@@ -21,9 +21,7 @@ class ViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
 
 }
 
@@ -45,7 +43,16 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let toValue = self.lazyCellNames()[indexPath.row]
-        print(toValue)
+        switch toValue {
+        case "CALayer":
+            self.navigationController?.gotoCALayerVC()
+        case "CoreAnimation":
+            self.navigationController?.gotoCoreAnimationVC()
+        case "MVVM":
+            self.navigationController?.gotoMVVMVC()
+        default:
+            print("error target viewController")
+        }
     }
 }
 
@@ -53,7 +60,7 @@ extension ViewController{
     
     func lazyCellNames() -> Array<String>{
         
-        return ["CALayer","CoreAnimation"]
+        return ["CALayer","CoreAnimation","MVVM"]
     }
     
 }

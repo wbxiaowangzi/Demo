@@ -16,6 +16,9 @@
 		9783B8F420CD1D4B00E30FD7 /* CALayerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9783B8F220CD1D4B00E30FD7 /* CALayerVC.xib */; };
 		9783B8F720CD1D6800E30FD7 /* CoreAnimationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783B8F520CD1D6800E30FD7 /* CoreAnimationVC.swift */; };
 		9783B8F820CD1D6800E30FD7 /* CoreAnimationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9783B8F620CD1D6800E30FD7 /* CoreAnimationVC.xib */; };
+		9783B8FB20CD1E2F00E30FD7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783B8FA20CD1E2F00E30FD7 /* Router.swift */; };
+		9783B90320CD341E00E30FD7 /* MVVMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783B90120CD341E00E30FD7 /* MVVMVC.swift */; };
+		9783B90420CD341E00E30FD7 /* MVVMVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9783B90220CD341E00E30FD7 /* MVVMVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		9783B8F220CD1D4B00E30FD7 /* CALayerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CALayerVC.xib; sourceTree = "<group>"; };
 		9783B8F520CD1D6800E30FD7 /* CoreAnimationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreAnimationVC.swift; sourceTree = "<group>"; };
 		9783B8F620CD1D6800E30FD7 /* CoreAnimationVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoreAnimationVC.xib; sourceTree = "<group>"; };
+		9783B8FA20CD1E2F00E30FD7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		9783B90120CD341E00E30FD7 /* MVVMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMVC.swift; sourceTree = "<group>"; };
+		9783B90220CD341E00E30FD7 /* MVVMVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVVMVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,8 @@
 		9783B8DC20CD12AD00E30FD7 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				9783B8FD20CD326300E30FD7 /* MVVM */,
+				9783B8F920CD1E0800E30FD7 /* Router */,
 				9783B8F020CD1D2A00E30FD7 /* CALayer */,
 				9783B8EF20CD1D2A00E30FD7 /* CoreAnimation */,
 				9783B8DD20CD12AD00E30FD7 /* AppDelegate.swift */,
@@ -90,6 +98,47 @@
 				9783B8F220CD1D4B00E30FD7 /* CALayerVC.xib */,
 			);
 			path = CALayer;
+			sourceTree = "<group>";
+		};
+		9783B8F920CD1E0800E30FD7 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9783B8FA20CD1E2F00E30FD7 /* Router.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9783B8FD20CD326300E30FD7 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				9783B8FE20CD326300E30FD7 /* ViewModel */,
+				9783B8FF20CD326300E30FD7 /* Model */,
+				9783B90020CD326300E30FD7 /* View */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		9783B8FE20CD326300E30FD7 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		9783B8FF20CD326300E30FD7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9783B90020CD326300E30FD7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9783B90120CD341E00E30FD7 /* MVVMVC.swift */,
+				9783B90220CD341E00E30FD7 /* MVVMVC.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +203,7 @@
 				9783B8E820CD12AF00E30FD7 /* LaunchScreen.storyboard in Resources */,
 				9783B8E520CD12AF00E30FD7 /* Assets.xcassets in Resources */,
 				9783B8F820CD1D6800E30FD7 /* CoreAnimationVC.xib in Resources */,
+				9783B90420CD341E00E30FD7 /* MVVMVC.xib in Resources */,
 				9783B8E320CD12AD00E30FD7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,8 +215,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9783B90320CD341E00E30FD7 /* MVVMVC.swift in Sources */,
 				9783B8E020CD12AD00E30FD7 /* ViewController.swift in Sources */,
 				9783B8F320CD1D4B00E30FD7 /* CALayerVC.swift in Sources */,
+				9783B8FB20CD1E2F00E30FD7 /* Router.swift in Sources */,
 				9783B8F720CD1D6800E30FD7 /* CoreAnimationVC.swift in Sources */,
 				9783B8DE20CD12AD00E30FD7 /* AppDelegate.swift in Sources */,
 			);
@@ -315,6 +367,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SLU2Z8YYU3;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -333,6 +386,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SLU2Z8YYU3;
 				INFOPLIST_FILE = Demo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

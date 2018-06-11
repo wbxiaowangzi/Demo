@@ -1,13 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoreAnimationVC" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CoreAnimationVC" customModule="Demo" customModuleProvider="target">
             <connections>
+                <outlet property="rightView" destination="mbG-mq-sgd" id="NKH-zf-kqZ"/>
+                <outlet property="tableView" destination="hjF-hr-dbf" id="mlE-Xy-f83"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,7 +21,32 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hjF-hr-dbf">
+                    <rect key="frame" x="0.0" y="20" width="80" height="647"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="80" id="Ipe-dl-uQE"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="wN5-GL-dg6"/>
+                        <outlet property="delegate" destination="-1" id="as6-Wq-9pi"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mbG-mq-sgd">
+                    <rect key="frame" x="80" y="20" width="295" height="647"/>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mbG-mq-sgd" firstAttribute="leading" secondItem="hjF-hr-dbf" secondAttribute="trailing" id="6yG-OR-v29"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mbG-mq-sgd" secondAttribute="trailing" id="FmZ-dg-6Y1"/>
+                <constraint firstItem="mbG-mq-sgd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Fmx-lV-NGc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mbG-mq-sgd" secondAttribute="bottom" id="YPK-su-5zY"/>
+                <constraint firstItem="hjF-hr-dbf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dl4-s5-KqS"/>
+                <constraint firstItem="hjF-hr-dbf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="k1j-re-1as"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hjF-hr-dbf" secondAttribute="bottom" id="llc-X9-4Os"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
         </view>
     </objects>
