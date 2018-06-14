@@ -45,4 +45,18 @@ extension UINavigationController{
         let vc = MVVMVC()
         self.pushViewController(vc, animated: true)
     }
+    
+    /*---Transition---*/
+
+    func gotoTransitionVC(){
+        let vc = TransitionVC()
+        self.pushViewController(vc, animated: true)
+    }
+    
+    /*---CALayer---*/
+    
+    func gotoShapeLayerVC(){
+        let vc = UIViewController()
+        self.pushViewController(vc, animated: true)
+    }
 }

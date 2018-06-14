@@ -1,31 +1,29 @@
 //
-//  ViewController.swift
+//  TransitionVC.swift
 //  Demo
 //
-//  Created by 王波 on 2018/6/10.
+//  Created by 王波 on 2018/6/13.
 //  Copyright © 2018年 wangbo. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    @IBOutlet weak var tableView: UITableView!
-    
+class TransitionVC: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
-
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+        
 }
 
-extension ViewController: UITableViewDataSource{
+extension TransitionVC: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.lazyCellNames().count
@@ -39,31 +37,26 @@ extension ViewController: UITableViewDataSource{
     }
 }
 
-extension ViewController: UITableViewDelegate {
+extension TransitionVC: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let toValue = self.lazyCellNames()[indexPath.row]
         switch toValue {
         case self.lazyCellNames()[0]:
-            self.navigationController?.gotoCALayerVC()
-        case self.lazyCellNames()[1]:
-            self.navigationController?.gotoCoreAnimationVC()
-        case self.lazyCellNames()[2]:
-            self.navigationController?.gotoMVVMVC()
-        case self.lazyCellNames()[3]:
-            self.navigationController?.gotoTransitionVC()
+            self.navigationController?.gotoShapeLayerVC()
         default:
             print("error target viewController")
         }
     }
 }
 
-extension ViewController{
+extension TransitionVC{
     
     func lazyCellNames() -> Array<String>{
         
-        return ["CALayer","CoreAnimation","MVVM","Transition"]
+        return ["one"]
     }
     
 }
+
 

@@ -101,7 +101,7 @@ extension CoreAnimationVC {
     }
     
     func showRotateAnimation(){
-        print("转一转")
+        //print("转一转")
         let pathA = CAKeyframeAnimation(keyPath: "position")
         let path = UIBezierPath()
         path.move(to: animateView.layer.position)

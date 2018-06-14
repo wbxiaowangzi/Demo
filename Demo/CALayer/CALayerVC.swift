@@ -9,17 +9,60 @@
 import UIKit
 
 class CALayerVC: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        tableView.tableFooterView = UIView()
+        
     }
     
-
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
 }
+
+extension CALayerVC: UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.lazyCellNames().count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        let name = self.lazyCellNames()[indexPath.row]
+        cell.textLabel?.text = name
+        return cell
+    }
+}
+
+extension CALayerVC: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let toValue = self.lazyCellNames()[indexPath.row]
+        switch toValue {
+        case self.lazyCellNames()[0]:
+            self.navigationController?.gotoShapeLayerVC()
+        case self.lazyCellNames()[1]:
+            self.navigationController?.gotoShapeLayerVC()
+        case self.lazyCellNames()[2]:
+            self.navigationController?.gotoShapeLayerVC()
+        case self.lazyCellNames()[3]:
+            self.navigationController?.gotoShapeLayerVC()
+        default:
+            print("error target viewController")
+        }
+    }
+}
+
+extension CALayerVC{
+    
+    func lazyCellNames() -> Array<String>{
+        
+        return ["CAShapeLayer","CAGirdentLayer","CATransitionLayer","CATextLayer"]
+    }
+    
+}
+
