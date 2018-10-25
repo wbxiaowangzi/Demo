@@ -56,7 +56,23 @@ extension UINavigationController{
     /*---CALayer---*/
     
     func gotoShapeLayerVC(){
-        let vc = UIViewController()
+        let vc = BaseVC()
+        self.pushViewController(vc, animated: true)
+    }
+    
+    func gotoGifBGVC(){
+        let vc = GifBGVC()
+        self.pushViewController(vc, animated: true)
+    }
+    
+    func gotoRotaryTableVC(){
+        let vc = RotaryTableVC()
+        self.pushViewController(vc, animated: true)
+    }
+    
+    func gotoMetalVC(){
+        let vc = MetalVC()
         self.pushViewController(vc, animated: true)
     }
 }
+

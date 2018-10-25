@@ -1,0 +1,118 @@
+//
+//  MetalVC.swift
+//  Demo
+//
+//  Created by 王波 on 2018/10/4.
+//  Copyright © 2018 wangbo. All rights reserved.
+//
+
+import UIKit
+import Metal
+import QuartzCore
+
+
+class MetalVC: UIViewController {
+    var device: MTLDevice! = nil
+    var metalLayer:CAMetalLayer! = nil
+    var pipelineState: MTLRenderPipelineState! = nil
+    var commandQueue: MTLCommandQueue! = nil
+    var vertexBuffer: MTLBuffer! = nil
+    let vertexData:[Float] = [
+        0.0,1.0,0.0,
+        -1.0,-1.0,0.0,
+        1.0,-1.0,0.0
+        ]
+    
+    var timer: CADisplayLink! = nil
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        creatMTLLayer()
+        sizeData()
+        CreatPipelineState()
+        creatCommandQueue()
+        creatTimer()
+        render()
+    }
+    
+    func creatMTLLayer() {
+        device = MTLCreateSystemDefaultDevice()
+        //创建CAMetalLayer
+        metalLayer = CAMetalLayer()
+        //明确layer使用的MTLDevice
+        metalLayer.device = device
+        //把相许格式设置为BGRAUnorm
+        metalLayer.pixelFormat = .bgra8Unorm
+        //framebufferonly设置为true，来增强表现率，
+        metalLayer.framebufferOnly = true
+        
+        metalLayer.frame = view.layer.frame
+        
+        var drawableSize = self.view.bounds.size
+        drawableSize.width *= self.view.contentScaleFactor
+        drawableSize.height *= self.view.contentScaleFactor
+        metalLayer.drawableSize = drawableSize
+        view.layer.addSublayer(metalLayer)
+    }
+    
+    func sizeData(){
+        let dataSize = vertexData.count * 4
+        vertexBuffer = device.makeBuffer(bytes: vertexData, length: dataSize, options: MTLResourceOptions(rawValue: UInt(0)))
+        
+    }
+
+    
+    func CreatPipelineState(){
+        
+        let defaultLibrary = device.makeDefaultLibrary()
+        let fragmentProgram = defaultLibrary?.makeFunction(name: "basic_fragment")
+        let vertextProgram = defaultLibrary?.makeFunction(name: "basic_vertext")
+        
+        let pipelineStateDescriptor = MTLRenderPipelineDescriptor()
+        pipelineStateDescriptor.vertexFunction = vertextProgram
+        pipelineStateDescriptor.fragmentFunction = fragmentProgram
+        pipelineStateDescriptor.colorAttachments[0].pixelFormat = .bgra8Unorm
+        
+        pipelineState = try? device.makeRenderPipelineState(descriptor: pipelineStateDescriptor)
+        
+    }
+    
+    func creatCommandQueue(){
+        commandQueue = device.makeCommandQueue()
+    }
+    
+    func creatTimer(){
+        timer = CADisplayLink(target: self, selector: #selector(self.drawloop))
+        timer.add(to: RunLoop.main, forMode: .defaultRunLoopMode)
+    }
+    
+    func render(){
+        creatRenderPassDescriptor()
+    }
+    
+    @objc func drawloop(){
+        self.render()
+    }
+    
+    func creatRenderPassDescriptor(){
+        let drawable = metalLayer.nextDrawable()
+        let renderpassDescriptor = MTLRenderPassDescriptor()
+        renderpassDescriptor.colorAttachments[0].texture = drawable?.texture
+        renderpassDescriptor.colorAttachments[0].loadAction = .clear
+        renderpassDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(0.0, 0.8, 0.5, 1.0)
+        
+        
+        let commandBuffer = commandQueue.makeCommandBuffer()
+        
+        let renderEncoder = commandBuffer?.makeRenderCommandEncoder(descriptor: renderpassDescriptor)
+        renderEncoder?.setRenderPipelineState(pipelineState)
+        
+        renderEncoder?.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
+        renderEncoder?.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3, instanceCount:1)
+        renderEncoder?.endEncoding()
+        
+        commandBuffer?.present(drawable!)
+        commandBuffer?.commit()
+    }
+}
