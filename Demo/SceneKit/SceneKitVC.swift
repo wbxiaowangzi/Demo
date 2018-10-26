@@ -121,6 +121,7 @@ class SceneKitVC: UIViewController {
     
     func jumpCompleted() {
         self.score += 1
+        print(score)
         self.lastPlatform  = self.platform
         self.platform = self.nextPlatform
         self.moveCameraToCurrentPlatform()
@@ -141,7 +142,7 @@ class SceneKitVC: UIViewController {
     func creatNextPlatform() {
         let node = SCNNode()
         //随机大小
-        let radius = 5//arc4random()%UInt32(kMinPlatformRadius) + UInt32(kMaxPressDuration) - UInt32(kMinPlatformRadius)
+        let radius = Int.random(in: 2...5)
         let cylinder = SCNCylinder.init(radius: CGFloat(radius), height: 2)
         //随机颜色
         let r = arc4random()%255
@@ -164,24 +165,16 @@ class SceneKitVC: UIViewController {
         
         //随机位置
         if var position = self.platform?.presentation.position{
-            let xDistance = 5//arc4random()%UInt32((kMaxPressDuration*3-1))+1
-            var lastRadius:CGFloat?
-            var radius:CGFloat?
-            if let g1 = self.platform?.geometry as? SCNCylinder{
-                lastRadius = g1.radius
+            let a = Int.random(in: 0...1)
+            if a == 0{
+                position.x -= 12
+            }else{
+                position.z -= 12
             }
-            if let g2 = node.geometry as? SCNCylinder{
-                radius = g2.radius
-            }
-            let maxDistance = sqrt(pow(kMaxPressDuration*3, 2)-pow(Double(xDistance), 2))
-            let minDistance = CGFloat(xDistance)>(CGFloat(lastRadius!)+CGFloat(radius!)) ? CGFloat(xDistance) : sqrt(pow(CGFloat(lastRadius!) + CGFloat(radius!), 2) - pow(CGFloat(xDistance), 2))
-            let zDistance = CGFloat(arc4random())/CGFloat(RAND_MAX)*(CGFloat(maxDistance)-minDistance) + minDistance
-            position.z = Float(zDistance)
-            position.x = Float(xDistance)+5
-            position.y += 10
+            position.y += 5
             node.position = position
-            
         }
+        
         self.scene.rootNode.addChildNode(node)
         self.nextPlatform = node
     }
@@ -275,14 +268,37 @@ extension SceneKitVC:SCNPhysicsContactDelegate{
     func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
         let bodyA = contact.nodeA.physicsBody
         let bodyB = contact.nodeB.physicsBody
+
+        
+        var jumper:SCNPhysicsBody?
+        var another:SCNPhysicsBody?
         if bodyA?.categoryBitMask == CollisionDetectionMask.jumper.rawValue{
-            if bodyB?.categoryBitMask == CollisionDetectionMask.floor.rawValue{
-                bodyB?.contactTestBitMask = CollisionDetectionMask.none.rawValue
-                self.gameDidOver()
-            }else if bodyB?.contactTestBitMask == CollisionDetectionMask.platform.rawValue{
-                bodyB?.categoryBitMask = CollisionDetectionMask.oldPlatform.rawValue
-                self.jumpCompleted()
+            jumper = bodyA
+            another = bodyB
+        }
+        if bodyB?.categoryBitMask == CollisionDetectionMask.jumper.rawValue{
+            jumper = bodyB
+            another = bodyA
+        }
+        
+//        if bodyA?.categoryBitMask == CollisionDetectionMask.jumper.rawValue{
+//            if bodyB?.categoryBitMask == CollisionDetectionMask.floor.rawValue{
+//                bodyB?.contactTestBitMask = CollisionDetectionMask.none.rawValue
+//                self.gameDidOver()
+//            }else if bodyB?.contactTestBitMask == CollisionDetectionMask.platform.rawValue{
+//                bodyB?.categoryBitMask = CollisionDetectionMask.oldPlatform.rawValue
+//                self.jumpCompleted()
+//            }
+//        }
+        if let _ = jumper,let a = another{
+            if a.categoryBitMask == CollisionDetectionMask.floor.rawValue{
+                a.contactTestBitMask = CollisionDetectionMask.none.rawValue
+                gameDidOver()
+            }else if a.categoryBitMask == CollisionDetectionMask.platform.rawValue{
+                a.categoryBitMask = CollisionDetectionMask.oldPlatform.rawValue
+                jumpCompleted()
             }
+            
         }
     }
 }
