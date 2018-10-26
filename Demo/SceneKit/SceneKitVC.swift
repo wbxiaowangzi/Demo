@@ -49,10 +49,10 @@ class SceneKitVC: UIViewController {
         scene.rootNode.addChildNode(jumper)
 
         scene.rootNode.addChildNode(camera)
-
         let longPressGesture = UILongPressGestureRecognizer.init(target: self, action: #selector(accumulateStrength(recognizer:)))
         longPressGesture.minimumPressDuration = 0
         view.addGestureRecognizer(longPressGesture)
+        view.addSubview(scroLab)
     }
     
     func creatFirstPlatform() {
@@ -119,9 +119,10 @@ class SceneKitVC: UIViewController {
         
     }
     
-    func jumpCompleted() {
+    @objc func jumpCompleted() {
         self.score += 1
         print(score)
+        scroLab.text = "分数：\(score)"
         self.lastPlatform  = self.platform
         self.platform = self.nextPlatform
         self.moveCameraToCurrentPlatform()
@@ -179,9 +180,10 @@ class SceneKitVC: UIViewController {
         self.nextPlatform = node
     }
     
-    func gameDidOver() {
+    @objc func gameDidOver() {
         print("****************----game over----*****************")
-        self.perform(#selector(restart), with: nil, afterDelay: 5)
+        //elf.performSelector(onMainThread: #selector(restart), with: nil, waitUntilDone: false)
+        restart()
     }
     
     private var scene:SCNScene = {
@@ -255,11 +257,41 @@ class SceneKitVC: UIViewController {
         return node
     }()
     
+    private lazy var scroLab:UILabel = {
+        let l = UILabel(frame: CGRect(x: 0, y: 84, width: 300, height: 20))
+        l.numberOfLines = 0
+        l.textColor = UIColor.black
+        l.text = "分数：0"
+        return l
+    }()
+    
+    private lazy var restartBtn:UIButton = {
+        let b = UIButton(type: UIButtonType.custom)
+        b.setTitle("RESTART", for: .normal)
+        b.frame = CGRect(x: 220, y: 220, width: 200, height: 100)
+        b.setTitleColor(UIColor.black, for: .normal)
+        b.backgroundColor = UIColor.yellow
+        b.addTarget(self, action: #selector(dprepare), for: .touchUpInside)
+
+        return b
+    }()
+    
     @objc func restart() {
+
+//        self.score = 0
 //        self.lastPlatform = nil
 //        self.platform = nil
 //        self.nextPlatform = nil
-//        self.makeUI()
+//        self.sceneView.removeFromSuperview()
+//        restartBtn.center = view.center
+//        self.view.addSubview(restartBtn)
+//        restartBtn.addTarget(self, action: #selector(dprepare), for: .touchUpInside)
+    }
+    
+    @objc func dprepare() {
+        restartBtn.removeFromSuperview()
+        creatFirstPlatform()
+        self.makeUI()
     }
 }
 
@@ -281,22 +313,13 @@ extension SceneKitVC:SCNPhysicsContactDelegate{
             another = bodyA
         }
         
-//        if bodyA?.categoryBitMask == CollisionDetectionMask.jumper.rawValue{
-//            if bodyB?.categoryBitMask == CollisionDetectionMask.floor.rawValue{
-//                bodyB?.contactTestBitMask = CollisionDetectionMask.none.rawValue
-//                self.gameDidOver()
-//            }else if bodyB?.contactTestBitMask == CollisionDetectionMask.platform.rawValue{
-//                bodyB?.categoryBitMask = CollisionDetectionMask.oldPlatform.rawValue
-//                self.jumpCompleted()
-//            }
-//        }
         if let _ = jumper,let a = another{
             if a.categoryBitMask == CollisionDetectionMask.floor.rawValue{
                 a.contactTestBitMask = CollisionDetectionMask.none.rawValue
-                gameDidOver()
+                performSelector(onMainThread: #selector(gameDidOver), with: nil, waitUntilDone: false)
             }else if a.categoryBitMask == CollisionDetectionMask.platform.rawValue{
                 a.categoryBitMask = CollisionDetectionMask.oldPlatform.rawValue
-                jumpCompleted()
+                performSelector(onMainThread: #selector(jumpCompleted), with: nil, waitUntilDone: false)
             }
             
         }
