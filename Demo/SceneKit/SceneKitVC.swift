@@ -44,10 +44,15 @@ class SceneKitVC: UIViewController {
         self.sceneView.scene = scene
         sceneView.frame = self.view.bounds
         self.view.addSubview(sceneView)
+        scene.rootNode.addChildNode(floor)
         camera.addChildNode(light)
         scene.rootNode.addChildNode(jumper)
+
         scene.rootNode.addChildNode(camera)
-        scene.rootNode.addChildNode(floor)
+
+        let longPressGesture = UILongPressGestureRecognizer.init(target: self, action: #selector(accumulateStrength(recognizer:)))
+        longPressGesture.minimumPressDuration = 0
+        view.addGestureRecognizer(longPressGesture)
     }
     
     func creatFirstPlatform() {
@@ -64,7 +69,7 @@ class SceneKitVC: UIViewController {
         body.collisionBitMask = CollisionDetectionMask.jumper.rawValue|CollisionDetectionMask.platform.rawValue|CollisionDetectionMask.oldPlatform.rawValue
         node.physicsBody = body
         
-        node.position = SCNVector3(0, 1, 0)
+        node.position = SCNVector3Make(0, 1, 0)
         self.scene.rootNode.addChildNode(node)
         self.platform = node
         moveCameraToCurrentPlatform()
@@ -108,8 +113,8 @@ class SceneKitVC: UIViewController {
             var z = sqrt(1/(pow(proportion, 2)+1))
             x *= subtractionX<0 ? -1 : 1
             z *= subtractionZ<0 ? -1 : 1
-            let force = SCNVector3(x*p, 20, z*p)
-            self.jumper.physicsBody?.applyForce(force, asImpulse: true)
+            let 动力 = SCNVector3Make(x*p, 20, z*p)
+            self.jumper.physicsBody?.applyForce(动力, asImpulse: true)
         }
         
     }
@@ -159,7 +164,7 @@ class SceneKitVC: UIViewController {
         
         //随机位置
         if var position = self.platform?.presentation.position{
-            let xDistance = 10//arc4random()%UInt32((kMaxPressDuration*3-1))+1
+            let xDistance = 5//arc4random()%UInt32((kMaxPressDuration*3-1))+1
             var lastRadius:CGFloat?
             var radius:CGFloat?
             if let g1 = self.platform?.geometry as? SCNCylinder{
@@ -172,8 +177,8 @@ class SceneKitVC: UIViewController {
             let minDistance = CGFloat(xDistance)>(CGFloat(lastRadius!)+CGFloat(radius!)) ? CGFloat(xDistance) : sqrt(pow(CGFloat(lastRadius!) + CGFloat(radius!), 2) - pow(CGFloat(xDistance), 2))
             let zDistance = CGFloat(arc4random())/CGFloat(RAND_MAX)*(CGFloat(maxDistance)-minDistance) + minDistance
             position.z = Float(zDistance)
-            position.x -= Float(xDistance)
-            position.y += 5
+            position.x = Float(xDistance)+5
+            position.y += 10
             node.position = position
             
         }
@@ -197,9 +202,6 @@ class SceneKitVC: UIViewController {
         view.allowsCameraControl = false
         view.autoenablesDefaultLighting = false
         view.translatesAutoresizingMaskIntoConstraints = false
-        let longPressGesture = UILongPressGestureRecognizer.init(target: self, action: #selector(accumulateStrength(recognizer:)))
-        longPressGesture.minimumPressDuration = 0
-        view.addGestureRecognizer(longPressGesture)
         return view
     }()
     
@@ -224,10 +226,10 @@ class SceneKitVC: UIViewController {
     private var jumper:SCNNode = {
         let node = SCNNode()
         let box = SCNBox.init(width: 1, height: 1, length: 1, chamferRadius: 0)
-        box.firstMaterial?.diffuse.contents = UIColor.red
+        box.firstMaterial?.diffuse.contents = UIColor.white
         node.geometry = box
         
-        let body = SCNPhysicsBody.static()
+        let body = SCNPhysicsBody.dynamic()
         body.restitution = 0
         body.friction = 1
         body.rollingFriction = 1
@@ -236,7 +238,7 @@ class SceneKitVC: UIViewController {
         body.categoryBitMask = CollisionDetectionMask.jumper.rawValue
         body.collisionBitMask = CollisionDetectionMask.floor.rawValue|CollisionDetectionMask.platform.rawValue|CollisionDetectionMask.oldPlatform.rawValue
         node.physicsBody = body
-        node.position = SCNVector3.init(x: 0, y: 12.5, z: 0)
+        node.position = SCNVector3.init(x: 0, y: 12, z: 0)
         return node
     }()
     
@@ -261,11 +263,10 @@ class SceneKitVC: UIViewController {
     }()
     
     @objc func restart() {
-        self.sceneView.removeFromSuperview()
-        self.lastPlatform = nil
-        self.platform = nil
-        self.nextPlatform = nil
-        self.makeUI()
+//        self.lastPlatform = nil
+//        self.platform = nil
+//        self.nextPlatform = nil
+//        self.makeUI()
     }
 }
 
