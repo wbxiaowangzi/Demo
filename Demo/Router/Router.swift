@@ -74,5 +74,10 @@ extension UINavigationController{
         let vc = MetalVC()
         self.pushViewController(vc, animated: true)
     }
+    
+    func gotoSceneKitVC(){
+        let vc = SceneKitVC()
+        self.pushViewController(vc, animated: true)
+    }
 }
 

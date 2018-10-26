@@ -27,6 +27,8 @@
 		9783B8FB20CD1E2F00E30FD7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783B8FA20CD1E2F00E30FD7 /* Router.swift */; };
 		9783B90320CD341E00E30FD7 /* MVVMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783B90120CD341E00E30FD7 /* MVVMVC.swift */; };
 		9783B90420CD341E00E30FD7 /* MVVMVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9783B90220CD341E00E30FD7 /* MVVMVC.xib */; };
+		AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA3E02181A052001BB669 /* SceneKitVC.swift */; };
+		AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7FA3E42181AACA001BB669 /* SceneKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +54,9 @@
 		9783B8FA20CD1E2F00E30FD7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9783B90120CD341E00E30FD7 /* MVVMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMVC.swift; sourceTree = "<group>"; };
 		9783B90220CD341E00E30FD7 /* MVVMVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVVMVC.xib; sourceTree = "<group>"; };
+		AF7FA3E02181A052001BB669 /* SceneKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKitVC.swift; sourceTree = "<group>"; };
+		AF7FA3E22181A7AB001BB669 /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		AF7FA3E42181AACA001BB669 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -157,6 +163,7 @@
 			children = (
 				9783B8DC20CD12AD00E30FD7 /* Demo */,
 				9783B8DB20CD12AD00E30FD7 /* Products */,
+				AF7FA3E32181AACA001BB669 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -171,6 +178,7 @@
 		9783B8DC20CD12AD00E30FD7 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				AF7FA3DF21819FF0001BB669 /* SceneKit */,
 				975386B62166096500B5BE32 /* Metal */,
 				9744CE5F20FF153000EBD3DE /* BaseObject */,
 				9744CE5E20FF13A000EBD3DE /* GifBG */,
@@ -185,6 +193,7 @@
 				9783B8F020CD1D2A00E30FD7 /* CALayer */,
 				9783B8EF20CD1D2A00E30FD7 /* CoreAnimation */,
 				9783B8DD20CD12AD00E30FD7 /* AppDelegate.swift */,
+				AF7FA3E22181A7AB001BB669 /* Demo-Bridging-Header.h */,
 				9783B8DF20CD12AD00E30FD7 /* ViewController.swift */,
 				9783B8E120CD12AD00E30FD7 /* Main.storyboard */,
 				9783B8E420CD12AF00E30FD7 /* Assets.xcassets */,
@@ -251,6 +260,22 @@
 				9783B90220CD341E00E30FD7 /* MVVMVC.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		AF7FA3DF21819FF0001BB669 /* SceneKit */ = {
+			isa = PBXGroup;
+			children = (
+				AF7FA3E02181A052001BB669 /* SceneKitVC.swift */,
+			);
+			path = SceneKit;
+			sourceTree = "<group>";
+		};
+		AF7FA3E32181AACA001BB669 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF7FA3E42181AACA001BB669 /* SceneKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -338,6 +363,7 @@
 				9783B8FB20CD1E2F00E30FD7 /* Router.swift in Sources */,
 				9783B8F720CD1D6800E30FD7 /* CoreAnimationVC.swift in Sources */,
 				9744CE6520FF173F00EBD3DE /* RotaryTableVC.swift in Sources */,
+				AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */,
 				975386BE216613DC00B5BE32 /* FragmentShader.metal in Sources */,
 				9783B8DE20CD12AD00E30FD7 /* AppDelegate.swift in Sources */,
 				975386BA21660A4800B5BE32 /* MetalVC.swift in Sources */,
@@ -494,6 +520,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = wbxiaowangzi.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Demo/Demo/Demo-Bridging-Header.h";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -513,6 +541,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = wbxiaowangzi.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Demo/Demo/Demo-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
