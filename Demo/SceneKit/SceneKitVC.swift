@@ -31,7 +31,7 @@ class SceneKitVC: UIViewController {
     var nextPlatform:SCNNode?
     var pressDate:Date?
     var score:NSInteger = 0
-    
+    var longG:UILongPressGestureRecognizer?
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -51,6 +51,7 @@ class SceneKitVC: UIViewController {
         scene.rootNode.addChildNode(camera)
         let longPressGesture = UILongPressGestureRecognizer.init(target: self, action: #selector(accumulateStrength(recognizer:)))
         longPressGesture.minimumPressDuration = 0
+        longG = longPressGesture
         view.addGestureRecognizer(longPressGesture)
         view.addSubview(scroLab)
     }
@@ -168,7 +169,7 @@ class SceneKitVC: UIViewController {
         if var position = self.platform?.presentation.position{
             let a = Int.random(in: 0...1)
             if a == 0{
-                position.x -= 12
+                position.x += 12
             }else{
                 position.z -= 12
             }
@@ -182,7 +183,6 @@ class SceneKitVC: UIViewController {
     
     @objc func gameDidOver() {
         print("****************----game over----*****************")
-        //elf.performSelector(onMainThread: #selector(restart), with: nil, waitUntilDone: false)
         restart()
     }
     
@@ -192,7 +192,7 @@ class SceneKitVC: UIViewController {
         return scene
     }()
     
-    private var sceneView:SCNView = {
+    private var sceneView:SCNView! = {
         let view = SCNView()
         view.allowsCameraControl = false
         view.autoenablesDefaultLighting = false
@@ -203,7 +203,7 @@ class SceneKitVC: UIViewController {
     private var floor:SCNNode = {
         let node = SCNNode()
         let floor = SCNFloor()
-        floor.firstMaterial?.diffuse.contents = UIColor.white
+        floor.firstMaterial?.diffuse.contents = UIImage(named: "floor")
         node.geometry = floor
         
         let body = SCNPhysicsBody.static()
@@ -258,7 +258,7 @@ class SceneKitVC: UIViewController {
     }()
     
     private lazy var scroLab:UILabel = {
-        let l = UILabel(frame: CGRect(x: 0, y: 84, width: 300, height: 20))
+        let l = UILabel(frame: CGRect(x: 20, y: 84, width: 300, height: 20))
         l.numberOfLines = 0
         l.textColor = UIColor.black
         l.text = "分数：0"
@@ -272,20 +272,26 @@ class SceneKitVC: UIViewController {
         b.setTitleColor(UIColor.black, for: .normal)
         b.backgroundColor = UIColor.yellow
         b.addTarget(self, action: #selector(dprepare), for: .touchUpInside)
-
         return b
     }()
     
     @objc func restart() {
 
-//        self.score = 0
-//        self.lastPlatform = nil
-//        self.platform = nil
-//        self.nextPlatform = nil
-//        self.sceneView.removeFromSuperview()
+//        score = 0
+//        lastPlatform = nil
+//        platform = nil
+//        nextPlatform = nil
 //        restartBtn.center = view.center
-//        self.view.addSubview(restartBtn)
-//        restartBtn.addTarget(self, action: #selector(dprepare), for: .touchUpInside)
+//        if let l = longG {
+//            view.removeGestureRecognizer(l)
+//            longG = nil
+//        }
+//        sceneView.removeFromSuperview()
+//        
+//        UIView.animate(withDuration: 1, animations: {
+//            self.view.addSubview(self.restartBtn)
+//        }) { (_) in
+//        }
     }
     
     @objc func dprepare() {
