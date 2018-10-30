@@ -79,5 +79,10 @@ extension UINavigationController{
         let vc = SceneKitVC()
         self.pushViewController(vc, animated: true)
     }
+    
+    func gotoRadarVC(){
+        let vc = RadarVC()
+        self.pushViewController(vc, animated: true)
+    }
 }
 
