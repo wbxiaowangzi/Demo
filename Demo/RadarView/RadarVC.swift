@@ -17,7 +17,12 @@ class RadarVC: UIViewController {
     }
 
     func makeRadarView() {
-        let radar = RadarView(frame: CGRect(x: 0, y: 100, width: 400, height: 400), radarData: [RadarModel(),RadarModel(),RadarModel(),RadarModel(),RadarModel(),RadarModel()])
+        let radar = RadarView(frame: CGRect(x: 0, y: 100, width: 400, height: 400), radarData: [RadarModel.init(name: "额部", score: 84),
+                                                                                                RadarModel.init(name: "侧脸", score: 54),
+                                                                                                RadarModel.init(name: "正脸", score: 89),
+                                                                                                RadarModel.init(name: "结构", score: 90),
+                                                                                                RadarModel.init(name: "鼻部", score: 76),
+                                                                                                RadarModel.init(name: "眼部", score: 62)])
         view.addSubview(radar)
     }
     
