@@ -16,7 +16,7 @@ class RadarView: UIView {
             return radarData.count
         }
     }
-    fileprivate let layerFloorCount = 6
+    fileprivate let layerFloorCount = 5
     //绘制需要用到的数据
     fileprivate var radius:CGFloat!
     fileprivate var radarViewW:CGFloat!
@@ -29,7 +29,7 @@ class RadarView: UIView {
     fileprivate var featurePoints:[CGPoint]!
     fileprivate var strokeLineW:CGFloat{
         get {
-            return radius/2/CGFloat(layerFloorCount)
+            return radius/CGFloat(layerFloorCount)
         }
     }
     
@@ -175,7 +175,7 @@ extension RadarView{
                 let model = radarData[i]
                 let c = sps[i]
                 drawCircle(with: c)
-                let p = transportPointToCenter(point: c)
+                let p = transportPointToCenter(point: c, isScore: true)
                 let lab = UILabel(frame: CGRect(x: 0, y: 0, width: featureLabW, height: featureLabH))
                 lab.textAlignment = .center
                 lab.text = "\(model.score!)"
@@ -197,10 +197,13 @@ extension RadarView{
         self.layer.addSublayer(layer)
     }
     
-    fileprivate func transportPointToCenter(point:CGPoint) ->CGPoint{
+    fileprivate func transportPointToCenter(point:CGPoint,isScore:Bool = false) ->CGPoint{
         let cx = centerPoint.x
         let cy = centerPoint.y
-        let space = CGFloat(10)
+        var space = CGFloat(16)
+        if isScore{
+            space = 0
+        }
         var center = point
         if fabsf(Float(point.x - cx)) < 5.0 {
             if point.y > cy{
