@@ -22,8 +22,11 @@ class RadarVC: UIViewController {
                                                                                                 RadarModel.init(name: "正脸", score: 89),
                                                                                                 RadarModel.init(name: "结构", score: 90),
                                                                                                 RadarModel.init(name: "鼻部", score: 76),
-                                                                                                RadarModel.init(name: "眼部", score: 62)])
+                                                                                                RadarModel.init(name: "眼部", score: 62),
+                                                                                                RadarModel.init(name: "眼部", score: 2)])
         view.addSubview(radar)
     }
+    
+    
     
 }

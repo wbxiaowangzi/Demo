@@ -7,29 +7,32 @@
 //
 
 import UIKit
+import AVFoundation
 
 class GifBGVC: BaseVC {
-
+    fileprivate var player:AVPlayer?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if let p = Bundle.main.path(forResource: "lol", ofType: "mov"){
+            let url = URL.init(fileURLWithPath: p)
+            let player = AVPlayer.init(url: url)
+            let playerLayer = AVPlayerLayer(player: player)
+            playerLayer.frame = view.bounds
+            playerLayer.videoGravity = AVLayerVideoGravity.resize
+            view.layer.addSublayer(playerLayer)
+            player.play()
+            self.player = player
+        }
+        NotificationCenter.default.addObserver(self, selector: #selector(playEnd), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: nil)
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @objc func playEnd()  {
+        player?.seek(to: CMTimeMake(0, 1))
+        player?.play()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
-    */
-
 }

@@ -29,6 +29,8 @@
 		9783B90420CD341E00E30FD7 /* MVVMVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9783B90220CD341E00E30FD7 /* MVVMVC.xib */; };
 		AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14A2CC21883E3B0081487A /* RadarVC.swift */; };
 		AF14A2CF21883E5A0081487A /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14A2CE21883E5A0081487A /* RadarView.swift */; };
+		AF30451C218AF66600DA36D2 /* lol.mov in Resources */ = {isa = PBXBuildFile; fileRef = AF30451B218AF66600DA36D2 /* lol.mov */; };
+		AF30451E218AF70000DA36D2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF30451D218AF70000DA36D2 /* AVFoundation.framework */; };
 		AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA3E02181A052001BB669 /* SceneKitVC.swift */; };
 		AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7FA3E42181AACA001BB669 /* SceneKit.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,8 @@
 		9783B90220CD341E00E30FD7 /* MVVMVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVVMVC.xib; sourceTree = "<group>"; };
 		AF14A2CC21883E3B0081487A /* RadarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarVC.swift; sourceTree = "<group>"; };
 		AF14A2CE21883E5A0081487A /* RadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarView.swift; sourceTree = "<group>"; };
+		AF30451B218AF66600DA36D2 /* lol.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = lol.mov; sourceTree = "<group>"; };
+		AF30451D218AF70000DA36D2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AF7FA3E02181A052001BB669 /* SceneKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKitVC.swift; sourceTree = "<group>"; };
 		AF7FA3E22181A7AB001BB669 /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF7FA3E42181AACA001BB669 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
@@ -68,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF30451E218AF70000DA36D2 /* AVFoundation.framework in Frameworks */,
 				AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				9744CE6220FF172600EBD3DE /* GifBGVC.swift */,
+				AF30451B218AF66600DA36D2 /* lol.mov */,
 			);
 			path = GifBG;
 			sourceTree = "<group>";
@@ -287,6 +293,7 @@
 		AF7FA3E32181AACA001BB669 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF30451D218AF70000DA36D2 /* AVFoundation.framework */,
 				AF7FA3E42181AACA001BB669 /* SceneKit.framework */,
 			);
 			name = Frameworks;
@@ -356,6 +363,7 @@
 				9772816F20D0AC88004E8E4F /* TransitionVC.xib in Resources */,
 				9783B8F820CD1D6800E30FD7 /* CoreAnimationVC.xib in Resources */,
 				9783B90420CD341E00E30FD7 /* MVVMVC.xib in Resources */,
+				AF30451C218AF66600DA36D2 /* lol.mov in Resources */,
 				9783B8E320CD12AD00E30FD7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
