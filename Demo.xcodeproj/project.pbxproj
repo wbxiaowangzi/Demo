@@ -31,6 +31,7 @@
 		AF14A2CF21883E5A0081487A /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14A2CE21883E5A0081487A /* RadarView.swift */; };
 		AF30451C218AF66600DA36D2 /* lol.mov in Resources */ = {isa = PBXBuildFile; fileRef = AF30451B218AF66600DA36D2 /* lol.mov */; };
 		AF30451E218AF70000DA36D2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF30451D218AF70000DA36D2 /* AVFoundation.framework */; };
+		AF304520218AFFBC00DA36D2 /* CAShapeLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF30451F218AFFBC00DA36D2 /* CAShapeLayerVC.swift */; };
 		AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA3E02181A052001BB669 /* SceneKitVC.swift */; };
 		AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7FA3E42181AACA001BB669 /* SceneKit.framework */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		AF14A2CE21883E5A0081487A /* RadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarView.swift; sourceTree = "<group>"; };
 		AF30451B218AF66600DA36D2 /* lol.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = lol.mov; sourceTree = "<group>"; };
 		AF30451D218AF70000DA36D2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		AF30451F218AFFBC00DA36D2 /* CAShapeLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAShapeLayerVC.swift; sourceTree = "<group>"; };
 		AF7FA3E02181A052001BB669 /* SceneKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKitVC.swift; sourceTree = "<group>"; };
 		AF7FA3E22181A7AB001BB669 /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF7FA3E42181AACA001BB669 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
@@ -228,6 +230,7 @@
 			children = (
 				9783B8F120CD1D4B00E30FD7 /* CALayerVC.swift */,
 				9783B8F220CD1D4B00E30FD7 /* CALayerVC.xib */,
+				AF30451F218AFFBC00DA36D2 /* CAShapeLayerVC.swift */,
 			);
 			path = CALayer;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				9744CE6520FF173F00EBD3DE /* RotaryTableVC.swift in Sources */,
 				AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */,
 				975386BE216613DC00B5BE32 /* FragmentShader.metal in Sources */,
+				AF304520218AFFBC00DA36D2 /* CAShapeLayerVC.swift in Sources */,
 				9783B8DE20CD12AD00E30FD7 /* AppDelegate.swift in Sources */,
 				975386BA21660A4800B5BE32 /* MetalVC.swift in Sources */,
 				AF14A2CF21883E5A0081487A /* RadarView.swift in Sources */,

@@ -56,7 +56,7 @@ extension UINavigationController{
     /*---CALayer---*/
     
     func gotoShapeLayerVC(){
-        let vc = BaseVC()
+        let vc = CAShapeLayerVC()
         self.pushViewController(vc, animated: true)
     }
     
