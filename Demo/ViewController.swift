@@ -62,6 +62,8 @@ extension ViewController: UITableViewDelegate {
             self.navigationController?.gotoSceneKitVC()
         case self.lazyCellNames()[8]:
             self.navigationController?.gotoRadarVC()
+        case self.lazyCellNames()[9]:
+            self.navigationController?.gotoOpenGLVC()
         default:
             print("error target viewController")
         }
@@ -72,7 +74,7 @@ extension ViewController{
     
     func lazyCellNames() -> Array<String>{
         
-        return ["CALayer","CoreAnimation","MVVM","Transition","RotatyTable","GifBG","Metal","SceneKit","Radar"]
+        return ["CALayer","CoreAnimation","MVVM","Transition","RotatyTable","GifBG","Metal","SceneKit","Radar","OpenGL"]
     }
     
 }

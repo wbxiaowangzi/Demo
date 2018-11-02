@@ -83,6 +83,12 @@ extension UINavigationController{
     func gotoRadarVC(){
         let vc = RadarVC()
         self.pushViewController(vc, animated: true)
+        
+    }
+    
+    func gotoOpenGLVC(){
+        let vc = OpenGLVC()
+        self.pushViewController(vc, animated: true)
     }
 }
 

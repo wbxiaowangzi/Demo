@@ -29,12 +29,29 @@
 		9783B90420CD341E00E30FD7 /* MVVMVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9783B90220CD341E00E30FD7 /* MVVMVC.xib */; };
 		AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14A2CC21883E3B0081487A /* RadarVC.swift */; };
 		AF14A2CF21883E5A0081487A /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14A2CE21883E5A0081487A /* RadarView.swift */; };
+		AF27F228218BFF8A001FDFC2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF27F227218BFF8A001FDFC2 /* OpenGLES.framework */; };
+		AF27F22A218BFF93001FDFC2 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF27F229218BFF92001FDFC2 /* GLKit.framework */; };
+		AF27F22E218C0A80001FDFC2 /* OpenGLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27F22C218C0A80001FDFC2 /* OpenGLVC.swift */; };
+		AF27F22F218C0A80001FDFC2 /* OpenGLVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF27F22D218C0A80001FDFC2 /* OpenGLVC.xib */; };
+		AF27F231218C1649001FDFC2 /* DrawingBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27F230218C1649001FDFC2 /* DrawingBoardView.swift */; };
 		AF30451C218AF66600DA36D2 /* lol.mov in Resources */ = {isa = PBXBuildFile; fileRef = AF30451B218AF66600DA36D2 /* lol.mov */; };
 		AF30451E218AF70000DA36D2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF30451D218AF70000DA36D2 /* AVFoundation.framework */; };
 		AF304520218AFFBC00DA36D2 /* CAShapeLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF30451F218AFFBC00DA36D2 /* CAShapeLayerVC.swift */; };
 		AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA3E02181A052001BB669 /* SceneKitVC.swift */; };
 		AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7FA3E42181AACA001BB669 /* SceneKit.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AF27F21E218BFE99001FDFC2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9744CE6020FF155A00EBD3DE /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
@@ -61,6 +78,12 @@
 		9783B90220CD341E00E30FD7 /* MVVMVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVVMVC.xib; sourceTree = "<group>"; };
 		AF14A2CC21883E3B0081487A /* RadarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarVC.swift; sourceTree = "<group>"; };
 		AF14A2CE21883E5A0081487A /* RadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarView.swift; sourceTree = "<group>"; };
+		AF27F220218BFE99001FDFC2 /* OpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF27F227218BFF8A001FDFC2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		AF27F229218BFF92001FDFC2 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		AF27F22C218C0A80001FDFC2 /* OpenGLVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGLVC.swift; sourceTree = "<group>"; };
+		AF27F22D218C0A80001FDFC2 /* OpenGLVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenGLVC.xib; sourceTree = "<group>"; };
+		AF27F230218C1649001FDFC2 /* DrawingBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoardView.swift; sourceTree = "<group>"; };
 		AF30451B218AF66600DA36D2 /* lol.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = lol.mov; sourceTree = "<group>"; };
 		AF30451D218AF70000DA36D2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AF30451F218AFFBC00DA36D2 /* CAShapeLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAShapeLayerVC.swift; sourceTree = "<group>"; };
@@ -74,8 +97,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF27F22A218BFF93001FDFC2 /* GLKit.framework in Frameworks */,
+				AF27F228218BFF8A001FDFC2 /* OpenGLES.framework in Frameworks */,
 				AF30451E218AF70000DA36D2 /* AVFoundation.framework in Frameworks */,
 				AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF27F21D218BFE99001FDFC2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				9783B8DA20CD12AD00E30FD7 /* Demo.app */,
+				AF27F220218BFE99001FDFC2 /* OpenGL */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,6 +223,7 @@
 		9783B8DC20CD12AD00E30FD7 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				AF27F22B218C0A5E001FDFC2 /* OpenGL */,
 				AF14A2CB21883DBD0081487A /* RadarView */,
 				AF7FA3DF21819FF0001BB669 /* SceneKit */,
 				975386B62166096500B5BE32 /* Metal */,
@@ -285,6 +319,16 @@
 			path = RadarView;
 			sourceTree = "<group>";
 		};
+		AF27F22B218C0A5E001FDFC2 /* OpenGL */ = {
+			isa = PBXGroup;
+			children = (
+				AF27F22C218C0A80001FDFC2 /* OpenGLVC.swift */,
+				AF27F22D218C0A80001FDFC2 /* OpenGLVC.xib */,
+				AF27F230218C1649001FDFC2 /* DrawingBoardView.swift */,
+			);
+			path = OpenGL;
+			sourceTree = "<group>";
+		};
 		AF7FA3DF21819FF0001BB669 /* SceneKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -296,6 +340,8 @@
 		AF7FA3E32181AACA001BB669 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF27F229218BFF92001FDFC2 /* GLKit.framework */,
+				AF27F227218BFF8A001FDFC2 /* OpenGLES.framework */,
 				AF30451D218AF70000DA36D2 /* AVFoundation.framework */,
 				AF7FA3E42181AACA001BB669 /* SceneKit.framework */,
 			);
@@ -322,18 +368,38 @@
 			productReference = 9783B8DA20CD12AD00E30FD7 /* Demo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AF27F21F218BFE99001FDFC2 /* OpenGL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF27F224218BFE99001FDFC2 /* Build configuration list for PBXNativeTarget "OpenGL" */;
+			buildPhases = (
+				AF27F21C218BFE99001FDFC2 /* Sources */,
+				AF27F21D218BFE99001FDFC2 /* Frameworks */,
+				AF27F21E218BFE99001FDFC2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenGL;
+			productName = OpenGL;
+			productReference = AF27F220218BFE99001FDFC2 /* OpenGL */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		9783B8D220CD12AD00E30FD7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = wangbo;
 				TargetAttributes = {
 					9783B8D920CD12AD00E30FD7 = {
 						CreatedOnToolsVersion = 9.4;
+					};
+					AF27F21F218BFE99001FDFC2 = {
+						CreatedOnToolsVersion = 10.0;
 					};
 				};
 			};
@@ -351,6 +417,7 @@
 			projectRoot = "";
 			targets = (
 				9783B8D920CD12AD00E30FD7 /* Demo */,
+				AF27F21F218BFE99001FDFC2 /* OpenGL */,
 			);
 		};
 /* End PBXProject section */
@@ -366,6 +433,7 @@
 				9772816F20D0AC88004E8E4F /* TransitionVC.xib in Resources */,
 				9783B8F820CD1D6800E30FD7 /* CoreAnimationVC.xib in Resources */,
 				9783B90420CD341E00E30FD7 /* MVVMVC.xib in Resources */,
+				AF27F22F218C0A80001FDFC2 /* OpenGLVC.xib in Resources */,
 				AF30451C218AF66600DA36D2 /* lol.mov in Resources */,
 				9783B8E320CD12AD00E30FD7 /* Main.storyboard in Resources */,
 			);
@@ -389,12 +457,21 @@
 				9783B8FB20CD1E2F00E30FD7 /* Router.swift in Sources */,
 				9783B8F720CD1D6800E30FD7 /* CoreAnimationVC.swift in Sources */,
 				9744CE6520FF173F00EBD3DE /* RotaryTableVC.swift in Sources */,
+				AF27F22E218C0A80001FDFC2 /* OpenGLVC.swift in Sources */,
 				AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */,
+				AF27F231218C1649001FDFC2 /* DrawingBoardView.swift in Sources */,
 				975386BE216613DC00B5BE32 /* FragmentShader.metal in Sources */,
 				AF304520218AFFBC00DA36D2 /* CAShapeLayerVC.swift in Sources */,
 				9783B8DE20CD12AD00E30FD7 /* AppDelegate.swift in Sources */,
 				975386BA21660A4800B5BE32 /* MetalVC.swift in Sources */,
 				AF14A2CF21883E5A0081487A /* RadarView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF27F21C218BFE99001FDFC2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +652,35 @@
 			};
 			name = Release;
 		};
+		AF27F225218BFE99001FDFC2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SLU2Z8YYU3;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		AF27F226218BFE99001FDFC2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = SLU2Z8YYU3;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -592,6 +698,15 @@
 			buildConfigurations = (
 				9783B8ED20CD12AF00E30FD7 /* Debug */,
 				9783B8EE20CD12AF00E30FD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF27F224218BFE99001FDFC2 /* Build configuration list for PBXNativeTarget "OpenGL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF27F225218BFE99001FDFC2 /* Debug */,
+				AF27F226218BFE99001FDFC2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
