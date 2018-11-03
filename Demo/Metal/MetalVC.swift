@@ -18,9 +18,9 @@ class MetalVC: UIViewController {
     var commandQueue: MTLCommandQueue! = nil
     var vertexBuffer: MTLBuffer! = nil
     let vertexData:[Float] = [
-        0.0,1.0,0.0,
+        0.0,1.0,0.5,
         -1.0,-1.0,0.0,
-        1.0,-1.0,0.0
+        1.0,-1.0,0.0,
         ]
     
     var timer: CADisplayLink! = nil
@@ -42,11 +42,10 @@ class MetalVC: UIViewController {
         metalLayer = CAMetalLayer()
         //明确layer使用的MTLDevice
         metalLayer.device = device
-        //把相许格式设置为BGRAUnorm
+        //把像素格式设置为BGRAUnorm
         metalLayer.pixelFormat = .bgra8Unorm
         //framebufferonly设置为true，来增强表现率，
         metalLayer.framebufferOnly = true
-        
         metalLayer.frame = view.layer.frame
         
         var drawableSize = self.view.bounds.size
