@@ -262,7 +262,7 @@ class DrawingBoardView: GLKView {
     @objc func tap(t : UITapGestureRecognizer) {
         let l = t.location(in: self)
         
-        if t.state == UIGestureRecognizerState.recognized {
+        if t.state == UIGestureRecognizer.State.recognized {
             glBindBuffer(GLenum(GL_ARRAY_BUFFER), dotsBuffer)
             
             var touchPoint : WFSignaturePoint = viewPointToGL(viewPoint: l, bounds: self.bounds, color: self.penColor)
@@ -319,7 +319,7 @@ class DrawingBoardView: GLKView {
         let lowPassFilterAlpha = STROKE_WIDTH_SMOOTHING
         let newThickness = Float(STROKE_WIDTH_MAX - STROKE_WIDTH_MIN) * Float(1 - normalizedVelocity) + Float(STROKE_WIDTH_MIN)
         penThickness = penThickness * Float(lowPassFilterAlpha) + newThickness * Float(1 - lowPassFilterAlpha)
-        if p.state == UIGestureRecognizerState.began {
+        if p.state == UIGestureRecognizer.State.began {
             previousPoint = l
             previousMidPoint = l
             
@@ -332,7 +332,7 @@ class DrawingBoardView: GLKView {
             
             self.hasSignature = true
             self.currentPath = pointsArray.count
-        }else if p.state == UIGestureRecognizerState.changed {
+        }else if p.state == UIGestureRecognizer.State.changed {
             let mid = CGPoint.init(x: (l.x + (previousPoint?.x)!) / 2.0, y: (l.y + (previousPoint?.y)!) / 2.0)
             if distance > Float(QUADRATIC_DISTANCE_TOLERANCE) {
                 let segmts : Int = Int(distance/1.5)
@@ -355,7 +355,7 @@ class DrawingBoardView: GLKView {
             }
             previousPoint = l
             previousMidPoint = mid
-        } else if p.state == UIGestureRecognizerState.ended || p.state == UIGestureRecognizerState.cancelled {
+        } else if p.state == UIGestureRecognizer.State.ended || p.state == UIGestureRecognizer.State.cancelled {
             var wfv = viewPointToGL(viewPoint: l, bounds: self.bounds, color: self.penColor)
             addVertex(length: &length, pointsArray: pointsArray, v: &wfv)
             previousVertex = wfv

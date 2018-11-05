@@ -83,7 +83,7 @@ class MetalVC: UIViewController {
     
     func creatTimer(){
         timer = CADisplayLink(target: self, selector: #selector(self.drawloop))
-        timer.add(to: RunLoop.main, forMode: .defaultRunLoopMode)
+        timer.add(to: RunLoop.main, forMode: RunLoop.Mode.default)
     }
     
     func render(){

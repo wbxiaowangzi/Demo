@@ -114,8 +114,8 @@ extension CoreAnimationVC {
     
     func showTransitionAnimation(){
         let t = CATransition()
-        t.type = "oglFlip"
-        t.subtype = kCATransitionFade
+        t.type = convertToCATransitionType("oglFlip")
+        t.subtype = CATransitionSubtype.fromLeft
         t.duration = 1
         
         let isRed = (animateView.layer.backgroundColor == UIColor.red.cgColor)
@@ -129,3 +129,8 @@ extension CoreAnimationVC {
 }
 
 
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToCATransitionType(_ input: String) -> CATransitionType {
+	return CATransitionType(rawValue: input)
+}

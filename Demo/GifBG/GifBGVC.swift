@@ -28,7 +28,7 @@ class GifBGVC: BaseVC {
     }
 
     @objc func playEnd()  {
-        player?.seek(to: CMTimeMake(0, 1))
+        player?.seek(to: CMTimeMake(value: 0, timescale: 1))
         player?.play()
     }
     

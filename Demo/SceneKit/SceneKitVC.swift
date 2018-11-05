@@ -109,7 +109,7 @@ class SceneKitVC: UIViewController {
             let jumperPositon = self.jumper.presentation.position
             let subtractionX = platformPosition.x - jumperPositon.x
             let subtractionZ = platformPosition.z - jumperPositon.z
-            let proportion = fabs(subtractionX/subtractionZ)
+            let proportion = abs(subtractionX/subtractionZ)
             var x = sqrt(1/(pow(proportion, 2)+1))*proportion
             var z = sqrt(1/(pow(proportion, 2)+1))
             x *= subtractionX<0 ? -1 : 1
@@ -266,7 +266,7 @@ class SceneKitVC: UIViewController {
     }()
     
     private lazy var restartBtn:UIButton = {
-        let b = UIButton(type: UIButtonType.custom)
+        let b = UIButton(type: UIButton.ButtonType.custom)
         b.setTitle("RESTART", for: .normal)
         b.frame = CGRect(x: 220, y: 220, width: 200, height: 100)
         b.setTitleColor(UIColor.black, for: .normal)
