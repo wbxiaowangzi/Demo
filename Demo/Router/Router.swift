@@ -90,5 +90,10 @@ extension UINavigationController{
         let vc = OpenGLVC()
         self.pushViewController(vc, animated: true)
     }
+    
+    func gotoRXSwiftVC(){
+        let vc = RXSwiftVC()
+        self.pushViewController(vc, animated: true)
+    }
 }
 

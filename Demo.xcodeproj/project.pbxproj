@@ -34,11 +34,14 @@
 		AF27F22E218C0A80001FDFC2 /* OpenGLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27F22C218C0A80001FDFC2 /* OpenGLVC.swift */; };
 		AF27F22F218C0A80001FDFC2 /* OpenGLVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF27F22D218C0A80001FDFC2 /* OpenGLVC.xib */; };
 		AF27F231218C1649001FDFC2 /* DrawingBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27F230218C1649001FDFC2 /* DrawingBoardView.swift */; };
+		AF2BED7E21928EC4007FB28E /* RXSwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2BED7C21928EC4007FB28E /* RXSwiftVC.swift */; };
+		AF2BED7F21928EC4007FB28E /* RXSwiftVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2BED7D21928EC4007FB28E /* RXSwiftVC.xib */; };
 		AF30451C218AF66600DA36D2 /* lol.mov in Resources */ = {isa = PBXBuildFile; fileRef = AF30451B218AF66600DA36D2 /* lol.mov */; };
 		AF30451E218AF70000DA36D2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF30451D218AF70000DA36D2 /* AVFoundation.framework */; };
 		AF304520218AFFBC00DA36D2 /* CAShapeLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF30451F218AFFBC00DA36D2 /* CAShapeLayerVC.swift */; };
 		AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA3E02181A052001BB669 /* SceneKitVC.swift */; };
 		AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7FA3E42181AACA001BB669 /* SceneKit.framework */; };
+		C1E87AD0D3F56B2E82A5B15D /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089D44138D619F7D2D329231 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -54,6 +57,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		089D44138D619F7D2D329231 /* Pods_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A736B16B89349DFCDB1C68C /* Pods-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		9744CE6020FF155A00EBD3DE /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		9744CE6220FF172600EBD3DE /* GifBGVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifBGVC.swift; sourceTree = "<group>"; };
 		9744CE6420FF173F00EBD3DE /* RotaryTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotaryTableVC.swift; sourceTree = "<group>"; };
@@ -76,6 +81,7 @@
 		9783B8FA20CD1E2F00E30FD7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9783B90120CD341E00E30FD7 /* MVVMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMVC.swift; sourceTree = "<group>"; };
 		9783B90220CD341E00E30FD7 /* MVVMVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVVMVC.xib; sourceTree = "<group>"; };
+		A6DA9D8A6B6E185481083FF5 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		AF14A2CC21883E3B0081487A /* RadarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarVC.swift; sourceTree = "<group>"; };
 		AF14A2CE21883E5A0081487A /* RadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarView.swift; sourceTree = "<group>"; };
 		AF27F220218BFE99001FDFC2 /* OpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +90,8 @@
 		AF27F22C218C0A80001FDFC2 /* OpenGLVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenGLVC.swift; sourceTree = "<group>"; };
 		AF27F22D218C0A80001FDFC2 /* OpenGLVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenGLVC.xib; sourceTree = "<group>"; };
 		AF27F230218C1649001FDFC2 /* DrawingBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoardView.swift; sourceTree = "<group>"; };
+		AF2BED7C21928EC4007FB28E /* RXSwiftVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXSwiftVC.swift; sourceTree = "<group>"; };
+		AF2BED7D21928EC4007FB28E /* RXSwiftVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RXSwiftVC.xib; sourceTree = "<group>"; };
 		AF30451B218AF66600DA36D2 /* lol.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = lol.mov; sourceTree = "<group>"; };
 		AF30451D218AF70000DA36D2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AF30451F218AFFBC00DA36D2 /* CAShapeLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAShapeLayerVC.swift; sourceTree = "<group>"; };
@@ -101,6 +109,7 @@
 				AF27F228218BFF8A001FDFC2 /* OpenGLES.framework in Frameworks */,
 				AF30451E218AF70000DA36D2 /* AVFoundation.framework in Frameworks */,
 				AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */,
+				C1E87AD0D3F56B2E82A5B15D /* Pods_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +123,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77CA83DD04E293DFCA75D345 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6DA9D8A6B6E185481083FF5 /* Pods-Demo.debug.xcconfig */,
+				0A736B16B89349DFCDB1C68C /* Pods-Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		9744CE5D20FF126B00EBD3DE /* RotaryTable */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +226,7 @@
 				9783B8DC20CD12AD00E30FD7 /* Demo */,
 				9783B8DB20CD12AD00E30FD7 /* Products */,
 				AF7FA3E32181AACA001BB669 /* Frameworks */,
+				77CA83DD04E293DFCA75D345 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -223,6 +242,7 @@
 		9783B8DC20CD12AD00E30FD7 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				AF2BED7B21928E9A007FB28E /* RXSwift */,
 				AF27F22B218C0A5E001FDFC2 /* OpenGL */,
 				AF14A2CB21883DBD0081487A /* RadarView */,
 				AF7FA3DF21819FF0001BB669 /* SceneKit */,
@@ -329,6 +349,15 @@
 			path = OpenGL;
 			sourceTree = "<group>";
 		};
+		AF2BED7B21928E9A007FB28E /* RXSwift */ = {
+			isa = PBXGroup;
+			children = (
+				AF2BED7C21928EC4007FB28E /* RXSwiftVC.swift */,
+				AF2BED7D21928EC4007FB28E /* RXSwiftVC.xib */,
+			);
+			path = RXSwift;
+			sourceTree = "<group>";
+		};
 		AF7FA3DF21819FF0001BB669 /* SceneKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,6 +373,7 @@
 				AF27F227218BFF8A001FDFC2 /* OpenGLES.framework */,
 				AF30451D218AF70000DA36D2 /* AVFoundation.framework */,
 				AF7FA3E42181AACA001BB669 /* SceneKit.framework */,
+				089D44138D619F7D2D329231 /* Pods_Demo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -355,9 +385,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9783B8EC20CD12AF00E30FD7 /* Build configuration list for PBXNativeTarget "Demo" */;
 			buildPhases = (
+				09CDCADC04EA1F380FF615CC /* [CP] Check Pods Manifest.lock */,
 				9783B8D620CD12AD00E30FD7 /* Sources */,
 				9783B8D720CD12AD00E30FD7 /* Frameworks */,
 				9783B8D820CD12AD00E30FD7 /* Resources */,
+				5922AF0CB70901FBAF2F09B6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -436,11 +468,65 @@
 				9783B90420CD341E00E30FD7 /* MVVMVC.xib in Resources */,
 				AF27F22F218C0A80001FDFC2 /* OpenGLVC.xib in Resources */,
 				AF30451C218AF66600DA36D2 /* lol.mov in Resources */,
+				AF2BED7F21928EC4007FB28E /* RXSwiftVC.xib in Resources */,
 				9783B8E320CD12AD00E30FD7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09CDCADC04EA1F380FF615CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5922AF0CB70901FBAF2F09B6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
+				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9783B8D620CD12AD00E30FD7 /* Sources */ = {
@@ -453,6 +539,7 @@
 				9783B8E020CD12AD00E30FD7 /* ViewController.swift in Sources */,
 				9744CE6120FF155A00EBD3DE /* BaseVC.swift in Sources */,
 				AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */,
+				AF2BED7E21928EC4007FB28E /* RXSwiftVC.swift in Sources */,
 				9783B8F320CD1D4B00E30FD7 /* CALayerVC.swift in Sources */,
 				9744CE6320FF172600EBD3DE /* GifBGVC.swift in Sources */,
 				9783B8FB20CD1E2F00E30FD7 /* Router.swift in Sources */,
@@ -614,6 +701,7 @@
 		};
 		9783B8ED20CD12AF00E30FD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6DA9D8A6B6E185481083FF5 /* Pods-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -626,7 +714,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = wbxiaowangzi.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Demo/Demo/Demo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Demo/Demo/Demo-Bridging-Header.h";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -635,6 +723,7 @@
 		};
 		9783B8EE20CD12AF00E30FD7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A736B16B89349DFCDB1C68C /* Pods-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -647,7 +736,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = wbxiaowangzi.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Demo/Demo/Demo-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Demo/Demo/Demo-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
