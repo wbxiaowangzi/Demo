@@ -36,6 +36,13 @@
 		AF27F231218C1649001FDFC2 /* DrawingBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27F230218C1649001FDFC2 /* DrawingBoardView.swift */; };
 		AF2BED7E21928EC4007FB28E /* RXSwiftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2BED7C21928EC4007FB28E /* RXSwiftVC.swift */; };
 		AF2BED7F21928EC4007FB28E /* RXSwiftVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF2BED7D21928EC4007FB28E /* RXSwiftVC.xib */; };
+		AF2C8BD12193D66F00BA9492 /* ShowMemory.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C8BC22193D66F00BA9492 /* ShowMemory.m */; };
+		AF2C8BD22193D66F00BA9492 /* ShowFlex.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C8BC62193D66F00BA9492 /* ShowFlex.m */; };
+		AF2C8BD32193D66F00BA9492 /* AppDebugger.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C8BC72193D66F00BA9492 /* AppDebugger.m */; };
+		AF2C8BD42193D66F00BA9492 /* SwitchServer.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C8BC82193D66F00BA9492 /* SwitchServer.m */; };
+		AF2C8BD52193D66F00BA9492 /* ChartConsole.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C8BC92193D66F00BA9492 /* ChartConsole.m */; };
+		AF2C8BD62193D66F00BA9492 /* ShowNavigator.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C8BCB2193D66F00BA9492 /* ShowNavigator.m */; };
+		AF2C8BD72193D66F00BA9492 /* CheckAnalysis.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2C8BCE2193D66F00BA9492 /* CheckAnalysis.m */; };
 		AF30451C218AF66600DA36D2 /* lol.mov in Resources */ = {isa = PBXBuildFile; fileRef = AF30451B218AF66600DA36D2 /* lol.mov */; };
 		AF30451E218AF70000DA36D2 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF30451D218AF70000DA36D2 /* AVFoundation.framework */; };
 		AF304520218AFFBC00DA36D2 /* CAShapeLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF30451F218AFFBC00DA36D2 /* CAShapeLayerVC.swift */; };
@@ -92,6 +99,21 @@
 		AF27F230218C1649001FDFC2 /* DrawingBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingBoardView.swift; sourceTree = "<group>"; };
 		AF2BED7C21928EC4007FB28E /* RXSwiftVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RXSwiftVC.swift; sourceTree = "<group>"; };
 		AF2BED7D21928EC4007FB28E /* RXSwiftVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RXSwiftVC.xib; sourceTree = "<group>"; };
+		AF2C8BC02193D66F00BA9492 /* DebuggerInterface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebuggerInterface.h; sourceTree = "<group>"; };
+		AF2C8BC12193D66F00BA9492 /* ShowNavigator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowNavigator.h; sourceTree = "<group>"; };
+		AF2C8BC22193D66F00BA9492 /* ShowMemory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowMemory.m; sourceTree = "<group>"; };
+		AF2C8BC32193D66F00BA9492 /* ChartConsole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChartConsole.h; sourceTree = "<group>"; };
+		AF2C8BC42193D66F00BA9492 /* SwitchServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchServer.h; sourceTree = "<group>"; };
+		AF2C8BC52193D66F00BA9492 /* CheckAnalysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckAnalysis.h; sourceTree = "<group>"; };
+		AF2C8BC62193D66F00BA9492 /* ShowFlex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowFlex.m; sourceTree = "<group>"; };
+		AF2C8BC72193D66F00BA9492 /* AppDebugger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDebugger.m; sourceTree = "<group>"; };
+		AF2C8BC82193D66F00BA9492 /* SwitchServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchServer.m; sourceTree = "<group>"; };
+		AF2C8BC92193D66F00BA9492 /* ChartConsole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChartConsole.m; sourceTree = "<group>"; };
+		AF2C8BCA2193D66F00BA9492 /* ShowMemory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowMemory.h; sourceTree = "<group>"; };
+		AF2C8BCB2193D66F00BA9492 /* ShowNavigator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowNavigator.m; sourceTree = "<group>"; };
+		AF2C8BCC2193D66F00BA9492 /* AppDebugger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDebugger.h; sourceTree = "<group>"; };
+		AF2C8BCD2193D66F00BA9492 /* ShowFlex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowFlex.h; sourceTree = "<group>"; };
+		AF2C8BCE2193D66F00BA9492 /* CheckAnalysis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckAnalysis.m; sourceTree = "<group>"; };
 		AF30451B218AF66600DA36D2 /* lol.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = lol.mov; sourceTree = "<group>"; };
 		AF30451D218AF70000DA36D2 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		AF30451F218AFFBC00DA36D2 /* CAShapeLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAShapeLayerVC.swift; sourceTree = "<group>"; };
@@ -242,6 +264,7 @@
 		9783B8DC20CD12AD00E30FD7 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				AF2C8BBE2193D66F00BA9492 /* AppDebugger */,
 				AF2BED7B21928E9A007FB28E /* RXSwift */,
 				AF27F22B218C0A5E001FDFC2 /* OpenGL */,
 				AF14A2CB21883DBD0081487A /* RadarView */,
@@ -356,6 +379,36 @@
 				AF2BED7D21928EC4007FB28E /* RXSwiftVC.xib */,
 			);
 			path = RXSwift;
+			sourceTree = "<group>";
+		};
+		AF2C8BBE2193D66F00BA9492 /* AppDebugger */ = {
+			isa = PBXGroup;
+			children = (
+				AF2C8BBF2193D66F00BA9492 /* AppDebugger */,
+			);
+			path = AppDebugger;
+			sourceTree = "<group>";
+		};
+		AF2C8BBF2193D66F00BA9492 /* AppDebugger */ = {
+			isa = PBXGroup;
+			children = (
+				AF2C8BCC2193D66F00BA9492 /* AppDebugger.h */,
+				AF2C8BC72193D66F00BA9492 /* AppDebugger.m */,
+				AF2C8BC32193D66F00BA9492 /* ChartConsole.h */,
+				AF2C8BC92193D66F00BA9492 /* ChartConsole.m */,
+				AF2C8BC52193D66F00BA9492 /* CheckAnalysis.h */,
+				AF2C8BCE2193D66F00BA9492 /* CheckAnalysis.m */,
+				AF2C8BC02193D66F00BA9492 /* DebuggerInterface.h */,
+				AF2C8BCD2193D66F00BA9492 /* ShowFlex.h */,
+				AF2C8BC62193D66F00BA9492 /* ShowFlex.m */,
+				AF2C8BCA2193D66F00BA9492 /* ShowMemory.h */,
+				AF2C8BC22193D66F00BA9492 /* ShowMemory.m */,
+				AF2C8BC12193D66F00BA9492 /* ShowNavigator.h */,
+				AF2C8BCB2193D66F00BA9492 /* ShowNavigator.m */,
+				AF2C8BC42193D66F00BA9492 /* SwitchServer.h */,
+				AF2C8BC82193D66F00BA9492 /* SwitchServer.m */,
+			);
+			path = AppDebugger;
 			sourceTree = "<group>";
 		};
 		AF7FA3DF21819FF0001BB669 /* SceneKit */ = {
@@ -508,6 +561,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Demo/Pods-Demo-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/FBRetainCycleDetector/FBRetainCycleDetector.framework",
+				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
 				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -517,6 +571,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBRetainCycleDetector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -534,24 +589,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				975386BC2166137D00B5BE32 /* Shader.metal in Sources */,
+				AF2C8BD32193D66F00BA9492 /* AppDebugger.m in Sources */,
 				9772816E20D0AC88004E8E4F /* TransitionVC.swift in Sources */,
 				9783B90320CD341E00E30FD7 /* MVVMVC.swift in Sources */,
 				9783B8E020CD12AD00E30FD7 /* ViewController.swift in Sources */,
 				9744CE6120FF155A00EBD3DE /* BaseVC.swift in Sources */,
 				AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */,
 				AF2BED7E21928EC4007FB28E /* RXSwiftVC.swift in Sources */,
+				AF2C8BD22193D66F00BA9492 /* ShowFlex.m in Sources */,
 				9783B8F320CD1D4B00E30FD7 /* CALayerVC.swift in Sources */,
 				9744CE6320FF172600EBD3DE /* GifBGVC.swift in Sources */,
+				AF2C8BD52193D66F00BA9492 /* ChartConsole.m in Sources */,
 				9783B8FB20CD1E2F00E30FD7 /* Router.swift in Sources */,
 				9783B8F720CD1D6800E30FD7 /* CoreAnimationVC.swift in Sources */,
+				AF2C8BD62193D66F00BA9492 /* ShowNavigator.m in Sources */,
 				9744CE6520FF173F00EBD3DE /* RotaryTableVC.swift in Sources */,
 				AF27F22E218C0A80001FDFC2 /* OpenGLVC.swift in Sources */,
+				AF2C8BD72193D66F00BA9492 /* CheckAnalysis.m in Sources */,
 				AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */,
 				AF27F231218C1649001FDFC2 /* DrawingBoardView.swift in Sources */,
 				975386BE216613DC00B5BE32 /* FragmentShader.metal in Sources */,
+				AF2C8BD42193D66F00BA9492 /* SwitchServer.m in Sources */,
 				AF304520218AFFBC00DA36D2 /* CAShapeLayerVC.swift in Sources */,
 				9783B8DE20CD12AD00E30FD7 /* AppDelegate.swift in Sources */,
 				975386BA21660A4800B5BE32 /* MetalVC.swift in Sources */,
+				AF2C8BD12193D66F00BA9492 /* ShowMemory.m in Sources */,
 				AF14A2CF21883E5A0081487A /* RadarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
