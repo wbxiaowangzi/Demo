@@ -19,6 +19,12 @@ static const CGFloat btnWidth = 80;
 static const CGFloat btnHeight = 24;
 static const NSInteger countPerLine = 3;
 
+#ifdef DEBUG
+BOOL needShow = YES;
+#else
+BOOL needShow = NO;
+#endif
+
 @interface AppDebugger ()
 
 @property(nonatomic, strong) UIWindow *debugBar;
@@ -84,7 +90,7 @@ static const NSInteger countPerLine = 3;
         self.debugBar.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
         self.debugBar.windowLevel = UIWindowLevelAlert;
         self.debugBar.rootViewController = [UIViewController new];
-        self.debugBar.hidden = YES;
+        self.debugBar.hidden = !needShow;//这样设置没有用不知道为什么？？？
         
         UIGestureRecognizer *gesture = [UITapGestureRecognizer new];
         [gesture addTarget:self action:@selector(showPanel)];
@@ -106,7 +112,7 @@ static const NSInteger countPerLine = 3;
         _count = 0;
         _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(onTick:)];
         [_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
-        _displayLink.frameInterval = 1;
+        _displayLink.preferredFramesPerSecond = 1;
         
         _isShowing = NO;
     }
