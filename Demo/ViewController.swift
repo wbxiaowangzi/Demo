@@ -44,28 +44,30 @@ extension ViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let toValue = self.lazyCellNames()[indexPath.row]
         switch toValue {
-        case self.lazyCellNames()[0]:
+        case VCType.CALayer.rawValue:
             self.navigationController?.gotoCALayerVC()
-        case self.lazyCellNames()[1]:
+        case VCType.CoreAnimation.rawValue:
             self.navigationController?.gotoCoreAnimationVC()
-        case self.lazyCellNames()[2]:
+        case VCType.MVVM.rawValue:
             self.navigationController?.gotoMVVMVC()
-        case self.lazyCellNames()[3]:
+        case VCType.Transition.rawValue:
             self.navigationController?.gotoTransitionVC()
-        case self.lazyCellNames()[4]:
+        case VCType.RotatyTable.rawValue:
             self.navigationController?.gotoRotaryTableVC()
-        case self.lazyCellNames()[5]:
+        case VCType.GifBG.rawValue:
             self.navigationController?.gotoGifBGVC()
-        case self.lazyCellNames()[6]:
+        case VCType.Metal.rawValue:
             self.navigationController?.gotoMetalVC()
-        case self.lazyCellNames()[7]:
+        case VCType.SceneKit.rawValue:
             self.navigationController?.gotoSceneKitVC()
-        case self.lazyCellNames()[8]:
+        case VCType.Radar.rawValue:
             self.navigationController?.gotoRadarVC()
-        case self.lazyCellNames()[9]:
+        case VCType.OpenGL.rawValue:
             self.navigationController?.gotoOpenGLVC()
-        case self.lazyCellNames()[10]:
+        case VCType.RXSwift.rawValue:
             self.navigationController?.gotoRXSwiftVC()
+        case VCType.SQLite.rawValue:
+            self.navigationController?.gotoSQLiteVC()
         default:
             print("error target viewController")
         }
@@ -76,19 +78,30 @@ extension ViewController{
     
     func lazyCellNames() -> Array<String>{
         
-        return ["CALayer",
-                "CoreAnimation",
-                "MVVM",
-                "Transition",
-                "RotatyTable",
-                "GifBG",
-                "Metal",
-                "SceneKit",
-                "Radar",
-                "OpenGL",
-                "RXSwift"]
+        return [VCType.SQLite.rawValue,
+                VCType.RXSwift.rawValue,
+                VCType.OpenGL.rawValue,
+                VCType.Radar.rawValue,
+                VCType.SceneKit.rawValue,
+                VCType.Metal.rawValue,
+                VCType.GifBG.rawValue,
+                VCType.CoreAnimation.rawValue]
         
     }
     
 }
 
+enum VCType:String {
+    case CALayer = "CALayer"
+    case CoreAnimation = "CoreAnimation"
+    case MVVM = "MVVM"
+    case Transition = "Transition"
+    case RotatyTable = "RotatyTable"
+    case GifBG = "GifBG"
+    case Metal = "Metal"
+    case SceneKit = "ScemeKit"
+    case Radar = "Radar"
+    case OpenGL = "Opengl"
+    case RXSwift = "RXSWift"
+    case SQLite = "SQLite"
+}

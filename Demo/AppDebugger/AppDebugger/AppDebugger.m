@@ -1,8 +1,5 @@
 //
 //  AppDebugger.m
-//  Pods
-//
-//  Created by zhangjianfei on 2017/5/2.
 //
 
 #import "AppDebugger.h"
@@ -199,8 +196,8 @@ BOOL needShow = NO;
                                                         blue:0xb0/255.f
                                                        alpha:1].CGColor;
             
-            NSMutableAttributedString *title1 = [self attributedTitle:[titles objectAtIndex:0] forState:UIControlStateNormal];
-            NSMutableAttributedString *title2 = [self attributedTitle:[titles objectAtIndex:1] forState:UIControlStateSelected];
+            NSMutableAttributedString *title1 = (NSMutableAttributedString *)[self attributedTitle:[titles objectAtIndex:0] forState:UIControlStateNormal];
+            NSMutableAttributedString *title2 = (NSMutableAttributedString *)[self attributedTitle:[titles objectAtIndex:1] forState:UIControlStateSelected];
             [button setAttributedTitle:title1 forState:UIControlStateNormal];
             [button setAttributedTitle:title2 forState:UIControlStateSelected];
             [button addTarget:self
@@ -255,9 +252,9 @@ BOOL needShow = NO;
     if (![normal isEqualToString:selected]) {
         [sender setSelected:!sender.isSelected];
     }
-    int tag = sender.tag;
+    NSInteger tag = sender.tag;
     NSArray *actions = [self buttonActions];
-    if (tag < actions) {
+    if (tag < [actions count]) {
         ClickBlock block = actions[tag];
         block();
     }

@@ -95,5 +95,10 @@ extension UINavigationController{
         let vc = RXSwiftVC()
         self.pushViewController(vc, animated: true)
     }
+    
+    func gotoSQLiteVC(){
+        let vc = SQLiteVC()
+        self.pushViewController(vc, animated: true)
+    }
 }
 

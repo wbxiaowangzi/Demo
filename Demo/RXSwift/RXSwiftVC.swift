@@ -21,16 +21,20 @@ class RXSwiftVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        userNameTF.endEditing(true)
+        passwordTF.endEditing(true)
+    }
     @IBAction func btnClick(_ sender: UIButton) {
-        empty()
-        just()
-        of()
-        from()
-        creat()
-        //range()
-        //repeatElement()
-        genreate()
+//        empty()
+//        just()
+//        of()
+//        from()
+//        creat()
+//        range()
+//        repeatElement()
+//        genreate()
+        practiceMap()
     }
     
     func never(){
@@ -121,11 +125,35 @@ class RXSwiftVC: UIViewController {
     }
     
     func publishSubject() {
-        let bag = DisposeBag()
-        var subject = PublishSubject<String>()
+//        let bag = DisposeBag()
+//        var subject = PublishSubject<String>()
+
+    }
+    
+    func practiceMap() {
+        let arr = [1,2,3,45,56,6,65]
+        let _ = arr.filter { $0 < 5 }
+        
+        let arr2 = [[1,2,3],[2,3,4,5],[3,4,5,6,77,8,8,9]]
+        let ra = arr2.flatMap{$0}
+        let ra2 = ra.filter{$0%2 == 0}
+        print(ra2)
+        
+        let arr3 = [Person(),Person(),Person()]
+        _ = arr3.map { (p) -> Person in
+            p.addAge()
+            return p
+        }
     }
     
 }
 
+class Person: NSObject{
+    var name:String = "张三"
+    var age:Int = 0
+    func addAge() {
+        age += 5
+    }
+}
 
 

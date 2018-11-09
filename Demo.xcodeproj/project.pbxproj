@@ -48,6 +48,10 @@
 		AF304520218AFFBC00DA36D2 /* CAShapeLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF30451F218AFFBC00DA36D2 /* CAShapeLayerVC.swift */; };
 		AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA3E02181A052001BB669 /* SceneKitVC.swift */; };
 		AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7FA3E42181AACA001BB669 /* SceneKit.framework */; };
+		AFF7A59621956F37003A4CA5 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF7A59521956F37003A4CA5 /* SQLite.framework */; };
+		AFF7A59821956FD6003A4CA5 /* SQLiteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF7A59721956FD6003A4CA5 /* SQLiteVC.swift */; };
+		AFF7A59A21957025003A4CA5 /* SQLDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF7A59921957025003A4CA5 /* SQLDB.swift */; };
+		AFF7A59D2195955D003A4CA5 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF7A59B219574A1003A4CA5 /* libsqlite3.0.tbd */; };
 		C1E87AD0D3F56B2E82A5B15D /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089D44138D619F7D2D329231 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +124,10 @@
 		AF7FA3E02181A052001BB669 /* SceneKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKitVC.swift; sourceTree = "<group>"; };
 		AF7FA3E22181A7AB001BB669 /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF7FA3E42181AACA001BB669 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		AFF7A59521956F37003A4CA5 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFF7A59721956FD6003A4CA5 /* SQLiteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteVC.swift; sourceTree = "<group>"; };
+		AFF7A59921957025003A4CA5 /* SQLDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLDB.swift; sourceTree = "<group>"; };
+		AFF7A59B219574A1003A4CA5 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +135,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFF7A59D2195955D003A4CA5 /* libsqlite3.0.tbd in Frameworks */,
+				AFF7A59621956F37003A4CA5 /* SQLite.framework in Frameworks */,
 				AF27F22A218BFF93001FDFC2 /* GLKit.framework in Frameworks */,
 				AF27F228218BFF8A001FDFC2 /* OpenGLES.framework in Frameworks */,
 				AF30451E218AF70000DA36D2 /* AVFoundation.framework in Frameworks */,
@@ -264,6 +274,7 @@
 		9783B8DC20CD12AD00E30FD7 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				AF3C914821956C8F006E02FF /* SQLite */,
 				AF2C8BBE2193D66F00BA9492 /* AppDebugger */,
 				AF2BED7B21928E9A007FB28E /* RXSwift */,
 				AF27F22B218C0A5E001FDFC2 /* OpenGL */,
@@ -411,6 +422,15 @@
 			path = AppDebugger;
 			sourceTree = "<group>";
 		};
+		AF3C914821956C8F006E02FF /* SQLite */ = {
+			isa = PBXGroup;
+			children = (
+				AFF7A59721956FD6003A4CA5 /* SQLiteVC.swift */,
+				AFF7A59921957025003A4CA5 /* SQLDB.swift */,
+			);
+			path = SQLite;
+			sourceTree = "<group>";
+		};
 		AF7FA3DF21819FF0001BB669 /* SceneKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +442,8 @@
 		AF7FA3E32181AACA001BB669 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFF7A59B219574A1003A4CA5 /* libsqlite3.0.tbd */,
+				AFF7A59521956F37003A4CA5 /* SQLite.framework */,
 				AF27F229218BFF92001FDFC2 /* GLKit.framework */,
 				AF27F227218BFF8A001FDFC2 /* OpenGLES.framework */,
 				AF30451D218AF70000DA36D2 /* AVFoundation.framework */,
@@ -565,6 +587,8 @@
 				"${BUILT_PRODUCTS_DIR}/MLeaksFinder/MLeaksFinder.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLCipher/SQLCipher.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -575,6 +599,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MLeaksFinder.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLCipher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -595,6 +621,7 @@
 				9783B8E020CD12AD00E30FD7 /* ViewController.swift in Sources */,
 				9744CE6120FF155A00EBD3DE /* BaseVC.swift in Sources */,
 				AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */,
+				AFF7A59A21957025003A4CA5 /* SQLDB.swift in Sources */,
 				AF2BED7E21928EC4007FB28E /* RXSwiftVC.swift in Sources */,
 				AF2C8BD22193D66F00BA9492 /* ShowFlex.m in Sources */,
 				9783B8F320CD1D4B00E30FD7 /* CALayerVC.swift in Sources */,
@@ -612,6 +639,7 @@
 				AF2C8BD42193D66F00BA9492 /* SwitchServer.m in Sources */,
 				AF304520218AFFBC00DA36D2 /* CAShapeLayerVC.swift in Sources */,
 				9783B8DE20CD12AD00E30FD7 /* AppDelegate.swift in Sources */,
+				AFF7A59821956FD6003A4CA5 /* SQLiteVC.swift in Sources */,
 				975386BA21660A4800B5BE32 /* MetalVC.swift in Sources */,
 				AF2C8BD12193D66F00BA9492 /* ShowMemory.m in Sources */,
 				AF14A2CF21883E5A0081487A /* RadarView.swift in Sources */,
