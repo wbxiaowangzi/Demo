@@ -102,6 +102,6 @@ enum VCType:String {
     case SceneKit = "ScemeKit"
     case Radar = "Radar"
     case OpenGL = "Opengl"
-    case RXSwift = "RXSWift"
+    case RXSwift = "RXSwift"
     case SQLite = "SQLite"
 }
