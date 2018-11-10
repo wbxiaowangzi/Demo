@@ -1,1 +1,3 @@
-*.python linguist-language=swift
+*.python linguist-language=Swift
+*.js linguist-language=Swift
+*.css linguist-language=Swift
