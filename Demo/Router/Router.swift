@@ -99,6 +99,12 @@ extension UINavigationController{
     func gotoSQLiteVC(){
         let vc = SQLiteVC()
         self.pushViewController(vc, animated: true)
+        
+    }
+    
+    func gotoAvatarXVC(){
+        let vc = BaseVC()
+        self.pushViewController(vc, animated: true)
     }
 }
 

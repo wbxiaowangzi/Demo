@@ -12,22 +12,22 @@ import QuartzCore
 
 
 class MetalVC: UIViewController {
-    var device: MTLDevice! = nil
+    var device: MTLDevice! = nil//GPU
     var metalLayer:CAMetalLayer! = nil
-    var pipelineState: MTLRenderPipelineState! = nil
-    var commandQueue: MTLCommandQueue! = nil
-    var vertexBuffer: MTLBuffer! = nil
-    let vertexData:[Float] = [
-        0.0,1.0,0.5,
-        -1.0,-1.0,0.0,
-        1.0,-1.0,0.0,
-        ]
+    var pipelineState: MTLRenderPipelineState! = nil//渲染管道状态
+    var commandQueue: MTLCommandQueue! = nil//命令队列
+    var vertexBuffer: MTLBuffer! = nil//定点缓存
+    let vertexData:[Float] =
+        [0.0,   1.0,  0.5,
+        -1.0,  -1.0,  0.0,
+         1.0,  -1.0,  0.0,]
     
     var timer: CADisplayLink! = nil
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
         creatMTLLayer()
         sizeData()
         CreatPipelineState()
@@ -46,9 +46,12 @@ class MetalVC: UIViewController {
         metalLayer.pixelFormat = .bgra8Unorm
         //framebufferonly设置为true，来增强表现率，
         metalLayer.framebufferOnly = true
-        metalLayer.frame = view.layer.frame
+        var frame = view.layer.frame
+        frame.size.height -= 120
+        frame.origin.y += 84
+        metalLayer.frame = frame
         
-        var drawableSize = self.view.bounds.size
+        var drawableSize = CGSize(width:  self.view.bounds.size.width, height:  self.view.bounds.size.height-64)
         drawableSize.width *= self.view.contentScaleFactor
         drawableSize.height *= self.view.contentScaleFactor
         metalLayer.drawableSize = drawableSize

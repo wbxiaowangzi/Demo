@@ -68,6 +68,8 @@ extension ViewController: UITableViewDelegate {
             self.navigationController?.gotoRXSwiftVC()
         case VCType.SQLite.rawValue:
             self.navigationController?.gotoSQLiteVC()
+        case VCType.AvatarX.rawValue:
+            self.navigationController?.gotoAvatarXVC()
         default:
             print("error target viewController")
         }
@@ -85,7 +87,8 @@ extension ViewController{
                 VCType.SceneKit.rawValue,
                 VCType.Metal.rawValue,
                 VCType.GifBG.rawValue,
-                VCType.CoreAnimation.rawValue]
+                VCType.CoreAnimation.rawValue,
+                VCType.AvatarX.rawValue]
         
     }
     
@@ -99,9 +102,10 @@ enum VCType:String {
     case RotatyTable = "RotatyTable"
     case GifBG = "GifBG"
     case Metal = "Metal"
-    case SceneKit = "ScemeKit"
+    case SceneKit = "SceneKit"
     case Radar = "Radar"
     case OpenGL = "Opengl"
     case RXSwift = "RXSwift"
     case SQLite = "SQLite"
+    case AvatarX = "AvatarX"
 }

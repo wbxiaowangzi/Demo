@@ -4,12 +4,14 @@ platform :ios, '10.0'
 target 'Demo' do
   use_frameworks!
 
-  pod 'RxSwift'
-  pod 'RxCocoa'
+  pod 'RxSwift', '~> 4.0'
+  pod 'RxCocoa', '~>4.1.0'
   pod 'MLeaksFinder'
   pod 'FLEX'
   pod 'SQLite.swift', '~> 0.11.5'
   pod 'SQLite.swift/SQLCipher', '~> 0.11.4'
-
+  #AvatarX
+  pod 'SSZipArchive'
+  pod 'Yaml', '~> 3.4.3'
 end
 

@@ -27,6 +27,7 @@
 		9783B8FB20CD1E2F00E30FD7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783B8FA20CD1E2F00E30FD7 /* Router.swift */; };
 		9783B90320CD341E00E30FD7 /* MVVMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783B90120CD341E00E30FD7 /* MVVMVC.swift */; };
 		9783B90420CD341E00E30FD7 /* MVVMVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9783B90220CD341E00E30FD7 /* MVVMVC.xib */; };
+		AF109738219BCCCB003F148D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AF109737219BCCCB003F148D /* libc++.tbd */; };
 		AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14A2CC21883E3B0081487A /* RadarVC.swift */; };
 		AF14A2CF21883E5A0081487A /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14A2CE21883E5A0081487A /* RadarView.swift */; };
 		AF27F228218BFF8A001FDFC2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF27F227218BFF8A001FDFC2 /* OpenGLES.framework */; };
@@ -93,6 +94,7 @@
 		9783B90120CD341E00E30FD7 /* MVVMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMVC.swift; sourceTree = "<group>"; };
 		9783B90220CD341E00E30FD7 /* MVVMVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVVMVC.xib; sourceTree = "<group>"; };
 		A6DA9D8A6B6E185481083FF5 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		AF109737219BCCCB003F148D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		AF14A2CC21883E3B0081487A /* RadarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarVC.swift; sourceTree = "<group>"; };
 		AF14A2CE21883E5A0081487A /* RadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarView.swift; sourceTree = "<group>"; };
 		AF27F220218BFE99001FDFC2 /* OpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,6 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF109738219BCCCB003F148D /* libc++.tbd in Frameworks */,
 				AFF7A59D2195955D003A4CA5 /* libsqlite3.0.tbd in Frameworks */,
 				AFF7A59621956F37003A4CA5 /* SQLite.framework in Frameworks */,
 				AF27F22A218BFF93001FDFC2 /* GLKit.framework in Frameworks */,
@@ -442,6 +445,7 @@
 		AF7FA3E32181AACA001BB669 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF109737219BCCCB003F148D /* libc++.tbd */,
 				AFF7A59B219574A1003A4CA5 /* libsqlite3.0.tbd */,
 				AFF7A59521956F37003A4CA5 /* SQLite.framework */,
 				AF27F229218BFF92001FDFC2 /* GLKit.framework */,
@@ -589,6 +593,8 @@
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLCipher/SQLCipher.framework",
 				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
+				"${BUILT_PRODUCTS_DIR}/SSZipArchive/SSZipArchive.framework",
+				"${BUILT_PRODUCTS_DIR}/Yaml/Yaml.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -601,6 +607,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLCipher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSZipArchive.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Yaml.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -796,11 +804,43 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LQQGDZBGK3;
+				ENABLE_TESTABILITY = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Demo/AvatarX",
+				);
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Demo/AvatarX/Camera360",
+				);
+				OTHER_LDFLAGS = (
+					"-l\"c++\"",
+					"$(inherited)",
+					"-framework",
+					"\"FBRetainCycleDetector\"",
+					"-framework",
+					"\"FLEX\"",
+					"-framework",
+					"\"MLeaksFinder\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"SQLCipher\"",
+					"-framework",
+					"\"SQLite\"",
+					"-framework",
+					"\"SSZipArchive\"",
+					"-framework",
+					"\"Yaml\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = wbxiaowangzi.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -808,6 +848,7 @@
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -818,17 +859,50 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LQQGDZBGK3;
+				ENABLE_TESTABILITY = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Demo/AvatarX",
+				);
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Demo/AvatarX/Camera360",
+				);
+				OTHER_LDFLAGS = (
+					"-l\"c++\"",
+					"$(inherited)",
+					"-framework",
+					"\"FBRetainCycleDetector\"",
+					"-framework",
+					"\"FLEX\"",
+					"-framework",
+					"\"MLeaksFinder\"",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"SQLCipher\"",
+					"-framework",
+					"\"SQLite\"",
+					"-framework",
+					"\"SSZipArchive\"",
+					"-framework",
+					"\"Yaml\"",
+					"-ObjC",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = wbxiaowangzi.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Demo/Demo-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};
