@@ -45,8 +45,11 @@ import UIKit
     }
 }
 
+fileprivate let ScreenWidth = UIScreen.main.bounds.size.width
 fileprivate let ratio = ScreenWidth/1024
-
+func adaptW(value:CGFloat)->CGFloat{
+    return value*ratio
+}
 extension UIView{
     func adjustSubLabelFont(){
         if self.subviews.count > 0 {
@@ -70,7 +73,7 @@ extension NSLayoutConstraint{
         set {
             objc_setAssociatedObject(self, AdapterScreenKey, adapterScreen, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY_NONATOMIC)
             if adapterScreen {
-                self.constant = adaptW(self.constant)
+                self.constant = self.constant*ratio
             }
         }
     }
@@ -109,7 +112,7 @@ extension UIView{
         
         if adaptConstraint{
             for c in self.constraints{
-                c.constant = adaptW(c.constant)
+                c.constant = adaptW(value: c.constant)
             }
         }
         if adaptFontSize{
@@ -117,12 +120,12 @@ extension UIView{
                 if let lab = sub as? UILabel{
                     let s = lab.font.pointSize
                     let n = lab.font.fontName
-                    lab.font = UIFont(name: n, size: adaptW(s))
+                    lab.font = UIFont(name: n, size: adaptW(value: s))
                 }
             }
         }
         if adaptCornerRadius{
-           self.layer.cornerRadius = adaptW(self.layer.cornerRadius)
+            self.layer.cornerRadius = adaptW(value: self.layer.cornerRadius)
         }
         
         for s in subviews{

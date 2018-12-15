@@ -8,8 +8,4 @@
 
 
 #import <SceneKit/SceneKit.h>
-#import "ObjLoaderBridge.h"
-#import "ZQLaplaceBridge.h"
-#import "SkinBridge.h"
-#import "PGSkinPrettifyEngine.h"
-#import "PGSkinPrettifyType.h"
+
