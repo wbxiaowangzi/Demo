@@ -70,6 +70,8 @@ extension ViewController: UITableViewDelegate {
             self.navigationController?.gotoSQLiteVC()
         case VCType.AvatarX.rawValue:
             self.navigationController?.gotoAvatarXVC()
+        case VCType.SizeClass.rawValue:
+            self.navigationController?.gotoSizeClassVC()
         default:
             print("error target viewController")
         }
@@ -88,7 +90,8 @@ extension ViewController{
                 VCType.Metal.rawValue,
                 VCType.GifBG.rawValue,
                 VCType.CoreAnimation.rawValue,
-                VCType.AvatarX.rawValue]
+                VCType.AvatarX.rawValue,
+                VCType.SizeClass.rawValue]
         
     }
     
@@ -108,4 +111,5 @@ enum VCType:String {
     case RXSwift = "RXSwift"
     case SQLite = "SQLite"
     case AvatarX = "AvatarX"
+    case SizeClass = "SizeClass"
 }

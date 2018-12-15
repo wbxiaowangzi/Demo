@@ -106,5 +106,10 @@ extension UINavigationController{
         let vc = BaseVC()
         self.pushViewController(vc, animated: true)
     }
+    
+    func gotoSizeClassVC(){
+        let vc = SizeClassVC()
+        self.pushViewController(vc, animated: true)
+    }
 }
 
