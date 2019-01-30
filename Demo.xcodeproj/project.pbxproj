@@ -53,6 +53,7 @@
 		AF5D3A56219D761800E64898 /* FirstBlood.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF5D3A54219D761800E64898 /* FirstBlood.cpp */; };
 		AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA3E02181A052001BB669 /* SceneKitVC.swift */; };
 		AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7FA3E42181AACA001BB669 /* SceneKit.framework */; };
+		AFB4707B2201A89B002B27C7 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4707A2201A89B002B27C7 /* Annotation.swift */; };
 		AFF7A59621956F37003A4CA5 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF7A59521956F37003A4CA5 /* SQLite.framework */; };
 		AFF7A59821956FD6003A4CA5 /* SQLiteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF7A59721956FD6003A4CA5 /* SQLiteVC.swift */; };
 		AFF7A59A21957025003A4CA5 /* SQLDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF7A59921957025003A4CA5 /* SQLDB.swift */; };
@@ -135,6 +136,7 @@
 		AF7FA3E02181A052001BB669 /* SceneKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKitVC.swift; sourceTree = "<group>"; };
 		AF7FA3E22181A7AB001BB669 /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF7FA3E42181AACA001BB669 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		AFB4707A2201A89B002B27C7 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		AFF7A59521956F37003A4CA5 /* SQLite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SQLite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFF7A59721956FD6003A4CA5 /* SQLiteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteVC.swift; sourceTree = "<group>"; };
 		AFF7A59921957025003A4CA5 /* SQLDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLDB.swift; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 		9783B8DC20CD12AD00E30FD7 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				AFB470792201A87D002B27C7 /* Annotation */,
 				AF36862121C3BF8100EC0923 /* SizeClass */,
 				AF5D3A68219E76F700E64898 /* Extension */,
 				AF5D3A53219D75ED00E64898 /* C++ */,
@@ -495,6 +498,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AFB470792201A87D002B27C7 /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				AFB4707A2201A89B002B27C7 /* Annotation.swift */,
+			);
+			path = Annotation;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -680,6 +691,7 @@
 				AF2C8BD62193D66F00BA9492 /* ShowNavigator.m in Sources */,
 				AF1B05A421BA2F6200A44FE4 /* UIView+Extension.swift in Sources */,
 				9744CE6520FF173F00EBD3DE /* RotaryTableVC.swift in Sources */,
+				AFB4707B2201A89B002B27C7 /* Annotation.swift in Sources */,
 				AF27F22E218C0A80001FDFC2 /* OpenGLVC.swift in Sources */,
 				AF2C8BD72193D66F00BA9492 /* CheckAnalysis.m in Sources */,
 				AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */,
