@@ -31,6 +31,7 @@
 		AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14A2CC21883E3B0081487A /* RadarVC.swift */; };
 		AF14A2CF21883E5A0081487A /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14A2CE21883E5A0081487A /* RadarView.swift */; };
 		AF1B05A421BA2F6200A44FE4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B05A321BA2F6100A44FE4 /* UIView+Extension.swift */; };
+		AF1B77C7221D6633008D9AF6 /* OverTimeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B77C6221D6633008D9AF6 /* OverTimeHandler.swift */; };
 		AF27F228218BFF8A001FDFC2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF27F227218BFF8A001FDFC2 /* OpenGLES.framework */; };
 		AF27F22A218BFF93001FDFC2 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF27F229218BFF92001FDFC2 /* GLKit.framework */; };
 		AF27F22E218C0A80001FDFC2 /* OpenGLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27F22C218C0A80001FDFC2 /* OpenGLVC.swift */; };
@@ -103,6 +104,7 @@
 		AF14A2CC21883E3B0081487A /* RadarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarVC.swift; sourceTree = "<group>"; };
 		AF14A2CE21883E5A0081487A /* RadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarView.swift; sourceTree = "<group>"; };
 		AF1B05A321BA2F6100A44FE4 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		AF1B77C6221D6633008D9AF6 /* OverTimeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverTimeHandler.swift; sourceTree = "<group>"; };
 		AF27F220218BFE99001FDFC2 /* OpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF27F227218BFF8A001FDFC2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		AF27F229218BFF92001FDFC2 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -288,6 +290,7 @@
 		9783B8DC20CD12AD00E30FD7 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				AF1B77C5221D660B008D9AF6 /* OverTimeHandler */,
 				AFB470792201A87D002B27C7 /* Annotation */,
 				AF36862121C3BF8100EC0923 /* SizeClass */,
 				AF5D3A68219E76F700E64898 /* Extension */,
@@ -389,6 +392,14 @@
 				AF14A2CE21883E5A0081487A /* RadarView.swift */,
 			);
 			path = RadarView;
+			sourceTree = "<group>";
+		};
+		AF1B77C5221D660B008D9AF6 /* OverTimeHandler */ = {
+			isa = PBXGroup;
+			children = (
+				AF1B77C6221D6633008D9AF6 /* OverTimeHandler.swift */,
+			);
+			path = OverTimeHandler;
 			sourceTree = "<group>";
 		};
 		AF27F22B218C0A5E001FDFC2 /* OpenGL */ = {
@@ -675,6 +686,7 @@
 				975386BC2166137D00B5BE32 /* Shader.metal in Sources */,
 				AF2C8BD32193D66F00BA9492 /* AppDebugger.m in Sources */,
 				9772816E20D0AC88004E8E4F /* TransitionVC.swift in Sources */,
+				AF1B77C7221D6633008D9AF6 /* OverTimeHandler.swift in Sources */,
 				9783B90320CD341E00E30FD7 /* MVVMVC.swift in Sources */,
 				9783B8E020CD12AD00E30FD7 /* ViewController.swift in Sources */,
 				9744CE6120FF155A00EBD3DE /* BaseVC.swift in Sources */,

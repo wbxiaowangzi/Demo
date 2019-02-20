@@ -16,7 +16,13 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
-
+        
+        let a = OverTimeHandler.init(with: 5) {
+            print("5秒过去了，超时了")
+        }.start()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            a.necessoryToExecuteHandler = false
+        }
     }
 
     override func didReceiveMemoryWarning() {
