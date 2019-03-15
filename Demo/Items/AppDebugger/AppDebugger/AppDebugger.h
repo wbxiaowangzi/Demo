@@ -7,7 +7,6 @@
 
 @import Foundation;
 #import <UIKit/UIKit.h>
-#import "SQLCipher-umbrella.h"
 
 @interface AppDebugger : NSObject
 

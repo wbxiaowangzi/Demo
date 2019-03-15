@@ -16,19 +16,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
-        
-        let a = OverTimeHandler.init(with: 5) {
-            print("5秒过去了，超时了")
-        }.start()
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-            a.necessoryToExecuteHandler = false
-        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    fileprivate func testOverTime(){
+        let a = OverTimeHandler.init(with: 5) {
+            print("5秒过去了，超时了")
+            }.start()
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+            a.necessoryToExecuteHandler = false
+        }
+    }
 }
 
 extension ViewController: UITableViewDataSource{
@@ -78,6 +79,8 @@ extension ViewController: UITableViewDelegate {
             self.navigationController?.gotoAvatarXVC()
         case VCType.SizeClass.rawValue:
             self.navigationController?.gotoSizeClassVC()
+        case VCType.Luck.rawValue:
+            self.navigationController?.gotoLuckVC()
         default:
             print("error target viewController")
         }
@@ -97,7 +100,8 @@ extension ViewController{
                 VCType.GifBG.rawValue,
                 VCType.CoreAnimation.rawValue,
                 VCType.AvatarX.rawValue,
-                VCType.SizeClass.rawValue]
+                VCType.SizeClass.rawValue,
+                VCType.Luck.rawValue]
         
     }
     
@@ -118,4 +122,6 @@ enum VCType:String {
     case SQLite = "SQLite"
     case AvatarX = "AvatarX"
     case SizeClass = "SizeClass"
+    case Luck = "Luck"
+
 }

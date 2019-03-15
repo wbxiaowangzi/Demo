@@ -111,5 +111,10 @@ extension UINavigationController{
         let vc = SizeClassVC()
         self.pushViewController(vc, animated: true)
     }
+    
+    func gotoLuckVC(){
+        let vc = LuckVC()
+        self.pushViewController(vc, animated: true)
+    }
 }
 

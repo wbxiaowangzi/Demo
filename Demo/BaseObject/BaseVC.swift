@@ -41,3 +41,21 @@ extension UIColor{
         self.init(red: CGFloat(red)/255.0, green: CGFloat(green)/255.0, blue: CGFloat(blue)/255.0, alpha: 1)
     }
 }
+
+//超出父视图还能相应事件
+class ANCView:UIView{
+    
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        var view = super.hitTest(point, with: event)
+        if view == nil {
+            for v in self.subviews{
+                let p = v.convert(point, from: self)
+                if v.bounds.contains(p){
+                    view = v
+                }
+            }
+        }
+        return view
+    }
+    
+}
