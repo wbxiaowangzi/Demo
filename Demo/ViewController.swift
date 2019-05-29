@@ -16,12 +16,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
+        testThrottle()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
+    func testThrottle(){
+        let throttle = Throttler.init(seconds: 5)
+        throttle.throttle {
+            var i = 0
+            while i < 100{
+                sleep(1)
+                NSLog("%d", i)
+                i += 1
+            }
+        }
+    }
+    
     fileprivate func testOverTime(){
         let a = OverTimeHandler.init(with: 5) {
             print("5秒过去了，超时了")

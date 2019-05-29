@@ -145,7 +145,7 @@ class RXSwiftVC: UIViewController {
             return p
         }
     }
-    
+
 }
 
 class Person: NSObject{
