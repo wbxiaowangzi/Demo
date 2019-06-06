@@ -35,6 +35,7 @@
 		AF14A2CF21883E5A0081487A /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14A2CE21883E5A0081487A /* RadarView.swift */; };
 		AF1B05A421BA2F6200A44FE4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B05A321BA2F6100A44FE4 /* UIView+Extension.swift */; };
 		AF1B77C7221D6633008D9AF6 /* OverTimeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B77C6221D6633008D9AF6 /* OverTimeHandler.swift */; };
+		AF243CE322A907BD00809768 /* RedPointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF243CE222A907BD00809768 /* RedPointProtocol.swift */; };
 		AF27F228218BFF8A001FDFC2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF27F227218BFF8A001FDFC2 /* OpenGLES.framework */; };
 		AF27F22A218BFF93001FDFC2 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF27F229218BFF92001FDFC2 /* GLKit.framework */; };
 		AF27F22E218C0A80001FDFC2 /* OpenGLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27F22C218C0A80001FDFC2 /* OpenGLVC.swift */; };
@@ -123,6 +124,7 @@
 		AF14A2CE21883E5A0081487A /* RadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarView.swift; sourceTree = "<group>"; };
 		AF1B05A321BA2F6100A44FE4 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		AF1B77C6221D6633008D9AF6 /* OverTimeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverTimeHandler.swift; sourceTree = "<group>"; };
+		AF243CE222A907BD00809768 /* RedPointProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedPointProtocol.swift; sourceTree = "<group>"; };
 		AF27F220218BFE99001FDFC2 /* OpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF27F227218BFF8A001FDFC2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		AF27F229218BFF92001FDFC2 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -448,6 +450,7 @@
 				AF1B77C5221D660B008D9AF6 /* OverTimeHandler */,
 				9772816820D0A321004E8E4F /* PrefectTableView */,
 				AF14A2CB21883DBD0081487A /* RadarView */,
+				AF243CE122A907A000809768 /* RedPoint */,
 				9744CE5D20FF126B00EBD3DE /* RotaryTable */,
 				9783B8F920CD1E0800E30FD7 /* Router */,
 				9772816A20D0AB06004E8E4F /* Runtime */,
@@ -484,6 +487,14 @@
 				AF1B77C6221D6633008D9AF6 /* OverTimeHandler.swift */,
 			);
 			path = OverTimeHandler;
+			sourceTree = "<group>";
+		};
+		AF243CE122A907A000809768 /* RedPoint */ = {
+			isa = PBXGroup;
+			children = (
+				AF243CE222A907BD00809768 /* RedPointProtocol.swift */,
+			);
+			path = RedPoint;
 			sourceTree = "<group>";
 		};
 		AF27F22B218C0A5E001FDFC2 /* OpenGL */ = {
@@ -888,6 +899,7 @@
 				AF36862421C3BFE100EC0923 /* SizeClassVC.swift in Sources */,
 				AF27F231218C1649001FDFC2 /* DrawingBoardView.swift in Sources */,
 				975386BE216613DC00B5BE32 /* FragmentShader.metal in Sources */,
+				AF243CE322A907BD00809768 /* RedPointProtocol.swift in Sources */,
 				AF2C8BD42193D66F00BA9492 /* SwitchServer.m in Sources */,
 				AF304520218AFFBC00DA36D2 /* CAShapeLayerVC.swift in Sources */,
 				9783B8DE20CD12AD00E30FD7 /* AppDelegate.swift in Sources */,
