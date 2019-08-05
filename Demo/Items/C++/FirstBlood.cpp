@@ -9,8 +9,13 @@
 #include "FirstBlood.hpp"
 #include <iostream>
 
-//int main()
-//{
-//    std::cout << "hello,world" << std::endl;
-//    return 0;
-//}
+using namespace std;
+
+void helloworld(void)
+{
+    cout << "hello,world" << endl;
+}
+
+namespace mynamespace1 {
+    int a;
+}

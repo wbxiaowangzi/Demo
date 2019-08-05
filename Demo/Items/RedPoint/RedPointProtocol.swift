@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import UIKit
 
-open protocol RedPointProtocol {
+public protocol RedPointProtocol {
     /*
      *discuss:
      **一下思路是不对的，页面的展示是从root开始的，我们不可能先看到内部再看到外部，所以红点展示需要从外向内”分发“。这个时候可以根据 viewid检索。比如我们要给  SearchVC.searchBtn添加一个红点，而SearchVC是从HomaPageVC跳转过去的，那我们 在 HomePageVC的时候就需要看到 红点，假如就是 HomePageVC.searchView,SearchVC.searchBtn都要有红点，我们怎么展示呢？如果用一个 path展示呢？比如 “HomePageVC.searchView->SearchVC.searchBtn”，(这里有些问题，1，我该怎么拆开这个 str,如果vc之间用特殊字符连接比如："->"呢。2，这个path怎么组织呢？是服务器请求，还是本地创建，还是二者都有)，
@@ -27,13 +28,13 @@ open protocol RedPointProtocol {
      4，单例检查自己所管理的路径，父路径没有子路径时清理掉自己，并向自己的父视图检查
      */
     /// view id for path
-    var viewID:String
+    var viewID:String{ get }
     
     /// 作为父视图时自己所拥有子redpointview的数量：用于清理红点判断，该值变化时（变为0或不为0）可用于自己显示、隐藏红点，通知父视图自己的变化
-    var redPointViewCount:Int = 0
+    var redPointViewCount:Int { get }
     
     /// super view behave RedPointProtocol
-    var superView:RedPointProtocol?
+    var superView:RedPointProtocol? { get }
     
     /// 显示红点
     func showRedPoint()
@@ -44,3 +45,17 @@ open protocol RedPointProtocol {
 }
 
 
+struct RedPointPath {
+    var viewID:String
+    //var superPath:RedPointPath?
+    var subPaths:[RedPointPath]?
+    /*
+     自己需要展示或者 subpaths 不为nil，则需要展示
+     */
+}
+
+extension UIView{
+    func addASimpleRedPoint(){
+        
+    }
+}

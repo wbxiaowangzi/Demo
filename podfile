@@ -16,6 +16,9 @@ target 'Demo' do
   pod 'Moya/RxSwift', '~> 11.0'
   pod 'ObjectMapper'
   pod 'ReachabilitySwift'
+  pod 'NVMAspects'
+  #BDD
+  pod 'Kiwi'
   
 end
 

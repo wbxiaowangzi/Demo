@@ -7,6 +7,12 @@
 //
 import UIKit
 
+let ScreenWidth = UIScreen.main.bounds.size.width
+let ScreenHeight = UIScreen.main.bounds.size.height
+
+let lerpW:CGFloat = ScreenWidth/1024
+let lerpH:CGFloat = ScreenHeight/1366
+
 @IBDesignable extension UIView {
     
     @IBInspectable open var cornerRadius: CGFloat {
@@ -45,11 +51,8 @@ import UIKit
     }
 }
 
-fileprivate let ScreenWidth = UIScreen.main.bounds.size.width
 fileprivate let ratio = ScreenWidth/1024
-func adaptW(value:CGFloat)->CGFloat{
-    return value*ratio
-}
+
 extension UIView{
     func adjustSubLabelFont(){
         if self.subviews.count > 0 {
@@ -73,7 +76,7 @@ extension NSLayoutConstraint{
         set {
             objc_setAssociatedObject(self, AdapterScreenKey, adapterScreen, objc_AssociationPolicy.OBJC_ASSOCIATION_COPY_NONATOMIC)
             if adapterScreen {
-                self.constant = self.constant*ratio
+                self.constant = adaptW(self.constant)
             }
         }
     }
@@ -112,20 +115,24 @@ extension UIView{
         
         if adaptConstraint{
             for c in self.constraints{
-                c.constant = adaptW(value: c.constant)
+                c.constant = adaptW(c.constant)
             }
         }
+        
         if adaptFontSize{
-            for sub in self.subviews{
-                if let lab = sub as? UILabel{
-                    let s = lab.font.pointSize
-                    let n = lab.font.fontName
-                    lab.font = UIFont(name: n, size: adaptW(value: s))
+            if let lab = self as? UILabel{
+                let s = lab.font.pointSize
+                let n = lab.font.fontName
+                lab.font = UIFont(name: n, size: adaptW(s))
+            }else if let tf = self as? UITextField{
+                if let s = tf.font?.pointSize,let n = tf.font?.fontName{
+                    tf.font = UIFont(name: n, size: adaptW(s))
                 }
             }
         }
+        
         if adaptCornerRadius{
-            self.layer.cornerRadius = adaptW(value: self.layer.cornerRadius)
+           self.layer.cornerRadius = adaptW(self.layer.cornerRadius)
         }
         
         for s in subviews{
@@ -144,4 +151,67 @@ extension UIView{
         }
         return false
     }
+    
+    static func getTextH(with text:String, font:UIFont,width:CGFloat)->CGFloat{
+        let rect = NSString.init(string: text).boundingRect(with: CGSize.init(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+        return rect.height
+    }
+}
+
+//自适应高
+func adaptH(_ value:CGFloat) -> CGFloat {
+    return value * lerpH
+}
+
+func adaptH(_ value:Int) -> CGFloat {
+    return CGFloat(value) * lerpH
+}
+func adaptH(_ value:Double) -> Double {
+    return value * Double(lerpH)
+}
+
+//自适应宽
+func adaptW(_ value:CGFloat) -> CGFloat {
+    return value * lerpW
+}
+
+func adaptW(_ value:Int) -> CGFloat {
+    return CGFloat(value) * lerpW
+}
+
+func adaptW(_ value:Double) -> Double {
+    return value * Double(lerpW)
+}
+
+//获取通用时间字符串
+func getCommonDateString(date:Date) -> String {
+    let dateFormatter = DateFormatter.init()
+    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+    return dateFormatter.string(from: date)
+}
+
+func getCommonDateString(time:Int) -> String {
+    let date = Date.init(timeIntervalSince1970: TimeInterval(time))
+    let dateFormatter = DateFormatter.init()
+    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+    return dateFormatter.string(from: date)
+}
+
+
+//UIImage颜色
+extension UIImage{
+    
+    func tintColor(color:UIColor,blendMode:CGBlendMode) -> UIImage {
+        let drawRect = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        UIGraphicsBeginImageContextWithOptions(size, false, scale)
+        //let context = UIGraphicsGetCurrentContext()
+        //CGContextClipToMask(context, drawRect, CGImage)
+        color.setFill()
+        UIRectFill(drawRect)
+        draw(in: drawRect, blendMode: blendMode, alpha: 1.0)
+        let tintedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return tintedImage!
+    }
+    
 }
