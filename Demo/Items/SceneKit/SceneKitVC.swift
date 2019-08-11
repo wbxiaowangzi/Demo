@@ -161,7 +161,11 @@ class SceneKitVC: UIViewController {
         body.allowsResting = true
         body.categoryBitMask = CollisionDetectionMask.platform.rawValue
         body.collisionBitMask = CollisionDetectionMask.jumper.rawValue|CollisionDetectionMask.floor.rawValue|CollisionDetectionMask.platform.rawValue|CollisionDetectionMask.oldPlatform.rawValue
-        body.contactTestBitMask = CollisionDetectionMask.jumper.rawValue
+        if #available(iOS 9.0, *) {
+            body.contactTestBitMask = CollisionDetectionMask.jumper.rawValue
+        } else {
+            // Fallback on earlier versions
+        }
         
         node.physicsBody = body
         
@@ -212,7 +216,11 @@ class SceneKitVC: UIViewController {
         body.damping = 0.3
         body.categoryBitMask = CollisionDetectionMask.floor.rawValue
         body.collisionBitMask = CollisionDetectionMask.jumper.rawValue|CollisionDetectionMask.platform.rawValue|CollisionDetectionMask.oldPlatform.rawValue
-        body.contactTestBitMask = CollisionDetectionMask.jumper.rawValue
+        if #available(iOS 9.0, *) {
+            body.contactTestBitMask = CollisionDetectionMask.jumper.rawValue
+        } else {
+            // Fallback on earlier versions
+        }
         node.physicsBody = body
         
         return node
@@ -321,7 +329,11 @@ extension SceneKitVC:SCNPhysicsContactDelegate{
         
         if let _ = jumper,let a = another{
             if a.categoryBitMask == CollisionDetectionMask.floor.rawValue{
-                a.contactTestBitMask = CollisionDetectionMask.none.rawValue
+                if #available(iOS 9.0, *) {
+                    a.contactTestBitMask = CollisionDetectionMask.none.rawValue
+                } else {
+                    // Fallback on earlier versions
+                }
                 performSelector(onMainThread: #selector(gameDidOver), with: nil, waitUntilDone: false)
             }else if a.categoryBitMask == CollisionDetectionMask.platform.rawValue{
                 a.categoryBitMask = CollisionDetectionMask.oldPlatform.rawValue

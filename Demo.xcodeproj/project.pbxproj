@@ -34,7 +34,6 @@
 		AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14A2CC21883E3B0081487A /* RadarVC.swift */; };
 		AF14A2CF21883E5A0081487A /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14A2CE21883E5A0081487A /* RadarView.swift */; };
 		AF188CD522D6DF4300DFE15D /* BatteryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AF188CD422D6DF4300DFE15D /* BatteryInfo.m */; };
-		AF188D2022D6FA8900DFE15D /* assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF188D1F22D6FA8900DFE15D /* assets.xcassets */; };
 		AF1B05A421BA2F6200A44FE4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B05A321BA2F6100A44FE4 /* UIView+Extension.swift */; };
 		AF1B77C7221D6633008D9AF6 /* OverTimeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B77C6221D6633008D9AF6 /* OverTimeHandler.swift */; };
 		AF234DDE22F821CA00A1A490 /* UILabel+swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = AF234DDC22F821CA00A1A490 /* UILabel+swizzle.m */; };
@@ -142,7 +141,6 @@
 		AF14A2CE21883E5A0081487A /* RadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarView.swift; sourceTree = "<group>"; };
 		AF188CD322D6DF4300DFE15D /* BatteryInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BatteryInfo.h; sourceTree = "<group>"; };
 		AF188CD422D6DF4300DFE15D /* BatteryInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BatteryInfo.m; sourceTree = "<group>"; };
-		AF188D1F22D6FA8900DFE15D /* assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = assets.xcassets; path = ../../../../Mirage3D_SAL/Mirage3D/Mirage3D/assets.xcassets; sourceTree = "<group>"; };
 		AF1B05A321BA2F6100A44FE4 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		AF1B77C6221D6633008D9AF6 /* OverTimeHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverTimeHandler.swift; sourceTree = "<group>"; };
 		AF234DDC22F821CA00A1A490 /* UILabel+swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+swizzle.m"; sourceTree = "<group>"; };
@@ -353,7 +351,6 @@
 				AF13A223223790CA008B91DD /* Items */,
 				9783B8DD20CD12AD00E30FD7 /* AppDelegate.swift */,
 				9783B8E420CD12AF00E30FD7 /* Assets.xcassets */,
-				AF188D1F22D6FA8900DFE15D /* assets.xcassets */,
 				9744CE5F20FF153000EBD3DE /* BaseObject */,
 				AF7FA3E22181A7AB001BB669 /* Demo-Bridging-Header.h */,
 				9783B8E920CD12AF00E30FD7 /* Info.plist */,
@@ -865,7 +862,6 @@
 				AF27F22F218C0A80001FDFC2 /* OpenGLVC.xib in Resources */,
 				AF30451C218AF66600DA36D2 /* lol.mov in Resources */,
 				AF2BED7F21928EC4007FB28E /* RXSwiftVC.xib in Resources */,
-				AF188D2022D6FA8900DFE15D /* assets.xcassets in Resources */,
 				AF36862521C3BFE100EC0923 /* SizeClassVC.xib in Resources */,
 				9783B8E320CD12AD00E30FD7 /* Main.storyboard in Resources */,
 				AF7C882D229E26F600988C98 /* Assets.xcassets in Resources */,
@@ -1052,6 +1048,7 @@
 		9783B8EA20CD12AF00E30FD7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1084,6 +1081,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1106,12 +1104,14 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		9783B8EB20CD12AF00E30FD7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
@@ -1144,6 +1144,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -1159,6 +1160,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1170,6 +1172,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LQQGDZBGK3;
+				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Demo/Info.plist;
@@ -1217,6 +1220,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LQQGDZBGK3;
+				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Demo/Info.plist;
