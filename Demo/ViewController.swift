@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
-        testThrottle()
+        //testThrottle()
     }
 
     override func didReceiveMemoryWarning() {

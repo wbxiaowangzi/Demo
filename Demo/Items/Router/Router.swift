@@ -71,7 +71,7 @@ extension UINavigationController{
     }
     
     func gotoMetalVC(){
-        let vc = MetalVC()
+        let vc = MetalViewController()
         self.pushViewController(vc, animated: true)
     }
     

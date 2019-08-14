@@ -11,8 +11,7 @@
 		9744CE6320FF172600EBD3DE /* GifBGVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744CE6220FF172600EBD3DE /* GifBGVC.swift */; };
 		9744CE6520FF173F00EBD3DE /* RotaryTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744CE6420FF173F00EBD3DE /* RotaryTableVC.swift */; };
 		975386BA21660A4800B5BE32 /* MetalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975386B921660A4800B5BE32 /* MetalVC.swift */; };
-		975386BC2166137D00B5BE32 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 975386BB2166137D00B5BE32 /* Shader.metal */; };
-		975386BE216613DC00B5BE32 /* FragmentShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 975386BD216613DC00B5BE32 /* FragmentShader.metal */; };
+		975386BC2166137D00B5BE32 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 975386BB2166137D00B5BE32 /* Shaders.metal */; };
 		9772816E20D0AC88004E8E4F /* TransitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9772816C20D0AC88004E8E4F /* TransitionVC.swift */; };
 		9772816F20D0AC88004E8E4F /* TransitionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9772816D20D0AC88004E8E4F /* TransitionVC.xib */; };
 		9783B8DE20CD12AD00E30FD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783B8DD20CD12AD00E30FD7 /* AppDelegate.swift */; };
@@ -70,6 +69,9 @@
 		AF3832E422E00F4700E1580F /* MiNavigationConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3832E022E00F4700E1580F /* MiNavigationConroller.swift */; };
 		AF42F43B22719863004979AB /* PreviousLuckDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42F43A22719863004979AB /* PreviousLuckDatas.swift */; };
 		AF42F43D22719E96004979AB /* LuckNumbersDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42F43C22719E96004979AB /* LuckNumbersDb.swift */; };
+		AF4EEB8F2302C39E001F298F /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EEB8E2302C39E001F298F /* MetalView.swift */; };
+		AF4EEB922302C4D2001F298F /* MetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EEB902302C4D2001F298F /* MetalViewController.swift */; };
+		AF4EEB932302C4D2001F298F /* MetalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4EEB912302C4D2001F298F /* MetalViewController.xib */; };
 		AF5D3A56219D761800E64898 /* FirstBlood.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF5D3A54219D761800E64898 /* FirstBlood.cpp */; };
 		AF60BAB42268240B00AE592D /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BAB32268240B00AE592D /* Debouncer.swift */; };
 		AF60BAB62268269000AE592D /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BAB52268269000AE592D /* Throttle.swift */; };
@@ -114,8 +116,7 @@
 		9744CE6220FF172600EBD3DE /* GifBGVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifBGVC.swift; sourceTree = "<group>"; };
 		9744CE6420FF173F00EBD3DE /* RotaryTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotaryTableVC.swift; sourceTree = "<group>"; };
 		975386B921660A4800B5BE32 /* MetalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalVC.swift; sourceTree = "<group>"; };
-		975386BB2166137D00B5BE32 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
-		975386BD216613DC00B5BE32 /* FragmentShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = FragmentShader.metal; sourceTree = "<group>"; };
+		975386BB2166137D00B5BE32 /* Shaders.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		9772816C20D0AC88004E8E4F /* TransitionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionVC.swift; sourceTree = "<group>"; };
 		9772816D20D0AC88004E8E4F /* TransitionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransitionVC.xib; sourceTree = "<group>"; };
 		9783B8DA20CD12AD00E30FD7 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +189,9 @@
 		AF3832E022E00F4700E1580F /* MiNavigationConroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiNavigationConroller.swift; sourceTree = "<group>"; };
 		AF42F43A22719863004979AB /* PreviousLuckDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousLuckDatas.swift; sourceTree = "<group>"; };
 		AF42F43C22719E96004979AB /* LuckNumbersDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckNumbersDb.swift; sourceTree = "<group>"; };
+		AF4EEB8E2302C39E001F298F /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
+		AF4EEB902302C4D2001F298F /* MetalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalViewController.swift; sourceTree = "<group>"; };
+		AF4EEB912302C4D2001F298F /* MetalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetalViewController.xib; sourceTree = "<group>"; };
 		AF5D3A54219D761800E64898 /* FirstBlood.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FirstBlood.cpp; sourceTree = "<group>"; };
 		AF5D3A55219D761800E64898 /* FirstBlood.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FirstBlood.hpp; sourceTree = "<group>"; };
 		AF60BAB32268240B00AE592D /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
@@ -286,8 +290,10 @@
 			isa = PBXGroup;
 			children = (
 				975386B921660A4800B5BE32 /* MetalVC.swift */,
-				975386BB2166137D00B5BE32 /* Shader.metal */,
-				975386BD216613DC00B5BE32 /* FragmentShader.metal */,
+				975386BB2166137D00B5BE32 /* Shaders.metal */,
+				AF4EEB8E2302C39E001F298F /* MetalView.swift */,
+				AF4EEB902302C4D2001F298F /* MetalViewController.swift */,
+				AF4EEB912302C4D2001F298F /* MetalViewController.xib */,
 			);
 			path = Metal;
 			sourceTree = "<group>";
@@ -870,6 +876,7 @@
 				9783B8E320CD12AD00E30FD7 /* Main.storyboard in Resources */,
 				AF7C882D229E26F600988C98 /* Assets.xcassets in Resources */,
 				AF13A22722379214008B91DD /* LuckVC.xib in Resources */,
+				AF4EEB932302C4D2001F298F /* MetalViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -934,7 +941,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3832D522E00D8D00E1580F /* Observable+ObjectMapper.swift in Sources */,
-				975386BC2166137D00B5BE32 /* Shader.metal in Sources */,
+				975386BC2166137D00B5BE32 /* Shaders.metal in Sources */,
 				AF2C8BD32193D66F00BA9492 /* AppDebugger.m in Sources */,
 				AFA648BA22CF3F5100B02CD0 /* UITableView+Extension.swift in Sources */,
 				AFA648BB22CF3F5100B02CD0 /* UINavigation+Extension.swift in Sources */,
@@ -945,6 +952,7 @@
 				9783B8E020CD12AD00E30FD7 /* ViewController.swift in Sources */,
 				9744CE6120FF155A00EBD3DE /* BaseVC.swift in Sources */,
 				AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */,
+				AF4EEB8F2302C39E001F298F /* MetalView.swift in Sources */,
 				AFF7A59A21957025003A4CA5 /* SQLDB.swift in Sources */,
 				AF2BED7E21928EC4007FB28E /* RXSwiftVC.swift in Sources */,
 				AF2C8BD22193D66F00BA9492 /* ShowFlex.m in Sources */,
@@ -957,6 +965,7 @@
 				9744CE6320FF172600EBD3DE /* GifBGVC.swift in Sources */,
 				AF3832E422E00F4700E1580F /* MiNavigationConroller.swift in Sources */,
 				AF42F43B22719863004979AB /* PreviousLuckDatas.swift in Sources */,
+				AF4EEB922302C4D2001F298F /* MetalViewController.swift in Sources */,
 				AF2C8BD52193D66F00BA9492 /* ChartConsole.m in Sources */,
 				AF5D3A56219D761800E64898 /* FirstBlood.cpp in Sources */,
 				9783B8FB20CD1E2F00E30FD7 /* Router.swift in Sources */,
@@ -981,7 +990,6 @@
 				AF188CD522D6DF4300DFE15D /* BatteryInfo.m in Sources */,
 				AF36862421C3BFE100EC0923 /* SizeClassVC.swift in Sources */,
 				AF27F231218C1649001FDFC2 /* DrawingBoardView.swift in Sources */,
-				975386BE216613DC00B5BE32 /* FragmentShader.metal in Sources */,
 				AF243CE322A907BD00809768 /* RedPointProtocol.swift in Sources */,
 				AF3832DC22E00EA800E1580F /* AppConfig.swift in Sources */,
 				AF2C8BD42193D66F00BA9492 /* SwitchServer.m in Sources */,

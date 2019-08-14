@@ -9,7 +9,7 @@
 
 @implementation SwitchServer
 
-+ (NSArray<NSString *> *)titles {
++ (NSArray<NSArray<NSString *> *> *)titles {
     
     return @[
              @[@"测试环境", @"测试环境"],
@@ -37,7 +37,7 @@
     return @[block1, block2, block3];
 }
 
-+ (void)showAlert:(void (^)())action {
++ (void)showAlert:(void (^)(void))action {
     UIAlertController *vc = [UIAlertController alertControllerWithTitle:@"提示"
                                                                 message:@"切换环境将会清除账号信息，并且强制退出应用。重新打开即可生效。"
                                                          preferredStyle:UIAlertControllerStyleAlert];
