@@ -212,6 +212,7 @@
 		AFA648B822CF3F5000B02CD0 /* UINavigation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigation+Extension.swift"; sourceTree = "<group>"; };
 		AFA758F4224B706C008440F0 /* SomeControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeControls.swift; sourceTree = "<group>"; };
 		AFB4707A2201A89B002B27C7 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
+		AFE569242304F75C00C72940 /* MClassMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MClassMap.swift; sourceTree = "<group>"; };
 		AFF7A59721956FD6003A4CA5 /* SQLiteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteVC.swift; sourceTree = "<group>"; };
 		AFF7A59921957025003A4CA5 /* SQLDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLDB.swift; sourceTree = "<group>"; };
 		AFF7A59B219574A1003A4CA5 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -449,7 +450,7 @@
 		AF13A223223790CA008B91DD /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				AF234DDF22F821F600A1A490 /* Runtime */,
+				AFE569232304F74A00C72940 /* ClassMap */,
 				AF71B1FF22DDC49A008DE695 /* AboutCopy */,
 				9772817020DD3B32004E8E4F /* AFN */,
 				AFB470792201A87D002B27C7 /* Annotation */,
@@ -466,8 +467,8 @@
 				9744CE5E20FF13A000EBD3DE /* GifBG */,
 				AF1380CF223CAAA800AB2E0D /* LeetCode */,
 				AF13A22222379008008B91DD /* Luck */,
-				9783B8FD20CD326300E30FD7 /* MVVM */,
 				975386B62166096500B5BE32 /* Metal */,
+				9783B8FD20CD326300E30FD7 /* MVVM */,
 				AF3832CD22E00D8D00E1580F /* Network */,
 				AF27F22B218C0A5E001FDFC2 /* OpenGL */,
 				AF1B77C5221D660B008D9AF6 /* OverTimeHandler */,
@@ -476,6 +477,7 @@
 				AF243CE122A907A000809768 /* RedPoint */,
 				9744CE5D20FF126B00EBD3DE /* RotaryTable */,
 				9783B8F920CD1E0800E30FD7 /* Router */,
+				AF234DDF22F821F600A1A490 /* Runtime */,
 				AF2BED7B21928E9A007FB28E /* RXSwift */,
 				AF7FA3DF21819FF0001BB669 /* SceneKit */,
 				AF36862121C3BF8100EC0923 /* SizeClass */,
@@ -753,6 +755,14 @@
 			children = (
 			);
 			path = AVPlayer;
+			sourceTree = "<group>";
+		};
+		AFE569232304F74A00C72940 /* ClassMap */ = {
+			isa = PBXGroup;
+			children = (
+				AFE569242304F75C00C72940 /* MClassMap.swift */,
+			);
+			path = ClassMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

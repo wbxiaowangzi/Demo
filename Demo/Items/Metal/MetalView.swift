@@ -35,10 +35,11 @@ class MetalView: MTKView {
     ///三步走
     
     func createBuffer(){
-        let vertex_data = [Vertex(position: [-1.0,-1.0,0.0,1.0], color: [1,0,0,1]),
-                           Vertex(position: [1.0,-1.0,0.0,1.0], color: [0,1,0,1]),
-                           Vertex(position: [0.0,1.0,0.0,1.0], color: [0,0,1,1])]
-        vertex_buffer = device!.makeBuffer(bytes: vertex_data, length: 36, options:[])
+        let vertex_data = [Vertex(position: [-0.8,-0.8,0.0,1.0], color: [1,0,0,1]),
+                           Vertex(position: [0.8,-0.8,0.0,1.0],  color: [0,1,0,1]),
+                           Vertex(position: [0.0,0.8,0.0,1.0],   color: [0,0,1,1])]
+        vertex_buffer = device!.makeBuffer(bytes: vertex_data, length: 8*8*4, options:[])
+        
         
     }
     
