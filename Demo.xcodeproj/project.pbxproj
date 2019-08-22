@@ -98,6 +98,9 @@
 		AFFEC15E230CE065001FAC72 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFEC15D230CE065001FAC72 /* Metal.framework */; };
 		AFFEC178230E3602001FAC72 /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC175230E3602001FAC72 /* JPEngine.m */; };
 		AFFEC179230E3602001FAC72 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = AFFEC177230E3602001FAC72 /* JSPatch.js */; };
+		AFFEC183230E3902001FAC72 /* JSPatchTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC181230E3902001FAC72 /* JSPatchTestVC.m */; };
+		AFFEC184230E3902001FAC72 /* JSPatchTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFEC182230E3902001FAC72 /* JSPatchTestVC.xib */; };
+		AFFEC189230E401C001FAC72 /* jsscript.txt in Resources */ = {isa = PBXBuildFile; fileRef = AFFEC188230E401C001FAC72 /* jsscript.txt */; };
 		C1E87AD0D3F56B2E82A5B15D /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089D44138D619F7D2D329231 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -238,6 +241,10 @@
 		AFFEC175230E3602001FAC72 /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
 		AFFEC176230E3602001FAC72 /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPEngine.h; sourceTree = "<group>"; };
 		AFFEC177230E3602001FAC72 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
+		AFFEC180230E3902001FAC72 /* JSPatchTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSPatchTestVC.h; sourceTree = "<group>"; };
+		AFFEC181230E3902001FAC72 /* JSPatchTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSPatchTestVC.m; sourceTree = "<group>"; };
+		AFFEC182230E3902001FAC72 /* JSPatchTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSPatchTestVC.xib; sourceTree = "<group>"; };
+		AFFEC188230E401C001FAC72 /* jsscript.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jsscript.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -796,11 +803,39 @@
 		AFFEC174230E3602001FAC72 /* JSPatch */ = {
 			isa = PBXGroup;
 			children = (
+				AFFEC187230E3FFF001FAC72 /* ScriptFiles */,
+				AFFEC17B230E38A2001FAC72 /* OCFiles */,
+				AFFEC17A230E3888001FAC72 /* JPEngine */,
+			);
+			path = JSPatch;
+			sourceTree = "<group>";
+		};
+		AFFEC17A230E3888001FAC72 /* JPEngine */ = {
+			isa = PBXGroup;
+			children = (
 				AFFEC175230E3602001FAC72 /* JPEngine.m */,
 				AFFEC176230E3602001FAC72 /* JPEngine.h */,
 				AFFEC177230E3602001FAC72 /* JSPatch.js */,
 			);
-			path = JSPatch;
+			path = JPEngine;
+			sourceTree = "<group>";
+		};
+		AFFEC17B230E38A2001FAC72 /* OCFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AFFEC180230E3902001FAC72 /* JSPatchTestVC.h */,
+				AFFEC181230E3902001FAC72 /* JSPatchTestVC.m */,
+				AFFEC182230E3902001FAC72 /* JSPatchTestVC.xib */,
+			);
+			path = OCFiles;
+			sourceTree = "<group>";
+		};
+		AFFEC187230E3FFF001FAC72 /* ScriptFiles */ = {
+			isa = PBXGroup;
+			children = (
+				AFFEC188230E401C001FAC72 /* jsscript.txt */,
+			);
+			path = ScriptFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -916,6 +951,8 @@
 				9783B90420CD341E00E30FD7 /* MVVMVC.xib in Resources */,
 				AFFEC179230E3602001FAC72 /* JSPatch.js in Resources */,
 				AF27F22F218C0A80001FDFC2 /* OpenGLVC.xib in Resources */,
+				AFFEC184230E3902001FAC72 /* JSPatchTestVC.xib in Resources */,
+				AFFEC189230E401C001FAC72 /* jsscript.txt in Resources */,
 				AF30451C218AF66600DA36D2 /* lol.mov in Resources */,
 				AF2BED7F21928EC4007FB28E /* RXSwiftVC.xib in Resources */,
 				AF36862521C3BFE100EC0923 /* SizeClassVC.xib in Resources */,
@@ -1002,6 +1039,7 @@
 				AF4EEB8F2302C39E001F298F /* MetalView.swift in Sources */,
 				AFF7A59A21957025003A4CA5 /* SQLDB.swift in Sources */,
 				AF2BED7E21928EC4007FB28E /* RXSwiftVC.swift in Sources */,
+				AFFEC183230E3902001FAC72 /* JSPatchTestVC.m in Sources */,
 				AF2C8BD22193D66F00BA9492 /* ShowFlex.m in Sources */,
 				AF42F43D22719E96004979AB /* LuckNumbersDb.swift in Sources */,
 				AFA648B922CF3F5100B02CD0 /* String+Extension.swift in Sources */,

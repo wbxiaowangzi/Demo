@@ -1,0 +1,6 @@
+ \ 
+var alertView = require（'UIAlertView'）。alloc（）。init（）; \ 
+alertView.setTitle（'Alert'）; \ 
+alertView.setMessage（'来自js的AlertView' ）; \ 
+alertView.addButtonWithTitle（'OK'）; \ 
+alertView.show（）; \ 
