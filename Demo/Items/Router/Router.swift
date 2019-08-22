@@ -116,5 +116,10 @@ extension UINavigationController{
         let vc = LuckVC()
         self.pushViewController(vc, animated: true)
     }
+    
+    func gotoJSPatchTestVCVC(){
+        let vc = JSPatchTestVC()
+        self.pushViewController(vc, animated: true)
+    }
 }
 

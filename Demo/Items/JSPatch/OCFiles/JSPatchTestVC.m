@@ -23,13 +23,14 @@
 }
 
 - (void)loadAndEvaluteSript{
-    NSString *urlStr = @"https://pan.baidu.com/s/1Qw82oZCDCAQkwwjCJWitXw";
+    NSString *urlStr = @"https://github.com/wbxiaowangzi/Demo/blob/master/Demo/Items/JSPatch/ScriptFiles/jsscript.txt";
     NSURL *url = [NSURL URLWithString:urlStr];
     
-    [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         NSString *script = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
         [JPEngine evaluateScript:script];
     }];
+    [task resume];
 }
 
 

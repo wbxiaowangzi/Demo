@@ -94,6 +94,8 @@ extension ViewController: UITableViewDelegate {
             self.navigationController?.gotoSizeClassVC()
         case VCType.Luck.rawValue:
             self.navigationController?.gotoLuckVC()
+        case VCType.JSPatchTestVC.rawValue:
+            self.navigationController?.gotoJSPatchTestVCVC()
         default:
             print("error target viewController")
         }
@@ -115,7 +117,8 @@ extension ViewController{
                 VCType.AvatarX.rawValue,
                 VCType.SizeClass.rawValue,
                 VCType.CALayer.rawValue,
-                VCType.Luck.rawValue]
+                VCType.Luck.rawValue,
+                VCType.JSPatchTestVC.rawValue]
         
     }
     
@@ -137,4 +140,6 @@ enum VCType:String {
     case AvatarX = "AvatarX"
     case SizeClass = "SizeClass"
     case Luck = "Luck"
+    case JSPatchTestVC = "JSPatchTestVC"
+
 }
