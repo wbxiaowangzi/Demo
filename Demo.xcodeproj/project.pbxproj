@@ -100,7 +100,7 @@
 		AFFEC179230E3602001FAC72 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = AFFEC177230E3602001FAC72 /* JSPatch.js */; };
 		AFFEC183230E3902001FAC72 /* JSPatchTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC181230E3902001FAC72 /* JSPatchTestVC.m */; };
 		AFFEC184230E3902001FAC72 /* JSPatchTestVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFFEC182230E3902001FAC72 /* JSPatchTestVC.xib */; };
-		AFFEC189230E401C001FAC72 /* jsscript.txt in Resources */ = {isa = PBXBuildFile; fileRef = AFFEC188230E401C001FAC72 /* jsscript.txt */; };
+		AFFEC189230E401C001FAC72 /* jsscript.js in Resources */ = {isa = PBXBuildFile; fileRef = AFFEC188230E401C001FAC72 /* jsscript.js */; };
 		C1E87AD0D3F56B2E82A5B15D /* Pods_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 089D44138D619F7D2D329231 /* Pods_Demo.framework */; };
 /* End PBXBuildFile section */
 
@@ -244,7 +244,7 @@
 		AFFEC180230E3902001FAC72 /* JSPatchTestVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSPatchTestVC.h; sourceTree = "<group>"; };
 		AFFEC181230E3902001FAC72 /* JSPatchTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JSPatchTestVC.m; sourceTree = "<group>"; };
 		AFFEC182230E3902001FAC72 /* JSPatchTestVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JSPatchTestVC.xib; sourceTree = "<group>"; };
-		AFFEC188230E401C001FAC72 /* jsscript.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jsscript.txt; sourceTree = "<group>"; };
+		AFFEC188230E401C001FAC72 /* jsscript.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = jsscript.js; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -833,7 +833,7 @@
 		AFFEC187230E3FFF001FAC72 /* ScriptFiles */ = {
 			isa = PBXGroup;
 			children = (
-				AFFEC188230E401C001FAC72 /* jsscript.txt */,
+				AFFEC188230E401C001FAC72 /* jsscript.js */,
 			);
 			path = ScriptFiles;
 			sourceTree = "<group>";
@@ -952,7 +952,7 @@
 				AFFEC179230E3602001FAC72 /* JSPatch.js in Resources */,
 				AF27F22F218C0A80001FDFC2 /* OpenGLVC.xib in Resources */,
 				AFFEC184230E3902001FAC72 /* JSPatchTestVC.xib in Resources */,
-				AFFEC189230E401C001FAC72 /* jsscript.txt in Resources */,
+				AFFEC189230E401C001FAC72 /* jsscript.js in Resources */,
 				AF30451C218AF66600DA36D2 /* lol.mov in Resources */,
 				AF2BED7F21928EC4007FB28E /* RXSwiftVC.xib in Resources */,
 				AF36862521C3BFE100EC0923 /* SizeClassVC.xib in Resources */,
