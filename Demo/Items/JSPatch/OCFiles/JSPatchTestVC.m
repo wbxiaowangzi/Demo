@@ -23,14 +23,15 @@
 }
 
 - (void)loadAndEvaluteSript{
-    
-    NSString *urlStr = @"https://raw.githubusercontent.com/wbxiaowangzi/Demo/master/Demo/Items/JSPatch/ScriptFiles/jsscript.txt";
+    NSString *urlStr = @"https://raw.githubusercontent.com/wbxiaowangzi/Demo/master/Demo/Items/JSPatch/ScriptFiles/jsscript.js";
     NSURL *url = [NSURL URLWithString:urlStr];
     NSURLSessionDownloadTask *task = [[NSURLSession sharedSession] downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         if (location != nil){
             NSData *data = [NSData dataWithContentsOfFile:location.path];
             NSString *script = [[NSString alloc]initWithData:data encoding:NSUTF8StringEncoding];
-            [JPEngine evaluateScript:script];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [JPEngine evaluateScript:script];
+            });
         }
     }];
     [task resume];
