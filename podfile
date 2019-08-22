@@ -1,5 +1,8 @@
 # Uncomment this line to define a global platform for your project
 # platform :iOS, '10.0'
+source 'http://211.159.217.203/Apple/Podspec.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
 platform :ios, '10.0'
 target 'Demo' do
   use_frameworks!
@@ -18,6 +21,8 @@ target 'Demo' do
   pod 'ReachabilitySwift'
   pod 'NVMAspects'
   pod 'MINavigator', :path=>'~/MINavigator/'
+  #pod 'MICommonUI', :path=>'~/MICommonUI/'
+  
   pod 'CTMediator'
   #BDD
   pod 'Kiwi'

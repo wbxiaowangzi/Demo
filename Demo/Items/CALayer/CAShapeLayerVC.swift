@@ -13,7 +13,7 @@ class CAShapeLayerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        drawSomething()
+        self.view.clipsToBounds = true
     }
     
     fileprivate func drawSomething(){
@@ -60,5 +60,6 @@ class CAShapeLayerVC: UIViewController {
         scoreLayer.fillColor = UIColor(hexString: "#3E97FF").withAlphaComponent(0.3).cgColor
         
     }
+
     
 }

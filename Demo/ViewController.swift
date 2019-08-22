@@ -114,6 +114,7 @@ extension ViewController{
                 VCType.CoreAnimation.rawValue,
                 VCType.AvatarX.rawValue,
                 VCType.SizeClass.rawValue,
+                VCType.CALayer.rawValue,
                 VCType.Luck.rawValue]
         
     }
@@ -136,5 +137,4 @@ enum VCType:String {
     case AvatarX = "AvatarX"
     case SizeClass = "SizeClass"
     case Luck = "Luck"
-
 }
