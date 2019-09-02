@@ -117,8 +117,13 @@ extension UINavigationController{
         self.pushViewController(vc, animated: true)
     }
     
-    func gotoJSPatchTestVCVC(){
+    func gotoJSPatchTestVC(){
         let vc = JSPatchTestVC()
+        self.pushViewController(vc, animated: true)
+    }
+    
+    func gotoOCTestVC(){
+        let vc = OCTestVC()
         self.pushViewController(vc, animated: true)
     }
 }

@@ -77,7 +77,6 @@ BOOL needShow = NO;
     dispatch_once(&onceToken, ^{
         sharedDebugger = [self new];
     });
-    
     return sharedDebugger;
 }
 
