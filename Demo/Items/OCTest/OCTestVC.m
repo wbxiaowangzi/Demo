@@ -7,6 +7,7 @@
 //
 
 #import "OCTestVC.h"
+#import "CppBridge.h"
 
 @interface OCTestVC ()
 
@@ -19,6 +20,9 @@
     self.view.backgroundColor = [UIColor whiteColor];
     //[self creatABarrierQueue];
     [self test3];
+    int aaaaaa = [CppBridge digitCounts:1 with:1];
+    NSLog(@"%d",aaaaaa);
+
 }
 ///以下代码的效果跟在主队列中调用 dispatch_sync 执行任务一样，会卡死主线程
 - (void)creatABarrierQueue{
@@ -91,4 +95,22 @@
     });
     
 }
+
+
+-(void)testWith:(int)age name:(NSString *)name{
+    NSString * test = @"[super viewDidLoad];7890()()-()()()()()()())))()(90909090090900990uiopuiop[]uiop[][] tihsi 9()_-0()_=-=-=-=-=-=-0-0-0-0-=0--0-=00-=this a a lalala [][][][][][][][][][][][][][][][]90909090090*(09090009*9090900*9900090090*09090909009090090909098090900008*7&&&&&&&&&&()()()())-";
+}
+- (void)testFunction:(NSString *)name age:(int)age{
+    NSLog(@"%s",__func__);
+    [self isKindOfClass:[NSObject class]];
+    [self isMemberOfClass:[NSObject class]];
+}
+
+- (void)anotherFunction:(NSString *)name age:(int)age{
+    NSLog(@"tihs another func %c",_cmd);
+}
+- (void)function:(NSString*)name age:(int)age{
+    NSLog(@"this is a log");//ca cb cc cd ce cf ... cz 
+}
 @end
+

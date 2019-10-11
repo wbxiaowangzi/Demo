@@ -8,6 +8,18 @@
 
 import UIKit
 
+enum SDAnimalEnum:CaseIterable {
+    case dog
+    case cat
+    case pig
+    case sheep
+    case cow
+    case bull
+    case chicken
+    case horse
+    case duck
+}
+
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -17,6 +29,30 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
         //testThrottle()
+        print(SDAnimalEnum.allCases)
+                
+        let str =  "123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901"
+        let number = 12345678901
+        print(MemoryLayout<String>.size)
+        print(MemoryLayout<String>.stride)
+        print(MemoryLayout<String>.alignment)
+        print(MemoryLayout.size(ofValue: str))
+        print(MemoryLayout.stride(ofValue: str))
+        print(MemoryLayout.alignment(ofValue: str))
+        
+        print(MemoryLayout<Character>.size)
+        print(MemoryLayout<Character>.stride)
+        print(MemoryLayout<Character>.alignment)
+        print("lalalallalaal")
+        let a:int4
+        
+        var b:Int? = 10
+        b? = 10
+        print(b)
+        var c:Int?
+        c? = 10
+        print(c)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,7 +78,10 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             a.necessoryToExecuteHandler = false
         }
+        
     }
+    
+    
 }
 
 extension ViewController: UITableViewDataSource{

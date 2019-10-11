@@ -24,8 +24,8 @@ target 'Demo' do
   #pod 'MICommonUI', :path=>'~/MICommonUI/'
   
   pod 'CTMediator'
-  #BDD
-  pod 'Kiwi'
+  #单元测试
+  #pod 'Kiwi'
   
 end
 

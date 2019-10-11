@@ -25,6 +25,8 @@
 		9783B8FB20CD1E2F00E30FD7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783B8FA20CD1E2F00E30FD7 /* Router.swift */; };
 		9783B90320CD341E00E30FD7 /* MVVMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783B90120CD341E00E30FD7 /* MVVMVC.swift */; };
 		9783B90420CD341E00E30FD7 /* MVVMVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9783B90220CD341E00E30FD7 /* MVVMVC.xib */; };
+		AF09856E23225D6C002B003B /* LintCode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF09856C23225D6B002B003B /* LintCode.cpp */; };
+		AF09857223226025002B003B /* CppBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF09857123226025002B003B /* CppBridge.mm */; };
 		AF109738219BCCCB003F148D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AF109737219BCCCB003F148D /* libc++.tbd */; };
 		AF1380D1223CAB1200AB2E0D /* LeetCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1380D0223CAB1200AB2E0D /* LeetCode.swift */; };
 		AF13A22622379214008B91DD /* LuckVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13A22422379214008B91DD /* LuckVC.swift */; };
@@ -74,7 +76,6 @@
 		AF4EEB8F2302C39E001F298F /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EEB8E2302C39E001F298F /* MetalView.swift */; };
 		AF4EEB922302C4D2001F298F /* MetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EEB902302C4D2001F298F /* MetalViewController.swift */; };
 		AF4EEB932302C4D2001F298F /* MetalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4EEB912302C4D2001F298F /* MetalViewController.xib */; };
-		AF5D3A56219D761800E64898 /* FirstBlood.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF5D3A54219D761800E64898 /* FirstBlood.cpp */; };
 		AF60BAB42268240B00AE592D /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BAB32268240B00AE592D /* Debouncer.swift */; };
 		AF60BAB62268269000AE592D /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BAB52268269000AE592D /* Throttle.swift */; };
 		AF71B20722DDC50C008DE695 /* LearnCopyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71B20522DDC50C008DE695 /* LearnCopyVC.swift */; };
@@ -96,7 +97,6 @@
 		AFF7A59821956FD6003A4CA5 /* SQLiteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF7A59721956FD6003A4CA5 /* SQLiteVC.swift */; };
 		AFF7A59A21957025003A4CA5 /* SQLDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF7A59921957025003A4CA5 /* SQLDB.swift */; };
 		AFF7A59D2195955D003A4CA5 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF7A59B219574A1003A4CA5 /* libsqlite3.0.tbd */; };
-		AFF7E6A923067727006F8D4F /* XCTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AFF7E6A6230676F4006F8D4F /* XCTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AFFEC15C230CE060001FAC72 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFEC15B230CE060001FAC72 /* MetalKit.framework */; };
 		AFFEC15E230CE065001FAC72 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFEC15D230CE065001FAC72 /* Metal.framework */; };
 		AFFEC178230E3602001FAC72 /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC175230E3602001FAC72 /* JPEngine.m */; };
@@ -117,13 +117,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		AFF7E6AA23067727006F8D4F /* Embed Frameworks */ = {
+		AF3FF0F32350308700846C74 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AFF7E6A923067727006F8D4F /* XCTest.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -155,6 +154,10 @@
 		9783B90120CD341E00E30FD7 /* MVVMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMVC.swift; sourceTree = "<group>"; };
 		9783B90220CD341E00E30FD7 /* MVVMVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVVMVC.xib; sourceTree = "<group>"; };
 		A6DA9D8A6B6E185481083FF5 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		AF09856C23225D6B002B003B /* LintCode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LintCode.cpp; sourceTree = "<group>"; };
+		AF09856D23225D6B002B003B /* LintCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LintCode.h; sourceTree = "<group>"; };
+		AF09857023226025002B003B /* CppBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CppBridge.h; sourceTree = "<group>"; };
+		AF09857123226025002B003B /* CppBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CppBridge.mm; sourceTree = "<group>"; };
 		AF109737219BCCCB003F148D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		AF1380D0223CAB1200AB2E0D /* LeetCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode.swift; sourceTree = "<group>"; };
 		AF13A22422379214008B91DD /* LuckVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckVC.swift; sourceTree = "<group>"; };
@@ -211,13 +214,14 @@
 		AF3832DA22E00EA700E1580F /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		AF3832DF22E00F4700E1580F /* UserDefaultStaticStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultStaticStrings.swift; sourceTree = "<group>"; };
 		AF3832E022E00F4700E1580F /* MiNavigationConroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiNavigationConroller.swift; sourceTree = "<group>"; };
+		AF3FF0FE235032BB00846C74 /* DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTests.swift; sourceTree = "<group>"; };
+		AF3FF100235032BB00846C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF3FF106235034F200846C74 /* libswiftXCTest.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftXCTest.tbd; path = usr/lib/swift/libswiftXCTest.tbd; sourceTree = SDKROOT; };
 		AF42F43A22719863004979AB /* PreviousLuckDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousLuckDatas.swift; sourceTree = "<group>"; };
 		AF42F43C22719E96004979AB /* LuckNumbersDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckNumbersDb.swift; sourceTree = "<group>"; };
 		AF4EEB8E2302C39E001F298F /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		AF4EEB902302C4D2001F298F /* MetalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalViewController.swift; sourceTree = "<group>"; };
 		AF4EEB912302C4D2001F298F /* MetalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetalViewController.xib; sourceTree = "<group>"; };
-		AF5D3A54219D761800E64898 /* FirstBlood.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FirstBlood.cpp; sourceTree = "<group>"; };
-		AF5D3A55219D761800E64898 /* FirstBlood.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FirstBlood.hpp; sourceTree = "<group>"; };
 		AF60BAB32268240B00AE592D /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		AF60BAB52268269000AE592D /* Throttle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttle.swift; sourceTree = "<group>"; };
 		AF71B20522DDC50C008DE695 /* LearnCopyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnCopyVC.swift; sourceTree = "<group>"; };
@@ -374,6 +378,7 @@
 				AF7C882E229E271500988C98 /* Target2Files */,
 				9783B8DC20CD12AD00E30FD7 /* Demo */,
 				AF7C881B229E263D00988C98 /* TargetTwo */,
+				AF3FF0FD235032BB00846C74 /* DemoTests */,
 				9783B8DB20CD12AD00E30FD7 /* Products */,
 				AF7FA3E32181AACA001BB669 /* Frameworks */,
 				77CA83DD04E293DFCA75D345 /* Pods */,
@@ -712,11 +717,22 @@
 			path = SQLite;
 			sourceTree = "<group>";
 		};
+		AF3FF0FD235032BB00846C74 /* DemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF3FF0FE235032BB00846C74 /* DemoTests.swift */,
+				AF3FF100235032BB00846C74 /* Info.plist */,
+			);
+			path = DemoTests;
+			sourceTree = "<group>";
+		};
 		AF5D3A53219D75ED00E64898 /* C++ */ = {
 			isa = PBXGroup;
 			children = (
-				AF5D3A54219D761800E64898 /* FirstBlood.cpp */,
-				AF5D3A55219D761800E64898 /* FirstBlood.hpp */,
+				AF09857023226025002B003B /* CppBridge.h */,
+				AF09857123226025002B003B /* CppBridge.mm */,
+				AF09856D23225D6B002B003B /* LintCode.h */,
+				AF09856C23225D6B002B003B /* LintCode.cpp */,
 			);
 			path = "C++";
 			sourceTree = "<group>";
@@ -782,6 +798,7 @@
 		AF7FA3E32181AACA001BB669 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AF3FF106235034F200846C74 /* libswiftXCTest.tbd */,
 				AFFEC15D230CE065001FAC72 /* Metal.framework */,
 				AFFEC15B230CE060001FAC72 /* MetalKit.framework */,
 				AFF7E6A6230676F4006F8D4F /* XCTest.framework */,
@@ -877,7 +894,7 @@
 				9783B8D720CD12AD00E30FD7 /* Frameworks */,
 				9783B8D820CD12AD00E30FD7 /* Resources */,
 				5922AF0CB70901FBAF2F09B6 /* [CP] Embed Pods Frameworks */,
-				AFF7E6AA23067727006F8D4F /* Embed Frameworks */,
+				AF3FF0F32350308700846C74 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -929,7 +946,7 @@
 			isa = PBXProject;
 			attributes = {
 				DefaultBuildSystemTypeForWorkspace = Original;
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1110;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = wangbo;
 				TargetAttributes = {
@@ -1079,9 +1096,10 @@
 				AF3832E422E00F4700E1580F /* MiNavigationConroller.swift in Sources */,
 				AF42F43B22719863004979AB /* PreviousLuckDatas.swift in Sources */,
 				AF4EEB922302C4D2001F298F /* MetalViewController.swift in Sources */,
+				AF09856E23225D6C002B003B /* LintCode.cpp in Sources */,
+				AF09857223226025002B003B /* CppBridge.mm in Sources */,
 				AF2C8BD52193D66F00BA9492 /* ChartConsole.m in Sources */,
 				AF26EACC2317724C00D61AF6 /* VCMap.swift in Sources */,
-				AF5D3A56219D761800E64898 /* FirstBlood.cpp in Sources */,
 				9783B8FB20CD1E2F00E30FD7 /* Router.swift in Sources */,
 				AFA758F5224B706C008440F0 /* SomeControls.swift in Sources */,
 				9783B8F720CD1D6800E30FD7 /* CoreAnimationVC.swift in Sources */,
@@ -1315,6 +1333,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Demo/Items/AvatarX/Camera360",
 				);
+				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = (
 					"-l\"c++\"",
 					"$(inherited)",
@@ -1329,9 +1348,9 @@
 					"-framework",
 					"\"RxSwift\"",
 					"-framework",
-					"\"SQLite\"",
-					"-framework",
 					"\"SSZipArchive\"",
+					"-framework",
+					"\"SQLite\"",
 					"-framework",
 					"\"Yaml\"",
 					"-ObjC",
@@ -1368,6 +1387,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Demo/Items/AvatarX/Camera360",
 				);
+				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = (
 					"-l\"c++\"",
 					"$(inherited)",
@@ -1382,9 +1402,9 @@
 					"-framework",
 					"\"RxSwift\"",
 					"-framework",
-					"\"SQLite\"",
-					"-framework",
 					"\"SSZipArchive\"",
+					"-framework",
+					"\"SQLite\"",
 					"-framework",
 					"\"Yaml\"",
 					"-ObjC",

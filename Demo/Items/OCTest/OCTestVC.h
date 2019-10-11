@@ -11,7 +11,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface OCTestVC : UIViewController
-
 @end
 
 NS_ASSUME_NONNULL_END
