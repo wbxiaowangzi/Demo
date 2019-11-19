@@ -60,6 +60,11 @@ extension UINavigationController{
         self.pushViewController(vc, animated: true)
     }
     
+    func gotoGradientLayerVC(){
+        let vc = CAGradientLayerVC()
+        self.pushViewController(vc, animated: true)
+    }
+    
     func gotoGifBGVC(){
         let vc = GifBGVC()
         self.pushViewController(vc, animated: true)

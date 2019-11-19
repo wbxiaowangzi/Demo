@@ -22,8 +22,8 @@
     [self test3];
     int aaaaaa = [CppBridge digitCounts:1 with:1];
     NSLog(@"%d",aaaaaa);
-
 }
+
 ///以下代码的效果跟在主队列中调用 dispatch_sync 执行任务一样，会卡死主线程
 - (void)creatABarrierQueue{
     dispatch_queue_t serialQueue = dispatch_queue_create("serial_queue", DISPATCH_QUEUE_SERIAL);
