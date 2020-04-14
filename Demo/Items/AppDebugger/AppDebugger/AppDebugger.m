@@ -87,7 +87,7 @@ BOOL needShow = NO;
         self.debugBar.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
         self.debugBar.windowLevel = UIWindowLevelAlert;
         self.debugBar.rootViewController = [UIViewController new];
-        self.debugBar.hidden = !needShow;
+        self.debugBar.hidden = !needShow;//这样设置没有用不知道为什么？？？
         
         UIGestureRecognizer *gesture = [UITapGestureRecognizer new];
         [gesture addTarget:self action:@selector(showPanel)];
@@ -130,9 +130,7 @@ BOOL needShow = NO;
 }
 
 - (void)show {
-    if (needShow){
-        self.debugBar.hidden = NO;
-    }
+    self.debugBar.hidden = NO;
 }
 
 - (UIView *)panel {

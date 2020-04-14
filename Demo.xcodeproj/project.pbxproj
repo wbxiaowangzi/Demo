@@ -28,7 +28,6 @@
 		9783B8FB20CD1E2F00E30FD7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783B8FA20CD1E2F00E30FD7 /* Router.swift */; };
 		9783B90320CD341E00E30FD7 /* MVVMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783B90120CD341E00E30FD7 /* MVVMVC.swift */; };
 		9783B90420CD341E00E30FD7 /* MVVMVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9783B90220CD341E00E30FD7 /* MVVMVC.xib */; };
-		97C7C79E23200C56004784F0 /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C7C79D23200C56004784F0 /* Generics.swift */; };
 		AF109738219BCCCB003F148D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AF109737219BCCCB003F148D /* libc++.tbd */; };
 		AF1380D1223CAB1200AB2E0D /* LeetCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1380D0223CAB1200AB2E0D /* LeetCode.swift */; };
 		AF13A22622379214008B91DD /* LuckVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13A22422379214008B91DD /* LuckVC.swift */; };
@@ -146,7 +145,6 @@
 		9783B8FA20CD1E2F00E30FD7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9783B90120CD341E00E30FD7 /* MVVMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMVC.swift; sourceTree = "<group>"; };
 		9783B90220CD341E00E30FD7 /* MVVMVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVVMVC.xib; sourceTree = "<group>"; };
-		97C7C79D23200C56004784F0 /* Generics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Generics.swift; sourceTree = "<group>"; };
 		A6DA9D8A6B6E185481083FF5 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		AF109737219BCCCB003F148D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		AF1380D0223CAB1200AB2E0D /* LeetCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode.swift; sourceTree = "<group>"; };
@@ -438,14 +436,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		97C7C79923200C28004784F0 /* Generics */ = {
-			isa = PBXGroup;
-			children = (
-				97C7C79D23200C56004784F0 /* Generics.swift */,
-			);
-			path = Generics;
-			sourceTree = "<group>";
-		};
 		AF1380CF223CAAA800AB2E0D /* LeetCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,7 +458,6 @@
 		AF13A223223790CA008B91DD /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				97C7C79923200C28004784F0 /* Generics */,
 				AF234DDF22F821F600A1A490 /* Runtime */,
 				AF71B1FF22DDC49A008DE695 /* AboutCopy */,
 				9772817020DD3B32004E8E4F /* AFN */,
@@ -1014,7 +1003,6 @@
 				AF3832D322E00D8D00E1580F /* YunweiMgr.swift in Sources */,
 				AFF7A59821956FD6003A4CA5 /* SQLiteVC.swift in Sources */,
 				975386BA21660A4800B5BE32 /* MetalVC.swift in Sources */,
-				97C7C79E23200C56004784F0 /* Generics.swift in Sources */,
 				AF2C8BD12193D66F00BA9492 /* ShowMemory.m in Sources */,
 				AF14A2CF21883E5A0081487A /* RadarView.swift in Sources */,
 			);
