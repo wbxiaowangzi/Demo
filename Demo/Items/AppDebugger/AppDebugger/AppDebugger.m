@@ -59,6 +59,7 @@ BOOL needShow = NO;
 }
 
 + (void)load {
+    NSLog(@"---------------load AppDebugger");
     __block __weak NSObject *observer =
     [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidFinishLaunchingNotification
                                                       object:nil
@@ -76,18 +77,17 @@ BOOL needShow = NO;
     dispatch_once(&onceToken, ^{
         sharedDebugger = [self new];
     });
-    
     return sharedDebugger;
 }
 
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.debugBar = [[UIWindow alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/2 - 40, 0, 130, 20)];
+        self.debugBar = [[UIWindow alloc] initWithFrame:CGRectMake([UIScreen mainScreen].bounds.size.width/2 - 50, 0, 150, 20)];
         self.debugBar.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0];
         self.debugBar.windowLevel = UIWindowLevelAlert;
         self.debugBar.rootViewController = [UIViewController new];
-        self.debugBar.hidden = !needShow;//这样设置没有用不知道为什么？？？
+        self.debugBar.hidden = !needShow;
         
         UIGestureRecognizer *gesture = [UITapGestureRecognizer new];
         [gesture addTarget:self action:@selector(showPanel)];
@@ -95,10 +95,10 @@ BOOL needShow = NO;
         
         UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 18, 20)];
         label.font = [UIFont systemFontOfSize:12];
-        label.text = @"🐞";
+        label.text = @"🍎";
         [self.debugBar addSubview:label];
         
-        _fpsLabel = [[UILabel alloc] initWithFrame:CGRectMake(70, 0, 60, 20)];
+        _fpsLabel = [[UILabel alloc] initWithFrame:CGRectMake(90, 0, 60, 20)];
         _fpsLabel.backgroundColor = [UIColor clearColor];
         _fpsLabel.textAlignment = NSTextAlignmentLeft;
         _fpsLabel.textColor = [UIColor orangeColor];
@@ -109,7 +109,7 @@ BOOL needShow = NO;
         _count = 0;
         _displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(onTick:)];
         [_displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
-        _displayLink.preferredFramesPerSecond = 1;
+//        _displayLink.preferredFramesPerSecond = 1;
         
         _isShowing = NO;
     }
@@ -124,7 +124,7 @@ BOOL needShow = NO;
     _count++;
     NSTimeInterval delta = displayLink.timestamp - _lastTime;
     if (delta < 1) return;
-    _fpsLabel.text = [NSString stringWithFormat:@"%.2f", _count / delta];
+    _fpsLabel.text = [NSString stringWithFormat:@"FPS:%.1f", _count / delta];
     _lastTime = displayLink.timestamp;
     _count = 0;
 }

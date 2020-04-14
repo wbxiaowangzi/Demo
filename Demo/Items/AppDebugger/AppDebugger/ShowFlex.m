@@ -10,7 +10,7 @@
 
 @implementation ShowFlex
 
-+ (NSArray<NSString *> *)titles {
++ (NSArray<NSArray<NSString *> *> *)titles {
     return @[@[@"FLEX", @"FLEX"]];
 }
 

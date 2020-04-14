@@ -14,7 +14,7 @@
     NSTimer *_timer;
 }
 
-+ (NSArray<NSString *> *)titles {
++ (NSArray<NSArray<NSString *> *> *)titles {
     return @[@[@"查看使用内存", @"关闭内存查看"]];
 }
 

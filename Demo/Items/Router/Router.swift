@@ -60,6 +60,11 @@ extension UINavigationController{
         self.pushViewController(vc, animated: true)
     }
     
+    func gotoGradientLayerVC(){
+        let vc = CAGradientLayerVC()
+        self.pushViewController(vc, animated: true)
+    }
+    
     func gotoGifBGVC(){
         let vc = GifBGVC()
         self.pushViewController(vc, animated: true)
@@ -71,7 +76,7 @@ extension UINavigationController{
     }
     
     func gotoMetalVC(){
-        let vc = MetalVC()
+        let vc = MetalViewController()
         self.pushViewController(vc, animated: true)
     }
     
@@ -114,6 +119,16 @@ extension UINavigationController{
     
     func gotoLuckVC(){
         let vc = LuckVC()
+        self.pushViewController(vc, animated: true)
+    }
+    
+    func gotoJSPatchTestVC(){
+        let vc = JSPatchTestVC()
+        self.pushViewController(vc, animated: true)
+    }
+    
+    func gotoOCTestVC(){
+        let vc = OCTestVC()
         self.pushViewController(vc, animated: true)
     }
 }

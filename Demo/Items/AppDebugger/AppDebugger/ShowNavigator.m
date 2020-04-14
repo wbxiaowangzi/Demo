@@ -13,7 +13,7 @@ static NSString *preURL = nil;
 
 @implementation ShowNavigator
 
-+ (NSArray<NSString *> *)titles {
++ (NSArray<NSArray<NSString *> *> *)titles {
     return @[@[@"页面跳转", @"页面跳转"]];
 }
 

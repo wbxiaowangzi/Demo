@@ -30,9 +30,20 @@ class GifBGVC: BaseVC {
     @objc func playEnd()  {
         player?.seek(to: CMTimeMake(value: 0, timescale: 1))
         player?.play()
+        
+        let dog = SDDog()
+        let str = dog[1]
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+}
+
+class SDDog:NSObject{
+    
+    ///下标、
+    subscript(index:Int)->String{
+        return "aaaaaa"
     }
 }

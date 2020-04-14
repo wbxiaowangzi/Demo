@@ -215,3 +215,54 @@ extension UIImage{
     }
     
 }
+
+extension CGPoint{
+    
+    static func -(left:CGPoint,right:CGPoint)->CGPoint{
+        return CGPoint.init(x: left.x - right.x, y: left.y - right.y)
+    }
+    static func +(left:CGPoint,right:CGPoint)->CGPoint{
+        return CGPoint.init(x: left.x + right.x, y: left.y + right.y)
+    }
+    
+}
+
+
+extension UIView{
+    ///根据uiview的size自适应宽高，用于addchildvc时
+    func adaptH(_ value:CGFloat) -> CGFloat {
+        return value * (self.bounds.size.height/1366)
+    }
+
+    func adaptH(_ value:Int) -> CGFloat {
+        return CGFloat(value) * (self.bounds.size.height/1366)
+    }
+    func adaptH(_ value:Double) -> Double {
+        return value * Double(self.bounds.size.height/1366)
+    }
+
+    //自适应宽
+    func adaptW(_ value:CGFloat) -> CGFloat {
+        return value * (self.bounds.size.width/1024)
+    }
+
+    func adaptW(_ value:Int) -> CGFloat {
+        return CGFloat(value) * (self.bounds.size.width/1024)
+    }
+
+    func adaptW(_ value:Double) -> Double {
+        return value * Double(self.bounds.size.width/1024)
+    }
+    
+    func adapt(_ origin:CGPoint) -> CGPoint{
+        return CGPoint(x: origin.x * (self.bounds.size.width/1024), y: origin.y * (self.bounds.size.height/1366))
+    }
+    
+    func adapt(_ size:CGSize) -> CGSize{
+        return CGSize(width: size.width * (self.bounds.size.width/1024), height: size.height * (self.bounds.size.height/1366))
+    }
+    
+    func adapt(_ frame:CGRect) -> CGRect{
+        return CGRect.init(origin: self.adapt(frame.origin), size: self.adapt(frame.size))
+    }
+}

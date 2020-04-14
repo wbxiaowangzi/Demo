@@ -1,5 +1,8 @@
 # Uncomment this line to define a global platform for your project
 # platform :iOS, '10.0'
+source 'http://211.159.217.203/Apple/Podspec.git'
+source 'https://github.com/CocoaPods/Specs.git'
+
 platform :ios, '10.0'
 target 'Demo' do
   use_frameworks!
@@ -17,8 +20,12 @@ target 'Demo' do
   pod 'ObjectMapper'
   pod 'ReachabilitySwift'
   pod 'NVMAspects'
-  #BDD
-  pod 'Kiwi'
+  pod 'MINavigator', :path=>'~/MINavigator/'
+  #pod 'MICommonUI', :path=>'~/MICommonUI/'
+  
+  pod 'CTMediator'
+  #单元测试
+  #pod 'Kiwi'
   
 end
 
@@ -35,7 +42,7 @@ post_install do |installer|
                 config.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '10.10'
             end
         end
-        if ['XiaoFuTech-develop'].include?target.name
+        if ['XiaoFuTech-develop','Kiwi'].include?target.name
             target.build_configurations.each do |config|
                 config.build_settings['ENABLE_BITCODE'] = 'NO'
             end

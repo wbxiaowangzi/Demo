@@ -16,9 +16,9 @@ class MetalVC: UIViewController {
     var metalLayer:CAMetalLayer! = nil
     var pipelineState: MTLRenderPipelineState! = nil//渲染管道状态
     var commandQueue: MTLCommandQueue! = nil//命令队列
-    var vertexBuffer: MTLBuffer! = nil//定点缓存
+    var vertexBuffer: MTLBuffer! = nil//顶点缓存
     let vertexData:[Float] =
-        [0.0,   1.0,  0.5,
+        [0.0,   1.0,  0.0,
         -1.0,  -1.0,  0.0,
          1.0,  -1.0,  0.0,]
     
@@ -68,8 +68,8 @@ class MetalVC: UIViewController {
     func CreatPipelineState(){
         
         let defaultLibrary = device.makeDefaultLibrary()
-        let fragmentProgram = defaultLibrary?.makeFunction(name: "basic_fragment")
-        let vertextProgram = defaultLibrary?.makeFunction(name: "basic_vertext")
+        let fragmentProgram = defaultLibrary?.makeFunction(name: "fragment_func")
+        let vertextProgram = defaultLibrary?.makeFunction(name: "vertex_func")
         
         let pipelineStateDescriptor = MTLRenderPipelineDescriptor()
         pipelineStateDescriptor.vertexFunction = vertextProgram

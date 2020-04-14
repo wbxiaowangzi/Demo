@@ -22,6 +22,7 @@ class LearnCopyVC: UIViewController {
         var x = [1,3,3,4]
         var y = x
         print(x,y)
+        let intsize = MemoryLayout<Int>.size
     }
     
     

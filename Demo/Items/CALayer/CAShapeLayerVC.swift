@@ -13,7 +13,16 @@ class CAShapeLayerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        drawSomething()
+        self.view.clipsToBounds = true
+        
+        let r = UnsafeMutablePointer<CGFloat>.allocate(capacity: 0)
+        let g = UnsafeMutablePointer<CGFloat>.allocate(capacity: 0)
+        let b = UnsafeMutablePointer<CGFloat>.allocate(capacity: 0)
+        let a = UnsafeMutablePointer<CGFloat>.allocate(capacity: 0)
+        _ = UIColor.red.getRed(r, green: g, blue: b, alpha: a)
+        print(r.pointee,g.pointee,b.pointee,a.pointee)
+//        objc_getAssociatedObject(<#T##object: Any##Any#>, <#T##key: UnsafeRawPointer##UnsafeRawPointer#>)
+//        objc_setAssociatedObject(<#T##object: Any##Any#>, <#T##key: UnsafeRawPointer##UnsafeRawPointer#>, <#T##value: Any?##Any?#>, <#T##policy: objc_AssociationPolicy##objc_AssociationPolicy#>)
     }
     
     fileprivate func drawSomething(){
@@ -60,5 +69,6 @@ class CAShapeLayerVC: UIViewController {
         scoreLayer.fillColor = UIColor(hexString: "#3E97FF").withAlphaComponent(0.3).cgColor
         
     }
+
     
 }

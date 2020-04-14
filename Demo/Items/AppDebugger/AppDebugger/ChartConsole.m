@@ -2,7 +2,6 @@
 //  ChartConsole.m
 //  Pods
 //
-//  Created by zhangjianfei on 16/9/2.
 //
 
 #import "ChartConsole.h"

@@ -46,7 +46,7 @@ extension CALayerVC: UITableViewDelegate {
         case self.lazyCellNames()[0]:
             self.navigationController?.gotoShapeLayerVC()
         case self.lazyCellNames()[1]:
-            self.navigationController?.gotoShapeLayerVC()
+            self.navigationController?.gotoGradientLayerVC()
         case self.lazyCellNames()[2]:
             self.navigationController?.gotoShapeLayerVC()
         case self.lazyCellNames()[3]:
