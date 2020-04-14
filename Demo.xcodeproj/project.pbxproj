@@ -81,6 +81,8 @@
 		AF4EEB8F2302C39E001F298F /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EEB8E2302C39E001F298F /* MetalView.swift */; };
 		AF4EEB922302C4D2001F298F /* MetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EEB902302C4D2001F298F /* MetalViewController.swift */; };
 		AF4EEB932302C4D2001F298F /* MetalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4EEB912302C4D2001F298F /* MetalViewController.xib */; };
+		AF53E4C9238D3CE600E89EB9 /* UIControlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF53E4C7238D3CE600E89EB9 /* UIControlVC.swift */; };
+		AF53E4CA238D3CE600E89EB9 /* UIControlVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF53E4C8238D3CE600E89EB9 /* UIControlVC.xib */; };
 		AF60BAB42268240B00AE592D /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BAB32268240B00AE592D /* Debouncer.swift */; };
 		AF60BAB62268269000AE592D /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BAB52268269000AE592D /* Throttle.swift */; };
 		AF71B20722DDC50C008DE695 /* LearnCopyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71B20522DDC50C008DE695 /* LearnCopyVC.swift */; };
@@ -100,6 +102,7 @@
 		AFA758F5224B706C008440F0 /* SomeControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA758F4224B706C008440F0 /* SomeControls.swift */; };
 		AFB4707B2201A89B002B27C7 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4707A2201A89B002B27C7 /* Annotation.swift */; };
 		AFB67CBB235EEB220066D49E /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB67CBA235EEB220066D49E /* SwiftUIView.swift */; };
+		AFF0B87B2445767900FCACA8 /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0B87A2445767900FCACA8 /* Solution.swift */; };
 		AFF7A59821956FD6003A4CA5 /* SQLiteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF7A59721956FD6003A4CA5 /* SQLiteVC.swift */; };
 		AFF7A59A21957025003A4CA5 /* SQLDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF7A59921957025003A4CA5 /* SQLDB.swift */; };
 		AFF7A59D2195955D003A4CA5 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF7A59B219574A1003A4CA5 /* libsqlite3.0.tbd */; };
@@ -261,6 +264,8 @@
 		AF4EEB8E2302C39E001F298F /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		AF4EEB902302C4D2001F298F /* MetalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalViewController.swift; sourceTree = "<group>"; };
 		AF4EEB912302C4D2001F298F /* MetalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetalViewController.xib; sourceTree = "<group>"; };
+		AF53E4C7238D3CE600E89EB9 /* UIControlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlVC.swift; sourceTree = "<group>"; };
+		AF53E4C8238D3CE600E89EB9 /* UIControlVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIControlVC.xib; sourceTree = "<group>"; };
 		AF60BAB32268240B00AE592D /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		AF60BAB52268269000AE592D /* Throttle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttle.swift; sourceTree = "<group>"; };
 		AF71B20522DDC50C008DE695 /* LearnCopyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnCopyVC.swift; sourceTree = "<group>"; };
@@ -283,6 +288,7 @@
 		AFB4707A2201A89B002B27C7 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		AFB67CBA235EEB220066D49E /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		AFE569242304F75C00C72940 /* MClassMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MClassMap.swift; sourceTree = "<group>"; };
+		AFF0B87A2445767900FCACA8 /* Solution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
 		AFF7A59721956FD6003A4CA5 /* SQLiteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteVC.swift; sourceTree = "<group>"; };
 		AFF7A59921957025003A4CA5 /* SQLDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLDB.swift; sourceTree = "<group>"; };
 		AFF7A59B219574A1003A4CA5 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -542,6 +548,7 @@
 			isa = PBXGroup;
 			children = (
 				AF1380D0223CAB1200AB2E0D /* LeetCode.swift */,
+				AFF0B87A2445767900FCACA8 /* Solution.swift */,
 			);
 			path = LeetCode;
 			sourceTree = "<group>";
@@ -560,6 +567,7 @@
 		AF13A223223790CA008B91DD /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				AF53E4C6238D3CAB00E89EB9 /* UIControl */,
 				AFB67CB9235EEB0F0066D49E /* SwiftUI */,
 				AF71B1FF22DDC49A008DE695 /* AboutCopy */,
 				9772817020DD3B32004E8E4F /* AFN */,
@@ -811,6 +819,15 @@
 				AF3FF13D2350736500846C74 /* Info.plist */,
 			);
 			path = TargetTwoUITests;
+			sourceTree = "<group>";
+		};
+		AF53E4C6238D3CAB00E89EB9 /* UIControl */ = {
+			isa = PBXGroup;
+			children = (
+				AF53E4C7238D3CE600E89EB9 /* UIControlVC.swift */,
+				AF53E4C8238D3CE600E89EB9 /* UIControlVC.xib */,
+			);
+			path = UIControl;
 			sourceTree = "<group>";
 		};
 		AF5D3A53219D75ED00E64898 /* C++ */ = {
@@ -1159,6 +1176,7 @@
 				9783B90420CD341E00E30FD7 /* MVVMVC.xib in Resources */,
 				AFFEC179230E3602001FAC72 /* JSPatch.js in Resources */,
 				AF27F22F218C0A80001FDFC2 /* OpenGLVC.xib in Resources */,
+				AF53E4CA238D3CE600E89EB9 /* UIControlVC.xib in Resources */,
 				AFFEC184230E3902001FAC72 /* JSPatchTestVC.xib in Resources */,
 				AFFEC189230E401C001FAC72 /* jsscript.js in Resources */,
 				AF30451C218AF66600DA36D2 /* lol.mov in Resources */,
@@ -1268,9 +1286,11 @@
 				AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */,
 				AF4EEB8F2302C39E001F298F /* MetalView.swift in Sources */,
 				AFF7A59A21957025003A4CA5 /* SQLDB.swift in Sources */,
+				AF53E4C9238D3CE600E89EB9 /* UIControlVC.swift in Sources */,
 				AF2BED7E21928EC4007FB28E /* RXSwiftVC.swift in Sources */,
 				AF26EAD0231774A700D61AF6 /* Navigator.swift in Sources */,
 				AFFEC183230E3902001FAC72 /* JSPatchTestVC.m in Sources */,
+				AFF0B87B2445767900FCACA8 /* Solution.swift in Sources */,
 				AF2C8BD22193D66F00BA9492 /* ShowFlex.m in Sources */,
 				AF42F43D22719E96004979AB /* LuckNumbersDb.swift in Sources */,
 				AFA648B922CF3F5100B02CD0 /* String+Extension.swift in Sources */,
