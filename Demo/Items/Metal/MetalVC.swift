@@ -23,8 +23,7 @@ class MetalVC: UIViewController {
          1.0,  -1.0,  0.0,]
     
     var timer: CADisplayLink! = nil
-    
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
