@@ -131,5 +131,13 @@ extension UINavigationController{
         let vc = OCTestVC()
         self.pushViewController(vc, animated: true)
     }
+    
+    func gotoSmoothVC(){
+        let vc = SmoothTableView()
+        self.pushViewController(vc, animated: true)
+    }
+    
+
+    
 }
 

@@ -29,29 +29,29 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
         //testThrottle()
-        print(SDAnimalEnum.allCases)
-                
-        let str =  "123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901"
-        let number = 12345678901
-        print(MemoryLayout<String>.size)
-        print(MemoryLayout<String>.stride)
-        print(MemoryLayout<String>.alignment)
-        print(MemoryLayout.size(ofValue: str))
-        print(MemoryLayout.stride(ofValue: str))
-        print(MemoryLayout.alignment(ofValue: str))
-        
-        print(MemoryLayout<Character>.size)
-        print(MemoryLayout<Character>.stride)
-        print(MemoryLayout<Character>.alignment)
-        print("lalalallalaal")
-        let a:int4
-        
-        var b:Int? = 10
-        b? = 10
-        print(b)
-        var c:Int?
-        c? = 10
-        print(c)
+//        print(SDAnimalEnum.allCases)
+//
+//        let str =  "123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901"
+//        let number = 12345678901
+//        print(MemoryLayout<String>.size)
+//        print(MemoryLayout<String>.stride)
+//        print(MemoryLayout<String>.alignment)
+//        print(MemoryLayout.size(ofValue: str))
+//        print(MemoryLayout.stride(ofValue: str))
+//        print(MemoryLayout.alignment(ofValue: str))
+//
+//        print(MemoryLayout<Character>.size)
+//        print(MemoryLayout<Character>.stride)
+//        print(MemoryLayout<Character>.alignment)
+//        print("lalalallalaal")
+//        let a:int4
+//
+//        var b:Int? = 10
+//        b? = 10
+//        print(b)
+//        var c:Int?
+//        c? = 10
+//        print(c)
         
     }
 
@@ -140,6 +140,8 @@ extension ViewController: UITableViewDelegate {
             self.navigationController?.gotoJSPatchTestVC()
         case VCType.OCTestVC.rawValue:
             self.navigationController?.gotoOCTestVC()
+        case VCType.SmoothTableVoew.rawValue:
+            self.navigationController?.gotoSmoothVC()
         default:
             print("error target viewController")
         }
@@ -163,7 +165,8 @@ extension ViewController{
                 VCType.CALayer.rawValue,
                 VCType.Luck.rawValue,
                 VCType.JSPatchTestVC.rawValue,
-                VCType.OCTestVC.rawValue]
+                VCType.OCTestVC.rawValue,
+                VCType.SmoothTableVoew.rawValue]
         
     }
     
@@ -187,5 +190,6 @@ enum VCType:String {
     case Luck = "Luck"
     case JSPatchTestVC = "JSPatchTestVC"
     case OCTestVC = "OCTestVC"
+    case SmoothTableVoew = "SmoothTableView"
 
 }

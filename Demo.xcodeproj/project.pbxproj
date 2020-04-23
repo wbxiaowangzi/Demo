@@ -86,6 +86,12 @@
 		AF60BAB62268269000AE592D /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BAB52268269000AE592D /* Throttle.swift */; };
 		AF71B20722DDC50C008DE695 /* LearnCopyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71B20522DDC50C008DE695 /* LearnCopyVC.swift */; };
 		AF71B20822DDC50C008DE695 /* LearnCopyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF71B20622DDC50C008DE695 /* LearnCopyVC.xib */; };
+		AF7B8E6F24516E24001055A3 /* SmoothTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B8E6D24516E23001055A3 /* SmoothTableView.swift */; };
+		AF7B8E7024516E24001055A3 /* SmoothTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7B8E6E24516E23001055A3 /* SmoothTableView.xib */; };
+		AF7B8E7324516E63001055A3 /* SmoothTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B8E7124516E63001055A3 /* SmoothTableViewCell.swift */; };
+		AF7B8E7424516E63001055A3 /* SmoothTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7B8E7224516E63001055A3 /* SmoothTableViewCell.xib */; };
+		AF7B8E7824518D0C001055A3 /* SmoothTableDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B8E7624518D0C001055A3 /* SmoothTableDetail.swift */; };
+		AF7B8E7924518D0C001055A3 /* SmoothTableDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7B8E7724518D0C001055A3 /* SmoothTableDetail.xib */; };
 		AF7C881D229E263D00988C98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C881C229E263D00988C98 /* AppDelegate.swift */; };
 		AF7C881F229E263D00988C98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C881E229E263D00988C98 /* ViewController.swift */; };
 		AF7C8822229E263D00988C98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7C8820229E263D00988C98 /* Main.storyboard */; };
@@ -267,6 +273,12 @@
 		AF60BAB52268269000AE592D /* Throttle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttle.swift; sourceTree = "<group>"; };
 		AF71B20522DDC50C008DE695 /* LearnCopyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnCopyVC.swift; sourceTree = "<group>"; };
 		AF71B20622DDC50C008DE695 /* LearnCopyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LearnCopyVC.xib; sourceTree = "<group>"; };
+		AF7B8E6D24516E23001055A3 /* SmoothTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothTableView.swift; sourceTree = "<group>"; };
+		AF7B8E6E24516E23001055A3 /* SmoothTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmoothTableView.xib; sourceTree = "<group>"; };
+		AF7B8E7124516E63001055A3 /* SmoothTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothTableViewCell.swift; sourceTree = "<group>"; };
+		AF7B8E7224516E63001055A3 /* SmoothTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmoothTableViewCell.xib; sourceTree = "<group>"; };
+		AF7B8E7624518D0C001055A3 /* SmoothTableDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothTableDetail.swift; sourceTree = "<group>"; };
+		AF7B8E7724518D0C001055A3 /* SmoothTableDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmoothTableDetail.xib; sourceTree = "<group>"; };
 		AF7C881A229E263D00988C98 /* TargetTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TargetTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7C881C229E263D00988C98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF7C881E229E263D00988C98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -657,6 +669,12 @@
 		AF234DE122F8221E00A1A490 /* PrefectTableView */ = {
 			isa = PBXGroup;
 			children = (
+				AF7B8E6D24516E23001055A3 /* SmoothTableView.swift */,
+				AF7B8E6E24516E23001055A3 /* SmoothTableView.xib */,
+				AF7B8E7124516E63001055A3 /* SmoothTableViewCell.swift */,
+				AF7B8E7224516E63001055A3 /* SmoothTableViewCell.xib */,
+				AF7B8E7624518D0C001055A3 /* SmoothTableDetail.swift */,
+				AF7B8E7724518D0C001055A3 /* SmoothTableDetail.xib */,
 			);
 			path = PrefectTableView;
 			sourceTree = "<group>";
@@ -1162,6 +1180,8 @@
 				9783B8E820CD12AF00E30FD7 /* LaunchScreen.storyboard in Resources */,
 				9772816F20D0AC88004E8E4F /* TransitionVC.xib in Resources */,
 				9783B8F820CD1D6800E30FD7 /* CoreAnimationVC.xib in Resources */,
+				AF7B8E7024516E24001055A3 /* SmoothTableView.xib in Resources */,
+				AF7B8E7424516E63001055A3 /* SmoothTableViewCell.xib in Resources */,
 				AF71B20822DDC50C008DE695 /* LearnCopyVC.xib in Resources */,
 				9783B90420CD341E00E30FD7 /* MVVMVC.xib in Resources */,
 				AFFEC179230E3602001FAC72 /* JSPatch.js in Resources */,
@@ -1172,6 +1192,7 @@
 				AF30451C218AF66600DA36D2 /* lol.mov in Resources */,
 				AF2BED7F21928EC4007FB28E /* RXSwiftVC.xib in Resources */,
 				AF36862521C3BFE100EC0923 /* SizeClassVC.xib in Resources */,
+				AF7B8E7924518D0C001055A3 /* SmoothTableDetail.xib in Resources */,
 				9783B8E320CD12AD00E30FD7 /* Main.storyboard in Resources */,
 				AF7C882D229E26F600988C98 /* Assets.xcassets in Resources */,
 				AF13A22722379214008B91DD /* LuckVC.xib in Resources */,
@@ -1264,6 +1285,7 @@
 				AF4119A12375617F008AF601 /* CAGradientLayerVC.swift in Sources */,
 				AF2C8BD32193D66F00BA9492 /* AppDebugger.m in Sources */,
 				AFA648BA22CF3F5100B02CD0 /* UITableView+Extension.swift in Sources */,
+				AF7B8E7824518D0C001055A3 /* SmoothTableDetail.swift in Sources */,
 				AFA648BB22CF3F5100B02CD0 /* UINavigation+Extension.swift in Sources */,
 				9772816E20D0AC88004E8E4F /* TransitionVC.swift in Sources */,
 				AFFEC178230E3602001FAC72 /* JPEngine.m in Sources */,
@@ -1274,6 +1296,7 @@
 				9744CE6120FF155A00EBD3DE /* BaseVC.swift in Sources */,
 				AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */,
 				AF4EEB8F2302C39E001F298F /* MetalView.swift in Sources */,
+				AF7B8E6F24516E24001055A3 /* SmoothTableView.swift in Sources */,
 				AFF7A59A21957025003A4CA5 /* SQLDB.swift in Sources */,
 				AF53E4C9238D3CE600E89EB9 /* UIControlVC.swift in Sources */,
 				AF2BED7E21928EC4007FB28E /* RXSwiftVC.swift in Sources */,
@@ -1284,6 +1307,7 @@
 				AF42F43D22719E96004979AB /* LuckNumbersDb.swift in Sources */,
 				AFA648B922CF3F5100B02CD0 /* String+Extension.swift in Sources */,
 				AF3832D622E00D8D00E1580F /* AccessTokenPlugin.swift in Sources */,
+				AF7B8E7324516E63001055A3 /* SmoothTableViewCell.swift in Sources */,
 				AF1380D1223CAB1200AB2E0D /* LeetCode.swift in Sources */,
 				AF3832D422E00D8D00E1580F /* ApiService.swift in Sources */,
 				9783B8F320CD1D4B00E30FD7 /* CALayerVC.swift in Sources */,
