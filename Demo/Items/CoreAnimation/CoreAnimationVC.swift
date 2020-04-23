@@ -12,6 +12,7 @@ class CoreAnimationVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var rightView: UIView!
+    @IBOutlet weak var suspend: UIButton!
     
     lazy var animateView: UIView = {
         let v = UIView()
@@ -32,6 +33,15 @@ class CoreAnimationVC: UIViewController {
         super.viewDidDisappear(animated)
         showAnimateView()
         
+    }
+    @IBAction func suspendClick(_ sender: Any) {
+        if suspend.title(for: .normal) == "暂停"{
+            self.suspendAnimation()
+            suspend.setTitle("继续", for: .normal)
+        }else{
+            self.continueAnmation()
+            suspend.setTitle("暂停", for: .normal)
+        }
     }
 }
 
@@ -125,6 +135,23 @@ extension CoreAnimationVC {
             animateView.layer.backgroundColor = UIColor.red.cgColor
         }
         animateView.layer.add(t, forKey: "transtion animation")
+    }
+}
+
+extension CoreAnimationVC {
+    private func suspendAnimation(){
+        let pausedTime = animateView.layer.convertTime(CACurrentMediaTime(), from: nil)
+        animateView.layer.speed = 0.0
+        animateView.layer.timeOffset = pausedTime
+    }
+    
+    private func continueAnmation(){
+        let pausedTime = animateView.layer.timeOffset
+        animateView.layer.speed = 1.0
+        animateView.layer.timeOffset = 0.0
+        animateView.layer.beginTime = 0.0
+        let timeSincePause = animateView.layer.convertTime(CACurrentMediaTime(), from: nil) - pausedTime
+        animateView.layer.beginTime = timeSincePause
     }
 }
 
