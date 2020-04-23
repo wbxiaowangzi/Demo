@@ -11,10 +11,6 @@
 		9744CE6320FF172600EBD3DE /* GifBGVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744CE6220FF172600EBD3DE /* GifBGVC.swift */; };
 		9744CE6520FF173F00EBD3DE /* RotaryTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9744CE6420FF173F00EBD3DE /* RotaryTableVC.swift */; };
 		975386BA21660A4800B5BE32 /* MetalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975386B921660A4800B5BE32 /* MetalVC.swift */; };
-		975386BC2166137D00B5BE32 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 975386BB2166137D00B5BE32 /* Shader.metal */; };
-		975386BE216613DC00B5BE32 /* FragmentShader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 975386BD216613DC00B5BE32 /* FragmentShader.metal */; };
-		9757718622FFC33400B52C9B /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9757718522FFC33400B52C9B /* XCTest.framework */; };
-		9757718822FFC36E00B52C9B /* XCTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9757718522FFC33400B52C9B /* XCTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9772816E20D0AC88004E8E4F /* TransitionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9772816C20D0AC88004E8E4F /* TransitionVC.swift */; };
 		9772816F20D0AC88004E8E4F /* TransitionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9772816D20D0AC88004E8E4F /* TransitionVC.xib */; };
 		9783B8DE20CD12AD00E30FD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783B8DD20CD12AD00E30FD7 /* AppDelegate.swift */; };
@@ -99,6 +95,7 @@
 		AF7C8831229E275D00988C98 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7C882F229E274F00988C98 /* Media.xcassets */; };
 		AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA3E02181A052001BB669 /* SceneKitVC.swift */; };
 		AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7FA3E42181AACA001BB669 /* SceneKit.framework */; };
+		AF97A58124513B6100F3D460 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = AF97A58024513B6100F3D460 /* Shaders.metal */; };
 		AFA648B922CF3F5100B02CD0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA648B622CF3F5000B02CD0 /* String+Extension.swift */; };
 		AFA648BA22CF3F5100B02CD0 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA648B722CF3F5000B02CD0 /* UITableView+Extension.swift */; };
 		AFA648BB22CF3F5100B02CD0 /* UINavigation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA648B822CF3F5000B02CD0 /* UINavigation+Extension.swift */; };
@@ -109,8 +106,6 @@
 		AFF7A59821956FD6003A4CA5 /* SQLiteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF7A59721956FD6003A4CA5 /* SQLiteVC.swift */; };
 		AFF7A59A21957025003A4CA5 /* SQLDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF7A59921957025003A4CA5 /* SQLDB.swift */; };
 		AFF7A59D2195955D003A4CA5 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AFF7A59B219574A1003A4CA5 /* libsqlite3.0.tbd */; };
-		AFFEC15C230CE060001FAC72 /* MetalKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFEC15B230CE060001FAC72 /* MetalKit.framework */; };
-		AFFEC15E230CE065001FAC72 /* Metal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFEC15D230CE065001FAC72 /* Metal.framework */; };
 		AFFEC178230E3602001FAC72 /* JPEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC175230E3602001FAC72 /* JPEngine.m */; };
 		AFFEC179230E3602001FAC72 /* JSPatch.js in Resources */ = {isa = PBXBuildFile; fileRef = AFFEC177230E3602001FAC72 /* JSPatch.js */; };
 		AFFEC183230E3902001FAC72 /* JSPatchTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFEC181230E3902001FAC72 /* JSPatchTestVC.m */; };
@@ -150,7 +145,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9757718822FFC36E00B52C9B /* XCTest.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -164,16 +158,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		AF3FF0F32350308700846C74 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -183,8 +167,6 @@
 		9744CE6220FF172600EBD3DE /* GifBGVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifBGVC.swift; sourceTree = "<group>"; };
 		9744CE6420FF173F00EBD3DE /* RotaryTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RotaryTableVC.swift; sourceTree = "<group>"; };
 		975386B921660A4800B5BE32 /* MetalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalVC.swift; sourceTree = "<group>"; };
-		975386BB2166137D00B5BE32 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
-		975386BD216613DC00B5BE32 /* FragmentShader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = FragmentShader.metal; sourceTree = "<group>"; };
 		9757718522FFC33400B52C9B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9772816C20D0AC88004E8E4F /* TransitionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionVC.swift; sourceTree = "<group>"; };
 		9772816D20D0AC88004E8E4F /* TransitionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransitionVC.xib; sourceTree = "<group>"; };
@@ -263,7 +245,6 @@
 		AF3832DA22E00EA700E1580F /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		AF3832DF22E00F4700E1580F /* UserDefaultStaticStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultStaticStrings.swift; sourceTree = "<group>"; };
 		AF3832E022E00F4700E1580F /* MiNavigationConroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiNavigationConroller.swift; sourceTree = "<group>"; };
-		AF3FF106235034F200846C74 /* libswiftXCTest.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftXCTest.tbd; path = usr/lib/swift/libswiftXCTest.tbd; sourceTree = SDKROOT; };
 		AF3FF11A2350678E00846C74 /* DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3FF11C2350678E00846C74 /* DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTests.swift; sourceTree = "<group>"; };
 		AF3FF11E2350678E00846C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -297,6 +278,7 @@
 		AF7FA3E02181A052001BB669 /* SceneKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKitVC.swift; sourceTree = "<group>"; };
 		AF7FA3E22181A7AB001BB669 /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF7FA3E42181AACA001BB669 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		AF97A58024513B6100F3D460 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		AFA648B622CF3F5000B02CD0 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		AFA648B722CF3F5000B02CD0 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
 		AFA648B822CF3F5000B02CD0 /* UINavigation+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigation+Extension.swift"; sourceTree = "<group>"; };
@@ -308,9 +290,6 @@
 		AFF7A59721956FD6003A4CA5 /* SQLiteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteVC.swift; sourceTree = "<group>"; };
 		AFF7A59921957025003A4CA5 /* SQLDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLDB.swift; sourceTree = "<group>"; };
 		AFF7A59B219574A1003A4CA5 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
-		AFF7E6A6230676F4006F8D4F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		AFFEC15B230CE060001FAC72 /* MetalKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MetalKit.framework; path = System/Library/Frameworks/MetalKit.framework; sourceTree = SDKROOT; };
-		AFFEC15D230CE065001FAC72 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		AFFEC175230E3602001FAC72 /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
 		AFFEC176230E3602001FAC72 /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPEngine.h; sourceTree = "<group>"; };
 		AFFEC177230E3602001FAC72 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
@@ -325,8 +304,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9757718622FFC33400B52C9B /* XCTest.framework in Frameworks */,
-
 				AF109738219BCCCB003F148D /* libc++.tbd in Frameworks */,
 				AFF7A59D2195955D003A4CA5 /* libsqlite3.0.tbd in Frameworks */,
 				AF27F22A218BFF93001FDFC2 /* GLKit.framework in Frameworks */,
@@ -413,8 +390,8 @@
 		975386B62166096500B5BE32 /* Metal */ = {
 			isa = PBXGroup;
 			children = (
+				AF97A58024513B6100F3D460 /* Shaders.metal */,
 				975386B921660A4800B5BE32 /* MetalVC.swift */,
-				975386BB2166137D00B5BE32 /* Shaders.metal */,
 				AF4EEB8E2302C39E001F298F /* MetalView.swift */,
 				AF4EEB902302C4D2001F298F /* MetalViewController.swift */,
 				AF4EEB912302C4D2001F298F /* MetalViewController.xib */,
@@ -583,8 +560,6 @@
 		AF13A223223790CA008B91DD /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				AF53E4C6238D3CAB00E89EB9 /* UIControl */,
-				AFB67CB9235EEB0F0066D49E /* SwiftUI */,
 				AF71B1FF22DDC49A008DE695 /* AboutCopy */,
 				9772817020DD3B32004E8E4F /* AFN */,
 				AFB470792201A87D002B27C7 /* Annotation */,
@@ -621,7 +596,9 @@
 				AF36862121C3BF8100EC0923 /* SizeClass */,
 				AFA758F3224B704D008440F0 /* SomeControls */,
 				AF3C914821956C8F006E02FF /* SQLite */,
+				AFB67CB9235EEB0F0066D49E /* SwiftUI */,
 				9772816220D0A177004E8E4F /* Transition */,
+				AF53E4C6238D3CAB00E89EB9 /* UIControl */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -1284,7 +1261,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF3832D522E00D8D00E1580F /* Observable+ObjectMapper.swift in Sources */,
-				975386BC2166137D00B5BE32 /* Shaders.metal in Sources */,
 				AF4119A12375617F008AF601 /* CAGradientLayerVC.swift in Sources */,
 				AF2C8BD32193D66F00BA9492 /* AppDebugger.m in Sources */,
 				AFA648BA22CF3F5100B02CD0 /* UITableView+Extension.swift in Sources */,
@@ -1348,6 +1324,7 @@
 				AF304520218AFFBC00DA36D2 /* CAShapeLayerVC.swift in Sources */,
 				9783B8DE20CD12AD00E30FD7 /* AppDelegate.swift in Sources */,
 				AF3832D322E00D8D00E1580F /* YunweiMgr.swift in Sources */,
+				AF97A58124513B6100F3D460 /* Shaders.metal in Sources */,
 				AFF7A59821956FD6003A4CA5 /* SQLiteVC.swift in Sources */,
 				975386BA21660A4800B5BE32 /* MetalVC.swift in Sources */,
 				AFB67CBB235EEB220066D49E /* SwiftUIView.swift in Sources */,
@@ -1582,20 +1559,14 @@
 				DEVELOPMENT_TEAM = LQQGDZBGK3;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Demo/Items/AvatarX",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Demo/Items/AvatarX/Camera360",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = (
 					"-l\"c++\"",
@@ -1636,20 +1607,14 @@
 				DEVELOPMENT_TEAM = LQQGDZBGK3;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Demo/Items/AvatarX",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Demo/Items/AvatarX/Camera360",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				MACH_O_TYPE = mh_execute;
 				OTHER_LDFLAGS = (
 					"-l\"c++\"",

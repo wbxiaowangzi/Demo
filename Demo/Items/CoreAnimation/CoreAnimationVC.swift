@@ -117,7 +117,7 @@ extension CoreAnimationVC {
         path.move(to: animateView.layer.position)
         path.addCurve(to: CGPoint(x: 300, y: 400), controlPoint1: CGPoint(x: 100, y: 200), controlPoint2: CGPoint(x: 200, y: 250))
         pathA.path = path.cgPath
-        pathA.duration = 1
+        pathA.duration = 5
         
         animateView.layer.add(pathA, forKey: "bezier path animation")
     }
@@ -126,7 +126,7 @@ extension CoreAnimationVC {
         let t = CATransition()
         t.type = convertToCATransitionType("oglFlip")
         t.subtype = CATransitionSubtype.fromLeft
-        t.duration = 1
+        t.duration = 5
         
         let isRed = (animateView.layer.backgroundColor == UIColor.red.cgColor)
         if isRed {

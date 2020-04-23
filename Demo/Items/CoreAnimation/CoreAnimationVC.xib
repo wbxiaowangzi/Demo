@@ -36,12 +36,15 @@
                     <rect key="frame" x="80" y="0.0" width="295" height="667"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sh7-ng-9vC">
-                            <rect key="frame" x="124.5" y="542" width="46" height="30"/>
+                            <rect key="frame" x="97.5" y="532" width="100" height="40"/>
+                            <color key="backgroundColor" red="0.24313725489999999" green="0.59215686270000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="46" id="cpH-VK-YzJ"/>
-                                <constraint firstAttribute="height" constant="30" id="hSl-iR-Yap"/>
+                                <constraint firstAttribute="width" constant="100" id="cpH-VK-YzJ"/>
+                                <constraint firstAttribute="height" constant="40" id="hSl-iR-Yap"/>
                             </constraints>
-                            <state key="normal" title="暂停"/>
+                            <state key="normal" title="暂停">
+                                <color key="titleColor" red="0.90196078430000004" green="0.91764705879999997" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
                             <connections>
                                 <action selector="suspendClick:" destination="-1" eventType="touchUpInside" id="kh8-dk-aoI"/>
                             </connections>
