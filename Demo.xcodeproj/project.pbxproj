@@ -24,6 +24,7 @@
 		9783B8FB20CD1E2F00E30FD7 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783B8FA20CD1E2F00E30FD7 /* Router.swift */; };
 		9783B90320CD341E00E30FD7 /* MVVMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9783B90120CD341E00E30FD7 /* MVVMVC.swift */; };
 		9783B90420CD341E00E30FD7 /* MVVMVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9783B90220CD341E00E30FD7 /* MVVMVC.xib */; };
+		97C197692451CA2F00860C26 /* Transitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C197682451CA2F00860C26 /* Transitioning.swift */; };
 		AF09856E23225D6C002B003B /* LintCode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF09856C23225D6B002B003B /* LintCode.cpp */; };
 		AF09857223226025002B003B /* CppBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF09857123226025002B003B /* CppBridge.mm */; };
 		AF109738219BCCCB003F148D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AF109737219BCCCB003F148D /* libc++.tbd */; };
@@ -192,6 +193,7 @@
 		9783B8FA20CD1E2F00E30FD7 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9783B90120CD341E00E30FD7 /* MVVMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMVC.swift; sourceTree = "<group>"; };
 		9783B90220CD341E00E30FD7 /* MVVMVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MVVMVC.xib; sourceTree = "<group>"; };
+		97C197682451CA2F00860C26 /* Transitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transitioning.swift; sourceTree = "<group>"; };
 		A6DA9D8A6B6E185481083FF5 /* Pods-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Demo/Pods-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		AF09856C23225D6B002B003B /* LintCode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LintCode.cpp; sourceTree = "<group>"; };
 		AF09856D23225D6B002B003B /* LintCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LintCode.h; sourceTree = "<group>"; };
@@ -554,6 +556,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		97C197642451C9D300860C26 /* TransferAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				97C197682451CA2F00860C26 /* Transitioning.swift */,
+			);
+			path = TransferAnimation;
+			sourceTree = "<group>";
+		};
 		AF1380CF223CAAA800AB2E0D /* LeetCode */ = {
 			isa = PBXGroup;
 			children = (
@@ -579,6 +589,7 @@
 			children = (
 				AF7B8EA22456D5F3001055A3 /* Mems */,
 				AF7B8E8C24541A3C001055A3 /* SDAspect */,
+				97C197642451C9D300860C26 /* TransferAnimation */,
 				AF71B1FF22DDC49A008DE695 /* AboutCopy */,
 				9772817020DD3B32004E8E4F /* AFN */,
 				AFB470792201A87D002B27C7 /* Annotation */,
@@ -1318,6 +1329,7 @@
 				9783B90320CD341E00E30FD7 /* MVVMVC.swift in Sources */,
 				9783B8E020CD12AD00E30FD7 /* ViewController.swift in Sources */,
 				9744CE6120FF155A00EBD3DE /* BaseVC.swift in Sources */,
+				97C197692451CA2F00860C26 /* Transitioning.swift in Sources */,
 				AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */,
 				AF4EEB8F2302C39E001F298F /* MetalView.swift in Sources */,
 				AF7B8E6F24516E24001055A3 /* SmoothTableView.swift in Sources */,
