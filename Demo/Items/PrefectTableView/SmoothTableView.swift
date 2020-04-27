@@ -14,6 +14,7 @@ class SmoothTableView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.ui()
+        
     }
     
     private func ui() {

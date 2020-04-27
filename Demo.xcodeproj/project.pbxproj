@@ -92,6 +92,8 @@
 		AF7B8E7424516E63001055A3 /* SmoothTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7B8E7224516E63001055A3 /* SmoothTableViewCell.xib */; };
 		AF7B8E7824518D0C001055A3 /* SmoothTableDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B8E7624518D0C001055A3 /* SmoothTableDetail.swift */; };
 		AF7B8E7924518D0C001055A3 /* SmoothTableDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7B8E7724518D0C001055A3 /* SmoothTableDetail.xib */; };
+		AF7B8E8F24541A60001055A3 /* MAspects.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7B8E8E24541A60001055A3 /* MAspects.m */; };
+		AF7B8EA42456D605001055A3 /* Mems.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B8EA32456D605001055A3 /* Mems.swift */; };
 		AF7C881D229E263D00988C98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C881C229E263D00988C98 /* AppDelegate.swift */; };
 		AF7C881F229E263D00988C98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7C881E229E263D00988C98 /* ViewController.swift */; };
 		AF7C8822229E263D00988C98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7C8820229E263D00988C98 /* Main.storyboard */; };
@@ -279,6 +281,9 @@
 		AF7B8E7224516E63001055A3 /* SmoothTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmoothTableViewCell.xib; sourceTree = "<group>"; };
 		AF7B8E7624518D0C001055A3 /* SmoothTableDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothTableDetail.swift; sourceTree = "<group>"; };
 		AF7B8E7724518D0C001055A3 /* SmoothTableDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmoothTableDetail.xib; sourceTree = "<group>"; };
+		AF7B8E8D24541A5F001055A3 /* MAspects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAspects.h; sourceTree = "<group>"; };
+		AF7B8E8E24541A60001055A3 /* MAspects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAspects.m; sourceTree = "<group>"; };
+		AF7B8EA32456D605001055A3 /* Mems.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mems.swift; sourceTree = "<group>"; };
 		AF7C881A229E263D00988C98 /* TargetTwo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TargetTwo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7C881C229E263D00988C98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF7C881E229E263D00988C98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -572,6 +577,8 @@
 		AF13A223223790CA008B91DD /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				AF7B8EA22456D5F3001055A3 /* Mems */,
+				AF7B8E8C24541A3C001055A3 /* SDAspect */,
 				AF71B1FF22DDC49A008DE695 /* AboutCopy */,
 				9772817020DD3B32004E8E4F /* AFN */,
 				AFB470792201A87D002B27C7 /* Annotation */,
@@ -879,6 +886,23 @@
 				AF71B20622DDC50C008DE695 /* LearnCopyVC.xib */,
 			);
 			path = AboutCopy;
+			sourceTree = "<group>";
+		};
+		AF7B8E8C24541A3C001055A3 /* SDAspect */ = {
+			isa = PBXGroup;
+			children = (
+				AF7B8E8D24541A5F001055A3 /* MAspects.h */,
+				AF7B8E8E24541A60001055A3 /* MAspects.m */,
+			);
+			path = SDAspect;
+			sourceTree = "<group>";
+		};
+		AF7B8EA22456D5F3001055A3 /* Mems */ = {
+			isa = PBXGroup;
+			children = (
+				AF7B8EA32456D605001055A3 /* Mems.swift */,
+			);
+			path = Mems;
 			sourceTree = "<group>";
 		};
 		AF7C881B229E263D00988C98 /* TargetTwo */ = {
@@ -1320,6 +1344,7 @@
 				AF2C8BD52193D66F00BA9492 /* ChartConsole.m in Sources */,
 				AF26EACC2317724C00D61AF6 /* VCMap.swift in Sources */,
 				9783B8FB20CD1E2F00E30FD7 /* Router.swift in Sources */,
+				AF7B8EA42456D605001055A3 /* Mems.swift in Sources */,
 				AFA758F5224B706C008440F0 /* SomeControls.swift in Sources */,
 				9783B8F720CD1D6800E30FD7 /* CoreAnimationVC.swift in Sources */,
 				AF2C8BD62193D66F00BA9492 /* ShowNavigator.m in Sources */,
@@ -1340,6 +1365,7 @@
 				AF71B20722DDC50C008DE695 /* LearnCopyVC.swift in Sources */,
 				AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */,
 				AF188CD522D6DF4300DFE15D /* BatteryInfo.m in Sources */,
+				AF7B8E8F24541A60001055A3 /* MAspects.m in Sources */,
 				AF36862421C3BFE100EC0923 /* SizeClassVC.swift in Sources */,
 				AF27F231218C1649001FDFC2 /* DrawingBoardView.swift in Sources */,
 				AF243CE322A907BD00809768 /* RedPointProtocol.swift in Sources */,

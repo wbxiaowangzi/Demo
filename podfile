@@ -23,6 +23,7 @@ target 'Demo' do
   pod 'MINavigator', :path=>'~/MINavigator/'
   #pod 'MICommonUI', :path=>'~/MICommonUI/'
   
+  pod 'SDWebImage'
   pod 'CTMediator'
   #单元测试
   #pod 'Kiwi'

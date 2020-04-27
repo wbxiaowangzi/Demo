@@ -18,11 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         #if DEBUG
         Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle")?.load()
-        //for tvOS:
-        Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/tvOSInjection10.bundle")?.load()
-        //Or for macOS:
-        Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/macOSInjection10.bundle")?.load()
         #endif
+        
+//        hookSDWebImage()
         return true
     }
 
@@ -48,5 +46,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+}
+
+extension AppDelegate{
+    
+//    fileprivate func hookSDWebImage() {
+//        let block: @convention(block) (AspectInfo) -> () = { info in
+//            guard let imageView = info.instance() as? UIImageView else { return }
+//            let arguments = info.arguments()
+//            guard arguments?.count ?? 0 > 0 else { return }
+//            var placeholderImage: UIImage?
+//            var options: SDWebImageOptions = []
+//            var completed: SDExternalCompletionBlock?
+//            if arguments!.count == 2 {
+//                completed = arguments![1] as? SDExternalCompletionBlock
+//            } else if arguments!.count == 4 {
+//                placeholderImage = arguments![1] as? UIImage
+//                options = arguments![2] as? SDWebImageOptions ?? []
+//                completed = arguments![3] as? SDExternalCompletionBlock
+//            } else {
+//                return
+//            }
+//            guard let url = arguments![0] as? URL else {
+//                imageView.sd_setImage(with: nil,
+//                                      placeholderImage: placeholderImage,
+//                                      options: options,
+//                                      progress: nil,
+//                                      completed: completed)
+//                return
+//            }
+//            let width = imageView.frame.size.width * UIScreen.main.scale
+//            let height = imageView.frame.size.height * UIScreen.main.scale
+//            guard width != 0, height != 0 else {
+//                DispatchQueue.main.async {
+//                    imageView.sd_setImage(with: url,
+//                                          placeholderImage: placeholderImage,
+//                                          options: options,
+//                                          completed: completed)
+//                }
+//                return
+//            }
+//            let parsedURL = parse(for: url, imageSize: CGSize(width: width, height: height), scale: nil)
+//            imageView.sd_setImage(with: parsedURL,
+//                                  placeholderImage: placeholderImage,
+//                                  options: options,
+//                                  progress: nil,
+//                                  completed: completed)
+//        }
+//         _ = try? UIImageView.aspect_hook(#selector(UIImageView.sd_setImage(with:placeholderImage:options:completed:)), with: .positionInstead, usingBlock: block)
+//    }
 }
 
