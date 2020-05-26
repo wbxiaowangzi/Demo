@@ -13,6 +13,7 @@ class CoreAnimationVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var rightView: UIView!
     @IBOutlet weak var suspend: UIButton!
+    private var implicitLayer: CALayer?
     
     lazy var animateView: UIView = {
         let v = UIView()
@@ -23,6 +24,7 @@ class CoreAnimationVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        UI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +36,7 @@ class CoreAnimationVC: UIViewController {
         showAnimateView()
         
     }
+    
     @IBAction func suspendClick(_ sender: Any) {
         if suspend.title(for: .normal) == "暂停"{
             self.suspendAnimation()
@@ -43,6 +46,27 @@ class CoreAnimationVC: UIViewController {
             suspend.setTitle("暂停", for: .normal)
         }
     }
+    
+    private func UI() {
+        let layer = CALayer()
+        layer.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
+        layer.backgroundColor = UIColor.red.cgColor
+        self.view.layer.addSublayer(layer)
+        self.implicitLayer = layer
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        guard let point = touches.first?.location(in: self.view) else { return }
+        if ((self.implicitLayer?.presentation()?.hitTest(point)) != nil) {
+            implicitAnimation()
+        } else {
+            CATransaction.begin()
+            CATransaction.setAnimationDuration(4.0)
+            implicitLayer?.position = point
+            CATransaction.commit()
+        }
+    }
+    
 }
 
 extension CoreAnimationVC: UITableViewDataSource{
@@ -71,6 +95,8 @@ extension CoreAnimationVC: UITableViewDelegate {
             showRotateAnimation()
         case "换一换":
             showTransitionAnimation()
+        case "隐式动画":
+            implicitAnimation()
         default:
             print("to be continued")
         }
@@ -80,7 +106,7 @@ extension CoreAnimationVC: UITableViewDelegate {
 extension CoreAnimationVC{
     
     func lazyCellNames() -> Array<String>{
-        return ["抖一抖","转一转","换一换"]
+        return ["抖一抖","转一转","换一换","隐式动画"]
     }
     
 }
@@ -136,6 +162,13 @@ extension CoreAnimationVC {
         }
         animateView.layer.add(t, forKey: "transtion animation")
     }
+    
+    private func implicitAnimation() {
+        let r = CGFloat.random(in: 1...256)/256.0
+        let g = CGFloat.random(in: 1...256)/256.0
+        let b = CGFloat.random(in: 1...256)/256.0
+        implicitLayer?.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1.0).cgColor
+    }
 }
 
 extension CoreAnimationVC {
@@ -148,14 +181,15 @@ extension CoreAnimationVC {
     private func continueAnmation(){
         let pausedTime = animateView.layer.timeOffset
         animateView.layer.speed = 1.0
+        
+        ///修改为默认值
         animateView.layer.timeOffset = 0.0
         animateView.layer.beginTime = 0.0
+        
         let timeSincePause = animateView.layer.convertTime(CACurrentMediaTime(), from: nil) - pausedTime
         animateView.layer.beginTime = timeSincePause
     }
 }
-
-
 
 // Helper function inserted by Swift 4.2 migrator.
 fileprivate func convertToCATransitionType(_ input: String) -> CATransitionType {
