@@ -11,13 +11,13 @@ import ObjectMapper
 import MINetwork
 
 class ConsultCaseListModel: MappableBase {
-    
+
     var total_count: Int?
-    
+
     var count: Int?
-    
+
     var list: [ConsultCaseModel]?
-    
+
     override func mapping(map: Map) {
         super.mapping(map: map)
         total_count <- map["data.total"]
@@ -26,44 +26,61 @@ class ConsultCaseListModel: MappableBase {
     }
 }
 
-
 class ConsultCaseModel: NSObject, Mappable {
-    
+
     var id: Int?
+
     
     var image_url: String?
+
     
     var image_type: Int?
+
     
     var image_number: Int?
+
     
     var name: String?
+
     
     var gender: Int?
+
     
     var age: Int?
+
     
     var occupation: String?
+
     
     var design_objective: String?
+
     
     var operate_time: Int?
+
     
     var photo_time: Int?
+
     
     var star: Int?
+
     
     var collect: Int?
+
     
     var doctor: ConsultCaseDoctorModel?
+
     
     var labels: [ConsultCaseLabeleModel]?
+
     
     var operations: [ConsultCaseOperationModel]?
+
     
     var solutions: [ConsultCaseSolutionModel]?
+
     
     var instances: [ConsultCaseInstanceModel]?
+
     
     override init() {
         super.init()
@@ -96,12 +113,17 @@ class ConsultCaseModel: NSObject, Mappable {
     }
     
 }
+
 class ConsultCaseDoctorModel: NSObject, Mappable {
-    
+
     var id: Int?
+
     var name: String?
+
     var image: String?
+
     var phone: String?
+
     
     override init() {
         super.init()
@@ -118,12 +140,15 @@ class ConsultCaseDoctorModel: NSObject, Mappable {
 }
 
 class ConsultCaseLabeleModel: NSObject, Mappable {
-    
+
     var id: Int?
+
     var full_name: String?
+
     var name: String?
+
     var degree: String?
-    
+
     override init() {
         super.init()
     }
@@ -139,7 +164,7 @@ class ConsultCaseLabeleModel: NSObject, Mappable {
 }
 
 class ConsultCaseSolutionModel: NSObject, Mappable {
-    
+
     override init() {
         super.init()
     }
@@ -148,6 +173,7 @@ class ConsultCaseSolutionModel: NSObject, Mappable {
     }
     
     var id: Int?
+
     var name: String?
 
     func mapping(map: Map) {
@@ -157,7 +183,7 @@ class ConsultCaseSolutionModel: NSObject, Mappable {
 }
 
 class ConsultCaseOperationModel: NSObject, Mappable {
-    
+
     override init() {
         super.init()
     }
@@ -166,6 +192,7 @@ class ConsultCaseOperationModel: NSObject, Mappable {
     }
     
     var id: Int?
+
     var name: String?
 
     func mapping(map: Map) {
@@ -175,15 +202,16 @@ class ConsultCaseOperationModel: NSObject, Mappable {
 }
 
 class ConsultCaseInstanceModel: NSObject, Mappable {
-    
+
     override init() {
         super.init()
     }
-    
+
     required init?(map: Map) {
     }
-    
+
     var id: Int?
+
     var name: String?
 
     func mapping(map: Map) {
