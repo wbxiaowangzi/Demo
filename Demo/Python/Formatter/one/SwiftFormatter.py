@@ -90,9 +90,7 @@ def formatter_the_folder(p):
 
 # 判断一个字符串是否是定义的属性或类
 def is_var_or_class(line):
-    is_v = re.match(r'.*var.*:.*', line, flags=0)\
-           or re.match(r'.*var.*=.*', line, flags=0)\
-           or re.match(r'.*class.*{.*', line, flags=0)
+    is_v = re.match(r'.*(((var)|(let).*[:=])|(class.*{)).*', line, flags=0)
     return is_v is not None
 
 
