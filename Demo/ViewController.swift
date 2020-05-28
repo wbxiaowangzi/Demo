@@ -27,32 +27,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
-        //testThrottle()
-//        print(SDAnimalEnum.allCases)
-//
-//        let str =  "123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901"
-
-//        let number = 12345678901
-//        print(MemoryLayout<String>.size)
-//        print(MemoryLayout<String>.stride)
-//        print(MemoryLayout<String>.alignment)
-//        print(MemoryLayout.size(ofValue: str))
-//        print(MemoryLayout.stride(ofValue: str))
-//        print(MemoryLayout.alignment(ofValue: str))
-//
-//        print(MemoryLayout<Character>.size)
-//        print(MemoryLayout<Character>.stride)
-//        print(MemoryLayout<Character>.alignment)
-//        print("lalalallalaal")
-//        let a: int4
-//
-//        var b: Int? = 10
-//        b? = 10
-//        print(b)
-//        var c: Int?
-//        c? = 10
-//        print(c)
-        
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,7 +52,6 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
             a.necessoryToExecuteHandler = false
         }
-        
     }
     
     func login() {
@@ -90,14 +63,14 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.lazyCellNames().count
+        return self.lazyDatas().count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
 
-        let name = self.lazyCellNames()[indexPath.row]
-        cell.textLabel?.text = name
+        let name = self.lazyDatas()[indexPath.row]
+        cell.textLabel?.text = name.rawValue
         return cell
     }
 }
@@ -105,70 +78,69 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let toValue = self.lazyCellNames()[indexPath.row]
+        let toValue = self.lazyDatas()[indexPath.row]
         switch toValue {
-        case VCType.CALayer.rawValue:
+        case .CALayer:
             self.navigationController?.gotoCALayerVC()
-        case VCType.CoreAnimation.rawValue:
+        case .CoreAnimation:
             self.navigationController?.gotoCoreAnimationVC()
-        case VCType.MVVM.rawValue:
+        case .MVVM:
             self.navigationController?.gotoMVVMVC()
-        case VCType.Transition.rawValue:
+        case .Transition:
             self.navigationController?.gotoTransitionVC()
-        case VCType.RotatyTable.rawValue:
+        case .RotatyTable:
             self.navigationController?.gotoRotaryTableVC()
-        case VCType.GifBG.rawValue:
+        case .GifBG:
             self.navigationController?.gotoGifBGVC()
-        case VCType.Metal.rawValue:
+        case .Metal:
             self.navigationController?.gotoMetalVC()
-        case VCType.SceneKit.rawValue:
+        case .SceneKit:
             self.navigationController?.gotoSceneKitVC()
-        case VCType.Radar.rawValue:
+        case .Radar:
             self.navigationController?.gotoRadarVC()
-        case VCType.OpenGL.rawValue:
+        case .OpenGL:
             self.navigationController?.gotoOpenGLVC()
-        case VCType.RXSwift.rawValue:
+        case .RXSwift:
             self.navigationController?.gotoRXSwiftVC()
-        case VCType.SQLite.rawValue:
+        case .SQLite:
             self.navigationController?.gotoSQLiteVC()
-        case VCType.AvatarX.rawValue:
+        case .AvatarX:
             self.navigationController?.gotoAvatarXVC()
-        case VCType.SizeClass.rawValue:
+        case .SizeClass:
             self.navigationController?.gotoSizeClassVC()
-        case VCType.Luck.rawValue:
+        case .Luck:
             self.navigationController?.gotoLuckVC()
-        case VCType.JSPatchTestVC.rawValue:
+        case .JSPatchTestVC:
             self.navigationController?.gotoJSPatchTestVC()
-        case VCType.OCTestVC.rawValue:
+        case .OCTestVC:
             self.navigationController?.gotoOCTestVC()
-        case VCType.SmoothTableVoew.rawValue:
+        case .SmoothTableVoew:
             self.navigationController?.gotoSmoothVC()
-        default:
-            print("error target viewController")
+        case .ImagePicker:
+            self.navigationController?.gotoImagePickerVC()
         }
     }
 }
 
 extension ViewController {
     
-    func lazyCellNames() -> Array<String> {
-        
-        return [VCType.SQLite.rawValue,
-                VCType.RXSwift.rawValue,
-                VCType.OpenGL.rawValue,
-                VCType.Radar.rawValue,
-                VCType.SceneKit.rawValue,
-                VCType.Metal.rawValue,
-                VCType.GifBG.rawValue,
-                VCType.CoreAnimation.rawValue,
-                VCType.AvatarX.rawValue,
-                VCType.SizeClass.rawValue,
-                VCType.CALayer.rawValue,
-                VCType.Luck.rawValue,
-                VCType.JSPatchTestVC.rawValue,
-                VCType.OCTestVC.rawValue,
-                VCType.SmoothTableVoew.rawValue]
-        
+    func lazyDatas() -> [VCType] {
+        return [.SQLite,
+                .RXSwift,
+                .OpenGL,
+                .Radar,
+                .SceneKit,
+                .Metal,
+                .GifBG,
+                .CoreAnimation,
+                .AvatarX,
+                .SizeClass,
+                .CALayer,
+                .Luck,
+                .JSPatchTestVC,
+                .OCTestVC,
+                .SmoothTableVoew,
+                .ImagePicker]
     }
     
 }
@@ -192,5 +164,5 @@ enum VCType: String {
     case JSPatchTestVC = "JSPatchTestVC"
     case OCTestVC = "OCTestVC"
     case SmoothTableVoew = "SmoothTableView"
-
+    case ImagePicker = "ImagePicker"
 }

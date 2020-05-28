@@ -140,5 +140,10 @@ extension UINavigationController {
         self.pushViewController(vc, animated: true)
     }
     
+    func gotoImagePickerVC() {
+        let vc = ImagePickerVC()
+        self.pushViewController(vc, animated: true)
+    }
+    
 }
 

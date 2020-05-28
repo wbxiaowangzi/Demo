@@ -71,6 +71,28 @@
 		AF3832DC22E00EA800E1580F /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3832DA22E00EA700E1580F /* AppConfig.swift */; };
 		AF3832E322E00F4700E1580F /* UserDefaultStaticStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3832DF22E00F4700E1580F /* UserDefaultStaticStrings.swift */; };
 		AF3832E422E00F4700E1580F /* MiNavigationConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3832E022E00F4700E1580F /* MiNavigationConroller.swift */; };
+		AF3DA0DB247FB6B700A005CB /* HXImageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0C4247FB6B700A005CB /* HXImageModel.swift */; };
+		AF3DA0DC247FB6B700A005CB /* HXAlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0C5247FB6B700A005CB /* HXAlbumModel.swift */; };
+		AF3DA0DD247FB6B700A005CB /* HXImageClipViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0C7247FB6B700A005CB /* HXImageClipViewController.swift */; };
+		AF3DA0DE247FB6B700A005CB /* HXAlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0C8247FB6B700A005CB /* HXAlbumListViewController.swift */; };
+		AF3DA0DF247FB6B700A005CB /* HXImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0C9247FB6B700A005CB /* HXImagePickerController.swift */; };
+		AF3DA0E0247FB6B700A005CB /* HXImagePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0CA247FB6B700A005CB /* HXImagePreviewViewController.swift */; };
+		AF3DA0E1247FB6B700A005CB /* HXImageListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0CB247FB6B700A005CB /* HXImageListViewController.swift */; };
+		AF3DA0E2247FB6B700A005CB /* HXPreviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0CD247FB6B700A005CB /* HXPreviewCell.swift */; };
+		AF3DA0E3247FB6B700A005CB /* HXImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0CE247FB6B700A005CB /* HXImageCell.swift */; };
+		AF3DA0E4247FB6B700A005CB /* HXPreviewThumbCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0CF247FB6B700A005CB /* HXPreviewThumbCell.swift */; };
+		AF3DA0E5247FB6B700A005CB /* HXSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0D0247FB6B700A005CB /* HXSelectButton.swift */; };
+		AF3DA0E6247FB6B700A005CB /* HXImageClipScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0D1247FB6B700A005CB /* HXImageClipScrollView.swift */; };
+		AF3DA0E7247FB6B700A005CB /* HXImageClipResizeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0D2247FB6B700A005CB /* HXImageClipResizeView.swift */; };
+		AF3DA0E8247FB6B700A005CB /* HXImageNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0D3247FB6B700A005CB /* HXImageNavigationView.swift */; };
+		AF3DA0E9247FB6B700A005CB /* HXImageToolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0D4247FB6B700A005CB /* HXImageToolView.swift */; };
+		AF3DA0EA247FB6B700A005CB /* HXAlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0D5247FB6B700A005CB /* HXAlbumCell.swift */; };
+		AF3DA0EB247FB6B700A005CB /* HXImagePickerConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0D7247FB6B700A005CB /* HXImagePickerConfig.swift */; };
+		AF3DA0EC247FB6B700A005CB /* HXPhotoImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0D8247FB6B700A005CB /* HXPhotoImageManager.swift */; };
+		AF3DA0ED247FB6B700A005CB /* HXReuseable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0D9247FB6B700A005CB /* HXReuseable.swift */; };
+		AF3DA0EE247FB6B700A005CB /* HXImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF3DA0DA247FB6B700A005CB /* HXImagePickerController.bundle */; };
+		AF3DA0F1247FB6E900A005CB /* ImagePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0EF247FB6E900A005CB /* ImagePickerVC.swift */; };
+		AF3DA0F2247FB6E900A005CB /* ImagePickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3DA0F0247FB6E900A005CB /* ImagePickerVC.xib */; };
 		AF3FF11D2350678E00846C74 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF11C2350678E00846C74 /* DemoTests.swift */; };
 		AF3FF12B235067A300846C74 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF12A235067A300846C74 /* DemoUITests.swift */; };
 		AF3FF13323506AFA00846C74 /* VCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF13223506AFA00846C74 /* VCTest.swift */; };
@@ -255,6 +277,28 @@
 		AF3832DA22E00EA700E1580F /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
 		AF3832DF22E00F4700E1580F /* UserDefaultStaticStrings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultStaticStrings.swift; sourceTree = "<group>"; };
 		AF3832E022E00F4700E1580F /* MiNavigationConroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiNavigationConroller.swift; sourceTree = "<group>"; };
+		AF3DA0C4247FB6B700A005CB /* HXImageModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXImageModel.swift; sourceTree = "<group>"; };
+		AF3DA0C5247FB6B700A005CB /* HXAlbumModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXAlbumModel.swift; sourceTree = "<group>"; };
+		AF3DA0C7247FB6B700A005CB /* HXImageClipViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXImageClipViewController.swift; sourceTree = "<group>"; };
+		AF3DA0C8247FB6B700A005CB /* HXAlbumListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXAlbumListViewController.swift; sourceTree = "<group>"; };
+		AF3DA0C9247FB6B700A005CB /* HXImagePickerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXImagePickerController.swift; sourceTree = "<group>"; };
+		AF3DA0CA247FB6B700A005CB /* HXImagePreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXImagePreviewViewController.swift; sourceTree = "<group>"; };
+		AF3DA0CB247FB6B700A005CB /* HXImageListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXImageListViewController.swift; sourceTree = "<group>"; };
+		AF3DA0CD247FB6B700A005CB /* HXPreviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXPreviewCell.swift; sourceTree = "<group>"; };
+		AF3DA0CE247FB6B700A005CB /* HXImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXImageCell.swift; sourceTree = "<group>"; };
+		AF3DA0CF247FB6B700A005CB /* HXPreviewThumbCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXPreviewThumbCell.swift; sourceTree = "<group>"; };
+		AF3DA0D0247FB6B700A005CB /* HXSelectButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXSelectButton.swift; sourceTree = "<group>"; };
+		AF3DA0D1247FB6B700A005CB /* HXImageClipScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXImageClipScrollView.swift; sourceTree = "<group>"; };
+		AF3DA0D2247FB6B700A005CB /* HXImageClipResizeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXImageClipResizeView.swift; sourceTree = "<group>"; };
+		AF3DA0D3247FB6B700A005CB /* HXImageNavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXImageNavigationView.swift; sourceTree = "<group>"; };
+		AF3DA0D4247FB6B700A005CB /* HXImageToolView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXImageToolView.swift; sourceTree = "<group>"; };
+		AF3DA0D5247FB6B700A005CB /* HXAlbumCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXAlbumCell.swift; sourceTree = "<group>"; };
+		AF3DA0D7247FB6B700A005CB /* HXImagePickerConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXImagePickerConfig.swift; sourceTree = "<group>"; };
+		AF3DA0D8247FB6B700A005CB /* HXPhotoImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXPhotoImageManager.swift; sourceTree = "<group>"; };
+		AF3DA0D9247FB6B700A005CB /* HXReuseable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HXReuseable.swift; sourceTree = "<group>"; };
+		AF3DA0DA247FB6B700A005CB /* HXImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HXImagePickerController.bundle; sourceTree = "<group>"; };
+		AF3DA0EF247FB6E900A005CB /* ImagePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerVC.swift; sourceTree = "<group>"; };
+		AF3DA0F0247FB6E900A005CB /* ImagePickerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagePickerVC.xib; sourceTree = "<group>"; };
 		AF3FF11A2350678E00846C74 /* DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3FF11C2350678E00846C74 /* DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTests.swift; sourceTree = "<group>"; };
 		AF3FF11E2350678E00846C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -587,6 +631,7 @@
 		AF13A223223790CA008B91DD /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				AF3DA0C1247FB69900A005CB /* ImagePicker */,
 				AF71B1FF22DDC49A008DE695 /* AboutCopy */,
 				9772817020DD3B32004E8E4F /* AFN */,
 				AFB470792201A87D002B27C7 /* Annotation */,
@@ -820,6 +865,75 @@
 				AFF7A59921957025003A4CA5 /* SQLDB.swift */,
 			);
 			path = SQLite;
+			sourceTree = "<group>";
+		};
+		AF3DA0C1247FB69900A005CB /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DA0C2247FB6B700A005CB /* ImagePicker */,
+				AF3DA0EF247FB6E900A005CB /* ImagePickerVC.swift */,
+				AF3DA0F0247FB6E900A005CB /* ImagePickerVC.xib */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		AF3DA0C2247FB6B700A005CB /* ImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DA0C3247FB6B700A005CB /* Models */,
+				AF3DA0C6247FB6B700A005CB /* Controllers */,
+				AF3DA0CC247FB6B700A005CB /* Views */,
+				AF3DA0D6247FB6B700A005CB /* Helpers */,
+				AF3DA0DA247FB6B700A005CB /* HXImagePickerController.bundle */,
+			);
+			path = ImagePicker;
+			sourceTree = "<group>";
+		};
+		AF3DA0C3247FB6B700A005CB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DA0C4247FB6B700A005CB /* HXImageModel.swift */,
+				AF3DA0C5247FB6B700A005CB /* HXAlbumModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF3DA0C6247FB6B700A005CB /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DA0C7247FB6B700A005CB /* HXImageClipViewController.swift */,
+				AF3DA0C8247FB6B700A005CB /* HXAlbumListViewController.swift */,
+				AF3DA0C9247FB6B700A005CB /* HXImagePickerController.swift */,
+				AF3DA0CA247FB6B700A005CB /* HXImagePreviewViewController.swift */,
+				AF3DA0CB247FB6B700A005CB /* HXImageListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		AF3DA0CC247FB6B700A005CB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DA0CD247FB6B700A005CB /* HXPreviewCell.swift */,
+				AF3DA0CE247FB6B700A005CB /* HXImageCell.swift */,
+				AF3DA0CF247FB6B700A005CB /* HXPreviewThumbCell.swift */,
+				AF3DA0D0247FB6B700A005CB /* HXSelectButton.swift */,
+				AF3DA0D1247FB6B700A005CB /* HXImageClipScrollView.swift */,
+				AF3DA0D2247FB6B700A005CB /* HXImageClipResizeView.swift */,
+				AF3DA0D3247FB6B700A005CB /* HXImageNavigationView.swift */,
+				AF3DA0D4247FB6B700A005CB /* HXImageToolView.swift */,
+				AF3DA0D5247FB6B700A005CB /* HXAlbumCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		AF3DA0D6247FB6B700A005CB /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DA0D7247FB6B700A005CB /* HXImagePickerConfig.swift */,
+				AF3DA0D8247FB6B700A005CB /* HXPhotoImageManager.swift */,
+				AF3DA0D9247FB6B700A005CB /* HXReuseable.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		AF3FF11B2350678E00846C74 /* DemoTests */ = {
@@ -1218,6 +1332,7 @@
 				AF7B8E7024516E24001055A3 /* SmoothTableView.xib in Resources */,
 				AF7B8E7424516E63001055A3 /* SmoothTableViewCell.xib in Resources */,
 				AF71B20822DDC50C008DE695 /* LearnCopyVC.xib in Resources */,
+				AF3DA0EE247FB6B700A005CB /* HXImagePickerController.bundle in Resources */,
 				9783B90420CD341E00E30FD7 /* MVVMVC.xib in Resources */,
 				AFFEC179230E3602001FAC72 /* JSPatch.js in Resources */,
 				AF27F22F218C0A80001FDFC2 /* OpenGLVC.xib in Resources */,
@@ -1230,6 +1345,7 @@
 				AF7B8E7924518D0C001055A3 /* SmoothTableDetail.xib in Resources */,
 				9783B8E320CD12AD00E30FD7 /* Main.storyboard in Resources */,
 				AF7C882D229E26F600988C98 /* Assets.xcassets in Resources */,
+				AF3DA0F2247FB6E900A005CB /* ImagePickerVC.xib in Resources */,
 				AF13A22722379214008B91DD /* LuckVC.xib in Resources */,
 				AF4EEB932302C4D2001F298F /* MetalViewController.xib in Resources */,
 			);
@@ -1320,31 +1436,43 @@
 				AF4119A12375617F008AF601 /* CAGradientLayerVC.swift in Sources */,
 				AF2C8BD32193D66F00BA9492 /* AppDebugger.m in Sources */,
 				AFA648BA22CF3F5100B02CD0 /* UITableView+Extension.swift in Sources */,
+				AF3DA0E8247FB6B700A005CB /* HXImageNavigationView.swift in Sources */,
 				AF7B8E7824518D0C001055A3 /* SmoothTableDetail.swift in Sources */,
 				AFA648BB22CF3F5100B02CD0 /* UINavigation+Extension.swift in Sources */,
 				9772816E20D0AC88004E8E4F /* TransitionVC.swift in Sources */,
+				AF3DA0F1247FB6E900A005CB /* ImagePickerVC.swift in Sources */,
+				AF3DA0EB247FB6B700A005CB /* HXImagePickerConfig.swift in Sources */,
 				AFFEC178230E3602001FAC72 /* JPEngine.m in Sources */,
 				AF1B77C7221D6633008D9AF6 /* OverTimeHandler.swift in Sources */,
 				AF3832DB22E00EA800E1580F /* NotificationName.swift in Sources */,
+				AF3DA0E3247FB6B700A005CB /* HXImageCell.swift in Sources */,
 				9783B90320CD341E00E30FD7 /* MVVMVC.swift in Sources */,
 				9783B8E020CD12AD00E30FD7 /* ViewController.swift in Sources */,
 				9744CE6120FF155A00EBD3DE /* BaseVC.swift in Sources */,
+				AF3DA0DC247FB6B700A005CB /* HXAlbumModel.swift in Sources */,
 				97C197692451CA2F00860C26 /* Transitioning.swift in Sources */,
+				AF3DA0E9247FB6B700A005CB /* HXImageToolView.swift in Sources */,
 				AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */,
 				AF4EEB8F2302C39E001F298F /* MetalView.swift in Sources */,
 				AF7B8E6F24516E24001055A3 /* SmoothTableView.swift in Sources */,
 				AFF7A59A21957025003A4CA5 /* SQLDB.swift in Sources */,
 				AF53E4C9238D3CE600E89EB9 /* UIControlVC.swift in Sources */,
+				AF3DA0E4247FB6B700A005CB /* HXPreviewThumbCell.swift in Sources */,
 				AF2BED7E21928EC4007FB28E /* RXSwiftVC.swift in Sources */,
 				AF26EAD0231774A700D61AF6 /* Navigator.swift in Sources */,
+				AF3DA0E1247FB6B700A005CB /* HXImageListViewController.swift in Sources */,
 				AFFEC183230E3902001FAC72 /* JSPatchTestVC.m in Sources */,
 				AFF0B87B2445767900FCACA8 /* Solution.swift in Sources */,
+				AF3DA0E7247FB6B700A005CB /* HXImageClipResizeView.swift in Sources */,
 				AF2C8BD22193D66F00BA9492 /* ShowFlex.m in Sources */,
 				AF42F43D22719E96004979AB /* LuckNumbersDb.swift in Sources */,
 				AFA648B922CF3F5100B02CD0 /* String+Extension.swift in Sources */,
+				AF3DA0DB247FB6B700A005CB /* HXImageModel.swift in Sources */,
 				AF3832D622E00D8D00E1580F /* AccessTokenPlugin.swift in Sources */,
 				AF7B8E7324516E63001055A3 /* SmoothTableViewCell.swift in Sources */,
 				AF1380D1223CAB1200AB2E0D /* LeetCode.swift in Sources */,
+				AF3DA0EC247FB6B700A005CB /* HXPhotoImageManager.swift in Sources */,
+				AF3DA0EA247FB6B700A005CB /* HXAlbumCell.swift in Sources */,
 				AF3832D422E00D8D00E1580F /* ApiService.swift in Sources */,
 				9783B8F320CD1D4B00E30FD7 /* CALayerVC.swift in Sources */,
 				9744CE6320FF172600EBD3DE /* GifBGVC.swift in Sources */,
@@ -1353,23 +1481,28 @@
 				AF4EEB922302C4D2001F298F /* MetalViewController.swift in Sources */,
 				AF09856E23225D6C002B003B /* LintCode.cpp in Sources */,
 				AF09857223226025002B003B /* CppBridge.mm in Sources */,
+				AF3DA0E2247FB6B700A005CB /* HXPreviewCell.swift in Sources */,
 				AF2C8BD52193D66F00BA9492 /* ChartConsole.m in Sources */,
 				AF26EACC2317724C00D61AF6 /* VCMap.swift in Sources */,
 				9783B8FB20CD1E2F00E30FD7 /* Router.swift in Sources */,
 				AF7B8EA42456D605001055A3 /* Mems.swift in Sources */,
 				AFA758F5224B706C008440F0 /* SomeControls.swift in Sources */,
+				AF3DA0ED247FB6B700A005CB /* HXReuseable.swift in Sources */,
 				9783B8F720CD1D6800E30FD7 /* CoreAnimationVC.swift in Sources */,
 				AF2C8BD62193D66F00BA9492 /* ShowNavigator.m in Sources */,
 				AF26EACA2317714F00D61AF6 /* OCTestVC.m in Sources */,
 				AF3832D722E00D8D00E1580F /* MD5Model.swift in Sources */,
 				AF13A22622379214008B91DD /* LuckVC.swift in Sources */,
 				AF13A22F2238B341008B91DD /* SDNetwork.swift in Sources */,
+				AF3DA0E5247FB6B700A005CB /* HXSelectButton.swift in Sources */,
 				AF1B05A421BA2F6200A44FE4 /* UIView+Extension.swift in Sources */,
 				AF60BAB62268269000AE592D /* Throttle.swift in Sources */,
 				AF234DDE22F821CA00A1A490 /* UILabel+swizzle.m in Sources */,
 				AF60BAB42268240B00AE592D /* Debouncer.swift in Sources */,
 				9744CE6520FF173F00EBD3DE /* RotaryTableVC.swift in Sources */,
+				AF3DA0DD247FB6B700A005CB /* HXImageClipViewController.swift in Sources */,
 				AF3832E322E00F4700E1580F /* UserDefaultStaticStrings.swift in Sources */,
+				AF3DA0E0247FB6B700A005CB /* HXImagePreviewViewController.swift in Sources */,
 				AFB4707B2201A89B002B27C7 /* Annotation.swift in Sources */,
 				AF27F22E218C0A80001FDFC2 /* OpenGLVC.swift in Sources */,
 				AF234DE322F822CA00A1A490 /* SourceCode.m in Sources */,
@@ -1382,7 +1515,10 @@
 				AF27F231218C1649001FDFC2 /* DrawingBoardView.swift in Sources */,
 				AF243CE322A907BD00809768 /* RedPointProtocol.swift in Sources */,
 				AF3832DC22E00EA800E1580F /* AppConfig.swift in Sources */,
+				AF3DA0E6247FB6B700A005CB /* HXImageClipScrollView.swift in Sources */,
+				AF3DA0DF247FB6B700A005CB /* HXImagePickerController.swift in Sources */,
 				AF2C8BD42193D66F00BA9492 /* SwitchServer.m in Sources */,
+				AF3DA0DE247FB6B700A005CB /* HXAlbumListViewController.swift in Sources */,
 				AF304520218AFFBC00DA36D2 /* CAShapeLayerVC.swift in Sources */,
 				9783B8DE20CD12AD00E30FD7 /* AppDelegate.swift in Sources */,
 				AF3832D322E00D8D00E1580F /* YunweiMgr.swift in Sources */,
