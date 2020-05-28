@@ -9,29 +9,34 @@
 import UIKit
 
 private let CodingStringModels = "LuckNumberModel.models"
+
 private let CodingStringRed = "LuckNumberModel.red"
+
 private let CodingStringBlue = "LuckNumberModel.blue"
 
 class PreviousLuckDatas: NSObject {
-    var models:[LuckNumberModel]?
+
+    var models: [LuckNumberModel]?
     
-    func saveData(){
+    func saveData() {
         let user = UserDefaults.standard
         user.set(models, forKey: CodingStringModels)
     }
     
-    func getData(){
+    func getData() {
         let user = UserDefaults.standard
-        if let ms = user.object(forKey: CodingStringModels) as? [LuckNumberModel]{
+
+        if let ms = user.object(forKey: CodingStringModels) as? [LuckNumberModel] {
             self.models = ms
         }
     }
 }
 
+class LuckNumberModel: NSObject, NSCoding {
 
-class LuckNumberModel: NSObject,NSCoding {
-    var red:[Int]?
-    var blue:[Int]?
+    var red: [Int]?
+
+    var blue: [Int]?
     override init() {
         super.init()
     }
@@ -42,10 +47,10 @@ class LuckNumberModel: NSObject,NSCoding {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        if let r = aDecoder.decodeObject(forKey: CodingStringRed) as? [Int]{
+        if let r = aDecoder.decodeObject(forKey: CodingStringRed) as? [Int] {
             self.red = r
         }
-        if let b = aDecoder.decodeObject(forKey: CodingStringBlue) as? [Int]{
+        if let b = aDecoder.decodeObject(forKey: CodingStringBlue) as? [Int] {
             self.blue = b
         }
     }

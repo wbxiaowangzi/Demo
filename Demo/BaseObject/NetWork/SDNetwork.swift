@@ -10,17 +10,17 @@ import UIKit
 import Moya
 
 class SDNetwork {
-    var provider:MoyaProvider<SDService>!
+
+    var provider: MoyaProvider<SDService>!
     
 }
 
-
 enum SDService {
-    case getLuckNumber(count:Int)
+    case getLuckNumber(count: Int)
     case defaultAPI
 }
 
-extension SDService:TargetType{
+extension SDService: TargetType {
     var baseURL: URL {
         return URL.init(string: "www.baidu.com")!
     }
@@ -46,9 +46,9 @@ extension SDService:TargetType{
     var task: Task {
         switch self {
         case .getLuckNumber(let count):
-            return .requestParameters(parameters: ["pagesize":count], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["pagesize": count], encoding: URLEncoding.default)
         default:
-            return .requestParameters(parameters: ["paramater":1], encoding: URLEncoding.default)
+            return .requestParameters(parameters: ["paramater": 1], encoding: URLEncoding.default)
         }
     }
     
@@ -56,16 +56,15 @@ extension SDService:TargetType{
         return ["Content-type": "application/json"]
     }
     
-    
 }
 
 /**String 拓展，方便使用*/
-private extension String{
-    var urlEscaped:String{
+private extension String {
+    var urlEscaped: String {
         return addingPercentEncoding(withAllowedCharacters: .urlHostAllowed)!
     }
     
-    var urf8Encoded:Data{
+    var urf8Encoded: Data {
         return data(using: .utf8)!
     }
     

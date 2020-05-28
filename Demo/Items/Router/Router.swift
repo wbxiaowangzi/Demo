@@ -12,25 +12,28 @@ class Router: NSObject {
 
 }
 
-extension ViewController{
+extension ViewController {
     
     func gotoCALayerVC() {
         let vc = CALayerVC()
+
         self.present(vc, animated: true, completion: nil)
     }
     
     func gotoCoreAnimationVC() {
         let vc = CoreAnimationVC()
+
         self.present(vc, animated: true, completion: nil)
     }
     
     func gotoMVVMVC() {
         let vc = MVVMVC()
+
         self.present(vc, animated: true, completion: nil)
     }
 }
 
-extension UINavigationController{
+extension UINavigationController {
     func gotoCALayerVC() {
         let vc = CALayerVC()
         self.pushViewController(vc, animated: true)
@@ -48,96 +51,94 @@ extension UINavigationController{
     
     /*---Transition---*/
 
-    func gotoTransitionVC(){
+    func gotoTransitionVC() {
         let vc = TransitionVC()
         self.pushViewController(vc, animated: true)
     }
     
     /*---CALayer---*/
     
-    func gotoShapeLayerVC(){
+    func gotoShapeLayerVC() {
         let vc = CAShapeLayerVC()
         self.pushViewController(vc, animated: true)
     }
     
-    func gotoGradientLayerVC(){
+    func gotoGradientLayerVC() {
         let vc = CAGradientLayerVC()
         self.pushViewController(vc, animated: true)
     }
     
-    func gotoGifBGVC(){
+    func gotoGifBGVC() {
         let vc = GifBGVC()
         self.pushViewController(vc, animated: true)
     }
     
-    func gotoRotaryTableVC(){
+    func gotoRotaryTableVC() {
         let vc = RotaryTableVC()
         self.pushViewController(vc, animated: true)
     }
     
-    func gotoMetalVC(){
+    func gotoMetalVC() {
         let vc = MetalViewController()
         self.pushViewController(vc, animated: true)
     }
     
-    func gotoSceneKitVC(){
+    func gotoSceneKitVC() {
         let vc = SceneKitVC()
         self.pushViewController(vc, animated: true)
     }
     
-    func gotoRadarVC(){
+    func gotoRadarVC() {
         let vc = RadarVC()
         self.pushViewController(vc, animated: true)
         
     }
     
-    func gotoOpenGLVC(){
+    func gotoOpenGLVC() {
         let vc = OpenGLVC()
         self.pushViewController(vc, animated: true)
     }
     
-    func gotoRXSwiftVC(){
+    func gotoRXSwiftVC() {
         let vc = RXSwiftVC()
         self.pushViewController(vc, animated: true)
     }
     
-    func gotoSQLiteVC(){
+    func gotoSQLiteVC() {
         let vc = SQLiteVC()
         self.pushViewController(vc, animated: true)
         
     }
     
-    func gotoAvatarXVC(){
+    func gotoAvatarXVC() {
         let vc = BaseVC()
         self.pushViewController(vc, animated: true)
     }
     
-    func gotoSizeClassVC(){
+    func gotoSizeClassVC() {
         let vc = SizeClassVC()
         self.pushViewController(vc, animated: true)
     }
     
-    func gotoLuckVC(){
+    func gotoLuckVC() {
         let vc = LuckVC()
         self.pushViewController(vc, animated: true)
     }
     
-    func gotoJSPatchTestVC(){
+    func gotoJSPatchTestVC() {
         let vc = JSPatchTestVC()
         self.pushViewController(vc, animated: true)
     }
     
-    func gotoOCTestVC(){
+    func gotoOCTestVC() {
         let vc = OCTestVC()
         self.pushViewController(vc, animated: true)
     }
     
-    func gotoSmoothVC(){
+    func gotoSmoothVC() {
         let vc = SmoothTableView()
         self.pushViewController(vc, animated: true)
     }
-    
-
     
 }
 

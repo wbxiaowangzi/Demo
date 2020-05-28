@@ -22,6 +22,7 @@ import Collobook
 import Outfit
 
 class MClassMap {
+
     static var config: [String : MNavigatable.Type] = [
         // Main
         "main" : TabBarController.self,
@@ -63,11 +64,11 @@ class MClassMap {
         "CategoryPage": Plaza.CategoryPageViewController.self,
         
         //YouWanna
-        "wannatest":YouWanna.WannaTestVC.self,
-        "wannatestresultvc":YouWanna.WannaTestResultVC.self,
-        "wannarecommend":YouWanna.RecommendClothesVC.self,
-        "wannasecondlook":YouWanna.SecondLookResultVC.self,
-        "wannaselectresult":YouWanna.SelectedResultVC.self,
+        "wannatest": YouWanna.WannaTestVC.self,
+        "wannatestresultvc": YouWanna.WannaTestResultVC.self,
+        "wannarecommend": YouWanna.RecommendClothesVC.self,
+        "wannasecondlook": YouWanna.SecondLookResultVC.self,
+        "wannaselectresult": YouWanna.SelectedResultVC.self,
         "wannacheck": HomePage.YouWannaModule.self,
         
         // Search
@@ -90,8 +91,8 @@ class MClassMap {
         "comment" : Topic.CommentViewController.self,
         "hometopic": Topic.HomeTopicVC.self,
         "alltopic": Topic.AllTopicListVC.self,
-        "topicfiltervc":Topic.TopicFilterVC.self,
-        "hotwordmodule":Topic.TopicHotWordModule.self,
+        "topicfiltervc": Topic.TopicFilterVC.self,
+        "hotwordmodule": Topic.TopicHotWordModule.self,
         
         // Share
         "sharemedel": MShare.MedelView.self,

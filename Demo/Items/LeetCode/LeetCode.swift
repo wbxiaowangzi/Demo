@@ -9,7 +9,9 @@
 import Foundation
 //  Definition for singly-linked list.
 public class ListNode {
+
     public var val: Int
+
     public var next: ListNode?
     public init(_ val: Int) {
         self.val = val
@@ -18,36 +20,42 @@ public class ListNode {
     
 }
 
-
-class LeetCode{
+class LeetCode {
     
     static func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
-        var dic = [Int:Int]()
-        for i in 0..<nums.count{
+        var dic = [Int: Int]()
+        for i in 0..<nums.count {
             let t = target-nums[i]
-            if dic.keys.contains(t),dic[t] != i{
-                return [dic[t]!,i]
+            if dic.keys.contains(t), dic[t] != i {
+                return [dic[t]!, i]
             }
             dic[nums[i]] = i
         }
         return [0]
     }
-    //twoSum([1,2,3,4,5], 5)
+    //twoSum([1, 2, 3,4,5], 5)
     
     static func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
         var next1 = l1
+
         var next2 = l2
+
         var val1 = l1?.val
+
         var val2 = l2?.val
+
         var sumVal = 0
+
         var carry = 0
+
         let result = ListNode(0)
+
         var current = result
         while (next1 != nil || next2 != nil) {
-            if next2 == nil{
+            if next2 == nil {
                 val2 = 0
             }
-            if next1 == nil{
+            if next1 == nil {
                 val1 = 0
             }
             sumVal = val1! + val2! + carry
@@ -65,6 +73,5 @@ class LeetCode{
         }
         return result.next
     }
-    
     
 }

@@ -11,21 +11,27 @@ import GLKit
 import OpenGLES.ES2.glext
 
 let STROKE_WIDTH_MIN = 0.004
+
 let STROKE_WIDTH_MAX = 0.030
+
 let STROKE_WIDTH_SMOOTHING = 0.5
 
 let VELOCITY_CLAMP_MIN = 20
+
 let VELOCITY_CLAMP_MAC = 5000
 
 let QUADRATIC_DISTANCE_TOLERANCE = 3.0
+
 let MAXMUM_VERTECES = 1000000
 
-let StrokeColor = GLKVector3.init(v: (0,0,0))
-var clearColor = [1.0,1.0,1.0,0.0]
+let StrokeColor = GLKVector3.init(v: (0, 0, 0))
 
-public struct _WFSignaturePoint{
-    public var vertex:GLKVector3
-    public var color:GLKVector3
+var clearColor = [1.0, 1.0, 1.0,0.0]
+
+public struct _WFSignaturePoint {
+    public var vertex: GLKVector3
+
+    public var color: GLKVector3
 }
 
 public typealias WFSignaturePoint = _WFSignaturePoint
@@ -81,7 +87,6 @@ func viewPointToGL(viewPoint : CGPoint, bounds : CGRect, color : GLKVector3) -> 
     return WFSignaturePoint.init(vertex: GLKVector3.init(v: (Float(viewPoint.x / bounds.size.width * 2.0) - 1, (Float((viewPoint.y / bounds.size.height) * 2.0) - 1) * -1, 0)), color: color)
 }
 
-
 class DrawingBoardView: GLKView {
     /*
      画笔颜色
@@ -128,11 +133,13 @@ class DrawingBoardView: GLKView {
      笔画顶点数组
      **/
     var signatureVertexData : Array<WFSignaturePoint?> = Array.init(repeating: nil, count: maxLength)
+
     var length : uint = 0
     /**
      笔画圆点数组
      **/
     var signatureDotsData : Array<WFSignaturePoint?> = Array.init(repeating: nil, count: maxLength)
+
     var dotsLength : uint = 0
     /**
      笔画厚度
@@ -199,20 +206,20 @@ class DrawingBoardView: GLKView {
             
             self.setupGL()
             
-            let pan = UIPanGestureRecognizer.init(target: self, action: #selector(self.pan(p:)))
+            let pan = UIPanGestureRecognizer.init(target: self, action: #selector(self.pan(p: )))
             pan.maximumNumberOfTouches = 1
             pan.minimumNumberOfTouches = 1
             pan.cancelsTouchesInView = true
             self.addGestureRecognizer(pan)
             
-            let tap = UITapGestureRecognizer.init(target: self, action: #selector(self.tap(t:)))
+            let tap = UITapGestureRecognizer.init(target: self, action: #selector(self.tap(t: )))
             tap.cancelsTouchesInView = true
             self.addGestureRecognizer(tap)
             
-            let longer = UILongPressGestureRecognizer.init(target: self, action: #selector(self.longPress(p:)))
+            let longer = UILongPressGestureRecognizer.init(target: self, action: #selector(self.longPress(p: )))
             longer.cancelsTouchesInView = true
             self.addGestureRecognizer(longer)
-        }else {
+        } else {
             print("NSOpenGLES2ContextException")
         }
     }
@@ -259,6 +266,7 @@ class DrawingBoardView: GLKView {
     }
     
     static var segments : Int = 20
+
     @objc func tap(t : UITapGestureRecognizer) {
         let l = t.location(in: self)
         
@@ -273,13 +281,18 @@ class DrawingBoardView: GLKView {
             addVertex(length: &dotsLength, pointsArray: pointsArray, v: &centerPoint)
             
             let radius = GLKVector2.init(v: (clamp(min: 0.00001, max: 0.02, value: penThickness * generateRandom(from: 0.5, to: 1.5)), clamp(min: 0.00001, max: 0.02, value: penThickness * generateRandom(from: 0.5, to: 1.5))))
+
             let velocityRadius = radius
+
             var angle : Float = 0.0
             
             for _ in 0 ... DrawingBoardView.segments {
                 let p = centerPoint
+
                 let x = p.vertex.x + velocityRadius.x * cosf(angle)
+
                 let y = p.vertex.y + velocityRadius.y * sinf(angle)
+
                 var point : WFSignaturePoint = WFSignaturePoint.init(vertex: GLKVector3.init(v: (x, y, p.vertex.z)), color: p.color)
                 addVertex(length: &dotsLength, pointsArray: pointsArray, v: &point)
                 addVertex(length: &dotsLength, pointsArray: pointsArray, v: &centerPoint)
@@ -301,6 +314,7 @@ class DrawingBoardView: GLKView {
         glBindBuffer(GLenum(GL_ARRAY_BUFFER), vertexBuffer)
         
         let v : CGPoint = p.velocity(in: self)
+
         let l : CGPoint = p.location(in: self)
         
         currentVelocity = viewPointToGL(viewPoint: v, bounds: self.bounds, color: GLKVector3.init(v: (0, 0, 0)))
@@ -308,15 +322,19 @@ class DrawingBoardView: GLKView {
         var distance : Float = 0.0
         if previousPoint!.x > 0 {
             let a1 = (l.x - previousPoint!.x) * (l.x - previousPoint!.x)
+
             let a = a1 + (l.y - previousPoint!.y) * (l.y - previousPoint!.y)
             distance = sqrtf(Float(a))
         }
         
         let velocityMagnitude = sqrtf(Float(v.x * v.x + v.y * v.y))
+
         let clampedVelocityMagnitude = clamp(min: Float(VELOCITY_CLAMP_MIN), max: Float(VELOCITY_CLAMP_MAC), value: velocityMagnitude)
+
         let normalizedVelocity = (clampedVelocityMagnitude - Float(VELOCITY_CLAMP_MIN)) / Float(VELOCITY_CLAMP_MAC - VELOCITY_CLAMP_MIN)
         
         let lowPassFilterAlpha = STROKE_WIDTH_SMOOTHING
+
         let newThickness = Float(STROKE_WIDTH_MAX - STROKE_WIDTH_MIN) * Float(1 - normalizedVelocity) + Float(STROKE_WIDTH_MIN)
         penThickness = penThickness * Float(lowPassFilterAlpha) + newThickness * Float(1 - lowPassFilterAlpha)
         if p.state == UIGestureRecognizer.State.began {
@@ -332,17 +350,20 @@ class DrawingBoardView: GLKView {
             
             self.hasSignature = true
             self.currentPath = pointsArray.count
-        }else if p.state == UIGestureRecognizer.State.changed {
+        } else if p.state == UIGestureRecognizer.State.changed {
             let mid = CGPoint.init(x: (l.x + (previousPoint?.x)!) / 2.0, y: (l.y + (previousPoint?.y)!) / 2.0)
             if distance > Float(QUADRATIC_DISTANCE_TOLERANCE) {
                 let segmts : Int = Int(distance/1.5)
+
                 let startPenThickness = previousThickness
+
                 let endPenThickness = penThickness
                 previousThickness = penThickness
                 
                 for index in 0 ... (segmts-1) {
                     penThickness = startPenThickness + ((endPenThickness - startPenThickness) / Float(segmts)) * Float(index)
                     let quadPoint = QuadraticPointInCurve(start: previousMidPoint!, end: mid, controlPoint: previousPoint!, percent: Float(index)/Float(segmts))
+
                     let wfv = viewPointToGL(viewPoint: quadPoint, bounds: self.bounds, color: self.penColor)
                     self.addTriangleStripPointsForPrevious(previous: previousVertex!, next: wfv)
                     previousVertex = wfv
@@ -370,9 +391,9 @@ class DrawingBoardView: GLKView {
         var red : CGFloat = 0, green : CGFloat = 0, blue : CGFloat = 0, alpha : CGFloat = 0, white : CGFloat = 1
         if (effect != nil) && (self.strokeColor != nil) && self.strokeColor!.getRed(&red, green: &green, blue: &blue, alpha: &alpha) {
             effect?.constantColor = GLKVector4.init(v: (Float(red), Float(green), Float(blue), Float(alpha)))
-        }else if effect != nil && self.strokeColor != nil && self.strokeColor!.getWhite(&white, alpha: &alpha) {
+        } else if effect != nil && self.strokeColor != nil && self.strokeColor!.getWhite(&white, alpha: &alpha) {
             effect?.constantColor = GLKVector4.init(v: (Float(white), Float(white), Float(white), Float(alpha)))
-        }else {
+        } else {
             effect?.constantColor = GLKVector4.init(v: (0, 0, 0, 1))
         }
     }
@@ -385,7 +406,7 @@ class DrawingBoardView: GLKView {
             clearColor[0] = Double(red)
             clearColor[1] = Double(green)
             clearColor[2] = Double(blue)
-        }else if backgroundColor.getWhite(&white, alpha: &alpha) {
+        } else if backgroundColor.getWhite(&white, alpha: &alpha) {
             clearColor[0] = Double(white)
             clearColor[1] = Double(white)
             clearColor[2] = Double(white)
@@ -437,12 +458,17 @@ class DrawingBoardView: GLKView {
         var toTravel = penThickness / 2.0
         for _ in 0 ... 1 {
             let p = perpendicular(p1: previous, p2: next)
+
             let p1 = next.vertex
+
             let ref = GLKVector3Add(p1, p)
             
             let distance = GLKVector3Distance(p1, ref)
+
             var difX = p1.x - ref.x
+
             var difY = p1.y - ref.y
+
             let ratio = -1.0 * (toTravel / distance)
             
             difX = difX * ratio

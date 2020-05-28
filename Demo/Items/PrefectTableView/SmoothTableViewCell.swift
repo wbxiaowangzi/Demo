@@ -9,7 +9,9 @@
 import UIKit
 
 class SmoothTableViewCell: UITableViewCell {
+
     static let identifier = "SmoothTableViewCell"
+
     @IBOutlet weak var icon: UIImageView!
 
     override func awakeFromNib() {

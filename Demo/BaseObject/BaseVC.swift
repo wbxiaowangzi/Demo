@@ -22,18 +22,23 @@ class BaseVC: UIViewController {
 
 }
 
-extension UIColor{
+extension UIColor {
     
-    convenience init(hexString:String) {
+    convenience init(hexString: String) {
         if hexString.count <= 0 || hexString.count != 7 || hexString == "(null)" || hexString == "<null>" {
             self.init(red: 1, green: 1, blue: 1, alpha: 1)
             return
         }
         var red: UInt32 = 0x0
+
         var green: UInt32 = 0x0
+
         var blue: UInt32 = 0x0
+
         let redString = String(hexString[hexString.index(hexString.startIndex, offsetBy: 1)...hexString.index(hexString.startIndex, offsetBy: 2)])
+
         let greenString = String(hexString[hexString.index(hexString.startIndex, offsetBy: 3)...hexString.index(hexString.startIndex, offsetBy: 4)])
+
         let blueString = String(hexString[hexString.index(hexString.startIndex, offsetBy: 5)...hexString.index(hexString.startIndex, offsetBy: 6)])
         Scanner(string: redString).scanHexInt32(&red)
         Scanner(string: greenString).scanHexInt32(&green)
@@ -43,14 +48,14 @@ extension UIColor{
 }
 
 //超出父视图还能相应事件
-class ANCView:UIView{
+class ANCView: UIView {
     
     override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
         var view = super.hitTest(point, with: event)
         if view == nil {
-            for v in self.subviews{
+            for v in self.subviews {
                 let p = v.convert(point, from: self)
-                if v.bounds.contains(p){
+                if v.bounds.contains(p) {
                     view = v
                 }
             }

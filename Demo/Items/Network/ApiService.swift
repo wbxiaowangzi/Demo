@@ -14,21 +14,22 @@ var formDataArr = [MultipartFormData]()
 
 enum ApiService {
     // MARK: - 示例接口
-    case demoApi(arg1:String,arg2:String)
+    case demoApi(arg1: String, arg2: String)
     //
     case dataRequestApi
     //
     case uploadCompositeMultipart
 }
 
-extension ApiService : TargetType{
+extension ApiService : TargetType {
     
     var headers: [String : String]? {
+
         let arr = NSLocale.preferredLanguages
-        if arr.first == "zh-Hans-CN"{
-            return ["zh":"Accept-Language"]
+        if arr.first == "zh-Hans-CN" {
+            return ["zh": "Accept-Language"]
         }
-        return ["en":"Accept-Language"]
+        return ["en": "Accept-Language"]
     }
     
     var baseURL: URL {
@@ -40,8 +41,8 @@ extension ApiService : TargetType{
         }
     }
     
-    var xiaofuBaseURL:URL{
-        return URL(string: "https://api.xiaofutech.com/external/")!
+    var xiaofuBaseURL: URL {
+        return URL(string: "https: //api.xiaofutech.com/external/")!
     }
     
     var path: String {
@@ -60,19 +61,21 @@ extension ApiService : TargetType{
     }
     
     var parameters: [String : Any]? {
-        var params:[String:Any] = [:]
-        var data:[String:Any] = [:]
+
+        var params: [String: Any] = [:]
+
+        var data: [String: Any] = [:]
         params["version"] = HttpCom.httpVersion
         switch self {
-        case .demoApi(let arg1,let arg2):
-            data = ["arg1": arg1,"arg2" : arg2]
+        case .demoApi(let arg1, let arg2):
+            data = ["arg1": arg1, "arg2" : arg2]
         case .dataRequestApi:
-            data = ["arg1":"arg1"]
+            data = ["arg1": "arg1"]
         case .uploadCompositeMultipart:
-            data = ["arg1":"args"]
+            data = ["arg1": "args"]
         }
         
-        if data.count != 0{
+        if data.count != 0 {
             params["data"] = data
         }
         let app = ["appversion": AppConfig.appVersion, "iosversion": AppConfig.iosVersion, "devicemodel": AppConfig.model]
@@ -104,12 +107,12 @@ extension ApiService : TargetType{
     
 }
 
-extension ApiService{
+extension ApiService {
     
-    func urlRequest() -> URLRequest{
+    func urlRequest() -> URLRequest {
         var request = URLRequest(url: URL(string: baseURL.absoluteString+path)!)
         request.httpMethod = method.rawValue
-        for (_,item) in headers!.enumerated(){
+        for (_, item) in headers!.enumerated() {
             request.setValue(item.value, forHTTPHeaderField: item.key)
         }
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -120,35 +123,21 @@ extension ApiService{
     }
 }
 
+public class HttpCom {
 
-public class HttpCom{
-
-    static var url:String = AppConfig.url
+    static var url: String = AppConfig.url
     
-    static var guide_url:String = AppConfig.guide_url
+    static var guide_url: String = AppConfig.guide_url
     
-    static var header = Dictionary<String,String>()
+    static var header = Dictionary<String, String>()
     
     static let httpVersion = AppConfig.yunweiVersion
     
-    static var Token:String = " "
+    static var Token: String = " "
     
-    static func SetHeaderKey(key:String,value:String){
+    static func SetHeaderKey(key: String, value: String) {
         header[key] = value
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 

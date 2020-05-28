@@ -10,12 +10,17 @@ import UIKit
 import AVFoundation
 
 class GifBGVC: BaseVC {
-    fileprivate var player:AVPlayer?
+
+    fileprivate var player: AVPlayer?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let p = Bundle.main.path(forResource: "lol", ofType: "mov"){
+        if let p = Bundle.main.path(forResource: "lol", ofType: "mov") {
+
             let url = URL.init(fileURLWithPath: p)
+
             let player = AVPlayer.init(url: url)
+
             let playerLayer = AVPlayerLayer(player: player)
             playerLayer.frame = view.bounds
             playerLayer.videoGravity = AVLayerVideoGravity.resize
@@ -32,6 +37,7 @@ class GifBGVC: BaseVC {
         player?.play()
         
         let dog = SDDog()
+
         let str = dog[1]
     }
     
@@ -40,10 +46,10 @@ class GifBGVC: BaseVC {
     }
 }
 
-class SDDog:NSObject{
+class SDDog: NSObject {
     
     ///下标、
-    subscript(index:Int)->String{
+    subscript(index: Int) -> String {
         return "aaaaaa"
     }
 }

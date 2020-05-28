@@ -14,6 +14,7 @@ class SQLiteVC: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         let m1 = FaceModel(faceid: 1, userid: "1231321")
+
         let m2 = FaceModel(faceid: 1, userid: "231231421")
         SQLDB.share.insertFace(model: m1)
         SQLDB.share.insertFace(model: m2)
@@ -25,7 +26,7 @@ class SQLiteVC: UIViewController {
         l.textColor = .black
         view.addSubview(l)
         let a = SQLDB.share.select(with: 1)
-        l.text = String(a.flatMap{$0.userid+"-----"})
+        l.text = String(a.flatMap {$0.userid+"-----"})
     }
 }
 

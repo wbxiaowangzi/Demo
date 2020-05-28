@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum SDAnimalEnum:CaseIterable {
+enum SDAnimalEnum: CaseIterable {
     case dog
     case cat
     case pig
@@ -24,7 +24,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
@@ -32,6 +31,7 @@ class ViewController: UIViewController {
 //        print(SDAnimalEnum.allCases)
 //
 //        let str =  "123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901123456789011234567890112345678901"
+
 //        let number = 12345678901
 //        print(MemoryLayout<String>.size)
 //        print(MemoryLayout<String>.stride)
@@ -44,12 +44,12 @@ class ViewController: UIViewController {
 //        print(MemoryLayout<Character>.stride)
 //        print(MemoryLayout<Character>.alignment)
 //        print("lalalallalaal")
-//        let a:int4
+//        let a: int4
 //
-//        var b:Int? = 10
+//        var b: Int? = 10
 //        b? = 10
 //        print(b)
-//        var c:Int?
+//        var c: Int?
 //        c? = 10
 //        print(c)
         
@@ -59,11 +59,11 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    func testThrottle(){
+    func testThrottle() {
         let throttle = Throttler.init(seconds: 5)
         throttle.throttle {
             var i = 0
-            while i < 100{
+            while i < 100 {
                 sleep(1)
                 NSLog("%d", i)
                 i += 1
@@ -71,7 +71,7 @@ class ViewController: UIViewController {
         }
     }
     
-    fileprivate func testOverTime(){
+    fileprivate func testOverTime() {
         let a = OverTimeHandler.init(with: 5) {
             print("5秒过去了，超时了")
             }.start()
@@ -81,13 +81,13 @@ class ViewController: UIViewController {
         
     }
     
-    func login(){
+    func login() {
         print("login...")
     }
     
 }
 
-extension ViewController: UITableViewDataSource{
+extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.lazyCellNames().count
@@ -95,6 +95,7 @@ extension ViewController: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+
         let name = self.lazyCellNames()[indexPath.row]
         cell.textLabel?.text = name
         return cell
@@ -148,9 +149,9 @@ extension ViewController: UITableViewDelegate {
     }
 }
 
-extension ViewController{
+extension ViewController {
     
-    func lazyCellNames() -> Array<String>{
+    func lazyCellNames() -> Array<String> {
         
         return [VCType.SQLite.rawValue,
                 VCType.RXSwift.rawValue,
@@ -172,7 +173,7 @@ extension ViewController{
     
 }
 
-enum VCType:String {
+enum VCType: String {
     case CALayer = "CALayer"
     case CoreAnimation = "CoreAnimation"
     case MVVM = "MVVM"

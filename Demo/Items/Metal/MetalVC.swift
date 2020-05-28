@@ -10,20 +10,24 @@ import UIKit
 import Metal
 import QuartzCore
 
-
 class MetalVC: UIViewController {
+
     var device: MTLDevice! = nil//GPU
-    var metalLayer:CAMetalLayer! = nil
+
+    var metalLayer: CAMetalLayer! = nil
+
     var pipelineState: MTLRenderPipelineState! = nil//渲染管道状态
+
     var commandQueue: MTLCommandQueue! = nil//命令队列
+
     var vertexBuffer: MTLBuffer! = nil//顶点缓存
-    let vertexData:[Float] =
+
+    let vertexData: [Float] =
         [0.0,   1.0,  0.0,
         -1.0,  -1.0,  0.0,
-         1.0,  -1.0,  0.0,]
+         1.0,  -1.0,  0.0, ]
     
     var timer: CADisplayLink! = nil
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,17 +62,18 @@ class MetalVC: UIViewController {
         view.layer.addSublayer(metalLayer)
     }
     
-    func sizeData(){
+    func sizeData() {
         let dataSize = vertexData.count * 4
         vertexBuffer = device.makeBuffer(bytes: vertexData, length: dataSize, options: MTLResourceOptions(rawValue: UInt(0)))
         
     }
 
-    
-    func CreatPipelineState(){
+    func CreatPipelineState() {
         
         let defaultLibrary = device.makeDefaultLibrary()
+
         let fragmentProgram = defaultLibrary?.makeFunction(name: "fragment_func")
+
         let vertextProgram = defaultLibrary?.makeFunction(name: "vertex_func")
         
         let pipelineStateDescriptor = MTLRenderPipelineDescriptor()
@@ -80,30 +85,30 @@ class MetalVC: UIViewController {
         
     }
     
-    func creatCommandQueue(){
+    func creatCommandQueue() {
         commandQueue = device.makeCommandQueue()
     }
     
-    func creatTimer(){
+    func creatTimer() {
         timer = CADisplayLink(target: self, selector: #selector(self.drawloop))
         timer.add(to: RunLoop.main, forMode: RunLoop.Mode.default)
     }
     
-    func render(){
+    func render() {
         creatRenderPassDescriptor()
     }
     
-    @objc func drawloop(){
+    @objc func drawloop() {
         self.render()
     }
     
-    func creatRenderPassDescriptor(){
+    func creatRenderPassDescriptor() {
         let drawable = metalLayer.nextDrawable()
+
         let renderpassDescriptor = MTLRenderPassDescriptor()
         renderpassDescriptor.colorAttachments[0].texture = drawable?.texture
         renderpassDescriptor.colorAttachments[0].loadAction = .clear
         renderpassDescriptor.colorAttachments[0].clearColor = MTLClearColorMake(0.0, 0.8, 0.5, 1.0)
-        
         
         let commandBuffer = commandQueue.makeCommandBuffer()
         
@@ -111,7 +116,7 @@ class MetalVC: UIViewController {
         renderEncoder?.setRenderPipelineState(pipelineState)
         
         renderEncoder?.setVertexBuffer(vertexBuffer, offset: 0, index: 0)
-        renderEncoder?.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3, instanceCount:1)
+        renderEncoder?.drawPrimitives(type: .triangle, vertexStart: 0, vertexCount: 3, instanceCount: 1)
         renderEncoder?.endEncoding()
         
         commandBuffer?.present(drawable!)

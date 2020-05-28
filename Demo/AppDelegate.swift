@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         #if DEBUG
         Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle")?.load()
@@ -42,20 +41,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationWillTerminate(_ application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground: .
     }
 
 }
 
-extension AppDelegate{
+extension AppDelegate {
     
 //    fileprivate func hookSDWebImage() {
 //        let block: @convention(block) (AspectInfo) -> () = { info in
+
 //            guard let imageView = info.instance() as? UIImageView else { return }
+
 //            let arguments = info.arguments()
 //            guard arguments?.count ?? 0 > 0 else { return }
 //            var placeholderImage: UIImage?
+
 //            var options: SDWebImageOptions = []
+
 //            var completed: SDExternalCompletionBlock?
 //            if arguments!.count == 2 {
 //                completed = arguments![1] as? SDExternalCompletionBlock
@@ -75,6 +78,7 @@ extension AppDelegate{
 //                return
 //            }
 //            let width = imageView.frame.size.width * UIScreen.main.scale
+
 //            let height = imageView.frame.size.height * UIScreen.main.scale
 //            guard width != 0, height != 0 else {
 //                DispatchQueue.main.async {
@@ -92,7 +96,7 @@ extension AppDelegate{
 //                                  progress: nil,
 //                                  completed: completed)
 //        }
-//         _ = try? UIImageView.aspect_hook(#selector(UIImageView.sd_setImage(with:placeholderImage:options:completed:)), with: .positionInstead, usingBlock: block)
+//         _ = try? UIImageView.aspect_hook(#selector(UIImageView.sd_setImage(with: placeholderImage: options:completed:)), with: .positionInstead, usingBlock: block)
 //    }
 }
 

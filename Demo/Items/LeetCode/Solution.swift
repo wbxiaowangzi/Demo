@@ -16,26 +16,31 @@ class Solution {
      */
     func addTwoNumbers(_ l1: ListNode?, _ l2: ListNode?) -> ListNode? {
         var arr0 = [Int]()
+
         var arr1 = [Int]()
+
         var n0 = l1
+
         var n1 = l2
-        while n0 != nil || n1 != nil{
-            if n0 != nil{
+        while n0 != nil || n1 != nil {
+            if n0 != nil {
                 arr0.append(n0!.val)
                 n0 = n0?.next
-            }else{
+            } else {
                 arr0.insert(0, at: 0)
             }
-            if n1 != nil{
+            if n1 != nil {
                 arr1.append(n1!.val)
                 n1 = n1?.next
-            }else{
+            } else {
                 arr1.insert(0, at: 0)
             }
         }
         
         var res = [Int]()
+
         var i = arr0.count-1
+
         var carry = 0
         while i>=0 {
             res.insert((arr1[i]+arr0[i]+carry)%10, at: 0)
@@ -50,15 +55,16 @@ class Solution {
         return node(from: res)
     }
     
-    func node(from arr:[Int])->ListNode?{
-        var result:ListNode?
-        var currentNode:ListNode?
-        for i in arr{
+    func node(from arr: [Int]) -> ListNode? {
+        var result: ListNode?
+
+        var currentNode: ListNode?
+        for i in arr {
             let node = ListNode(i)
-            if result == nil{
+            if result == nil {
                 result = node
                 currentNode = node
-            }else{
+            } else {
                 currentNode!.next = node
                 currentNode = node
             }

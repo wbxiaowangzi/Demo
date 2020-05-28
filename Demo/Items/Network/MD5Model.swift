@@ -14,10 +14,9 @@ class MD5Model: Mappable {
         
     }
     
-    var md5:String?
+    var md5: String?
     
-    var error:String?
-    
+    var error: String?
     
     func mapping(map: Map) {
         

@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 class NotificationName {
     
     static let HTTP_CONNECT_FAIL = Notification.Name.init("HTTP_CONNECT_FAIL")

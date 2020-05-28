@@ -34,15 +34,16 @@ class ZKViewController: UIViewController {
         super.viewDidAppear(animated)
     }
     
-    func addImageGesture(imageView:UIImageView) -> Void {
+    func addImageGesture(imageView: UIImageView) -> Void {
         imageView.isUserInteractionEnabled = true
-        let imgClick = UITapGestureRecognizer(target: self, action: #selector(imgShow(_:)));
+        let imgClick = UITapGestureRecognizer(target: self, action: #selector(imgShow(_: )));
         imageView.addGestureRecognizer(imgClick);
     }
     
-    var tips:TipsView?
-    func showTips(text:String,parentView:UIView) -> Void {
-        if tips == nil{
+    var tips: TipsView?
+
+    func showTips(text: String, parentView: UIView) -> Void {
+        if tips == nil {
             tips = TipsView.init(frame: CGRect.init(x: adaptW(202), y: adaptH(260), width: adaptW(620), height: adaptH(156)))
             parentView.addSubview(tips!)
         }
@@ -56,17 +57,18 @@ class ZKViewController: UIViewController {
     }
     
     //图片放大功能
-    private var _imageParent:UIImageView?
-    private var _imageView:UIImageView?
-    private var _imageFrame:CGRect?
+    private var _imageParent: UIImageView?
+
+    private var _imageView: UIImageView?
+
+    private var _imageFrame: CGRect?
     
-    @objc private func imgShow(_ sender:UITapGestureRecognizer){
+    @objc private func imgShow(_ sender: UITapGestureRecognizer) {
         let imageView = sender.view as! UIImageView
         
         if imageView.image == nil {
             return
         }
-        
         
         let image = imageView.image!
         imageView.image = nil
@@ -77,6 +79,7 @@ class ZKViewController: UIViewController {
         self._imageView?.image = image
         self._imageView?.frame = _imageFrame!
         let width = ScreenWidth > image.size.width ? image.size.width : ScreenWidth
+
         let height = (width/image.size.width) * image.size.height
         
         UIView.animate(withDuration: 0.15, animations: {
@@ -88,7 +91,7 @@ class ZKViewController: UIViewController {
     }
     
     func imgQuit() -> Void {
-        if _imageParent == nil{
+        if _imageParent == nil {
             return
         }
         
@@ -104,13 +107,12 @@ class ZKViewController: UIViewController {
         
     }
     
-
 }
 
 //错误提示窗口
 class TipsView: UIView {
     
-    var label:UILabel!
+    var label: UILabel!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -135,7 +137,7 @@ class TipsView: UIView {
     }
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("init(coder: ) has not been implemented")
     }
     
 }
@@ -159,7 +161,6 @@ class MiNavigationController: UINavigationController {
         
     }
     
-    
     override func popViewController(animated: Bool) -> UIViewController? {
         
         let vc = super.popViewController(animated: animated)
@@ -167,13 +168,11 @@ class MiNavigationController: UINavigationController {
         return vc
     }
 
-    
 }
-
 
 class MiNavigationBar: UINavigationBar {
     
-    let barHeight:CGFloat = 84
+    let barHeight: CGFloat = 84
     
     override func sizeThatFits(_ size: CGSize) -> CGSize {
         var amendedSize = super.sizeThatFits(size)

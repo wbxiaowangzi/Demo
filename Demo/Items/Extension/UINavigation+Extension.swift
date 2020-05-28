@@ -9,19 +9,18 @@
 import Foundation
 import UIKit
 
-extension UINavigationBar{
+extension UINavigationBar {
     
-    func setBackgroundColor(color:UIColor) -> Void {
+    func setBackgroundColor(color: UIColor) -> Void {
         let barView = UIView.init(frame: CGRect(x: 0, y: -20, width: UIScreen.main.bounds.size.width, height: 84))
         barView.backgroundColor = color
         self.setValue(barView, forKey: "backgroundView")
     }
     
-    
 }
 
-extension UINavigationItem{
-    func title(_ title:String,_ color:UIColor = UIColor.black) -> Void {
+extension UINavigationItem {
+    func title(_ title: String, _ color: UIColor = UIColor.black) -> Void {
         let label = UILabel.init(frame: CGRect(x: 0, y: 0, width: 100, height: 44))
         label.text = title
         label.font = UIFont.boldSystemFont(ofSize: 16)

@@ -15,17 +15,12 @@ class LuckVC: BaseVC {
         self.view.backgroundColor = .white
     }
 
-    
     /// 获取距今n次的平均值
     ///
     /// - Parameter times: 次数
-    func getMeanValue(with times:Int)->LuckNumberModel{
+    func getMeanValue(with times: Int) -> LuckNumberModel {
 
-        
-        
         return LuckNumberModel()
     }
 }
-
-
 

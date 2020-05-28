@@ -12,12 +12,17 @@ import SQLite
 class SQLDB: NSObject {
     
     static let DocumentPath = NSHomeDirectory() + "/Documents"
+
     static let SQLDBPath  = DocumentPath + "/SQLite"
+
     static let share = SQLDB()
+
     var DB = try? Connection(SQLDBPath)
     
     let Face_Table = Table("face")
+
     let Face_id = Expression<Int>("face_id")
+
     let User_ID = Expression<String>("user_id")
 
     private override init() {
@@ -32,7 +37,7 @@ class SQLDB: NSObject {
         }))
     }
     
-    func insertFace(model:FaceModel) {
+    func insertFace(model: FaceModel) {
         guard DB != nil else {
             return
         }
@@ -43,32 +48,34 @@ class SQLDB: NSObject {
         let _ = try? DB!.run(insert)
     }
     
-    func deleteFace(model:FaceModel) {
+    func deleteFace(model: FaceModel) {
+
         deleteFace(with: model.faceid)
     }
     
-    func deleteFace(with faceID:Int) {
+    func deleteFace(with faceID: Int) {
         try! DB?.run(Face_Table.filter(self.Face_id == faceID).delete())
     }
     
-    func deleteFace(with userID:String) {
+    func deleteFace(with userID: String) {
         try! DB?.run(Face_Table.filter(self.User_ID == userID).delete())
     }
     
-    func select(with faceID:Int) -> [FaceModel]  {
+    func select(with faceID: Int) -> [FaceModel]  {
         let a = try! DB?.prepare(Face_Table.filter(self.Face_id == faceID))
-        return a!.map{FaceModel(faceid: $0[Face_id], userid: $0[User_ID])}
+        return a!.map {FaceModel(faceid: $0[Face_id], userid: $0[User_ID])}
     }
     
-    func isExist(faceid:Int)->Bool {
+    func isExist(faceid: Int) -> Bool {
         return select(with: faceid).count > 0
     }
 }
 
 struct FaceModel {
     var faceid = 0
+
     var userid = "123"
-    init(faceid:Int,userid:String){
+    init(faceid: Int, userid: String) {
         self.faceid = faceid
         self.userid = userid
     }

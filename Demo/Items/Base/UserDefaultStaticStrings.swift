@@ -52,10 +52,8 @@ public class UserDefaultStaticStrings: NSObject {
     
     /*--------用户登录信息-------*/
     
-    
     /// 检测皮肤功能是否被点击过
     public static let SkinFunction = "SkinFunction"
-    
     
     /// 显示综合分数
     public static let NeedShowCombinedScore = "getNeedShowCombinedScore"
@@ -74,16 +72,16 @@ public class UserDefaultStaticStrings: NSObject {
 
 }
 
-extension UserDefaultStaticStrings{
+extension UserDefaultStaticStrings {
     
-    public static func boolForKey(with key:String)->Bool{
-        if UserDefaults.standard.object(forKey: key) == nil{
+    public static func boolForKey(with key: String) -> Bool {
+        if UserDefaults.standard.object(forKey: key) == nil {
             return false
         }
         return UserDefaults.standard.bool(forKey: key)
     }
     
-    public static func setBool(value:Bool, key:String){
+    public static func setBool(value: Bool, key: String) {
         UserDefaults.standard.set(value, forKey: key)
     }
 }

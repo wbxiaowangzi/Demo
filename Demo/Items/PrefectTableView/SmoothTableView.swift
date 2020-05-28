@@ -11,6 +11,7 @@ import UIKit
 class SmoothTableView: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.ui()
@@ -21,8 +22,7 @@ class SmoothTableView: UIViewController {
         self.tableView.register(UINib.init(nibName: SmoothTableViewCell.identifier, bundle: Bundle.main), forCellReuseIdentifier: SmoothTableViewCell.identifier)
     }
     
-    
-    func startCustomTransitionAnimation(){
+    func startCustomTransitionAnimation() {
         UIGraphicsBeginImageContextWithOptions(self.navigationController!.view.bounds.size, true, 0)
         self.navigationController!.view.layer.render(in: UIGraphicsGetCurrentContext()!)
         let coverImage = UIGraphicsGetImageFromCurrentImageContext()
@@ -40,12 +40,13 @@ class SmoothTableView: UIViewController {
         }
     }
     
-    func startCustomTransitionAnimation(originView:SmoothTableViewCell){
+    func startCustomTransitionAnimation(originView: SmoothTableViewCell) {
         UIGraphicsBeginImageContextWithOptions(originView.icon.bounds.size, true, 0)
         originView.icon.layer.render(in: UIGraphicsGetCurrentContext()!)
         let coverImage = UIGraphicsGetImageFromCurrentImageContext()
         
         let coverImageView = UIImageView.init(image: coverImage)
+
         let position = self.tableView.convert(originView.frame.origin, to: self.navigationController!.view)
         coverImageView.frame = CGRect.init(x: position.x + 10, y: position.y + 10, width: 80, height: 80)
         let backV = UIView.init(frame: self.view.frame)
@@ -65,7 +66,7 @@ class SmoothTableView: UIViewController {
     }
 
 }
-extension SmoothTableView:UITableViewDelegate,UITableViewDataSource {
+extension SmoothTableView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 100
@@ -76,16 +77,16 @@ extension SmoothTableView:UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: SmoothTableViewCell.identifier) as? SmoothTableViewCell{
+        if let cell = tableView.dequeueReusableCell(withIdentifier: SmoothTableViewCell.identifier) as? SmoothTableViewCell {
             return cell
         }
         return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) as? SmoothTableViewCell{
+        if let cell = tableView.cellForRow(at: indexPath) as? SmoothTableViewCell {
             self.startCustomTransitionAnimation(originView: cell)
-        }else{
+        } else {
             self.startCustomTransitionAnimation()
         }
 

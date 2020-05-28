@@ -16,15 +16,13 @@ class LearnCopyVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-
-    func aboutArray(){
+    func aboutArray() {
         
-        var x = [1,3,3,4]
+        var x = [1, 3, 3,4]
+
         var y = x
-        print(x,y)
+        print(x, y)
         let intsize = MemoryLayout<Int>.size
     }
     
-    
-
 }

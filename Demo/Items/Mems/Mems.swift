@@ -18,12 +18,15 @@ private let _EMPTY_PTR = UnsafeRawPointer(bitPattern: 0x1)!
 public struct Mems<T> {
     private static func _memStr(_ ptr: UnsafeRawPointer,
                                 _ size: Int,
-                                _ aligment: Int) ->String {
+                                _ aligment: Int) -> String {
         if ptr == _EMPTY_PTR { return "" }
         
         var rawPtr = ptr
+
         var string = ""
+
         let fmt = "0x%0\(aligment << 1)lx"
+
         let count = size / aligment
         for i in 0..<count {
             if i > 0 {

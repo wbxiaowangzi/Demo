@@ -9,12 +9,16 @@
 import Foundation
 
 class Debouncer {
+
     public let label: String
+
     public let interval: DispatchTimeInterval
+
     fileprivate let queue: DispatchQueue
+
     fileprivate let semaphore: DispatchSemaphoreWrapper
+
     fileprivate var workItem: DispatchWorkItem?
-    
     
     public init(label: String, interval: Float, qos: DispatchQoS = .userInteractive) {
         self.interval  = .milliseconds(Int(interval * 1000))
@@ -36,7 +40,6 @@ class Debouncer {
     }
     
 }
-
 
 public struct DispatchSemaphoreWrapper {
     

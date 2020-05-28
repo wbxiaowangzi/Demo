@@ -14,25 +14,30 @@ import ObjectMapper
 import Reachability
 import Alamofire
 
-final class YunweiMgr{
+final class YunweiMgr {
     
-    static let Instance:YunweiMgr = YunweiMgr.init()
+    static let Instance: YunweiMgr = YunweiMgr.init()
     
     var apiProvider: MoyaProvider<ApiService>!
-    fileprivate var streamProvider:MoyaProvider<ApiService>!
+
+    fileprivate var streamProvider: MoyaProvider<ApiService>!
     /** 网络状态监听 **/
     private let reachability = Reachability()!
+
     private let remoteHostName = "www.baidu.com"
+
     private var _isReachability = true
-    private var _connectState:ConnectState = .Not
-    var isNetReachability: Bool{
-        get{
+
+    private var _connectState: ConnectState = .Not
+
+    var isNetReachability: Bool {
+        get {
             return self._isReachability
         }
     }
     
-    var connectState:ConnectState{
-        get{
+    var connectState: ConnectState {
+        get {
             return self._connectState
         }
     }
@@ -41,7 +46,7 @@ final class YunweiMgr{
         HttpCom.SetHeaderKey(key: "version", value: AppConfig.yunweiVersion)
 
         RefreshProvider()
-        //accessTokenPlugin.completeDele = onComplete(_:)
+        //accessTokenPlugin.completeDele = onComplete(_: )
     }
     
     let accessTokenPlugin : AccessTokenPlugin = AccessTokenPlugin.init { (a) -> URLCredential? in
@@ -51,16 +56,16 @@ final class YunweiMgr{
     /** 刷新provider **/
     func RefreshProvider() {
         let commonEndpointClosure = { (target: ApiService) -> Endpoint in
+
             let URL = target.baseURL.appendingPathComponent(target.path).absoluteString
             
-            var headFields = Dictionary<String,String>()
+            var headFields = Dictionary<String, String>()
             headFields["token"] = HttpCom.Token
             let endpoint = Endpoint(url: URL,
                                     sampleResponseClosure: {.networkResponse(0, target.sampleData)},
                                     method: target.method,
                                     task: target.task, httpHeaderFields: headFields)
            
-            
             // 添加 AccessToken
             var request = try? endpoint.urlRequest()
             request?.timeoutInterval = 15
@@ -70,26 +75,26 @@ final class YunweiMgr{
         apiProvider = MoyaProvider<ApiService>(endpointClosure: commonEndpointClosure,
                                                  plugins: [],
                                                  trackInflights: false)
-        let stubC = {(api:ApiService)->StubBehavior in
+        let stubC = {(api: ApiService) -> StubBehavior in
             return .never
         }
         streamProvider = MoyaProvider<ApiService>(endpointClosure: commonEndpointClosure, stubClosure: stubC, plugins: [], trackInflights: false)
     }
     
-    
     /** post **/
-    private func _request(apiService:ApiService,callback:((SingleEvent<Response>)->Void)?) -> Observable<Response> {
-        print("发送请求:\r url: \(apiService.baseURL)\(apiService.path)\r method:\(apiService.method)\r headers： \(String(describing: apiService.headers))\r paramas:\(apiService.parameters!))")
+    private func _request(apiService: ApiService, callback: ((SingleEvent<Response>) -> Void)?) -> Observable<Response> {
+        print("发送请求: \r url: \(apiService.baseURL)\(apiService.path)\r method: \(apiService.method)\r headers： \(String(describing: apiService.headers))\r paramas:\(apiService.parameters!))")
         
         let obserable = apiProvider.rx.request(apiService)
 
         let _ = obserable.subscribe { (e) in
-            switch e{
+            switch e {
             case.success(let response):
+
                 let token = response.response?.allHeaderFields["token"]
-                if token != nil{
+                if token != nil {
                     let s = token as! String
-                    if HttpCom.Token != s{
+                    if HttpCom.Token != s {
                         HttpCom.Token = s
                         self.RefreshProvider()
                         //CoreUserMgr.Instance.saveToken()
@@ -99,7 +104,7 @@ final class YunweiMgr{
                 //let model = MapperUtil<TokenModel>.map(response)
                 //print("接收应答:  \(String(describing: model.code))")
                 //若token过期，则直接进入代理
-//                if model.code == 606{
+//                if model.code == 606 {
 //                    self.TokenOvertime()
 //                    return
 //                }
@@ -112,19 +117,19 @@ final class YunweiMgr{
         return obserable.asObservable()
     }
 
-    
     /// yunwei通用接口
     ///
     /// - Parameters:
     ///   - apiService: ApiService
     ///   - event: callback
-    func request(apiService:ApiService,event:((SingleEvent<Response>)->Void)?) -> Observable<Response> {
+    func request(apiService: ApiService, event: ((SingleEvent<Response>) -> Void)?) -> Observable<Response> {
 
         return _request(apiService: apiService, callback: event)
         
     }
     
-    func request(urlRequest:URLRequest,completionHandler: @escaping ((DataResponse<Any>) -> Void)){
+    func request(urlRequest: URLRequest, completionHandler: @escaping ((DataResponse<Any>) -> Void)) {
+
         Alamofire.request(urlRequest).responseJSON(completionHandler: completionHandler)
     }
     
@@ -134,7 +139,7 @@ final class YunweiMgr{
     ///   - apiService: apiService
     ///   - event: callback
     /// - Returns: ctrl
-    func requestWithProgress(apiService: ApiService, event: @escaping (Event<ProgressResponse>)->Void) -> Disposable {
+    func requestWithProgress(apiService: ApiService, event: @escaping (Event<ProgressResponse>) -> Void) -> Disposable {
         let disposable = apiProvider.rx.requestWithProgress(apiService).subscribe { (e) in
             event(e)
             
@@ -189,19 +194,19 @@ enum ConnectState {
     case Not
 }
 
+class MapperUtil<T: Mappable> {
 
-class MapperUtil<T:Mappable> {
-    static func map(_ s:Any?) -> T?{
+    static func map(_ s: Any?) -> T? {
         return Mapper<T>().map(JSONObject: s)
     }
     
-    static func map(_ r:Response) -> T{
-        var json:Any
-        do{
+    static func map(_ r: Response) -> T {
+        var json: Any
+        do {
             json = try r.mapJSON()
-        }catch{
+        }catch {
             print(error.localizedDescription)
-            let data = "{\"code\":-1111}".data(using: String.Encoding.utf8)!
+            let data = " {\"code\": -1111}".data(using: String.Encoding.utf8)!
             json = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
             let model = MapperUtil<T>.map(json)!
             
@@ -211,15 +216,15 @@ class MapperUtil<T:Mappable> {
         return Mapper<T>().map(JSONObject: json)!
     }
     
-    static func create() -> T{
-        let data = "{\"code\":-1}".data(using: String.Encoding.utf8)!
+    static func create() -> T {
+        let data = " {\"code\": -1}".data(using: String.Encoding.utf8)!
+
         let json = try! JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.mutableContainers) as! NSDictionary
+
         let model = MapperUtil<T>.map(json)!
         
         return model
     }
     
 }
-
-
 

@@ -10,7 +10,8 @@ import UIKit
 
 class RadarView: UIView {
     
-    fileprivate var radarData:[RadarModel]!
+    fileprivate var radarData: [RadarModel]!
+
     fileprivate var featureCount: NSInteger {
         get {
             return radarData.count
@@ -18,16 +19,25 @@ class RadarView: UIView {
     }
     fileprivate let layerFloorCount = 5
     //绘制需要用到的数据
-    fileprivate var radius:CGFloat!
-    fileprivate var radarViewW:CGFloat!
-    fileprivate var radarViewH:CGFloat!
-    fileprivate var centerPoint:CGPoint!
+    fileprivate var radius: CGFloat!
+
+    fileprivate var radarViewW: CGFloat!
+
+    fileprivate var radarViewH: CGFloat!
+
+    fileprivate var centerPoint: CGPoint!
+
     fileprivate var path = UIBezierPath()
+
     fileprivate var featureLabH = CGFloat(20)
+
     fileprivate var featureLabW = CGFloat(40)
-    fileprivate var scorePoints:[CGPoint]!
-    fileprivate var featurePoints:[CGPoint]!
-    fileprivate var strokeLineW:CGFloat{
+
+    fileprivate var scorePoints: [CGPoint]!
+
+    fileprivate var featurePoints: [CGPoint]!
+
+    fileprivate var strokeLineW: CGFloat {
         get {
             return radius/CGFloat(layerFloorCount)
         }
@@ -37,10 +47,10 @@ class RadarView: UIView {
         super.init(frame: frame)
     }
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("init(coder: ) has not been implemented")
     }
     
-    convenience  init(frame: CGRect,radarData:[RadarModel]) {
+    convenience  init(frame: CGRect, radarData: [RadarModel]) {
         self.init(frame: frame)
         backgroundColor = .black
         self.radarData = radarData
@@ -64,12 +74,12 @@ class RadarView: UIView {
     
 }
 
-extension RadarView{
-    fileprivate func  drawRadarBackView(with featureCount:NSInteger?){
+extension RadarView {
+    fileprivate func  drawRadarBackView(with featureCount: NSInteger?) {
         guard featureCount != nil else {
             return
         }
-        for i in 0..<layerFloorCount{
+        for i in 0..<layerFloorCount {
             let shapeLayer = CAShapeLayer()
             shapeLayer.frame = CGRect(x: 0, y: 0, width: radarViewW, height: radarViewH)
             layer.addSublayer(shapeLayer)
@@ -77,39 +87,43 @@ extension RadarView{
         }
     }
     
-    fileprivate func setBackSpiderLayer(layer:CAShapeLayer,value:CGFloat,index:NSInteger){
+    fileprivate func setBackSpiderLayer(layer: CAShapeLayer, value: CGFloat, index:NSInteger) {
         let realRadius = radius - (strokeLineW * CGFloat(index))
+
         let angle = CGFloat.pi*CGFloat(2)/CGFloat(featureCount)
+
         var points = [CGPoint]()
-        for i in 0..<featureCount{
+        for i in 0..<featureCount {
             let apa = CGFloat.pi/2.0 + CGFloat(i)*angle
+
             let px = centerPoint.x + realRadius*cos(apa)
+
             let py = centerPoint.y + realRadius*sin(apa)
             points.append(CGPoint(x: px, y: py))
         }
         let path = UIBezierPath()
         path.move(to: points.first!)
-        for p in points{
-            if p == points.first{
+        for p in points {
+            if p == points.first {
                 continue
             }
             path.addLine(to: p)
-            if p == points.last{
+            if p == points.last {
                 path.close()
             }
         }
         layer.path = path.cgPath
         //layer.strokeColor = UIColor.white.cgColor
         layer.fillColor = UIColor(hexString: "#FFFFFF").withAlphaComponent(0.3).cgColor
-        if index == 0{
+        if index == 0 {
             featurePoints = points
         }
     }
 }
 
-extension RadarView{
+extension RadarView {
     
-    fileprivate func drawScoreView(with radarDatas:[RadarModel]?) {
+    fileprivate func drawScoreView(with radarDatas: [RadarModel]?) {
         guard radarDatas != nil else {
             return
         }
@@ -117,12 +131,17 @@ extension RadarView{
         scoreLayer.frame = CGRect(x: 0, y: 0, width: radarViewW, height: radarViewH)
         layer.addSublayer(scoreLayer)
         let angle = CGFloat.pi*CGFloat(2)/CGFloat(featureCount)
+
         var points = [CGPoint]()
+
         var lengths = [CGFloat]()
-        for i in 0..<featureCount{
+        for i in 0..<featureCount {
             let realRadius = radius! * CGFloat(CGFloat(radarDatas![i].score)/100)
+
             let apa = CGFloat.pi/2.0 + CGFloat(i)*angle
+
             let px = centerPoint.x + realRadius*cos(apa)
+
             let py = centerPoint.y + realRadius*sin(apa)
             points.append(CGPoint(x: px, y: py))
             lengths.append(realRadius)
@@ -130,12 +149,12 @@ extension RadarView{
         scorePoints = points
         let path = UIBezierPath()
         path.move(to: points.first!)
-        for p in points{
-            if p == points.first{
+        for p in points {
+            if p == points.first {
                 continue
             }
             path.addLine(to: p)
-            if p == points.last{
+            if p == points.last {
                 path.close()
             }
         }
@@ -152,13 +171,15 @@ extension RadarView{
         
     }
     
-    fileprivate func deawLabAndCircle(){
+    fileprivate func deawLabAndCircle() {
         
-        if let fps = featurePoints{
+        if let fps = featurePoints {
             //画特征lab
-            for i in 0..<fps.count{
+            for i in 0..<fps.count {
                 let model = radarData[i]
+
                 let p = transportPointToCenter(point: fps[i])
+
                 let lab = UILabel(frame: CGRect(x: 0, y: 0, width: featureLabW, height: featureLabH))
                 lab.text = model.name
                 lab.textAlignment = .center
@@ -169,13 +190,15 @@ extension RadarView{
             }
         }
         
-        if let sps = scorePoints{
+        if let sps = scorePoints {
             //画分数圆圈和lab
-            for i in 0..<sps.count{
+            for i in 0..<sps.count {
                 let model = radarData[i]
+
                 let c = sps[i]
                 drawCircle(with: c)
                 let p = transportPointToCenter(point: c, isScore: true)
+
                 let lab = UILabel(frame: CGRect(x: 0, y: 0, width: featureLabW, height: featureLabH))
                 lab.textAlignment = .center
                 lab.text = "\(model.score!)"
@@ -187,7 +210,7 @@ extension RadarView{
         }
     }
     
-    fileprivate func drawCircle(with center:CGPoint){
+    fileprivate func drawCircle(with center: CGPoint) {
         let path = UIBezierPath()
         path.addArc(withCenter: center, radius: 3, startAngle: 0, endAngle: CGFloat(2*Float.pi), clockwise: true)
         let layer = CAShapeLayer()
@@ -197,23 +220,25 @@ extension RadarView{
         self.layer.addSublayer(layer)
     }
     
-    fileprivate func transportPointToCenter(point:CGPoint,isScore:Bool = false) ->CGPoint{
+    fileprivate func transportPointToCenter(point: CGPoint, isScore: Bool = false) -> CGPoint {
         let cx = centerPoint.x
+
         let cy = centerPoint.y
+
         var space = CGFloat(16)
-        if isScore{
+        if isScore {
             space = 0
         }
         var center = point
         if fabsf(Float(point.x - cx)) < 5.0 {
-            if point.y > cy{
+            if point.y > cy {
                 center.y += featureLabH/2 + space
-            }else{
+            } else {
                 center.y -= featureLabH/2 + space
             }
-        }else if point.x > cx{
+        } else if point.x > cx {
             center.x += featureLabW/2 + space
-        }else{
+        } else {
             center.x -= featureLabW/2 + space
         }
         
@@ -222,8 +247,8 @@ extension RadarView{
 }
 
 struct RadarModel {
-    var name:String! = "特征"
+    var name: String! = "特征"
     //满分100分
-    var score:NSInteger! = 55
+    var score: NSInteger! = 55
     
 }

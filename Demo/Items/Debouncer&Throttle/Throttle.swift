@@ -11,9 +11,13 @@ import Foundation
 public class Throttler {
     
     private let queue: DispatchQueue = DispatchQueue.global(qos: .background)
+
     private var job: DispatchWorkItem = DispatchWorkItem(block: {})
+
     private var previousRun: Date = Date.distantPast
+
     private var maxInterval: Int
+
     fileprivate let semaphore: DispatchSemaphoreWrapper
     
     init(seconds: Int) {
@@ -21,12 +25,11 @@ public class Throttler {
         self.semaphore = DispatchSemaphoreWrapper(withValue: 1)
     }
     
-    
     func throttle(block: @escaping () -> ()) {
         
         self.semaphore.sync  { () -> () in
             job.cancel()
-            job = DispatchWorkItem(){ [weak self] in
+            job = DispatchWorkItem() { [weak self] in
                 self?.previousRun = Date()
                 block()
             }

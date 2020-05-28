@@ -14,7 +14,7 @@ import ObjectMapper
 //yunwei通信token验证与刷新
 internal final class AccessTokenPlugin: PluginType {
 
-    var completeDele:((_ code:Int) -> Void)?
+    var completeDele: ((_ code: Int) -> Void)?
     public typealias CredentialClosure = (TargetType) -> URLCredential?
     let credentialsClosure: CredentialClosure
     
@@ -38,16 +38,16 @@ internal final class AccessTokenPlugin: PluginType {
         case .success(let response):
             //print(".success ======= " + String(response.statusCode))
             //print(".success ==== TOKEN === " + (response.request?.value(forHTTPHeaderField: "token"))!)
-            var code:Int = -1
+            var code: Int = -1
             do {
                 let jsonObject = try! response.mapJSON()
             }
             
             let token = response.response?.allHeaderFields["token"]
             //print("接收应答: \(String.init(data: response.data, encoding: String.Encoding.utf8)!.replacingOccurrences(of: "\\", with: ""))")
-            if token != nil{
+            if token != nil {
                 let s = token as! String
-                if HttpCom.Token != s{
+                if HttpCom.Token != s {
                     HttpCom.Token = s
                     print("refresh Token: success" + " --------\(s)")
                     YunweiMgr.Instance.RefreshProvider()
@@ -55,15 +55,10 @@ internal final class AccessTokenPlugin: PluginType {
             }
             completeDele?(code)
         case .failure(_):
-            print("HttpConnect Error:" + result.error.debugDescription + " --------")
+            print("HttpConnect Error: " + result.error.debugDescription + " --------")
             completeDele?(-1)
         }
     }
     
- 
-
 }
-
-
-
 

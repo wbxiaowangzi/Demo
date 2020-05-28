@@ -27,6 +27,4 @@ class RadarVC: UIViewController {
         view.addSubview(radar)
     }
     
-    
-    
 }

@@ -9,8 +9,8 @@
 import UIKit
 
 class CALayerVC: UIViewController {
+
     @IBOutlet weak var tableView: UITableView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class CALayerVC: UIViewController {
     
 }
 
-extension CALayerVC: UITableViewDataSource{
+extension CALayerVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.lazyCellNames().count
@@ -32,6 +32,7 @@ extension CALayerVC: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+
         let name = self.lazyCellNames()[indexPath.row]
         cell.textLabel?.text = name
         return cell
@@ -57,11 +58,11 @@ extension CALayerVC: UITableViewDelegate {
     }
 }
 
-extension CALayerVC{
+extension CALayerVC {
     
-    func lazyCellNames() -> Array<String>{
+    func lazyCellNames() -> Array<String> {
         
-        return ["CAShapeLayer","CAGirdentLayer","CATransitionLayer","CATextLayer"]
+        return ["CAShapeLayer", "CAGirdentLayer", "CATransitionLayer","CATextLayer"]
     }
     
 }

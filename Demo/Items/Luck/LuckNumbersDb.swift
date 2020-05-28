@@ -12,13 +12,19 @@ import SQLite
 class LuckNumbersDB: NSObject {
 
     static let DocumentPath = NSHomeDirectory() + "/Documents"
+
     static let SQLDBPath  = DocumentPath + "/SQLite/LuckNumbers"
+
     static let share = LuckNumbersDB()
+
     var DB = try? Connection(SQLDBPath)
     
     let Number_Table = Table("luck_number")
+
     let Face_id = Expression<Int>("face_id")
+
     let User_ID = Expression<String>("user_id")
+
     let numbs = Expression<[Int]>("ints")
     private override init() {
         super.init()
@@ -32,7 +38,7 @@ class LuckNumbersDB: NSObject {
         }))
     }
     
-    func insertModel(model:FaceModel) {
+    func insertModel(model: FaceModel) {
         guard DB != nil else {
             return
         }
@@ -43,32 +49,34 @@ class LuckNumbersDB: NSObject {
         let _ = try? DB!.run(insert)
     }
     
-    func deleteModel(model:FaceModel) {
+    func deleteModel(model: FaceModel) {
+
         deleteModel(with: model.faceid)
     }
     
-    func deleteModel(with faceID:Int) {
+    func deleteModel(with faceID: Int) {
         try! DB?.run(Number_Table.filter(self.Face_id == faceID).delete())
     }
     
-    func deleteModel(with userID:String) {
+    func deleteModel(with userID: String) {
         try! DB?.run(Number_Table.filter(self.User_ID == userID).delete())
     }
     
-    func select(with faceID:Int) -> [FaceModel]  {
+    func select(with faceID: Int) -> [FaceModel]  {
         let a = try! DB?.prepare(Number_Table.filter(self.Face_id == faceID))
-        return a!.map{FaceModel(faceid: $0[Face_id], userid: $0[User_ID])}
+        return a!.map {FaceModel(faceid: $0[Face_id], userid: $0[User_ID])}
     }
     
-    func isExist(faceid:Int)->Bool {
+    func isExist(faceid: Int) -> Bool {
         return select(with: faceid).count > 0
     }
 }
 
 struct FLuckNumberModel {
     var faceid = 0
+
     var userid = "123"
-    init(faceid:Int,userid:String){
+    init(faceid: Int, userid: String) {
         self.faceid = faceid
         self.userid = userid
     }

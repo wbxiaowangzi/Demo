@@ -9,7 +9,7 @@
 import UIKit
 import SceneKit
 
-enum CollisionDetectionMask:Int {
+enum CollisionDetectionMask: Int {
     
     case none = 0
     case floor = 2
@@ -20,18 +20,27 @@ enum CollisionDetectionMask:Int {
 }
 
 let kMaxPressDuration = 2.0
+
 let kMaxPlatFormRadius = 6
+
 let kMinPlatformRadius = kMaxPressDuration - 4
+
 let kGravityValue = 30
 
 class SceneKitVC: UIViewController {
     
-    var lastPlatform:SCNNode?
-    var platform:SCNNode?
-    var nextPlatform:SCNNode?
-    var pressDate:Date?
-    var score:NSInteger = 0
-    var longG:UILongPressGestureRecognizer?
+    var lastPlatform: SCNNode?
+
+    var platform: SCNNode?
+
+    var nextPlatform: SCNNode?
+
+    var pressDate: Date?
+
+    var score: NSInteger = 0
+
+    var longG: UILongPressGestureRecognizer?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
@@ -49,7 +58,7 @@ class SceneKitVC: UIViewController {
         scene.rootNode.addChildNode(jumper)
 
         scene.rootNode.addChildNode(camera)
-        let longPressGesture = UILongPressGestureRecognizer.init(target: self, action: #selector(accumulateStrength(recognizer:)))
+        let longPressGesture = UILongPressGestureRecognizer.init(target: self, action: #selector(accumulateStrength(recognizer: )))
         longPressGesture.minimumPressDuration = 0
         longG = longPressGesture
         view.addGestureRecognizer(longPressGesture)
@@ -58,6 +67,7 @@ class SceneKitVC: UIViewController {
     
     func creatFirstPlatform() {
         let node = SCNNode()
+
         let cylinder = SCNCylinder(radius: 5, height: 2)
         cylinder.firstMaterial?.diffuse.contents = UIColor.yellow
         node.geometry = cylinder
@@ -76,17 +86,18 @@ class SceneKitVC: UIViewController {
         moveCameraToCurrentPlatform()
     }
     
-    
-    @objc func accumulateStrength(recognizer:UILongPressGestureRecognizer)  {
+    @objc func accumulateStrength(recognizer: UILongPressGestureRecognizer)  {
         if recognizer.state == .began {
             pressDate = Date()
             updataeStrengthStatus()
-        }else if recognizer.state == .ended {
-            if let pd = pressDate{
+        } else if recognizer.state == .ended {
+            if let pd = pressDate {
                 jumper.geometry?.firstMaterial?.diffuse.contents = UIColor.white
                 jumper.removeAllActions()
                 let pressDate = pd.timeIntervalSince1970
+
                 let nowDate = Date().timeIntervalSince1970
+
                 var power = nowDate - pressDate
                 power = power > kMaxPressDuration ? kMaxPressDuration : power
                 jumperWithPower(power)
@@ -96,6 +107,7 @@ class SceneKitVC: UIViewController {
     
     func updataeStrengthStatus()  {
         let action = SCNAction.customAction(duration: kMaxPressDuration) {[weak self] (node, elapsedTime) in
+
             let percentage = Double(elapsedTime)/kMaxPressDuration
             self?.jumper.geometry?.firstMaterial?.diffuse.contents = UIColor(red: 1, green: CGFloat(1-percentage), blue: CGFloat(1-percentage), alpha: 1)
             
@@ -105,12 +117,19 @@ class SceneKitVC: UIViewController {
     
     func jumperWithPower( _ power: Double)  {
         let p = Float(power*30)
-        if let platformPosition = self.nextPlatform?.presentation.position{
+
+        if let platformPosition = self.nextPlatform?.presentation.position {
+
             let jumperPositon = self.jumper.presentation.position
+
             let subtractionX = platformPosition.x - jumperPositon.x
+
             let subtractionZ = platformPosition.z - jumperPositon.z
+
             let proportion = abs(subtractionX/subtractionZ)
+
             var x = sqrt(1/(pow(proportion, 2)+1))*proportion
+
             var z = sqrt(1/(pow(proportion, 2)+1))
             x *= subtractionX<0 ? -1 : 1
             z *= subtractionZ<0 ? -1 : 1
@@ -129,9 +148,8 @@ class SceneKitVC: UIViewController {
         self.moveCameraToCurrentPlatform()
     }
     
-    
     func moveCameraToCurrentPlatform() {
-        if  var position = self.platform?.presentation.position{
+        if  var position = self.platform?.presentation.position {
             position.x += 20
             position.y += 30
             position.z += 20
@@ -145,11 +163,15 @@ class SceneKitVC: UIViewController {
         let node = SCNNode()
         //随机大小
         let radius = Int.random(in: 2...5)
+
         let cylinder = SCNCylinder.init(radius: CGFloat(radius), height: 2)
         //随机颜色
         let r = arc4random()%255
+
         let g = arc4random()%255
+
         let b = arc4random()%255
+
         let color = UIColor(red: CGFloat(r)/255.0, green: CGFloat(g)/255.0, blue: CGFloat(b)/255.0, alpha: 1)
         cylinder.firstMaterial?.diffuse.contents = color
         node.geometry = cylinder
@@ -170,11 +192,12 @@ class SceneKitVC: UIViewController {
         node.physicsBody = body
         
         //随机位置
-        if var position = self.platform?.presentation.position{
+        if var position = self.platform?.presentation.position {
+
             let a = Int.random(in: 0...1)
-            if a == 0{
+            if a == 0 {
                 position.x += 12
-            }else{
+            } else {
                 position.z -= 12
             }
             position.y += 5
@@ -190,13 +213,15 @@ class SceneKitVC: UIViewController {
         restart()
     }
     
-    private var scene:SCNScene = {
+    private var scene: SCNScene = {
+
         let scene = SCNScene()
         scene.physicsWorld.gravity = SCNVector3(0, -kGravityValue, 0)
         return scene
     }()
     
-    private var sceneView:SCNView! = {
+    private var sceneView: SCNView! = {
+
         let view = SCNView()
         view.allowsCameraControl = false
         view.autoenablesDefaultLighting = false
@@ -204,8 +229,10 @@ class SceneKitVC: UIViewController {
         return view
     }()
     
-    private var floor:SCNNode = {
+    private var floor: SCNNode = {
+
         let node = SCNNode()
+
         let floor = SCNFloor()
         floor.firstMaterial?.diffuse.contents = UIImage(named: "floor")
         node.geometry = floor
@@ -226,8 +253,10 @@ class SceneKitVC: UIViewController {
         return node
     }()
     
-    private var jumper:SCNNode = {
+    private var jumper: SCNNode = {
+
         let node = SCNNode()
+
         let box = SCNBox.init(width: 1, height: 1, length: 1, chamferRadius: 0)
         box.firstMaterial?.diffuse.contents = UIColor.white
         node.geometry = box
@@ -245,8 +274,8 @@ class SceneKitVC: UIViewController {
         return node
     }()
     
+    private var camera: SCNNode = {
 
-    private var camera:SCNNode = {
         let node = SCNNode()
         node.camera = SCNCamera()
         node.camera?.zFar = 200.0
@@ -255,9 +284,10 @@ class SceneKitVC: UIViewController {
         return node
     }()
     
-    
-    private lazy var light:SCNNode = {
+    private lazy var light: SCNNode = {
+
         let node = SCNNode()
+
         let light = SCNLight()
         light.color = UIColor.white
         light.type = SCNLight.LightType.omni
@@ -265,7 +295,8 @@ class SceneKitVC: UIViewController {
         return node
     }()
     
-    private lazy var scroLab:UILabel = {
+    private lazy var scroLab: UILabel = {
+
         let l = UILabel(frame: CGRect(x: 20, y: 84, width: 300, height: 20))
         l.numberOfLines = 0
         l.textColor = UIColor.black
@@ -273,7 +304,8 @@ class SceneKitVC: UIViewController {
         return l
     }()
     
-    private lazy var restartBtn:UIButton = {
+    private lazy var restartBtn: UIButton = {
+
         let b = UIButton(type: UIButton.ButtonType.custom)
         b.setTitle("RESTART", for: .normal)
         b.frame = CGRect(x: 220, y: 220, width: 200, height: 100)
@@ -309,33 +341,33 @@ class SceneKitVC: UIViewController {
     }
 }
 
-
-extension SceneKitVC:SCNPhysicsContactDelegate{
+extension SceneKitVC: SCNPhysicsContactDelegate {
     func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
         let bodyA = contact.nodeA.physicsBody
+
         let bodyB = contact.nodeB.physicsBody
 
-        
-        var jumper:SCNPhysicsBody?
-        var another:SCNPhysicsBody?
-        if bodyA?.categoryBitMask == CollisionDetectionMask.jumper.rawValue{
+        var jumper: SCNPhysicsBody?
+
+        var another: SCNPhysicsBody?
+        if bodyA?.categoryBitMask == CollisionDetectionMask.jumper.rawValue {
             jumper = bodyA
             another = bodyB
         }
-        if bodyB?.categoryBitMask == CollisionDetectionMask.jumper.rawValue{
+        if bodyB?.categoryBitMask == CollisionDetectionMask.jumper.rawValue {
             jumper = bodyB
             another = bodyA
         }
         
-        if let _ = jumper,let a = another{
-            if a.categoryBitMask == CollisionDetectionMask.floor.rawValue{
+        if let _ = jumper, let a = another {
+            if a.categoryBitMask == CollisionDetectionMask.floor.rawValue {
                 if #available(iOS 9.0, *) {
                     a.contactTestBitMask = CollisionDetectionMask.none.rawValue
                 } else {
                     // Fallback on earlier versions
                 }
                 performSelector(onMainThread: #selector(gameDidOver), with: nil, waitUntilDone: false)
-            }else if a.categoryBitMask == CollisionDetectionMask.platform.rawValue{
+            } else if a.categoryBitMask == CollisionDetectionMask.platform.rawValue {
                 a.categoryBitMask = CollisionDetectionMask.oldPlatform.rawValue
                 performSelector(onMainThread: #selector(jumpCompleted), with: nil, waitUntilDone: false)
             }

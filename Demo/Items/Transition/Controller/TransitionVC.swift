@@ -11,6 +11,7 @@ import UIKit
 class TransitionVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
@@ -23,7 +24,7 @@ class TransitionVC: UIViewController {
         
 }
 
-extension TransitionVC: UITableViewDataSource{
+extension TransitionVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.lazyCellNames().count
@@ -31,6 +32,7 @@ extension TransitionVC: UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
+
         let name = self.lazyCellNames()[indexPath.row]
         cell.textLabel?.text = name
         return cell
@@ -50,13 +52,12 @@ extension TransitionVC: UITableViewDelegate {
     }
 }
 
-extension TransitionVC{
+extension TransitionVC {
     
-    func lazyCellNames() -> Array<String>{
+    func lazyCellNames() -> Array<String> {
         
         return ["one"]
     }
     
 }
-
 

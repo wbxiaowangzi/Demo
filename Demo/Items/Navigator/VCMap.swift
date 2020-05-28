@@ -8,8 +8,8 @@
 
 import Foundation
 
-
 class VCMap {
+
 //    static var config: [String : Navigatable] = [
 //        // homepage
 //        //"homepage" : HomePageVC.self

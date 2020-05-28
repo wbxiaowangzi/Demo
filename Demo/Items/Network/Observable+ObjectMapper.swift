@@ -15,7 +15,7 @@ extension Observable {
     func mapObject<T: Mappable>(type: T.Type) -> Observable<T> {
         return self.map { response in
             
-            guard let r = response as? Response else{
+            guard let r = response as? Response else {
                 throw RxSwiftMoyaError.ParseJSONError
             }
             
@@ -52,10 +52,14 @@ extension Observable {
     
     fileprivate func parseError(response: [String: Any]?) -> NSError? {
         var error: NSError?
+
         if let value = response {
-            var code:Int?
-            var msg:String?
-            if let errorDic = value["error"] as? [String:Any]{
+
+            var code: Int?
+
+            var msg: String?
+
+            if let errorDic = value["error"] as? [String: Any] {
                 code = errorDic["code"] as? Int
                 msg = errorDic["msg"] as? String
                 error = NSError(domain: "Network", code: code!, userInfo: [NSLocalizedDescriptionKey: msg ?? ""])
