@@ -146,23 +146,23 @@ extension ViewController {
 }
 
 enum VCType: String {
-    case CALayer = "CALayer"
-    case CoreAnimation = "CoreAnimation"
-    case MVVM = "MVVM"
-    case Transition = "Transition"
-    case RotatyTable = "RotatyTable"
-    case GifBG = "GifBG"
-    case Metal = "Metal"
-    case SceneKit = "SceneKit"
-    case Radar = "Radar"
-    case OpenGL = "Opengl"
-    case RXSwift = "RXSwift"
-    case SQLite = "SQLite"
-    case AvatarX = "AvatarX"
-    case SizeClass = "SizeClass"
-    case Luck = "Luck"
-    case JSPatchTestVC = "JSPatchTestVC"
-    case OCTestVC = "OCTestVC"
-    case SmoothTableVoew = "SmoothTableView"
-    case ImagePicker = "ImagePicker"
+    case CALayer
+    case CoreAnimation
+    case MVVM
+    case Transition
+    case RotatyTable
+    case GifBG
+    case Metal
+    case SceneKit
+    case Radar
+    case OpenGL
+    case RXSwift
+    case SQLite
+    case AvatarX
+    case SizeClass
+    case Luck
+    case JSPatchTestVC
+    case OCTestVC
+    case SmoothTableVoew
+    case ImagePicker
 }
