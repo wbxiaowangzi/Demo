@@ -51,7 +51,7 @@ def formatter_the_file(file_path):
     while line:
         # 添加空格
         va = re.sub(r'\S\{', change, line, re.I)
-        va = re.sub(r'\}\S', change, va, re.I)
+        va = re.sub(r'\}e', change, va, re.I)
         va = re.sub(r':\S', change, va, re.I)
         va = re.sub(r',\S', change, va, re.I)
         va = re.sub(r'->\S', join_space_two, va, re.I)
@@ -59,13 +59,16 @@ def formatter_the_file(file_path):
         file2.write(va)
         line = file.readline()
         # 添加换行
-        # if ("class " in va or "    var" in va or "    private" in va or "    let" in va) and line != "\n":
-        #     file2.write("\n")
+        if is_var_or_class(va) and is_var_or_class(line):
+            file2.write("\n")
+        if is_var_or_class(va) and is_func(line):
+            file2.write("\n")
         # 多行空行只保留一个空行
-        # if va == "\n" and line == "\n":
-        #     while file.readline() == "\n":
-        #         pass
-        #     line = file.readline()
+        if va.isspace() and line.isspace():
+            line = file.readline()
+            while line.isspace():
+                line = file.readline()
+                pass
 
     file2.close()
     os.remove(file_path)
@@ -83,3 +86,17 @@ def formatter_the_folder(p):
     names = get_swift_file_names(p)
     for name in names:
         formatter_the_file(name)
+
+
+# 判断一个字符串是否是定义的属性或类
+def is_var_or_class(line):
+    is_v = re.match(r'.*var.*:.*', line, flags=0)\
+           or re.match(r'.*var.*=.*', line, flags=0)\
+           or re.match(r'.*class.*{.*', line, flags=0)
+    return is_v is not None
+
+
+# 判断一个字符串是否是方法
+def is_func(line):
+    is_f = re.match(r'.*func.*\(.*\).*{.*', line, flags=0)
+    return is_f is not None

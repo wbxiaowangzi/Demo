@@ -10,7 +10,7 @@ testPath = "/Users/yingzi/Documents/GitHub/Demo/Demo/Python/Formatter"
 home = "/Users/yingzi/MIHousekeeper/MIHousekeeper/MIHousekeeper/Business/HomePage/"
 business = "/Users/yingzi/MIHousekeeper/MIHousekeeper/MIHousekeeper/Business"
 
-formatter_the_folder(business)
+formatter_the_folder(testPath)
 
-#print(get_swift_file_names(home))
+# print(get_swift_file_names(home))
 

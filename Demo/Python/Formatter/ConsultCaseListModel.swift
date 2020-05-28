@@ -24,74 +24,57 @@ class ConsultCaseListModel: MappableBase {
         count       <- map["data.count"]
         list        <- map["data.list"]
     }
+
 }
 
 class ConsultCaseModel: NSObject, Mappable {
 
     var id: Int?
 
-    
     var image_url: String?
 
-    
     var image_type: Int?
 
-    
     var image_number: Int?
 
-    
     var name: String?
 
-    
     var gender: Int?
 
-    
     var age: Int?
 
-    
     var occupation: String?
 
-    
     var design_objective: String?
 
-    
     var operate_time: Int?
 
-    
     var photo_time: Int?
 
-    
     var star: Int?
 
-    
     var collect: Int?
 
-    
     var doctor: ConsultCaseDoctorModel?
 
-    
     var labels: [ConsultCaseLabeleModel]?
 
-    
     var operations: [ConsultCaseOperationModel]?
 
-    
     var solutions: [ConsultCaseSolutionModel]?
 
-    
     var instances: [ConsultCaseInstanceModel]?
 
-    
     override init() {
         super.init()
         labels = [ConsultCaseLabeleModel]()
         solutions = [ConsultCaseSolutionModel]()
         operations = [ConsultCaseOperationModel]()
     }
-    
+
     required init?(map: Map) {
     }
-    
+
     func mapping(map: Map) {
         id         <- map["id"]
         image_url  <- map["image_url"]
@@ -111,7 +94,7 @@ class ConsultCaseModel: NSObject, Mappable {
         star       <- map["star"]
         collect    <- map["collect"]
     }
-    
+
 }
 
 class ConsultCaseDoctorModel: NSObject, Mappable {
@@ -124,7 +107,6 @@ class ConsultCaseDoctorModel: NSObject, Mappable {
 
     var phone: String?
 
-    
     override init() {
         super.init()
     }
