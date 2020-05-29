@@ -11,5 +11,5 @@ business = "/Users/yingzi/MIHousekeeper/MIHousekeeper/MIHousekeeper/Business"
 housekeeper = "/Users/yingzi/MIHousekeeper/MIHousekeeper/MIHousekeeper"
 demo = "/Users/yingzi/Documents/GitHub/Demo/Demo"
 
-formatter_the_folder(demo)
+formatter_the_folder(testPath)
 

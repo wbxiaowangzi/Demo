@@ -18,6 +18,8 @@ class ConsultCaseListModel: MappableBase {
 
     var list: [ConsultCaseModel]?
 
+    "varlist:[ConsultCaseModel]?"
+
     override func mapping(map: Map) {
         super.mapping(map: map)
         total_count <- map["data.total"]
@@ -110,7 +112,7 @@ class ConsultCaseDoctorModel: NSObject, Mappable {
     override init() {
         super.init()
     }
-    
+
     required init?(map: Map) {
     }
     func mapping(map: Map) {
@@ -134,7 +136,7 @@ class ConsultCaseLabeleModel: NSObject, Mappable {
     override init() {
         super.init()
     }
-    
+
     required init?(map: Map) {
     }
     func mapping(map: Map) {
@@ -150,10 +152,10 @@ class ConsultCaseSolutionModel: NSObject, Mappable {
     override init() {
         super.init()
     }
-    
+
     required init?(map: Map) {
     }
-    
+
     var id: Int?
 
     var name: String?
@@ -169,10 +171,10 @@ class ConsultCaseOperationModel: NSObject, Mappable {
     override init() {
         super.init()
     }
-    
+
     required init?(map: Map) {
     }
-    
+
     var id: Int?
 
     var name: String?

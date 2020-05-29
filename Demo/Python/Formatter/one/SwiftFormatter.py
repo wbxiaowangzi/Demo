@@ -50,13 +50,16 @@ def formatter_the_file(file_path):
     line = file.readline()
     while line:
         # 添加空格
-        va = re.sub(r'\S\{', change, line, re.I)
-        va = re.sub(r'\}e', change, va, re.I)
-        va = re.sub(r':\S', change, va, re.I)
-        va = re.sub(r',\S', change, va, re.I)
-        va = re.sub(r'->\S', join_space_two, va, re.I)
-        va = re.sub(r'\S->', join_space_one, va, re.I)
-        file2.write(va)
+        if not_contain_str(line):
+            va = re.sub(r'\S\{', change, line, re.I)
+            va = re.sub(r'\}e', change, va, re.I)
+            va = re.sub(r':\S', change, va, re.I)
+            va = re.sub(r',\S', change, va, re.I)
+            va = re.sub(r'->\S', join_space_two, va, re.I)
+            va = re.sub(r'\S->', join_space_one, va, re.I)
+            file2.write(va)
+        else:
+            file2.write(line)
         line = file.readline()
         # 添加换行
         if is_var_or_class(va) and is_var_or_class(line):
@@ -98,3 +101,9 @@ def is_var_or_class(line):
 def is_func(line):
     is_f = re.match(r'.*func.*\(.*\).*{.*', line, flags=0)
     return is_f is not None
+
+
+# 判断一行是否含有字符串
+def not_contain_str(line):
+    is_c = re.match(r'\".*\"', line, flags=0)
+    return is_c is None
