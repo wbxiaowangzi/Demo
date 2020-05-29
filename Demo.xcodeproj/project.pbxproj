@@ -93,6 +93,7 @@
 		AF3DA0EE247FB6B700A005CB /* HXImagePickerController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF3DA0DA247FB6B700A005CB /* HXImagePickerController.bundle */; };
 		AF3DA0F1247FB6E900A005CB /* ImagePickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0EF247FB6E900A005CB /* ImagePickerVC.swift */; };
 		AF3DA0F2247FB6E900A005CB /* ImagePickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3DA0F0247FB6E900A005CB /* ImagePickerVC.xib */; };
+		AF3DA0FF2480C1E000A005CB /* URLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0FE2480C1E000A005CB /* URLParser.swift */; };
 		AF3FF11D2350678E00846C74 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF11C2350678E00846C74 /* DemoTests.swift */; };
 		AF3FF12B235067A300846C74 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF12A235067A300846C74 /* DemoUITests.swift */; };
 		AF3FF13323506AFA00846C74 /* VCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF13223506AFA00846C74 /* VCTest.swift */; };
@@ -299,6 +300,7 @@
 		AF3DA0DA247FB6B700A005CB /* HXImagePickerController.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HXImagePickerController.bundle; sourceTree = "<group>"; };
 		AF3DA0EF247FB6E900A005CB /* ImagePickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerVC.swift; sourceTree = "<group>"; };
 		AF3DA0F0247FB6E900A005CB /* ImagePickerVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagePickerVC.xib; sourceTree = "<group>"; };
+		AF3DA0FE2480C1E000A005CB /* URLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParser.swift; sourceTree = "<group>"; };
 		AF3FF11A2350678E00846C74 /* DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3FF11C2350678E00846C74 /* DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTests.swift; sourceTree = "<group>"; };
 		AF3FF11E2350678E00846C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -526,6 +528,7 @@
 		9783B8DC20CD12AD00E30FD7 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				AF3DA1042480DF1700A005CB /* Instrument */,
 				AF13A223223790CA008B91DD /* Items */,
 				9783B8DD20CD12AD00E30FD7 /* AppDelegate.swift */,
 				9783B8E420CD12AF00E30FD7 /* Assets.xcassets */,
@@ -934,6 +937,22 @@
 				AF3DA0D9247FB6B700A005CB /* HXReuseable.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AF3DA0FD2480C1BD00A005CB /* URLParser */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DA0FE2480C1E000A005CB /* URLParser.swift */,
+			);
+			path = URLParser;
+			sourceTree = "<group>";
+		};
+		AF3DA1042480DF1700A005CB /* Instrument */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DA0FD2480C1BD00A005CB /* URLParser */,
+			);
+			path = Instrument;
 			sourceTree = "<group>";
 		};
 		AF3FF11B2350678E00846C74 /* DemoTests */ = {
@@ -1478,6 +1497,7 @@
 				9744CE6320FF172600EBD3DE /* GifBGVC.swift in Sources */,
 				AF3832E422E00F4700E1580F /* MiNavigationConroller.swift in Sources */,
 				AF42F43B22719863004979AB /* PreviousLuckDatas.swift in Sources */,
+				AF3DA0FF2480C1E000A005CB /* URLParser.swift in Sources */,
 				AF4EEB922302C4D2001F298F /* MetalViewController.swift in Sources */,
 				AF09856E23225D6C002B003B /* LintCode.cpp in Sources */,
 				AF09857223226025002B003B /* CppBridge.mm in Sources */,
