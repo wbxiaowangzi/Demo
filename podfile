@@ -25,6 +25,7 @@ target 'Demo' do
   
   pod 'SDWebImage'
   pod 'CTMediator'
+  pod 'PLCrashReporter'
   #单元测试
   #pod 'Kiwi'
   

@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle")?.load()
         #endif
         hookSDWebImage()
+        CatonMonitoring()
         return true
     }
 
@@ -93,6 +94,10 @@ extension AppDelegate {
                                   completed: completed)
         }
         _ = try? UIImageView.aspect_hook(#selector(UIImageView.sd_setImage(with:placeholderImage:options:completed:)), with: .positionInstead, usingBlock: block)
+    }
+    
+    func CatonMonitoring() {
+        SDCatonMonitor.shareInstance().beginMonitoring()
     }
 }
 

@@ -109,8 +109,12 @@
 - (void)anotherFunction:(NSString *)name age:(int)age{
     NSLog(@"tihs another func %c",_cmd);
 }
+
 - (void)function:(NSString*)name age:(int)age{
     NSLog(@"this is a log");//ca cb cc cd ce cf ... cz 
 }
+
+
+
 @end
 
