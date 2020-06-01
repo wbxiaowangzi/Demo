@@ -145,5 +145,10 @@ extension UINavigationController {
         self.pushViewController(vc, animated: true)
     }
     
+    func gotoCatonVC() {
+        let vc = CatonVC()
+        self.pushViewController(vc, animated: true)
+    }
+    
 }
 

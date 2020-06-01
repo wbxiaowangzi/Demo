@@ -95,6 +95,8 @@
 		AF3DA0F2247FB6E900A005CB /* ImagePickerVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3DA0F0247FB6E900A005CB /* ImagePickerVC.xib */; };
 		AF3DA0FF2480C1E000A005CB /* URLParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA0FE2480C1E000A005CB /* URLParser.swift */; };
 		AF3DA12324850ACF00A005CB /* SDCatonMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA12224850ACE00A005CB /* SDCatonMonitor.m */; };
+		AF3DA12B2485144400A005CB /* CatonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA1292485144400A005CB /* CatonVC.swift */; };
+		AF3DA12C2485144400A005CB /* CatonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3DA12A2485144400A005CB /* CatonVC.xib */; };
 		AF3FF11D2350678E00846C74 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF11C2350678E00846C74 /* DemoTests.swift */; };
 		AF3FF12B235067A300846C74 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF12A235067A300846C74 /* DemoUITests.swift */; };
 		AF3FF13323506AFA00846C74 /* VCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF13223506AFA00846C74 /* VCTest.swift */; };
@@ -304,6 +306,8 @@
 		AF3DA0FE2480C1E000A005CB /* URLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParser.swift; sourceTree = "<group>"; };
 		AF3DA12124850ACE00A005CB /* SDCatonMonitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDCatonMonitor.h; sourceTree = "<group>"; };
 		AF3DA12224850ACE00A005CB /* SDCatonMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDCatonMonitor.m; sourceTree = "<group>"; };
+		AF3DA1292485144400A005CB /* CatonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatonVC.swift; sourceTree = "<group>"; };
+		AF3DA12A2485144400A005CB /* CatonVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatonVC.xib; sourceTree = "<group>"; };
 		AF3FF11A2350678E00846C74 /* DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3FF11C2350678E00846C74 /* DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTests.swift; sourceTree = "<group>"; };
 		AF3FF11E2350678E00846C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -964,6 +968,8 @@
 			children = (
 				AF3DA12124850ACE00A005CB /* SDCatonMonitor.h */,
 				AF3DA12224850ACE00A005CB /* SDCatonMonitor.m */,
+				AF3DA1292485144400A005CB /* CatonVC.swift */,
+				AF3DA12A2485144400A005CB /* CatonVC.xib */,
 			);
 			path = CatonMonitor;
 			sourceTree = "<group>";
@@ -1359,6 +1365,7 @@
 			files = (
 				9783B8F420CD1D4B00E30FD7 /* CALayerVC.xib in Resources */,
 				9783B8E820CD12AF00E30FD7 /* LaunchScreen.storyboard in Resources */,
+				AF3DA12C2485144400A005CB /* CatonVC.xib in Resources */,
 				9772816F20D0AC88004E8E4F /* TransitionVC.xib in Resources */,
 				9783B8F820CD1D6800E30FD7 /* CoreAnimationVC.xib in Resources */,
 				AF7B8E7024516E24001055A3 /* SmoothTableView.xib in Resources */,
@@ -1485,6 +1492,7 @@
 				97C197692451CA2F00860C26 /* Transitioning.swift in Sources */,
 				AF3DA0E9247FB6B700A005CB /* HXImageToolView.swift in Sources */,
 				AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */,
+				AF3DA12B2485144400A005CB /* CatonVC.swift in Sources */,
 				AF4EEB8F2302C39E001F298F /* MetalView.swift in Sources */,
 				AF7B8E6F24516E24001055A3 /* SmoothTableView.swift in Sources */,
 				AFF7A59A21957025003A4CA5 /* SQLDB.swift in Sources */,

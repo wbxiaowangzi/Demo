@@ -118,6 +118,8 @@ extension ViewController: UITableViewDelegate {
             self.navigationController?.gotoSmoothVC()
         case .ImagePicker:
             self.navigationController?.gotoImagePickerVC()
+        case .caton:
+            self.navigationController?.gotoCatonVC()
         }
     }
 }
@@ -140,7 +142,8 @@ extension ViewController {
                 .JSPatchTestVC,
                 .OCTestVC,
                 .SmoothTableVoew,
-                .ImagePicker]
+                .ImagePicker,
+                .caton]
     }
     
 }
@@ -165,4 +168,5 @@ enum VCType: String {
     case OCTestVC
     case SmoothTableVoew
     case ImagePicker
+    case caton
 }

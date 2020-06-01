@@ -51,7 +51,7 @@
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
         //自宣称开启一个持续的loop用来监控
         while (YES) {
-            long semaphoreWait = dispatch_semaphore_wait(self->dispatchSemaphore, dispatch_time(DISPATCH_TIME_NOW, 3*NSEC_PER_SEC));
+            long semaphoreWait = dispatch_semaphore_wait(self->dispatchSemaphore, dispatch_time(DISPATCH_TIME_NOW, 2*NSEC_PER_SEC));
             if (semaphoreWait != 0) {
                 if (!self->runLoopObserver) {
                     self->timeoutCount = 0;
@@ -70,7 +70,7 @@
                     // 进行字符串格式化处理
                     NSString *lagReportString = [PLCrashReportTextFormatter stringValueForCrashReport:lagReport withTextFormat:PLCrashReportTextFormatiOS];
                     //将字符串上传服务器
-                    NSLog(@"lag happen, detail below: \n %@",lagReportString);
+                    NSLog(@"--------CATON WARNING-------- \n %@", lagReportString);
                 }
             }
             self->timeoutCount = 0;
