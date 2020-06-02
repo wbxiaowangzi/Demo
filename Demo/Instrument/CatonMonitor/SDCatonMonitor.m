@@ -49,10 +49,10 @@
     
     //创建子线程监控
     dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        //自宣称开启一个持续的loop用来监控
+        //开启一个持续的loop用来监控
         while (YES) {
-            long semaphoreWait = dispatch_semaphore_wait(self->dispatchSemaphore, dispatch_time(DISPATCH_TIME_NOW, 2*NSEC_PER_SEC));
-            if (semaphoreWait != 0) {
+            long waitSuccess = dispatch_semaphore_wait(self->dispatchSemaphore, dispatch_time(DISPATCH_TIME_NOW, 2*NSEC_PER_SEC));
+            if (waitSuccess != 0) {
                 if (!self->runLoopObserver) {
                     self->timeoutCount = 0;
                     self->dispatchSemaphore = 0;
@@ -61,7 +61,8 @@
                 }
                 
                 if (self->runLoopActivity == kCFRunLoopBeforeSources || self->runLoopActivity == kCFRunLoopAfterWaiting) {
-                    
+                    self->timeoutCount += 1;
+
                     // 获取数据
                     NSData *lagData = [[[PLCrashReporter alloc]
                                         initWithConfiguration:[[PLCrashReporterConfig alloc] initWithSignalHandlerType:PLCrashReporterSignalHandlerTypeBSD symbolicationStrategy:PLCrashReporterSymbolicationStrategyAll]] generateLiveReport];

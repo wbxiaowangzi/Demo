@@ -97,6 +97,7 @@
 		AF3DA12324850ACF00A005CB /* SDCatonMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA12224850ACE00A005CB /* SDCatonMonitor.m */; };
 		AF3DA12B2485144400A005CB /* CatonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA1292485144400A005CB /* CatonVC.swift */; };
 		AF3DA12C2485144400A005CB /* CatonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF3DA12A2485144400A005CB /* CatonVC.xib */; };
+		AF3DA137248624C800A005CB /* ModelToJson.m in Sources */ = {isa = PBXBuildFile; fileRef = AF3DA136248624C700A005CB /* ModelToJson.m */; };
 		AF3FF11D2350678E00846C74 /* DemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF11C2350678E00846C74 /* DemoTests.swift */; };
 		AF3FF12B235067A300846C74 /* DemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF12A235067A300846C74 /* DemoUITests.swift */; };
 		AF3FF13323506AFA00846C74 /* VCTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3FF13223506AFA00846C74 /* VCTest.swift */; };
@@ -308,6 +309,8 @@
 		AF3DA12224850ACE00A005CB /* SDCatonMonitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SDCatonMonitor.m; sourceTree = "<group>"; };
 		AF3DA1292485144400A005CB /* CatonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatonVC.swift; sourceTree = "<group>"; };
 		AF3DA12A2485144400A005CB /* CatonVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatonVC.xib; sourceTree = "<group>"; };
+		AF3DA135248624C700A005CB /* ModelToJson.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ModelToJson.h; sourceTree = "<group>"; };
+		AF3DA136248624C700A005CB /* ModelToJson.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ModelToJson.m; sourceTree = "<group>"; };
 		AF3FF11A2350678E00846C74 /* DemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF3FF11C2350678E00846C74 /* DemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTests.swift; sourceTree = "<group>"; };
 		AF3FF11E2350678E00846C74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -641,7 +644,6 @@
 		AF13A223223790CA008B91DD /* Items */ = {
 			isa = PBXGroup;
 			children = (
-				AF3DA12024850A8700A005CB /* CatonMonitor */,
 				AF3DA0C1247FB69900A005CB /* ImagePicker */,
 				AF71B1FF22DDC49A008DE695 /* AboutCopy */,
 				9772817020DD3B32004E8E4F /* AFN */,
@@ -958,6 +960,8 @@
 		AF3DA1042480DF1700A005CB /* Instrument */ = {
 			isa = PBXGroup;
 			children = (
+				AF3DA12024850A8700A005CB /* CatonMonitor */,
+				AF3DA1342486249500A005CB /* ModelToJson */,
 				AF3DA0FD2480C1BD00A005CB /* URLParser */,
 			);
 			path = Instrument;
@@ -972,6 +976,15 @@
 				AF3DA12A2485144400A005CB /* CatonVC.xib */,
 			);
 			path = CatonMonitor;
+			sourceTree = "<group>";
+		};
+		AF3DA1342486249500A005CB /* ModelToJson */ = {
+			isa = PBXGroup;
+			children = (
+				AF3DA135248624C700A005CB /* ModelToJson.h */,
+				AF3DA136248624C700A005CB /* ModelToJson.m */,
+			);
+			path = ModelToJson;
 			sourceTree = "<group>";
 		};
 		AF3FF11B2350678E00846C74 /* DemoTests */ = {
@@ -1493,6 +1506,7 @@
 				AF3DA0E9247FB6B700A005CB /* HXImageToolView.swift in Sources */,
 				AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */,
 				AF3DA12B2485144400A005CB /* CatonVC.swift in Sources */,
+				AF3DA137248624C800A005CB /* ModelToJson.m in Sources */,
 				AF4EEB8F2302C39E001F298F /* MetalView.swift in Sources */,
 				AF7B8E6F24516E24001055A3 /* SmoothTableView.swift in Sources */,
 				AFF7A59A21957025003A4CA5 /* SQLDB.swift in Sources */,
