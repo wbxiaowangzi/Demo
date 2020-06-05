@@ -22,7 +22,7 @@ class RXSwiftVC: UIViewController {
 
     @IBOutlet weak var loginBtn: UIButton!
     
-    private let bag = DisposeBag()
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,7 @@ extension RXSwiftVC {
         vm.behaviorSubject.onNext("behaviorSubject  3")
         vm.behaviorSubject.subscribe(onNext: { (info) in
             print(info)
-        }).disposed(by: bag)
+        }).disposed(by: disposeBag)
         
         //完成前的一个（不管是订阅前还是订阅后的完成）
         vm.asyncSubject.onNext("asyncSubject  1")
@@ -64,7 +64,7 @@ extension RXSwiftVC {
 //        vm.asyncSubject.onCompleted()
         vm.asyncSubject.subscribe(onNext: {
             print($0)
-        }).disposed(by: bag)
+        }).disposed(by: disposeBag)
         vm.asyncSubject.onNext("asyncSubject  4")
         vm.asyncSubject.onCompleted()
         
@@ -74,7 +74,7 @@ extension RXSwiftVC {
         vm.publicSubject.onNext("publicSubject  3")
         vm.publicSubject.subscribe(onNext: {
             print($0)
-        }).disposed(by: bag)
+        }).disposed(by: disposeBag)
         vm.publicSubject.onNext("publicSubject  4")
 
         //最近的n个和以后的
@@ -84,7 +84,7 @@ extension RXSwiftVC {
         vm.replaySubject.onNext("replaySubject  4")
         vm.replaySubject.subscribe(onNext: {
             print($0)
-        }).disposed(by: bag)
+        }).disposed(by: disposeBag)
         
         //最近的一个和以后的
         vm.variableSubject.value = "variableSubject  1"
@@ -92,7 +92,7 @@ extension RXSwiftVC {
         vm.variableSubject.value = "variableSubject  3"
         vm.variableSubject.asObservable().subscribe(onNext: {
             print($0)
-        }).disposed(by: bag)
+        }).disposed(by: disposeBag)
         vm.variableSubject.value = "variableSubject  4"
 
     }
@@ -102,17 +102,13 @@ extension RXSwiftVC {
 extension RXSwiftVC {
     
     func never() {
-        let disposeBag = DisposeBag()
-
         let neverSequence = Observable<String>.never()
-        _ = neverSequence.subscribe {_ in
+        neverSequence.subscribe {_ in
             print("This iwill never be printed")
             }.disposed(by: disposeBag)
-        
     }
     
     func empty() {
-        let disposeBag = DisposeBag()
         Observable<Int>.empty().subscribe { event in
             print(event)
             print("↑↑↑↑↑↑↑↑↑-------------\(#function)------------↑↑↑↑↑↑↑↑↑↑\r")
@@ -120,7 +116,6 @@ extension RXSwiftVC {
     }
     
     func just() {
-        let disposeBag = DisposeBag()
         Observable.just("aaaa").subscribe {event in
             print(event)
             print("↑↑↑↑↑↑↑↑↑-------------\(#function)------------↑↑↑↑↑↑↑↑↑↑\r")
@@ -128,28 +123,24 @@ extension RXSwiftVC {
     }
     
     func of()  {
-        let bag = DisposeBag()
         Observable.of(1, 2, 3,4,5).subscribe( {event in
             print(event)
-        }).disposed(by: bag)
+        }).disposed(by: disposeBag)
         
         Observable.of(1, 2, 3,4,5).subscribe(onNext: { (a) in
             print(a)
             print("↑↑↑↑↑↑↑↑↑-------------\(#function)------------↑↑↑↑↑↑↑↑↑↑\r")
-        }).disposed(by: bag)
+        }).disposed(by: disposeBag)
     }
     
     func from() {
-        let bag = DisposeBag()
         Observable.from([1, 2, 3,4,5,6]).subscribe(onNext: { (a) in
             print(a)
             print("↑↑↑↑↑↑↑↑↑-------------\(#function)------------↑↑↑↑↑↑↑↑↑↑\r")
-        }, onError: nil, onCompleted: nil, onDisposed: nil).disposed(by: bag)
+        }).disposed(by: disposeBag)
     }
     
     func creat() {
-        let bag = DisposeBag()
-
         let se = Observable<Any>.create { (observer) -> Disposable in
             observer.on(.next("1234"))
             observer.on(.completed)
@@ -158,43 +149,33 @@ extension RXSwiftVC {
         se.subscribe( {
             print($0)
             print("↑↑↑↑↑↑↑↑↑-------------\(#function)------------↑↑↑↑↑↑↑↑↑↑\r")
-        }).disposed(by: bag)
+        }).disposed(by: disposeBag)
         
     }
     
     func range() {
-        let bag = DisposeBag()
         Observable.range(start: 1, count: 10).subscribe( {
             print($0)
             print("↑↑↑↑↑↑↑↑↑-------------\(#function)------------↑↑↑↑↑↑↑↑↑↑\r")
-        }).disposed(by: bag)
+        }).disposed(by: disposeBag)
         
         Observable.range(start: 1, count: 10).subscribe(onNext: { (a) in
             print(a)
             print("↑↑↑↑↑↑↑↑↑-------------\(#function)------------↑↑↑↑↑↑↑↑↑↑\r")
-        }).disposed(by: bag)
+        }).disposed(by: disposeBag)
     }
     
     func repeatElement() {
-        let bag = DisposeBag()
         Observable.repeatElement("6").take(6).subscribe(onNext: {
             print($0)
             print("↑↑↑↑↑↑↑↑↑-------------\(#function)------------↑↑↑↑↑↑↑↑↑↑\r")
-        }).disposed(by: bag)
+        }).disposed(by: disposeBag)
     }
     
     func genreate() {
-        let bag = DisposeBag()
         Observable.generate(initialState: 0, condition: {$0<3}, iterate: {$0+1}).subscribe(onNext: {
             print($0)
-            }).disposed(by: bag)
-    }
-    
-    func publishSubject() {
-//        let bag = DisposeBag()
-
-//        var subject = PublishSubject<String>()
-
+            }).disposed(by: disposeBag)
     }
     
     func practiceMap() {
