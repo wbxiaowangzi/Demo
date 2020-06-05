@@ -22,8 +22,11 @@ class RXSwiftVC: UIViewController {
 
     @IBOutlet weak var loginBtn: UIButton!
     
+    private let bag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindViewModel()
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         userNameTF.endEditing(true)
@@ -40,6 +43,63 @@ class RXSwiftVC: UIViewController {
 //        genreate()
         practiceMap()
     }
+}
+
+extension RXSwiftVC {
+    func bindViewModel(){
+        let vm = TheViewModel()
+        
+        //最近的一个
+        vm.behaviorSubject.onNext("behaviorSubject  1")
+        vm.behaviorSubject.onNext("behaviorSubject  2")
+        vm.behaviorSubject.onNext("behaviorSubject  3")
+        vm.behaviorSubject.subscribe(onNext: { (info) in
+            print(info)
+        }).disposed(by: bag)
+        
+        //完成前的一个（不管是订阅前还是订阅后的完成）
+        vm.asyncSubject.onNext("asyncSubject  1")
+        vm.asyncSubject.onNext("asyncSubject  2")
+        vm.asyncSubject.onNext("asyncSubject  3")
+//        vm.asyncSubject.onCompleted()
+        vm.asyncSubject.subscribe(onNext: {
+            print($0)
+        }).disposed(by: bag)
+        vm.asyncSubject.onNext("asyncSubject  4")
+        vm.asyncSubject.onCompleted()
+        
+        ///只有以后发生的消息
+        vm.publicSubject.onNext("publicSubject  1")
+        vm.publicSubject.onNext("publicSubject  2")
+        vm.publicSubject.onNext("publicSubject  3")
+        vm.publicSubject.subscribe(onNext: {
+            print($0)
+        }).disposed(by: bag)
+        vm.publicSubject.onNext("publicSubject  4")
+
+        //最近的n个和以后的
+        vm.replaySubject.onNext("replaySubject  1")
+        vm.replaySubject.onNext("replaySubject  2")
+        vm.replaySubject.onNext("replaySubject  3")
+        vm.replaySubject.onNext("replaySubject  4")
+        vm.replaySubject.subscribe(onNext: {
+            print($0)
+        }).disposed(by: bag)
+        
+        //最近的一个和以后的
+        vm.variableSubject.value = "variableSubject  1"
+        vm.variableSubject.value = "variableSubject  2"
+        vm.variableSubject.value = "variableSubject  3"
+        vm.variableSubject.asObservable().subscribe(onNext: {
+            print($0)
+        }).disposed(by: bag)
+        vm.variableSubject.value = "variableSubject  4"
+
+    }
+    
+}
+
+extension RXSwiftVC {
     
     func never() {
         let disposeBag = DisposeBag()
