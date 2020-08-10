@@ -8,11 +8,23 @@
 
 import UIKit
 
-class SizeClassVC: UIViewController {
+class SizeClassVC: ZKViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+    }
+    
+    override var shouldAutorotate: Bool {
+        return true
+    }
+    
+    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
+        return .landscapeRight
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return [.landscapeLeft,.portrait,.landscapeRight]
     }
 
 }
