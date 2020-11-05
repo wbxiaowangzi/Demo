@@ -28,6 +28,7 @@
 		AF09856E23225D6C002B003B /* LintCode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF09856C23225D6B002B003B /* LintCode.cpp */; };
 		AF09857223226025002B003B /* CppBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF09857123226025002B003B /* CppBridge.mm */; };
 		AF109738219BCCCB003F148D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AF109737219BCCCB003F148D /* libc++.tbd */; };
+		AF12F09F25345BCC0003CAE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9783B8E420CD12AF00E30FD7 /* Assets.xcassets */; };
 		AF1380D1223CAB1200AB2E0D /* LeetCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1380D0223CAB1200AB2E0D /* LeetCode.swift */; };
 		AF13A22622379214008B91DD /* LuckVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13A22422379214008B91DD /* LuckVC.swift */; };
 		AF13A22722379214008B91DD /* LuckVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF13A22522379214008B91DD /* LuckVC.xib */; };
@@ -127,10 +128,16 @@
 		AF7C8822229E263D00988C98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7C8820229E263D00988C98 /* Main.storyboard */; };
 		AF7C8824229E263F00988C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7C8823229E263F00988C98 /* Assets.xcassets */; };
 		AF7C8827229E263F00988C98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7C8825229E263F00988C98 /* LaunchScreen.storyboard */; };
-		AF7C882D229E26F600988C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9783B8E420CD12AF00E30FD7 /* Assets.xcassets */; };
 		AF7C8831229E275D00988C98 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7C882F229E274F00988C98 /* Media.xcassets */; };
 		AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA3E02181A052001BB669 /* SceneKitVC.swift */; };
 		AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7FA3E42181AACA001BB669 /* SceneKit.framework */; };
+		AF859F0A2500B467008CB548 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF859F092500B467008CB548 /* StreamReader.swift */; };
+		AF92CF6F2553C1BF00DEF7A0 /* CopyAliPayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92CF6B2553C1BE00DEF7A0 /* CopyAliPayButton.swift */; };
+		AF92CF702553C1BF00DEF7A0 /* CopyGlobalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92CF6C2553C1BF00DEF7A0 /* CopyGlobalButton.swift */; };
+		AF92CF712553C1BF00DEF7A0 /* CopyQIYButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92CF6D2553C1BF00DEF7A0 /* CopyQIYButton.swift */; };
+		AF92CF722553C1BF00DEF7A0 /* WaveTouchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92CF6E2553C1BF00DEF7A0 /* WaveTouchButton.swift */; };
+		AF92CF752553C1FE00DEF7A0 /* ButtonsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92CF732553C1FE00DEF7A0 /* ButtonsVC.swift */; };
+		AF92CF762553C1FE00DEF7A0 /* ButtonsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF92CF742553C1FE00DEF7A0 /* ButtonsVC.xib */; };
 		AF97A58124513B6100F3D460 /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = AF97A58024513B6100F3D460 /* Shaders.metal */; };
 		AFA648B922CF3F5100B02CD0 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA648B622CF3F5000B02CD0 /* String+Extension.swift */; };
 		AFA648BA22CF3F5100B02CD0 /* UITableView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA648B722CF3F5000B02CD0 /* UITableView+Extension.swift */; };
@@ -354,6 +361,13 @@
 		AF7FA3E02181A052001BB669 /* SceneKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKitVC.swift; sourceTree = "<group>"; };
 		AF7FA3E22181A7AB001BB669 /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF7FA3E42181AACA001BB669 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
+		AF859F092500B467008CB548 /* StreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
+		AF92CF6B2553C1BE00DEF7A0 /* CopyAliPayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyAliPayButton.swift; sourceTree = "<group>"; };
+		AF92CF6C2553C1BF00DEF7A0 /* CopyGlobalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyGlobalButton.swift; sourceTree = "<group>"; };
+		AF92CF6D2553C1BF00DEF7A0 /* CopyQIYButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyQIYButton.swift; sourceTree = "<group>"; };
+		AF92CF6E2553C1BF00DEF7A0 /* WaveTouchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaveTouchButton.swift; sourceTree = "<group>"; };
+		AF92CF732553C1FE00DEF7A0 /* ButtonsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsVC.swift; sourceTree = "<group>"; };
+		AF92CF742553C1FE00DEF7A0 /* ButtonsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ButtonsVC.xib; sourceTree = "<group>"; };
 		AF97A58024513B6100F3D460 /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
 		AFA648B622CF3F5000B02CD0 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		AFA648B722CF3F5000B02CD0 /* UITableView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Extension.swift"; sourceTree = "<group>"; };
@@ -646,6 +660,7 @@
 		AF13A223223790CA008B91DD /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				AF92CF6A2553C19800DEF7A0 /* SomeButtons */,
 				AF3DA0C1247FB69900A005CB /* ImagePicker */,
 				AF71B1FF22DDC49A008DE695 /* AboutCopy */,
 				9772817020DD3B32004E8E4F /* AFN */,
@@ -963,6 +978,7 @@
 		AF3DA1042480DF1700A005CB /* Instrument */ = {
 			isa = PBXGroup;
 			children = (
+				AF859F082500B450008CB548 /* StreamReader */,
 				AF3DA12024850A8700A005CB /* CatonMonitor */,
 				AF3DA1342486249500A005CB /* ModelToJson */,
 				AF3DA0FD2480C1BD00A005CB /* URLParser */,
@@ -1126,6 +1142,27 @@
 				089D44138D619F7D2D329231 /* Pods_Demo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF859F082500B450008CB548 /* StreamReader */ = {
+			isa = PBXGroup;
+			children = (
+				AF859F092500B467008CB548 /* StreamReader.swift */,
+			);
+			path = StreamReader;
+			sourceTree = "<group>";
+		};
+		AF92CF6A2553C19800DEF7A0 /* SomeButtons */ = {
+			isa = PBXGroup;
+			children = (
+				AF92CF6B2553C1BE00DEF7A0 /* CopyAliPayButton.swift */,
+				AF92CF6C2553C1BF00DEF7A0 /* CopyGlobalButton.swift */,
+				AF92CF6D2553C1BF00DEF7A0 /* CopyQIYButton.swift */,
+				AF92CF6E2553C1BF00DEF7A0 /* WaveTouchButton.swift */,
+				AF92CF732553C1FE00DEF7A0 /* ButtonsVC.swift */,
+				AF92CF742553C1FE00DEF7A0 /* ButtonsVC.xib */,
+			);
+			path = SomeButtons;
 			sourceTree = "<group>";
 		};
 		AFA758F3224B704D008440F0 /* SomeControls */ = {
@@ -1392,6 +1429,7 @@
 				AFFEC179230E3602001FAC72 /* JSPatch.js in Resources */,
 				AF27F22F218C0A80001FDFC2 /* OpenGLVC.xib in Resources */,
 				AF53E4CA238D3CE600E89EB9 /* UIControlVC.xib in Resources */,
+				AF92CF762553C1FE00DEF7A0 /* ButtonsVC.xib in Resources */,
 				AFFEC184230E3902001FAC72 /* JSPatchTestVC.xib in Resources */,
 				AFFEC189230E401C001FAC72 /* jsscript.js in Resources */,
 				AF30451C218AF66600DA36D2 /* lol.mov in Resources */,
@@ -1399,9 +1437,9 @@
 				AF36862521C3BFE100EC0923 /* SizeClassVC.xib in Resources */,
 				AF7B8E7924518D0C001055A3 /* SmoothTableDetail.xib in Resources */,
 				9783B8E320CD12AD00E30FD7 /* Main.storyboard in Resources */,
-				AF7C882D229E26F600988C98 /* Assets.xcassets in Resources */,
 				AF3DA0F2247FB6E900A005CB /* ImagePickerVC.xib in Resources */,
 				AF13A22722379214008B91DD /* LuckVC.xib in Resources */,
+				AF12F09F25345BCC0003CAE6 /* Assets.xcassets in Resources */,
 				AF4EEB932302C4D2001F298F /* MetalViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1508,6 +1546,9 @@
 				97C197692451CA2F00860C26 /* Transitioning.swift in Sources */,
 				AF3DA0E9247FB6B700A005CB /* HXImageToolView.swift in Sources */,
 				AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */,
+				AF92CF712553C1BF00DEF7A0 /* CopyQIYButton.swift in Sources */,
+				AF92CF752553C1FE00DEF7A0 /* ButtonsVC.swift in Sources */,
+				AF92CF6F2553C1BF00DEF7A0 /* CopyAliPayButton.swift in Sources */,
 				AF3DA12B2485144400A005CB /* CatonVC.swift in Sources */,
 				AF3DA137248624C800A005CB /* ModelToJson.m in Sources */,
 				AF4EEB8F2302C39E001F298F /* MetalView.swift in Sources */,
@@ -1518,6 +1559,7 @@
 				AF2BED7E21928EC4007FB28E /* RXSwiftVC.swift in Sources */,
 				AF26EAD0231774A700D61AF6 /* Navigator.swift in Sources */,
 				AF3DA0E1247FB6B700A005CB /* HXImageListViewController.swift in Sources */,
+				AF92CF702553C1BF00DEF7A0 /* CopyGlobalButton.swift in Sources */,
 				AFFEC183230E3902001FAC72 /* JSPatchTestVC.m in Sources */,
 				AFF0B87B2445767900FCACA8 /* Solution.swift in Sources */,
 				AF3DA0E7247FB6B700A005CB /* HXImageClipResizeView.swift in Sources */,
@@ -1531,6 +1573,7 @@
 				AF3DA0EC247FB6B700A005CB /* HXPhotoImageManager.swift in Sources */,
 				AF3DA0EA247FB6B700A005CB /* HXAlbumCell.swift in Sources */,
 				AF3832D422E00D8D00E1580F /* ApiService.swift in Sources */,
+				AF859F0A2500B467008CB548 /* StreamReader.swift in Sources */,
 				9783B8F320CD1D4B00E30FD7 /* CALayerVC.swift in Sources */,
 				9744CE6320FF172600EBD3DE /* GifBGVC.swift in Sources */,
 				AF3832E422E00F4700E1580F /* MiNavigationConroller.swift in Sources */,
@@ -1544,6 +1587,7 @@
 				AF26EACC2317724C00D61AF6 /* VCMap.swift in Sources */,
 				9783B8FB20CD1E2F00E30FD7 /* Router.swift in Sources */,
 				AF7B8EA42456D605001055A3 /* Mems.swift in Sources */,
+				AF92CF722553C1BF00DEF7A0 /* WaveTouchButton.swift in Sources */,
 				AFA758F5224B706C008440F0 /* SomeControls.swift in Sources */,
 				AF3DA0ED247FB6B700A005CB /* HXReuseable.swift in Sources */,
 				9783B8F720CD1D6800E30FD7 /* CoreAnimationVC.swift in Sources */,

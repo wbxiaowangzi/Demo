@@ -150,5 +150,10 @@ extension UINavigationController {
         self.pushViewController(vc, animated: true)
     }
     
+    func gotoButtonsVC() {
+        let vc = ButtonsVC()
+        self.pushViewController(vc, animated: true)
+    }
+    
 }
 

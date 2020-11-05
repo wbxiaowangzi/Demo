@@ -21,7 +21,7 @@ enum SDAnimalEnum: CaseIterable {
 }
 
 class ViewController: UIViewController {
-    
+        
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -121,6 +121,8 @@ extension ViewController: UITableViewDelegate {
             self.navigationController?.gotoImagePickerVC()
         case .caton:
             self.navigationController?.gotoCatonVC()
+        case .buttons:
+            self.navigationController?.gotoButtonsVC()
         }
     }
 }
@@ -144,7 +146,8 @@ extension ViewController {
                 .OCTestVC,
                 .SmoothTableVoew,
                 .ImagePicker,
-                .caton]
+                .caton,
+                .buttons]
     }
     
 }
@@ -170,4 +173,5 @@ enum VCType: String {
     case SmoothTableVoew
     case ImagePicker
     case caton
+    case buttons
 }

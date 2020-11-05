@@ -35,7 +35,7 @@ class ZKViewController: UIViewController {
         }
     }    
     
-       override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         if self.shouldAutorotate {
             let value = self.preferredInterfaceOrientationForPresentation.rawValue
