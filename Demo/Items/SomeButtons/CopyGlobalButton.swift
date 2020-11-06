@@ -176,3 +176,64 @@ class CopyGlobalButton: UIView {
         }
     }
 }
+
+
+public class  MIMoveButton: UIButton {
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        ui()
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    
+    private func ui() {
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureAction(pan:)))
+        self.addGestureRecognizer(panGesture)
+    }
+    
+    var beginFrame: CGRect?
+    var beginPoint: CGPoint?
+    @objc func panGestureAction(pan: UIPanGestureRecognizer) {
+        guard let superFrame = self.superview?.bounds else {
+            return
+        }
+        let point = pan.location(in: self.superview!)
+        switch pan.state {
+        case .began:
+            beginFrame = self.frame
+            beginPoint = point
+        case .changed:
+            guard let bp = beginPoint, let bf = beginFrame else { break }
+            let dx = point.x - bp.x
+            let dy = point.y - bp.y
+            let endX = bf.origin.x + dx
+            let endY = bf.origin.y + dy
+            self.frame = CGRect(x: endX, y: endY, width: bf.size.width, height: bf.size.height)
+        case .ended:
+            guard let bp = beginPoint, let bf = beginFrame else { break }
+            let dx = point.x - bp.x
+            let dy = point.y - bp.y
+            var endX = bf.origin.x + dx
+            var endY = bf.origin.y + dy
+            
+            if endX > superFrame.size.width-bf.size.width {
+                endX = superFrame.size.width-bf.size.width
+            } else if endX < 0 {
+                endX = 0
+            }
+            
+            if endY > superFrame.size.height-bf.size.height {
+                endY = superFrame.size.height-bf.size.height
+            } else if endY < 80 {
+                endY = 80
+            }
+            UIView.animate(withDuration: 0.2) {
+                self.frame = CGRect(x: endX, y: endY, width: bf.size.width, height: bf.size.height)
+            }
+        default: break
+        }
+    }
+}
