@@ -29,9 +29,23 @@ class ButtonsVC: UIViewController {
         self.view.addSubview(qIYButton)
         
         //仿苹果的全局浮动按钮
-        let frame: CGRect = self.view.frame
-        let globalButton = CopyGlobalButton(frame: CGRect(x: 100, y: 500, width: 100, height: 100), viewFrame: frame)
-        self.view.addSubview(globalButton)
+        let b = MIMoveButton(frame: CGRect(x: 100, y: 500, width: 100, height: 100))
+        b.backgroundColor = .black
+        self.view.addSubview(b)
+        
+        let ss = STSegmentView.init(frame: CGRect(x: 100, y: 600, width: 200, height: 50))
+        ss.titleArray = ["one","two"]
+        ss.backgroundColor = .green
+        ss.selectedBackgroundColor = .red
+        ss.selectedBgViewCornerRadius = 10
+        self.view.addSubview(ss)
+        
+        let ds = DWSegmentedControl.init(frame: CGRect(x: 100, y: 660, width: 200, height: 50))
+        ds.backgroundColor = .white
+        ds.selectedViewColor = .red
+        ds.normalLabelColor = .green
+        ds.titles = ["one","two"]
+        self.view.addSubview(ds)
     }
 
 }

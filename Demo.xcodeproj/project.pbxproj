@@ -132,6 +132,9 @@
 		AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA3E02181A052001BB669 /* SceneKitVC.swift */; };
 		AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7FA3E42181AACA001BB669 /* SceneKit.framework */; };
 		AF859F0A2500B467008CB548 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF859F092500B467008CB548 /* StreamReader.swift */; };
+		AF9041D1256E18A10005A808 /* STSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9041CF256E18A10005A808 /* STSegmentView.m */; };
+		AF9041D4256E19D60005A808 /* DWSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9041D3256E19D60005A808 /* DWSegmentedControl.m */; };
+		AF9041D7256E1A4B0005A808 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9041D5256E1A4A0005A808 /* UIView+Frame.m */; };
 		AF92CF6F2553C1BF00DEF7A0 /* CopyAliPayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92CF6B2553C1BE00DEF7A0 /* CopyAliPayButton.swift */; };
 		AF92CF702553C1BF00DEF7A0 /* CopyGlobalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92CF6C2553C1BF00DEF7A0 /* CopyGlobalButton.swift */; };
 		AF92CF712553C1BF00DEF7A0 /* CopyQIYButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF92CF6D2553C1BF00DEF7A0 /* CopyQIYButton.swift */; };
@@ -362,6 +365,12 @@
 		AF7FA3E22181A7AB001BB669 /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF7FA3E42181AACA001BB669 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
 		AF859F092500B467008CB548 /* StreamReader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StreamReader.swift; sourceTree = "<group>"; };
+		AF9041CF256E18A10005A808 /* STSegmentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STSegmentView.m; sourceTree = "<group>"; };
+		AF9041D0256E18A10005A808 /* STSegmentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STSegmentView.h; sourceTree = "<group>"; };
+		AF9041D2256E19D50005A808 /* DWSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DWSegmentedControl.h; sourceTree = "<group>"; };
+		AF9041D3256E19D60005A808 /* DWSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DWSegmentedControl.m; sourceTree = "<group>"; };
+		AF9041D5256E1A4A0005A808 /* UIView+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
+		AF9041D6256E1A4B0005A808 /* UIView+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		AF92CF6B2553C1BE00DEF7A0 /* CopyAliPayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyAliPayButton.swift; sourceTree = "<group>"; };
 		AF92CF6C2553C1BF00DEF7A0 /* CopyGlobalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyGlobalButton.swift; sourceTree = "<group>"; };
 		AF92CF6D2553C1BF00DEF7A0 /* CopyQIYButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyQIYButton.swift; sourceTree = "<group>"; };
@@ -1155,6 +1164,12 @@
 		AF92CF6A2553C19800DEF7A0 /* SomeButtons */ = {
 			isa = PBXGroup;
 			children = (
+				AF9041D6256E1A4B0005A808 /* UIView+Frame.h */,
+				AF9041D5256E1A4A0005A808 /* UIView+Frame.m */,
+				AF9041D2256E19D50005A808 /* DWSegmentedControl.h */,
+				AF9041D3256E19D60005A808 /* DWSegmentedControl.m */,
+				AF9041D0256E18A10005A808 /* STSegmentView.h */,
+				AF9041CF256E18A10005A808 /* STSegmentView.m */,
 				AF92CF6B2553C1BE00DEF7A0 /* CopyAliPayButton.swift */,
 				AF92CF6C2553C1BF00DEF7A0 /* CopyGlobalButton.swift */,
 				AF92CF6D2553C1BF00DEF7A0 /* CopyQIYButton.swift */,
@@ -1556,6 +1571,7 @@
 				AFF7A59A21957025003A4CA5 /* SQLDB.swift in Sources */,
 				AF53E4C9238D3CE600E89EB9 /* UIControlVC.swift in Sources */,
 				AF3DA0E4247FB6B700A005CB /* HXPreviewThumbCell.swift in Sources */,
+				AF9041D1256E18A10005A808 /* STSegmentView.m in Sources */,
 				AF2BED7E21928EC4007FB28E /* RXSwiftVC.swift in Sources */,
 				AF26EAD0231774A700D61AF6 /* Navigator.swift in Sources */,
 				AF3DA0E1247FB6B700A005CB /* HXImageListViewController.swift in Sources */,
@@ -1581,6 +1597,7 @@
 				AF3DA0FF2480C1E000A005CB /* URLParser.swift in Sources */,
 				AF4EEB922302C4D2001F298F /* MetalViewController.swift in Sources */,
 				AF09856E23225D6C002B003B /* LintCode.cpp in Sources */,
+				AF9041D4256E19D60005A808 /* DWSegmentedControl.m in Sources */,
 				AF09857223226025002B003B /* CppBridge.mm in Sources */,
 				AF3DA0E2247FB6B700A005CB /* HXPreviewCell.swift in Sources */,
 				AF2C8BD52193D66F00BA9492 /* ChartConsole.m in Sources */,
@@ -1621,6 +1638,7 @@
 				AF3832DC22E00EA800E1580F /* AppConfig.swift in Sources */,
 				AF3DA0E6247FB6B700A005CB /* HXImageClipScrollView.swift in Sources */,
 				AF3DA0DF247FB6B700A005CB /* HXImagePickerController.swift in Sources */,
+				AF9041D7256E1A4B0005A808 /* UIView+Frame.m in Sources */,
 				AF2C8BD42193D66F00BA9492 /* SwitchServer.m in Sources */,
 				AF3DA0DE247FB6B700A005CB /* HXAlbumListViewController.swift in Sources */,
 				AF304520218AFFBC00DA36D2 /* CAShapeLayerVC.swift in Sources */,
