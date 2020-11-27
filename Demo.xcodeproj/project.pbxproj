@@ -115,6 +115,7 @@
 		AF60BAB62268269000AE592D /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BAB52268269000AE592D /* Throttle.swift */; };
 		AF71B20722DDC50C008DE695 /* LearnCopyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71B20522DDC50C008DE695 /* LearnCopyVC.swift */; };
 		AF71B20822DDC50C008DE695 /* LearnCopyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF71B20622DDC50C008DE695 /* LearnCopyVC.xib */; };
+		AF7A6D7825709F8300543A2B /* MISegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6D7725709F8300543A2B /* MISegment.swift */; };
 		AF7B8E6F24516E24001055A3 /* SmoothTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B8E6D24516E23001055A3 /* SmoothTableView.swift */; };
 		AF7B8E7024516E24001055A3 /* SmoothTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7B8E6E24516E23001055A3 /* SmoothTableView.xib */; };
 		AF7B8E7324516E63001055A3 /* SmoothTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B8E7124516E63001055A3 /* SmoothTableViewCell.swift */; };
@@ -344,6 +345,7 @@
 		AF60BAB52268269000AE592D /* Throttle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttle.swift; sourceTree = "<group>"; };
 		AF71B20522DDC50C008DE695 /* LearnCopyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnCopyVC.swift; sourceTree = "<group>"; };
 		AF71B20622DDC50C008DE695 /* LearnCopyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LearnCopyVC.xib; sourceTree = "<group>"; };
+		AF7A6D7725709F8300543A2B /* MISegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MISegment.swift; sourceTree = "<group>"; };
 		AF7B8E6D24516E23001055A3 /* SmoothTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothTableView.swift; sourceTree = "<group>"; };
 		AF7B8E6E24516E23001055A3 /* SmoothTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmoothTableView.xib; sourceTree = "<group>"; };
 		AF7B8E7124516E63001055A3 /* SmoothTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothTableViewCell.swift; sourceTree = "<group>"; };
@@ -1164,6 +1166,7 @@
 		AF92CF6A2553C19800DEF7A0 /* SomeButtons */ = {
 			isa = PBXGroup;
 			children = (
+				AF7A6D7725709F8300543A2B /* MISegment.swift */,
 				AF9041D6256E1A4B0005A808 /* UIView+Frame.h */,
 				AF9041D5256E1A4A0005A808 /* UIView+Frame.m */,
 				AF9041D2256E19D50005A808 /* DWSegmentedControl.h */,
@@ -1574,6 +1577,7 @@
 				AF9041D1256E18A10005A808 /* STSegmentView.m in Sources */,
 				AF2BED7E21928EC4007FB28E /* RXSwiftVC.swift in Sources */,
 				AF26EAD0231774A700D61AF6 /* Navigator.swift in Sources */,
+				AF7A6D7825709F8300543A2B /* MISegment.swift in Sources */,
 				AF3DA0E1247FB6B700A005CB /* HXImageListViewController.swift in Sources */,
 				AF92CF702553C1BF00DEF7A0 /* CopyGlobalButton.swift in Sources */,
 				AFFEC183230E3902001FAC72 /* JSPatchTestVC.m in Sources */,

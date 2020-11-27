@@ -35,17 +35,33 @@ class ButtonsVC: UIViewController {
         
         let ss = STSegmentView.init(frame: CGRect(x: 100, y: 600, width: 200, height: 50))
         ss.titleArray = ["one","two"]
-        ss.backgroundColor = .green
+        ss.backgroundColor = .clear
         ss.selectedBackgroundColor = .red
-        ss.selectedBgViewCornerRadius = 10
+        ss.topLabelTextColor = .yellow
+        ss.bottomLabelTextColor = .purple
+        ss.selectedBgViewCornerRadius = 25
         self.view.addSubview(ss)
         
-        let ds = DWSegmentedControl.init(frame: CGRect(x: 100, y: 660, width: 200, height: 50))
+        let ds = DWSegmentedControl.init(frame: CGRect(x: 10, y: 660, width: 200, height: 50))
         ds.backgroundColor = .white
         ds.selectedViewColor = .red
         ds.normalLabelColor = .green
         ds.titles = ["one","two"]
         self.view.addSubview(ds)
+        
+        let seg1 = MISegment(frame: CGRect.init(x: 210, y: 660, width: 200, height: 50),
+                             titles: ["3D影像", "皮肤数据"],
+                             selectedItemBackgroundColor: UIColor.init(hexString: "#0372FF"),
+                             normalItemBackgroundColor: .white,
+                             selectedItemTitleColor: .white,
+                             normalItemTitleColor: UIColor.init(hexString: "#414550"),
+                             itemCornetRadius: adaptW(25))
+        seg1.layer.borderWidth = 1
+        seg1.layer.borderColor = UIColor.init(hexString: "#0372FF").cgColor
+        self.view.addSubview(seg1)
+        seg1.selectedValueChangeBlock = { [weak self] tag in
+            print(tag)
+        }
     }
 
 }
