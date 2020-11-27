@@ -116,6 +116,29 @@
 		AF71B20722DDC50C008DE695 /* LearnCopyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71B20522DDC50C008DE695 /* LearnCopyVC.swift */; };
 		AF71B20822DDC50C008DE695 /* LearnCopyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF71B20622DDC50C008DE695 /* LearnCopyVC.xib */; };
 		AF7A6D7825709F8300543A2B /* MISegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6D7725709F8300543A2B /* MISegment.swift */; };
+		AF7A6E28257103EE00543A2B /* CircleTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E26257103EE00543A2B /* CircleTransitionAnimator.swift */; };
+		AF7A6E29257103EE00543A2B /* NavagationCotrollerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E27257103EE00543A2B /* NavagationCotrollerDelegate.swift */; };
+		AF7A6E5F25710FAE00543A2B /* YMCardToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E3425710FAD00543A2B /* YMCardToViewController.m */; };
+		AF7A6E6025710FAE00543A2B /* YMCardPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E3525710FAD00543A2B /* YMCardPresentationController.m */; };
+		AF7A6E6125710FAE00543A2B /* YMCardFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E3625710FAD00543A2B /* YMCardFromViewController.m */; };
+		AF7A6E6225710FAE00543A2B /* YMCircleAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E3D25710FAD00543A2B /* YMCircleAnimation.m */; };
+		AF7A6E6325710FAE00543A2B /* YMCircleToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E3E25710FAD00543A2B /* YMCircleToViewController.m */; };
+		AF7A6E6425710FAE00543A2B /* YMCircleFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E3F25710FAD00543A2B /* YMCircleFromViewController.m */; };
+		AF7A6E6525710FAE00543A2B /* YMOpenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E4425710FAD00543A2B /* YMOpenViewController.m */; };
+		AF7A6E6625710FAE00543A2B /* YMOpenAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E4525710FAD00543A2B /* YMOpenAnimation.m */; };
+		AF7A6E6725710FAE00543A2B /* YMSwipeInteractiveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E4725710FAD00543A2B /* YMSwipeInteractiveTransition.m */; };
+		AF7A6E6825710FAE00543A2B /* YMSwipeToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E4A25710FAD00543A2B /* YMSwipeToViewController.m */; };
+		AF7A6E6925710FAE00543A2B /* YMSwipeTransitionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E4C25710FAD00543A2B /* YMSwipeTransitionManager.m */; };
+		AF7A6E6A25710FAE00543A2B /* YMSwipeAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E4E25710FAD00543A2B /* YMSwipeAnimation.m */; };
+		AF7A6E6B25710FAE00543A2B /* YMSwipeFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E4F25710FAD00543A2B /* YMSwipeFromViewController.m */; };
+		AF7A6E6C25710FAE00543A2B /* YMPopupFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E5325710FAD00543A2B /* YMPopupFromViewController.m */; };
+		AF7A6E6D25710FAE00543A2B /* YMPopupAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E5425710FAD00543A2B /* YMPopupAnimation.m */; };
+		AF7A6E6E25710FAE00543A2B /* YMPopupToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E5525710FAD00543A2B /* YMPopupToViewController.m */; };
+		AF7A6E6F25710FAE00543A2B /* YMFadeInAnimate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E5925710FAE00543A2B /* YMFadeInAnimate.m */; };
+		AF7A6E7025710FAE00543A2B /* YMFadeFromViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E5D25710FAE00543A2B /* YMFadeFromViewController.m */; };
+		AF7A6E7125710FAE00543A2B /* YMFadeToViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E5E25710FAE00543A2B /* YMFadeToViewController.m */; };
+		AF7A6E742571102100543A2B /* TransVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6E722571102100543A2B /* TransVC.swift */; };
+		AF7A6E752571102100543A2B /* TransVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7A6E732571102100543A2B /* TransVC.xib */; };
 		AF7B8E6F24516E24001055A3 /* SmoothTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B8E6D24516E23001055A3 /* SmoothTableView.swift */; };
 		AF7B8E7024516E24001055A3 /* SmoothTableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7B8E6E24516E23001055A3 /* SmoothTableView.xib */; };
 		AF7B8E7324516E63001055A3 /* SmoothTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7B8E7124516E63001055A3 /* SmoothTableViewCell.swift */; };
@@ -346,6 +369,48 @@
 		AF71B20522DDC50C008DE695 /* LearnCopyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnCopyVC.swift; sourceTree = "<group>"; };
 		AF71B20622DDC50C008DE695 /* LearnCopyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LearnCopyVC.xib; sourceTree = "<group>"; };
 		AF7A6D7725709F8300543A2B /* MISegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MISegment.swift; sourceTree = "<group>"; };
+		AF7A6E26257103EE00543A2B /* CircleTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleTransitionAnimator.swift; sourceTree = "<group>"; };
+		AF7A6E27257103EE00543A2B /* NavagationCotrollerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavagationCotrollerDelegate.swift; sourceTree = "<group>"; };
+		AF7A6E3425710FAD00543A2B /* YMCardToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMCardToViewController.m; sourceTree = "<group>"; };
+		AF7A6E3525710FAD00543A2B /* YMCardPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMCardPresentationController.m; sourceTree = "<group>"; };
+		AF7A6E3625710FAD00543A2B /* YMCardFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMCardFromViewController.m; sourceTree = "<group>"; };
+		AF7A6E3725710FAD00543A2B /* YMCardToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMCardToViewController.h; sourceTree = "<group>"; };
+		AF7A6E3825710FAD00543A2B /* YMCardPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMCardPresentationController.h; sourceTree = "<group>"; };
+		AF7A6E3925710FAD00543A2B /* YMCardFromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMCardFromViewController.h; sourceTree = "<group>"; };
+		AF7A6E3B25710FAD00543A2B /* YMCircleFromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMCircleFromViewController.h; sourceTree = "<group>"; };
+		AF7A6E3C25710FAD00543A2B /* YMCircleToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMCircleToViewController.h; sourceTree = "<group>"; };
+		AF7A6E3D25710FAD00543A2B /* YMCircleAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMCircleAnimation.m; sourceTree = "<group>"; };
+		AF7A6E3E25710FAD00543A2B /* YMCircleToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMCircleToViewController.m; sourceTree = "<group>"; };
+		AF7A6E3F25710FAD00543A2B /* YMCircleFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMCircleFromViewController.m; sourceTree = "<group>"; };
+		AF7A6E4025710FAD00543A2B /* YMCircleAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMCircleAnimation.h; sourceTree = "<group>"; };
+		AF7A6E4225710FAD00543A2B /* YMOpenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMOpenViewController.h; sourceTree = "<group>"; };
+		AF7A6E4325710FAD00543A2B /* YMOpenAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMOpenAnimation.h; sourceTree = "<group>"; };
+		AF7A6E4425710FAD00543A2B /* YMOpenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMOpenViewController.m; sourceTree = "<group>"; };
+		AF7A6E4525710FAD00543A2B /* YMOpenAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMOpenAnimation.m; sourceTree = "<group>"; };
+		AF7A6E4725710FAD00543A2B /* YMSwipeInteractiveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMSwipeInteractiveTransition.m; sourceTree = "<group>"; };
+		AF7A6E4825710FAD00543A2B /* YMSwipeTransitionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMSwipeTransitionManager.h; sourceTree = "<group>"; };
+		AF7A6E4925710FAD00543A2B /* YMSwipeAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMSwipeAnimation.h; sourceTree = "<group>"; };
+		AF7A6E4A25710FAD00543A2B /* YMSwipeToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMSwipeToViewController.m; sourceTree = "<group>"; };
+		AF7A6E4B25710FAD00543A2B /* YMSwipeFromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMSwipeFromViewController.h; sourceTree = "<group>"; };
+		AF7A6E4C25710FAD00543A2B /* YMSwipeTransitionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMSwipeTransitionManager.m; sourceTree = "<group>"; };
+		AF7A6E4D25710FAD00543A2B /* YMSwipeInteractiveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMSwipeInteractiveTransition.h; sourceTree = "<group>"; };
+		AF7A6E4E25710FAD00543A2B /* YMSwipeAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMSwipeAnimation.m; sourceTree = "<group>"; };
+		AF7A6E4F25710FAD00543A2B /* YMSwipeFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMSwipeFromViewController.m; sourceTree = "<group>"; };
+		AF7A6E5025710FAD00543A2B /* YMSwipeToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMSwipeToViewController.h; sourceTree = "<group>"; };
+		AF7A6E5225710FAD00543A2B /* YMPopupToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMPopupToViewController.h; sourceTree = "<group>"; };
+		AF7A6E5325710FAD00543A2B /* YMPopupFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMPopupFromViewController.m; sourceTree = "<group>"; };
+		AF7A6E5425710FAD00543A2B /* YMPopupAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMPopupAnimation.m; sourceTree = "<group>"; };
+		AF7A6E5525710FAD00543A2B /* YMPopupToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMPopupToViewController.m; sourceTree = "<group>"; };
+		AF7A6E5625710FAD00543A2B /* YMPopupFromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMPopupFromViewController.h; sourceTree = "<group>"; };
+		AF7A6E5725710FAD00543A2B /* YMPopupAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMPopupAnimation.h; sourceTree = "<group>"; };
+		AF7A6E5925710FAE00543A2B /* YMFadeInAnimate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMFadeInAnimate.m; sourceTree = "<group>"; };
+		AF7A6E5A25710FAE00543A2B /* YMFadeFromViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMFadeFromViewController.h; sourceTree = "<group>"; };
+		AF7A6E5B25710FAE00543A2B /* YMFadeToViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMFadeToViewController.h; sourceTree = "<group>"; };
+		AF7A6E5C25710FAE00543A2B /* YMFadeInAnimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMFadeInAnimate.h; sourceTree = "<group>"; };
+		AF7A6E5D25710FAE00543A2B /* YMFadeFromViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMFadeFromViewController.m; sourceTree = "<group>"; };
+		AF7A6E5E25710FAE00543A2B /* YMFadeToViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMFadeToViewController.m; sourceTree = "<group>"; };
+		AF7A6E722571102100543A2B /* TransVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransVC.swift; sourceTree = "<group>"; };
+		AF7A6E732571102100543A2B /* TransVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransVC.xib; sourceTree = "<group>"; };
 		AF7B8E6D24516E23001055A3 /* SmoothTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothTableView.swift; sourceTree = "<group>"; };
 		AF7B8E6E24516E23001055A3 /* SmoothTableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SmoothTableView.xib; sourceTree = "<group>"; };
 		AF7B8E7124516E63001055A3 /* SmoothTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmoothTableViewCell.swift; sourceTree = "<group>"; };
@@ -643,7 +708,17 @@
 		97C197642451C9D300860C26 /* TransferAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				AF7A6E3A25710FAD00543A2B /* 扩散圆 */,
+				AF7A6E3325710FAD00543A2B /* BottomCardAnimate */,
+				AF7A6E5825710FAE00543A2B /* FadeInAnimate */,
+				AF7A6E5125710FAD00543A2B /* PopupAnimate */,
+				AF7A6E4125710FAD00543A2B /* Push开门动画 */,
+				AF7A6E4625710FAD00543A2B /* SwipeAnimate */,
+				AF7A6E26257103EE00543A2B /* CircleTransitionAnimator.swift */,
+				AF7A6E27257103EE00543A2B /* NavagationCotrollerDelegate.swift */,
 				97C197682451CA2F00860C26 /* Transitioning.swift */,
+				AF7A6E722571102100543A2B /* TransVC.swift */,
+				AF7A6E732571102100543A2B /* TransVC.xib */,
 			);
 			path = TransferAnimation;
 			sourceTree = "<group>";
@@ -1094,6 +1169,86 @@
 			path = AboutCopy;
 			sourceTree = "<group>";
 		};
+		AF7A6E3325710FAD00543A2B /* BottomCardAnimate */ = {
+			isa = PBXGroup;
+			children = (
+				AF7A6E3425710FAD00543A2B /* YMCardToViewController.m */,
+				AF7A6E3525710FAD00543A2B /* YMCardPresentationController.m */,
+				AF7A6E3625710FAD00543A2B /* YMCardFromViewController.m */,
+				AF7A6E3725710FAD00543A2B /* YMCardToViewController.h */,
+				AF7A6E3825710FAD00543A2B /* YMCardPresentationController.h */,
+				AF7A6E3925710FAD00543A2B /* YMCardFromViewController.h */,
+			);
+			path = BottomCardAnimate;
+			sourceTree = "<group>";
+		};
+		AF7A6E3A25710FAD00543A2B /* 扩散圆 */ = {
+			isa = PBXGroup;
+			children = (
+				AF7A6E3B25710FAD00543A2B /* YMCircleFromViewController.h */,
+				AF7A6E3C25710FAD00543A2B /* YMCircleToViewController.h */,
+				AF7A6E3D25710FAD00543A2B /* YMCircleAnimation.m */,
+				AF7A6E3E25710FAD00543A2B /* YMCircleToViewController.m */,
+				AF7A6E3F25710FAD00543A2B /* YMCircleFromViewController.m */,
+				AF7A6E4025710FAD00543A2B /* YMCircleAnimation.h */,
+			);
+			path = "扩散圆";
+			sourceTree = "<group>";
+		};
+		AF7A6E4125710FAD00543A2B /* Push开门动画 */ = {
+			isa = PBXGroup;
+			children = (
+				AF7A6E4225710FAD00543A2B /* YMOpenViewController.h */,
+				AF7A6E4325710FAD00543A2B /* YMOpenAnimation.h */,
+				AF7A6E4425710FAD00543A2B /* YMOpenViewController.m */,
+				AF7A6E4525710FAD00543A2B /* YMOpenAnimation.m */,
+			);
+			path = "Push开门动画";
+			sourceTree = "<group>";
+		};
+		AF7A6E4625710FAD00543A2B /* SwipeAnimate */ = {
+			isa = PBXGroup;
+			children = (
+				AF7A6E4725710FAD00543A2B /* YMSwipeInteractiveTransition.m */,
+				AF7A6E4825710FAD00543A2B /* YMSwipeTransitionManager.h */,
+				AF7A6E4925710FAD00543A2B /* YMSwipeAnimation.h */,
+				AF7A6E4A25710FAD00543A2B /* YMSwipeToViewController.m */,
+				AF7A6E4B25710FAD00543A2B /* YMSwipeFromViewController.h */,
+				AF7A6E4C25710FAD00543A2B /* YMSwipeTransitionManager.m */,
+				AF7A6E4D25710FAD00543A2B /* YMSwipeInteractiveTransition.h */,
+				AF7A6E4E25710FAD00543A2B /* YMSwipeAnimation.m */,
+				AF7A6E4F25710FAD00543A2B /* YMSwipeFromViewController.m */,
+				AF7A6E5025710FAD00543A2B /* YMSwipeToViewController.h */,
+			);
+			path = SwipeAnimate;
+			sourceTree = "<group>";
+		};
+		AF7A6E5125710FAD00543A2B /* PopupAnimate */ = {
+			isa = PBXGroup;
+			children = (
+				AF7A6E5225710FAD00543A2B /* YMPopupToViewController.h */,
+				AF7A6E5325710FAD00543A2B /* YMPopupFromViewController.m */,
+				AF7A6E5425710FAD00543A2B /* YMPopupAnimation.m */,
+				AF7A6E5525710FAD00543A2B /* YMPopupToViewController.m */,
+				AF7A6E5625710FAD00543A2B /* YMPopupFromViewController.h */,
+				AF7A6E5725710FAD00543A2B /* YMPopupAnimation.h */,
+			);
+			path = PopupAnimate;
+			sourceTree = "<group>";
+		};
+		AF7A6E5825710FAE00543A2B /* FadeInAnimate */ = {
+			isa = PBXGroup;
+			children = (
+				AF7A6E5925710FAE00543A2B /* YMFadeInAnimate.m */,
+				AF7A6E5A25710FAE00543A2B /* YMFadeFromViewController.h */,
+				AF7A6E5B25710FAE00543A2B /* YMFadeToViewController.h */,
+				AF7A6E5C25710FAE00543A2B /* YMFadeInAnimate.h */,
+				AF7A6E5D25710FAE00543A2B /* YMFadeFromViewController.m */,
+				AF7A6E5E25710FAE00543A2B /* YMFadeToViewController.m */,
+			);
+			path = FadeInAnimate;
+			sourceTree = "<group>";
+		};
 		AF7B8E8C24541A3C001055A3 /* SDAspect */ = {
 			isa = PBXGroup;
 			children = (
@@ -1435,6 +1590,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9783B8F420CD1D4B00E30FD7 /* CALayerVC.xib in Resources */,
+				AF7A6E752571102100543A2B /* TransVC.xib in Resources */,
 				9783B8E820CD12AF00E30FD7 /* LaunchScreen.storyboard in Resources */,
 				AF3DA12C2485144400A005CB /* CatonVC.xib in Resources */,
 				9772816F20D0AC88004E8E4F /* TransitionVC.xib in Resources */,
@@ -1550,14 +1706,19 @@
 				AF3DA0E8247FB6B700A005CB /* HXImageNavigationView.swift in Sources */,
 				AF7B8E7824518D0C001055A3 /* SmoothTableDetail.swift in Sources */,
 				AFA648BB22CF3F5100B02CD0 /* UINavigation+Extension.swift in Sources */,
+				AF7A6E6D25710FAE00543A2B /* YMPopupAnimation.m in Sources */,
 				9772816E20D0AC88004E8E4F /* TransitionVC.swift in Sources */,
 				AF3DA0F1247FB6E900A005CB /* ImagePickerVC.swift in Sources */,
 				AF3DA0EB247FB6B700A005CB /* HXImagePickerConfig.swift in Sources */,
+				AF7A6E742571102100543A2B /* TransVC.swift in Sources */,
 				AFFEC178230E3602001FAC72 /* JPEngine.m in Sources */,
+				AF7A6E6825710FAE00543A2B /* YMSwipeToViewController.m in Sources */,
 				AF1B77C7221D6633008D9AF6 /* OverTimeHandler.swift in Sources */,
 				AF3832DB22E00EA800E1580F /* NotificationName.swift in Sources */,
+				AF7A6E6625710FAE00543A2B /* YMOpenAnimation.m in Sources */,
 				AF3DA0E3247FB6B700A005CB /* HXImageCell.swift in Sources */,
 				9783B90320CD341E00E30FD7 /* MVVMVC.swift in Sources */,
+				AF7A6E6B25710FAE00543A2B /* YMSwipeFromViewController.m in Sources */,
 				9783B8E020CD12AD00E30FD7 /* ViewController.swift in Sources */,
 				9744CE6120FF155A00EBD3DE /* BaseVC.swift in Sources */,
 				AF3DA0DC247FB6B700A005CB /* HXAlbumModel.swift in Sources */,
@@ -1566,6 +1727,7 @@
 				AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */,
 				AF92CF712553C1BF00DEF7A0 /* CopyQIYButton.swift in Sources */,
 				AF92CF752553C1FE00DEF7A0 /* ButtonsVC.swift in Sources */,
+				AF7A6E5F25710FAE00543A2B /* YMCardToViewController.m in Sources */,
 				AF92CF6F2553C1BF00DEF7A0 /* CopyAliPayButton.swift in Sources */,
 				AF3DA12B2485144400A005CB /* CatonVC.swift in Sources */,
 				AF3DA137248624C800A005CB /* ModelToJson.m in Sources */,
@@ -1590,6 +1752,7 @@
 				AF3832D622E00D8D00E1580F /* AccessTokenPlugin.swift in Sources */,
 				AF7B8E7324516E63001055A3 /* SmoothTableViewCell.swift in Sources */,
 				AF1380D1223CAB1200AB2E0D /* LeetCode.swift in Sources */,
+				AF7A6E6425710FAE00543A2B /* YMCircleFromViewController.m in Sources */,
 				AF3DA0EC247FB6B700A005CB /* HXPhotoImageManager.swift in Sources */,
 				AF3DA0EA247FB6B700A005CB /* HXAlbumCell.swift in Sources */,
 				AF3832D422E00D8D00E1580F /* ApiService.swift in Sources */,
@@ -1605,30 +1768,41 @@
 				AF09857223226025002B003B /* CppBridge.mm in Sources */,
 				AF3DA0E2247FB6B700A005CB /* HXPreviewCell.swift in Sources */,
 				AF2C8BD52193D66F00BA9492 /* ChartConsole.m in Sources */,
+				AF7A6E6E25710FAE00543A2B /* YMPopupToViewController.m in Sources */,
 				AF26EACC2317724C00D61AF6 /* VCMap.swift in Sources */,
 				9783B8FB20CD1E2F00E30FD7 /* Router.swift in Sources */,
 				AF7B8EA42456D605001055A3 /* Mems.swift in Sources */,
+				AF7A6E6725710FAE00543A2B /* YMSwipeInteractiveTransition.m in Sources */,
+				AF7A6E6225710FAE00543A2B /* YMCircleAnimation.m in Sources */,
 				AF92CF722553C1BF00DEF7A0 /* WaveTouchButton.swift in Sources */,
 				AFA758F5224B706C008440F0 /* SomeControls.swift in Sources */,
 				AF3DA0ED247FB6B700A005CB /* HXReuseable.swift in Sources */,
 				9783B8F720CD1D6800E30FD7 /* CoreAnimationVC.swift in Sources */,
+				AF7A6E6525710FAE00543A2B /* YMOpenViewController.m in Sources */,
 				AF2C8BD62193D66F00BA9492 /* ShowNavigator.m in Sources */,
+				AF7A6E6F25710FAE00543A2B /* YMFadeInAnimate.m in Sources */,
 				AF26EACA2317714F00D61AF6 /* OCTestVC.m in Sources */,
 				AF3832D722E00D8D00E1580F /* MD5Model.swift in Sources */,
 				AF13A22622379214008B91DD /* LuckVC.swift in Sources */,
+				AF7A6E6A25710FAE00543A2B /* YMSwipeAnimation.m in Sources */,
 				AF13A22F2238B341008B91DD /* SDNetwork.swift in Sources */,
 				AFE80052248A338B00859B39 /* TheViewModel.swift in Sources */,
+				AF7A6E6325710FAE00543A2B /* YMCircleToViewController.m in Sources */,
 				AF3DA0E5247FB6B700A005CB /* HXSelectButton.swift in Sources */,
 				AF1B05A421BA2F6200A44FE4 /* UIView+Extension.swift in Sources */,
+				AF7A6E6925710FAE00543A2B /* YMSwipeTransitionManager.m in Sources */,
 				AF60BAB62268269000AE592D /* Throttle.swift in Sources */,
 				AF234DDE22F821CA00A1A490 /* UILabel+swizzle.m in Sources */,
 				AF60BAB42268240B00AE592D /* Debouncer.swift in Sources */,
 				9744CE6520FF173F00EBD3DE /* RotaryTableVC.swift in Sources */,
+				AF7A6E7125710FAE00543A2B /* YMFadeToViewController.m in Sources */,
+				AF7A6E28257103EE00543A2B /* CircleTransitionAnimator.swift in Sources */,
 				AF3DA0DD247FB6B700A005CB /* HXImageClipViewController.swift in Sources */,
 				AF3832E322E00F4700E1580F /* UserDefaultStaticStrings.swift in Sources */,
 				AF3DA0E0247FB6B700A005CB /* HXImagePreviewViewController.swift in Sources */,
 				AFB4707B2201A89B002B27C7 /* Annotation.swift in Sources */,
 				AF27F22E218C0A80001FDFC2 /* OpenGLVC.swift in Sources */,
+				AF7A6E7025710FAE00543A2B /* YMFadeFromViewController.m in Sources */,
 				AF234DE322F822CA00A1A490 /* SourceCode.m in Sources */,
 				AF2C8BD72193D66F00BA9492 /* CheckAnalysis.m in Sources */,
 				AF71B20722DDC50C008DE695 /* LearnCopyVC.swift in Sources */,
@@ -1637,8 +1811,10 @@
 				AF7B8E8F24541A60001055A3 /* MAspects.m in Sources */,
 				AF36862421C3BFE100EC0923 /* SizeClassVC.swift in Sources */,
 				AF3DA12324850ACF00A005CB /* SDCatonMonitor.m in Sources */,
+				AF7A6E6C25710FAE00543A2B /* YMPopupFromViewController.m in Sources */,
 				AF27F231218C1649001FDFC2 /* DrawingBoardView.swift in Sources */,
 				AF243CE322A907BD00809768 /* RedPointProtocol.swift in Sources */,
+				AF7A6E6025710FAE00543A2B /* YMCardPresentationController.m in Sources */,
 				AF3832DC22E00EA800E1580F /* AppConfig.swift in Sources */,
 				AF3DA0E6247FB6B700A005CB /* HXImageClipScrollView.swift in Sources */,
 				AF3DA0DF247FB6B700A005CB /* HXImagePickerController.swift in Sources */,
@@ -1652,7 +1828,9 @@
 				AFF7A59821956FD6003A4CA5 /* SQLiteVC.swift in Sources */,
 				975386BA21660A4800B5BE32 /* MetalVC.swift in Sources */,
 				AFB67CBB235EEB220066D49E /* SwiftUIView.swift in Sources */,
+				AF7A6E6125710FAE00543A2B /* YMCardFromViewController.m in Sources */,
 				AF2C8BD12193D66F00BA9492 /* ShowMemory.m in Sources */,
+				AF7A6E29257103EE00543A2B /* NavagationCotrollerDelegate.swift in Sources */,
 				AF14A2CF21883E5A0081487A /* RadarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

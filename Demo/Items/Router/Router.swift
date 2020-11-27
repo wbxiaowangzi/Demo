@@ -155,5 +155,10 @@ extension UINavigationController {
         self.pushViewController(vc, animated: true)
     }
     
+    func gotoTransVC() {
+        let vc = TransVC()
+        self.pushViewController(vc, animated: true)
+    }
+    
 }
 

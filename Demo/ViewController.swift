@@ -123,6 +123,8 @@ extension ViewController: UITableViewDelegate {
             self.navigationController?.gotoCatonVC()
         case .buttons:
             self.navigationController?.gotoButtonsVC()
+        case .trans:
+            self.navigationController?.gotoTransVC()
         }
     }
 }
@@ -147,7 +149,8 @@ extension ViewController {
                 .SmoothTableVoew,
                 .ImagePicker,
                 .caton,
-                .buttons]
+                .buttons,
+                .trans]
     }
     
 }
@@ -174,4 +177,5 @@ enum VCType: String {
     case ImagePicker
     case caton
     case buttons
+    case trans
 }
