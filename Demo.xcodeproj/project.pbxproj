@@ -153,6 +153,8 @@
 		AF7C8824229E263F00988C98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7C8823229E263F00988C98 /* Assets.xcassets */; };
 		AF7C8827229E263F00988C98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7C8825229E263F00988C98 /* LaunchScreen.storyboard */; };
 		AF7C8831229E275D00988C98 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7C882F229E274F00988C98 /* Media.xcassets */; };
+		AF7CB1A82577942C00280908 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7CB1A62577942C00280908 /* FilterVC.swift */; };
+		AF7CB1A92577942C00280908 /* FilterVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7CB1A72577942C00280908 /* FilterVC.xib */; };
 		AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7FA3E02181A052001BB669 /* SceneKitVC.swift */; };
 		AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF7FA3E42181AACA001BB669 /* SceneKit.framework */; };
 		AF859F0A2500B467008CB548 /* StreamReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF859F092500B467008CB548 /* StreamReader.swift */; };
@@ -428,6 +430,8 @@
 		AF7C8826229E263F00988C98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF7C8828229E263F00988C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF7C882F229E274F00988C98 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		AF7CB1A62577942C00280908 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		AF7CB1A72577942C00280908 /* FilterVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterVC.xib; sourceTree = "<group>"; };
 		AF7FA3E02181A052001BB669 /* SceneKitVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneKitVC.swift; sourceTree = "<group>"; };
 		AF7FA3E22181A7AB001BB669 /* Demo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		AF7FA3E42181AACA001BB669 /* SceneKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SceneKit.framework; path = System/Library/Frameworks/SceneKit.framework; sourceTree = SDKROOT; };
@@ -457,6 +461,7 @@
 		AFF7A59721956FD6003A4CA5 /* SQLiteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteVC.swift; sourceTree = "<group>"; };
 		AFF7A59921957025003A4CA5 /* SQLDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLDB.swift; sourceTree = "<group>"; };
 		AFF7A59B219574A1003A4CA5 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		AFF84A982574DD4400DD9FA4 /* TargetTwo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TargetTwo.entitlements; sourceTree = "<group>"; };
 		AFFEC175230E3602001FAC72 /* JPEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPEngine.m; sourceTree = "<group>"; };
 		AFFEC176230E3602001FAC72 /* JPEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPEngine.h; sourceTree = "<group>"; };
 		AFFEC177230E3602001FAC72 /* JSPatch.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = JSPatch.js; sourceTree = "<group>"; };
@@ -746,6 +751,7 @@
 		AF13A223223790CA008B91DD /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				AF7CB1A5257793AF00280908 /* Filter */,
 				AF92CF6A2553C19800DEF7A0 /* SomeButtons */,
 				AF3DA0C1247FB69900A005CB /* ImagePicker */,
 				AF71B1FF22DDC49A008DE695 /* AboutCopy */,
@@ -1269,6 +1275,7 @@
 		AF7C881B229E263D00988C98 /* TargetTwo */ = {
 			isa = PBXGroup;
 			children = (
+				AFF84A982574DD4400DD9FA4 /* TargetTwo.entitlements */,
 				AF7C881C229E263D00988C98 /* AppDelegate.swift */,
 				AF7C881E229E263D00988C98 /* ViewController.swift */,
 				AF7C8820229E263D00988C98 /* Main.storyboard */,
@@ -1285,6 +1292,15 @@
 				AF7C882F229E274F00988C98 /* Media.xcassets */,
 			);
 			path = Target2Files;
+			sourceTree = "<group>";
+		};
+		AF7CB1A5257793AF00280908 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				AF7CB1A62577942C00280908 /* FilterVC.swift */,
+				AF7CB1A72577942C00280908 /* FilterVC.xib */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 		AF7FA3DF21819FF0001BB669 /* SceneKit */ = {
@@ -1595,6 +1611,7 @@
 				AF3DA12C2485144400A005CB /* CatonVC.xib in Resources */,
 				9772816F20D0AC88004E8E4F /* TransitionVC.xib in Resources */,
 				9783B8F820CD1D6800E30FD7 /* CoreAnimationVC.xib in Resources */,
+				AF7CB1A92577942C00280908 /* FilterVC.xib in Resources */,
 				AF7B8E7024516E24001055A3 /* SmoothTableView.xib in Resources */,
 				AF7B8E7424516E63001055A3 /* SmoothTableViewCell.xib in Resources */,
 				AF71B20822DDC50C008DE695 /* LearnCopyVC.xib in Resources */,
@@ -1767,6 +1784,7 @@
 				AF9041D4256E19D60005A808 /* DWSegmentedControl.m in Sources */,
 				AF09857223226025002B003B /* CppBridge.mm in Sources */,
 				AF3DA0E2247FB6B700A005CB /* HXPreviewCell.swift in Sources */,
+				AF7CB1A82577942C00280908 /* FilterVC.swift in Sources */,
 				AF2C8BD52193D66F00BA9492 /* ChartConsole.m in Sources */,
 				AF7A6E6E25710FAE00543A2B /* YMPopupToViewController.m in Sources */,
 				AF26EACC2317724C00D61AF6 /* VCMap.swift in Sources */,
@@ -2318,6 +2336,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TargetTwo/TargetTwo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LQQGDZBGK3;
 				INFOPLIST_FILE = TargetTwo/Info.plist;
@@ -2339,6 +2358,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TargetTwo/TargetTwo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LQQGDZBGK3;
 				INFOPLIST_FILE = TargetTwo/Info.plist;

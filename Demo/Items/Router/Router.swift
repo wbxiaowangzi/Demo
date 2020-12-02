@@ -160,5 +160,9 @@ extension UINavigationController {
         self.pushViewController(vc, animated: true)
     }
     
+    func gotoFilterVC() {
+        let vc = FilterVC()
+        self.pushViewController(vc, animated: true)
+    }
 }
 

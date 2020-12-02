@@ -16,11 +16,8 @@ class CAShapeLayerVC: UIViewController {
         self.view.clipsToBounds = true
         
         let r = UnsafeMutablePointer<CGFloat>.allocate(capacity: 0)
-
         let g = UnsafeMutablePointer<CGFloat>.allocate(capacity: 0)
-
         let b = UnsafeMutablePointer<CGFloat>.allocate(capacity: 0)
-
         let a = UnsafeMutablePointer<CGFloat>.allocate(capacity: 0)
         _ = UIColor.red.getRed(r, green: g, blue: b, alpha: a)
         print(r.pointee, g.pointee, b.pointee,a.pointee)
