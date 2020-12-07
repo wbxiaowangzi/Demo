@@ -10,6 +10,8 @@ import UIKit
 //import NVMAspects
 import SDWebImage
 
+let umkey = "5fcdcefabed37e4506c428c7"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -23,6 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         #if DEBUG
         Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle")?.load()
         #endif
+        UMConfigure.initWithAppkey(umkey, channel: "adhoc")
         hookSDWebImage()
         CatonMonitoring()
         return true

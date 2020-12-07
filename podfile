@@ -1,6 +1,6 @@
 # Uncomment this line to define a global platform for your project
 # platform :iOS, '10.0'
-source 'http://211.159.217.203/Apple/Podspec.git'
+source 'http://gl2.myreal3d.com/Apple/Podspec.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
 platform :ios, '10.0'
@@ -27,6 +27,8 @@ target 'Demo' do
   pod 'CTMediator'
   pod 'PLCrashReporter'
   pod 'SnapKit'
+  pod 'UMCCommon'
+
   #单元测试
   #pod 'Kiwi'
   

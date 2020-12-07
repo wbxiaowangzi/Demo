@@ -57,8 +57,16 @@ class ViewController: UIViewController {
     func login() {
         print("login...")
     }
-
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UMTool.sdBeginLogPageView(UMPageName.home)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UMTool.sdEndLogPageView(UMPageName.home)
+    }
 }
 
 extension ViewController: UITableViewDataSource {
