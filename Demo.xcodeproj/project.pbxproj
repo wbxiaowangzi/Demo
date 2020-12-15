@@ -113,6 +113,9 @@
 		AF53E4CA238D3CE600E89EB9 /* UIControlVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF53E4C8238D3CE600E89EB9 /* UIControlVC.xib */; };
 		AF60BAB42268240B00AE592D /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BAB32268240B00AE592D /* Debouncer.swift */; };
 		AF60BAB62268269000AE592D /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BAB52268269000AE592D /* Throttle.swift */; };
+		AF63E97225875DFA006019F1 /* ThreadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF63E97025875DFA006019F1 /* ThreadVC.xib */; };
+		AF63E97325875DFA006019F1 /* ThreadVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF63E97125875DFA006019F1 /* ThreadVC.swift */; };
+		AF63E97525885DE5006019F1 /* Dispatch+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF63E97425885DE5006019F1 /* Dispatch+Extension.swift */; };
 		AF71B20722DDC50C008DE695 /* LearnCopyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF71B20522DDC50C008DE695 /* LearnCopyVC.swift */; };
 		AF71B20822DDC50C008DE695 /* LearnCopyVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF71B20622DDC50C008DE695 /* LearnCopyVC.xib */; };
 		AF7A6D7825709F8300543A2B /* MISegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A6D7725709F8300543A2B /* MISegment.swift */; };
@@ -369,6 +372,9 @@
 		AF53E4C8238D3CE600E89EB9 /* UIControlVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIControlVC.xib; sourceTree = "<group>"; };
 		AF60BAB32268240B00AE592D /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		AF60BAB52268269000AE592D /* Throttle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttle.swift; sourceTree = "<group>"; };
+		AF63E97025875DFA006019F1 /* ThreadVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThreadVC.xib; sourceTree = "<group>"; };
+		AF63E97125875DFA006019F1 /* ThreadVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThreadVC.swift; sourceTree = "<group>"; };
+		AF63E97425885DE5006019F1 /* Dispatch+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dispatch+Extension.swift"; sourceTree = "<group>"; };
 		AF71B20522DDC50C008DE695 /* LearnCopyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnCopyVC.swift; sourceTree = "<group>"; };
 		AF71B20622DDC50C008DE695 /* LearnCopyVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LearnCopyVC.xib; sourceTree = "<group>"; };
 		AF7A6D7725709F8300543A2B /* MISegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MISegment.swift; sourceTree = "<group>"; };
@@ -590,14 +596,6 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		9772816920D0A844004E8E4F /* GCD */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = GCD;
-			path = ../GCD;
-			sourceTree = "<group>";
-		};
 		9772817020DD3B32004E8E4F /* AFN */ = {
 			isa = PBXGroup;
 			children = (
@@ -753,6 +751,7 @@
 		AF13A223223790CA008B91DD /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				AF63E96B25875C9C006019F1 /* Thread */,
 				AFFB4723257E07CA00D31718 /* Statistics */,
 				AF7CB1A5257793AF00280908 /* Filter */,
 				AF92CF6A2553C19800DEF7A0 /* SomeButtons */,
@@ -770,7 +769,6 @@
 				9783B8EF20CD1D2A00E30FD7 /* CoreAnimation */,
 				AF60BAB2226823DE00AE592D /* Debouncer&Throttle */,
 				AF5D3A68219E76F700E64898 /* Extension */,
-				9772816920D0A844004E8E4F /* GCD */,
 				9744CE5E20FF13A000EBD3DE /* GifBG */,
 				AFFEC174230E3602001FAC72 /* JSPatch */,
 				AF1380CF223CAAA800AB2E0D /* LeetCode */,
@@ -1156,6 +1154,7 @@
 				AFA648B822CF3F5000B02CD0 /* UINavigation+Extension.swift */,
 				AFA648B722CF3F5000B02CD0 /* UITableView+Extension.swift */,
 				AF1B05A321BA2F6100A44FE4 /* UIView+Extension.swift */,
+				AF63E97425885DE5006019F1 /* Dispatch+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -1167,6 +1166,15 @@
 				AF60BAB52268269000AE592D /* Throttle.swift */,
 			);
 			path = "Debouncer&Throttle";
+			sourceTree = "<group>";
+		};
+		AF63E96B25875C9C006019F1 /* Thread */ = {
+			isa = PBXGroup;
+			children = (
+				AF63E97125875DFA006019F1 /* ThreadVC.swift */,
+				AF63E97025875DFA006019F1 /* ThreadVC.xib */,
+			);
+			path = Thread;
 			sourceTree = "<group>";
 		};
 		AF71B1FF22DDC49A008DE695 /* AboutCopy */ = {
@@ -1624,6 +1632,7 @@
 				9783B8F820CD1D6800E30FD7 /* CoreAnimationVC.xib in Resources */,
 				AF7CB1A92577942C00280908 /* FilterVC.xib in Resources */,
 				AF7B8E7024516E24001055A3 /* SmoothTableView.xib in Resources */,
+				AF63E97225875DFA006019F1 /* ThreadVC.xib in Resources */,
 				AF7B8E7424516E63001055A3 /* SmoothTableViewCell.xib in Resources */,
 				AF71B20822DDC50C008DE695 /* LearnCopyVC.xib in Resources */,
 				AF3DA0EE247FB6B700A005CB /* HXImagePickerController.bundle in Resources */,
@@ -1785,6 +1794,7 @@
 				AF3DA0EA247FB6B700A005CB /* HXAlbumCell.swift in Sources */,
 				AF3832D422E00D8D00E1580F /* ApiService.swift in Sources */,
 				AF859F0A2500B467008CB548 /* StreamReader.swift in Sources */,
+				AF63E97525885DE5006019F1 /* Dispatch+Extension.swift in Sources */,
 				9783B8F320CD1D4B00E30FD7 /* CALayerVC.swift in Sources */,
 				9744CE6320FF172600EBD3DE /* GifBGVC.swift in Sources */,
 				AF3832E422E00F4700E1580F /* MiNavigationConroller.swift in Sources */,
@@ -1816,6 +1826,7 @@
 				AF7A6E6A25710FAE00543A2B /* YMSwipeAnimation.m in Sources */,
 				AF13A22F2238B341008B91DD /* SDNetwork.swift in Sources */,
 				AFE80052248A338B00859B39 /* TheViewModel.swift in Sources */,
+				AF63E97325875DFA006019F1 /* ThreadVC.swift in Sources */,
 				AF7A6E6325710FAE00543A2B /* YMCircleToViewController.m in Sources */,
 				AF3DA0E5247FB6B700A005CB /* HXSelectButton.swift in Sources */,
 				AF1B05A421BA2F6200A44FE4 /* UIView+Extension.swift in Sources */,

@@ -97,7 +97,8 @@ extension ViewController: UITableViewDelegate {
 extension ViewController {
     
     func lazyDatas() -> [VCType] {
-        return [.SQLite,
+        return [.Thread,
+                .SQLite,
                 .RXSwift,
                 .OpenGL,
                 .Radar,
@@ -113,10 +114,10 @@ extension ViewController {
                 .OCTest,
                 .SmoothTableVoew,
                 .ImagePicker,
-                .caton,
-                .buttons,
-                .trans,
-                .filter]
+                .Caton,
+                .Buttons,
+                .Trans,
+                .Filter]
     }
 }
 
@@ -140,10 +141,11 @@ enum VCType: String {
     case OCTest
     case SmoothTableVoew
     case ImagePicker
-    case caton
-    case buttons
-    case trans
-    case filter
+    case Caton
+    case Buttons
+    case Trans
+    case Filter
+    case Thread
     
     var theVC: UIViewController? {
         switch self {
@@ -185,16 +187,17 @@ enum VCType: String {
             return SmoothTableView()
         case .ImagePicker:
             return ImagePickerVC()
-        case .caton:
+        case .Caton:
             return CatonVC()
-        case .buttons:
+        case .Buttons:
             return ButtonsVC()
-        case .trans:
+        case .Trans:
             return TransVC()
-        case .filter:
+        case .Filter:
             return FilterVC()
+        case .Thread:
+            return ThreadVC()
         }
-        return nil
     }
 }
 

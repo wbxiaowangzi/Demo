@@ -34,7 +34,6 @@ extension FilterVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        
         let name = self.lazyCellNames()[indexPath.row]
         cell.textLabel?.text = name
         return cell
