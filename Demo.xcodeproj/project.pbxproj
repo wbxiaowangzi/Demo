@@ -106,6 +106,7 @@
 		AF4119A12375617F008AF601 /* CAGradientLayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4119A02375617F008AF601 /* CAGradientLayerVC.swift */; };
 		AF42F43B22719863004979AB /* PreviousLuckDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42F43A22719863004979AB /* PreviousLuckDatas.swift */; };
 		AF42F43D22719E96004979AB /* LuckNumbersDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42F43C22719E96004979AB /* LuckNumbersDb.swift */; };
+		AF4DFA2425A4256900D3AF6D /* MIMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DFA2325A4256900D3AF6D /* MIMotion.swift */; };
 		AF4EEB8F2302C39E001F298F /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EEB8E2302C39E001F298F /* MetalView.swift */; };
 		AF4EEB922302C4D2001F298F /* MetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EEB902302C4D2001F298F /* MetalViewController.swift */; };
 		AF4EEB932302C4D2001F298F /* MetalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4EEB912302C4D2001F298F /* MetalViewController.xib */; };
@@ -365,6 +366,7 @@
 		AF4119A02375617F008AF601 /* CAGradientLayerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAGradientLayerVC.swift; sourceTree = "<group>"; };
 		AF42F43A22719863004979AB /* PreviousLuckDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousLuckDatas.swift; sourceTree = "<group>"; };
 		AF42F43C22719E96004979AB /* LuckNumbersDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckNumbersDb.swift; sourceTree = "<group>"; };
+		AF4DFA2325A4256900D3AF6D /* MIMotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIMotion.swift; sourceTree = "<group>"; };
 		AF4EEB8E2302C39E001F298F /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		AF4EEB902302C4D2001F298F /* MetalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalViewController.swift; sourceTree = "<group>"; };
 		AF4EEB912302C4D2001F298F /* MetalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetalViewController.xib; sourceTree = "<group>"; };
@@ -1071,6 +1073,7 @@
 		AF3DA1042480DF1700A005CB /* Instrument */ = {
 			isa = PBXGroup;
 			children = (
+				AF4DFA2225A4255A00D3AF6D /* Util */,
 				AF859F082500B450008CB548 /* StreamReader */,
 				AF3DA12024850A8700A005CB /* CatonMonitor */,
 				AF3DA1342486249500A005CB /* ModelToJson */,
@@ -1125,6 +1128,14 @@
 				AF3FF13D2350736500846C74 /* Info.plist */,
 			);
 			path = TargetTwoUITests;
+			sourceTree = "<group>";
+		};
+		AF4DFA2225A4255A00D3AF6D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AF4DFA2325A4256900D3AF6D /* MIMotion.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		AF53E4C6238D3CAB00E89EB9 /* UIControl */ = {
@@ -1837,6 +1848,7 @@
 				9744CE6520FF173F00EBD3DE /* RotaryTableVC.swift in Sources */,
 				AF7A6E7125710FAE00543A2B /* YMFadeToViewController.m in Sources */,
 				AF7A6E28257103EE00543A2B /* CircleTransitionAnimator.swift in Sources */,
+				AF4DFA2425A4256900D3AF6D /* MIMotion.swift in Sources */,
 				AF3DA0DD247FB6B700A005CB /* HXImageClipViewController.swift in Sources */,
 				AF3832E322E00F4700E1580F /* UserDefaultStaticStrings.swift in Sources */,
 				AF3DA0E0247FB6B700A005CB /* HXImagePreviewViewController.swift in Sources */,
