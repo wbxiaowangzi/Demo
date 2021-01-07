@@ -19,6 +19,7 @@
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext {
     return 1;
 }
+
 // This method can only  be a nop if the transition is interactive and not a percentDriven interactive transition.
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
     UIViewController *fromVc = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
@@ -30,6 +31,7 @@
         [self dismissViewControllerWithTransition:transitionContext];
     }
 }
+
 - (void)presentViewControllerWithTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
     UINavigationController *navVc = (UINavigationController *)[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     YMCircleFromViewController * fromVc = navVc.viewControllers.lastObject;
@@ -59,6 +61,7 @@
     [maskLayer addAnimation:maskLayerAnimation forKey:@"path"];
     
 }
+
 - (void)dismissViewControllerWithTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
     UIViewController * fromViewController     = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UINavigationController * toViewController = (UINavigationController *)[transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
@@ -96,7 +99,6 @@
  * is removed from the object it is attached to (i.e. the layer). 'flag'
  * is true if the animation reached the end of its active duration
  * without being removed. */
-
 - (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
     if (_isPresentOrDismiss) {
         // 标记转场结束

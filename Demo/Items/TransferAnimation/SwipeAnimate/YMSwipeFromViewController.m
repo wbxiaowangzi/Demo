@@ -26,9 +26,11 @@
     gesture.edges = UIRectEdgeRight;
     [self.view addGestureRecognizer:gesture];
 }
+
 - (void)event_back {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 - (void)gesture_present:(UIScreenEdgePanGestureRecognizer *)gesture {
     if (gesture.state == UIGestureRecognizerStateBegan) {
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
@@ -41,6 +43,7 @@
         [self presentViewController:vc animated:YES completion:nil];
     }
 }
+
 - (IBAction)event_jump:(id)sender {
     UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     YMSwipeToViewController *vc = [sb instantiateViewControllerWithIdentifier:@"YMSwipeToViewController"];
@@ -57,15 +60,5 @@
     }
     return _manager;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

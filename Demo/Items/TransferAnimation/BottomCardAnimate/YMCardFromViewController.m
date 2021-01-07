@@ -25,7 +25,8 @@
     self.title = @"PopupVc";
     [self.view addSubview:self.presentBtn];
 }
--(void)backClicked{
+
+- (void)backClicked {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -35,6 +36,7 @@
     vc.transitioningDelegate = presentationController;
     [self presentViewController:vc animated:YES completion:nil];
 }
+
 - (UIButton *)presentBtn {
     if (nil == _presentBtn) {
         _presentBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -45,10 +47,10 @@
     }
     return _presentBtn;
 }
--(UIButton *)leftItem{
+
+- (UIButton *)leftItem {
     
     if (!_leftItem) {
-        
         _leftItem = [UIButton buttonWithType:UIButtonTypeCustom];
         _leftItem.frame = CGRectMake(0, 0,50, 20);
         [_leftItem setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -57,14 +59,5 @@
     }
     return _leftItem;
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

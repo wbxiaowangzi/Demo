@@ -12,7 +12,9 @@
 @property (nonatomic, strong) UIView *dismissView;
 @property (nonatomic, strong) UIView *replacePresentView;
 @end
+
 @implementation YMCardPresentationController
+
 - (instancetype)initWithPresentedViewController:(UIViewController *)presentedViewController presentingViewController:(nullable UIViewController *)presentingViewController{
     
     self =[super initWithPresentedViewController:presentedViewController presentingViewController:presentingViewController];
@@ -20,7 +22,6 @@
         
         // 自定义modalPresentationStyle
         presentedViewController.modalPresentationStyle= UIModalPresentationCustom;
-        
     }
     return self;
 }
@@ -74,6 +75,7 @@
         
     } completion:NULL];
 }
+
 /**
  dismiss执行结束
  */
@@ -83,16 +85,20 @@
         self.dismissView = nil;
     }
 }
+
 - (UIView *)presentedView {
     return self.replacePresentView;
 }
+
 - (void)gesture_dismiss {
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
+
 #pragma mark - UIViewControllerAnimatedTransitioning
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext {
     return 0.35;
 }
+
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     UIView *containerView = [transitionContext containerView];
     UIViewController *fromVc = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
@@ -119,6 +125,7 @@
         }];
     }
 }
+
 #pragma mark - UIViewControllerTransitioningDelegate
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
     return self;

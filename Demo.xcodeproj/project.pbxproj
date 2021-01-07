@@ -1205,12 +1205,12 @@
 		AF7A6E3325710FAD00543A2B /* BottomCardAnimate */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A6E3425710FAD00543A2B /* YMCardToViewController.m */,
-				AF7A6E3525710FAD00543A2B /* YMCardPresentationController.m */,
-				AF7A6E3625710FAD00543A2B /* YMCardFromViewController.m */,
-				AF7A6E3725710FAD00543A2B /* YMCardToViewController.h */,
-				AF7A6E3825710FAD00543A2B /* YMCardPresentationController.h */,
 				AF7A6E3925710FAD00543A2B /* YMCardFromViewController.h */,
+				AF7A6E3625710FAD00543A2B /* YMCardFromViewController.m */,
+				AF7A6E3825710FAD00543A2B /* YMCardPresentationController.h */,
+				AF7A6E3525710FAD00543A2B /* YMCardPresentationController.m */,
+				AF7A6E3725710FAD00543A2B /* YMCardToViewController.h */,
+				AF7A6E3425710FAD00543A2B /* YMCardToViewController.m */,
 			);
 			path = BottomCardAnimate;
 			sourceTree = "<group>";
@@ -1218,12 +1218,12 @@
 		AF7A6E3A25710FAD00543A2B /* 扩散圆 */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A6E3B25710FAD00543A2B /* YMCircleFromViewController.h */,
-				AF7A6E3C25710FAD00543A2B /* YMCircleToViewController.h */,
-				AF7A6E3D25710FAD00543A2B /* YMCircleAnimation.m */,
-				AF7A6E3E25710FAD00543A2B /* YMCircleToViewController.m */,
-				AF7A6E3F25710FAD00543A2B /* YMCircleFromViewController.m */,
 				AF7A6E4025710FAD00543A2B /* YMCircleAnimation.h */,
+				AF7A6E3D25710FAD00543A2B /* YMCircleAnimation.m */,
+				AF7A6E3B25710FAD00543A2B /* YMCircleFromViewController.h */,
+				AF7A6E3F25710FAD00543A2B /* YMCircleFromViewController.m */,
+				AF7A6E3C25710FAD00543A2B /* YMCircleToViewController.h */,
+				AF7A6E3E25710FAD00543A2B /* YMCircleToViewController.m */,
 			);
 			path = "扩散圆";
 			sourceTree = "<group>";
@@ -1231,10 +1231,10 @@
 		AF7A6E4125710FAD00543A2B /* Push开门动画 */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A6E4225710FAD00543A2B /* YMOpenViewController.h */,
 				AF7A6E4325710FAD00543A2B /* YMOpenAnimation.h */,
-				AF7A6E4425710FAD00543A2B /* YMOpenViewController.m */,
 				AF7A6E4525710FAD00543A2B /* YMOpenAnimation.m */,
+				AF7A6E4225710FAD00543A2B /* YMOpenViewController.h */,
+				AF7A6E4425710FAD00543A2B /* YMOpenViewController.m */,
 			);
 			path = "Push开门动画";
 			sourceTree = "<group>";
@@ -1242,16 +1242,16 @@
 		AF7A6E4625710FAD00543A2B /* SwipeAnimate */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A6E4725710FAD00543A2B /* YMSwipeInteractiveTransition.m */,
-				AF7A6E4825710FAD00543A2B /* YMSwipeTransitionManager.h */,
 				AF7A6E4925710FAD00543A2B /* YMSwipeAnimation.h */,
-				AF7A6E4A25710FAD00543A2B /* YMSwipeToViewController.m */,
-				AF7A6E4B25710FAD00543A2B /* YMSwipeFromViewController.h */,
-				AF7A6E4C25710FAD00543A2B /* YMSwipeTransitionManager.m */,
-				AF7A6E4D25710FAD00543A2B /* YMSwipeInteractiveTransition.h */,
 				AF7A6E4E25710FAD00543A2B /* YMSwipeAnimation.m */,
+				AF7A6E4B25710FAD00543A2B /* YMSwipeFromViewController.h */,
 				AF7A6E4F25710FAD00543A2B /* YMSwipeFromViewController.m */,
+				AF7A6E4D25710FAD00543A2B /* YMSwipeInteractiveTransition.h */,
+				AF7A6E4725710FAD00543A2B /* YMSwipeInteractiveTransition.m */,
 				AF7A6E5025710FAD00543A2B /* YMSwipeToViewController.h */,
+				AF7A6E4A25710FAD00543A2B /* YMSwipeToViewController.m */,
+				AF7A6E4825710FAD00543A2B /* YMSwipeTransitionManager.h */,
+				AF7A6E4C25710FAD00543A2B /* YMSwipeTransitionManager.m */,
 			);
 			path = SwipeAnimate;
 			sourceTree = "<group>";
@@ -1259,12 +1259,12 @@
 		AF7A6E5125710FAD00543A2B /* PopupAnimate */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A6E5225710FAD00543A2B /* YMPopupToViewController.h */,
-				AF7A6E5325710FAD00543A2B /* YMPopupFromViewController.m */,
-				AF7A6E5425710FAD00543A2B /* YMPopupAnimation.m */,
-				AF7A6E5525710FAD00543A2B /* YMPopupToViewController.m */,
-				AF7A6E5625710FAD00543A2B /* YMPopupFromViewController.h */,
 				AF7A6E5725710FAD00543A2B /* YMPopupAnimation.h */,
+				AF7A6E5425710FAD00543A2B /* YMPopupAnimation.m */,
+				AF7A6E5625710FAD00543A2B /* YMPopupFromViewController.h */,
+				AF7A6E5325710FAD00543A2B /* YMPopupFromViewController.m */,
+				AF7A6E5225710FAD00543A2B /* YMPopupToViewController.h */,
+				AF7A6E5525710FAD00543A2B /* YMPopupToViewController.m */,
 			);
 			path = PopupAnimate;
 			sourceTree = "<group>";
@@ -1272,11 +1272,11 @@
 		AF7A6E5825710FAE00543A2B /* FadeInAnimate */ = {
 			isa = PBXGroup;
 			children = (
-				AF7A6E5925710FAE00543A2B /* YMFadeInAnimate.m */,
 				AF7A6E5A25710FAE00543A2B /* YMFadeFromViewController.h */,
-				AF7A6E5B25710FAE00543A2B /* YMFadeToViewController.h */,
-				AF7A6E5C25710FAE00543A2B /* YMFadeInAnimate.h */,
 				AF7A6E5D25710FAE00543A2B /* YMFadeFromViewController.m */,
+				AF7A6E5C25710FAE00543A2B /* YMFadeInAnimate.h */,
+				AF7A6E5925710FAE00543A2B /* YMFadeInAnimate.m */,
+				AF7A6E5B25710FAE00543A2B /* YMFadeToViewController.h */,
 				AF7A6E5E25710FAE00543A2B /* YMFadeToViewController.m */,
 			);
 			path = FadeInAnimate;

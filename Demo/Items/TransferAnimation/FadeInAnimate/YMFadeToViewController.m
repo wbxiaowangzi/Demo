@@ -20,9 +20,11 @@
     self.view.backgroundColor = [UIColor blueColor];
     [self.view addSubview:self.dismissBtn];
 }
+
 - (void)event_dismiss {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 - (UIButton *)dismissBtn {
     if (nil == _dismissBtn) {
         _dismissBtn = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -33,14 +35,5 @@
     }
     return _dismissBtn;
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

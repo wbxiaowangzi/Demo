@@ -20,7 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor purpleColor];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:self.leftItem];
     self.title = @"PopupVc";
@@ -30,10 +29,9 @@
     imageView.layer.cornerRadius = 10;
     imageView.layer.masksToBounds = YES;
     [self.view addSubview:imageView];
-    
 }
 
--(void)backClicked{
+-(void)backClicked {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -43,6 +41,7 @@
     vc.modalPresentationStyle = UIModalPresentationCustom;
     [self presentViewController:vc animated:YES completion:nil];
 }
+
 #pragma UIViewControllerTransitioningDelegate
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
     return [YMPopupAnimation new];
@@ -53,10 +52,8 @@
 }
 
 #pragma mark - Lazyloading
--(UIButton *)leftItem{
-    
+- (UIButton *)leftItem {
     if (!_leftItem) {
-        
         _leftItem = [UIButton buttonWithType:UIButtonTypeCustom];
         _leftItem.frame = CGRectMake(0, 0,50, 20);
         [_leftItem setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -74,15 +71,5 @@
     }
     return _presentBtn;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

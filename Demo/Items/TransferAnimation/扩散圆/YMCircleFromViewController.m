@@ -28,10 +28,10 @@
 
     // Do any additional setup after loading the view.
 }
--(UIButton *)leftItem{
+
+- (UIButton *)leftItem {
     
     if (!_leftItem) {
-        
         _leftItem = [UIButton buttonWithType:UIButtonTypeCustom];
         _leftItem.frame = CGRectMake(0, 0,50, 20);
         [_leftItem setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -41,12 +41,9 @@
     return _leftItem;
 }
 
-
-
--(UIButton *)presentBtn{
+- (UIButton *)presentBtn {
     
     if (!_presentBtn) {
-        
         _presentBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         _presentBtn.backgroundColor = [UIColor grayColor];
         _presentBtn.titleLabel.numberOfLines = 0;
@@ -55,22 +52,18 @@
         _presentBtn.layer.masksToBounds = YES;
         _presentBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
         _presentBtn.titleLabel.font = [UIFont systemFontOfSize:13];
-        
         _presentBtn.frame = CGRectMake(self.view.frame.size.width-60, self.view.frame.size.height-150, 60, 60);
-        
         [_presentBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_presentBtn setTitle:@"点击\n拖动" forState:UIControlStateNormal];
         [_presentBtn addTarget:self action:@selector(presentBtnClicked) forControlEvents:UIControlEventTouchUpInside];
-        
         UIPanGestureRecognizer *pan = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(gesture_presentBtnPan:)];
         [_presentBtn addGestureRecognizer:pan];
-        
     }
     return _presentBtn;
 }
 
 
--(void)gesture_presentBtnPan:(UIPanGestureRecognizer *)recognizer{
+- (void)gesture_presentBtnPan:(UIPanGestureRecognizer *)recognizer {
     CGPoint translation = [recognizer translationInView:self.view];
     CGPoint newCenter   = CGPointMake(recognizer.view.center.x + translation.x,
                                       recognizer.view.center.y + translation.y);
@@ -81,10 +74,9 @@
     newCenter.x = MIN(self.view.frame.size.width - recognizer.view.frame.size.width/2,newCenter.x);
     recognizer.view.center = newCenter;
     [recognizer setTranslation:CGPointZero inView:self.view];
-    
 }
 
--(void)presentBtnClicked{
+- (void)presentBtnClicked {
     
     YMCircleToViewController *  vc =[[YMCircleToViewController alloc]init];
     vc.transitioningDelegate = self;
@@ -92,7 +84,7 @@
     [self presentViewController:vc animated:YES completion:nil];
 }
 
--(void)backClicked{
+- (void)backClicked {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -104,14 +96,5 @@
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
     return [YMCircleAnimation new];
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

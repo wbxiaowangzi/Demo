@@ -24,15 +24,18 @@
     [self.view addSubview:self.presentBtn];
     
 }
+
 - (void)event_back {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+
 - (void)event_present {
     YMFadeToViewController *vc = [YMFadeToViewController new];
     vc.transitioningDelegate = self;
     vc.modalPresentationStyle = UIModalPresentationFullScreen;
     [self presentViewController:vc animated:YES completion:nil];
 }
+
 - (UIButton *)presentBtn {
     if (nil == _presentBtn) {
         _presentBtn = [UIButton buttonWithType:UIButtonTypeSystem];
@@ -42,6 +45,7 @@
     }
     return _presentBtn;
 }
+
 #pragma mark - UIViewControllerTransitioningDelegate
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source {
     return [YMFadeInAnimate new];
@@ -50,14 +54,5 @@
 - (nullable id <UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed {
     return [YMFadeInAnimate new];
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -45,7 +45,7 @@
  
  interactive 交互
  */
--(void)startInteractiveTransition:(id<UIViewControllerContextTransitioning>)transitionContext{
+- (void)startInteractiveTransition:(id<UIViewControllerContextTransitioning>)transitionContext {
     
     [super startInteractiveTransition:transitionContext];
     //保存我们的交互上下文，方便做进度更新等操作
@@ -53,26 +53,19 @@
 }
 
 // 手势触发该方法
--(void)gestureRecognizeDidUpdate:(UIScreenEdgePanGestureRecognizer *)gestureRecognizer{
+- (void)gestureRecognizeDidUpdate:(UIScreenEdgePanGestureRecognizer *)gestureRecognizer {
     
     switch (gestureRecognizer.state){
-            
-            
         case UIGestureRecognizerStateBegan:
-            
             break;
         case UIGestureRecognizerStateChanged:
-            
             // 调用updateInteractiveTransition来更新动画进度
             // 里面嵌套定义 percentForGesture 方法计算动画进度
             [self updateInteractiveTransition:[self percentForGesture:gestureRecognizer]];
             break;
-            
         case UIGestureRecognizerStateEnded:
-            
             //判断手势位置，要大于一般,就完成这个转场，要小于一半就取消
             if ([self percentForGesture:gestureRecognizer] >= 0.5f)
-                
                 // 完成交互转场
                 [self finishInteractiveTransition];
             else
@@ -80,14 +73,13 @@
                 [self cancelInteractiveTransition];
             break;
         default:
-            
             [self cancelInteractiveTransition];
             break;
     }
 }
 
 // 计算动画进度
--(CGFloat)percentForGesture:(UIScreenEdgePanGestureRecognizer *)gesture{
+- (CGFloat)percentForGesture:(UIScreenEdgePanGestureRecognizer *)gesture {
     UIView * transitionContainerView = self.transitionContext.containerView;
     // 手势滑动 在transitionContainerView中 的位置
     // 这个位置判断的方法可以具体根据你的需求确定
@@ -105,7 +97,8 @@
     else
         return 0.f;
 }
-- (void)dealloc{
+
+- (void)dealloc {
     
     [self.gestureRecognizer removeTarget:self action:@selector(gestureRecognizeDidUpdate:)];
 }

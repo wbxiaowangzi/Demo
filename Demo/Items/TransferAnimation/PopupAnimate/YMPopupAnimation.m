@@ -9,16 +9,21 @@
 #import "YMPopupAnimation.h"
 
 @implementation YMPopupAnimation
+
 - (NSTimeInterval)transitionDuration:(nullable id <UIViewControllerContextTransitioning>)transitionContext {
     return .35;
 }
+
 // This method can only  be a nop if the transition is interactive and not a percentDriven interactive transition.
 - (void)animateTransition:(id <UIViewControllerContextTransitioning>)transitionContext {
+    
     UIViewController *fromVc = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     UIViewController *toVc = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     UIView *containerView = [transitionContext containerView];
+    
     BOOL present = (toVc.presentingViewController == fromVc);
     UIView *tempView = nil;
+    
     if (present) {
         tempView = [fromVc.view snapshotViewAfterScreenUpdates:NO];
         tempView.frame = fromVc.view.frame;
@@ -57,6 +62,6 @@
             }
         }];
     }
-    
 }
+
 @end
