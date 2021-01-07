@@ -107,6 +107,7 @@
 		AF42F43B22719863004979AB /* PreviousLuckDatas.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42F43A22719863004979AB /* PreviousLuckDatas.swift */; };
 		AF42F43D22719E96004979AB /* LuckNumbersDb.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF42F43C22719E96004979AB /* LuckNumbersDb.swift */; };
 		AF4DFA2425A4256900D3AF6D /* MIMotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4DFA2325A4256900D3AF6D /* MIMotion.swift */; };
+		AF4DFAEB25A6A5B600D3AF6D /* NSObject+runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = AF4DFAEA25A6A5B600D3AF6D /* NSObject+runtime.m */; };
 		AF4EEB8F2302C39E001F298F /* MetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EEB8E2302C39E001F298F /* MetalView.swift */; };
 		AF4EEB922302C4D2001F298F /* MetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF4EEB902302C4D2001F298F /* MetalViewController.swift */; };
 		AF4EEB932302C4D2001F298F /* MetalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4EEB912302C4D2001F298F /* MetalViewController.xib */; };
@@ -367,6 +368,8 @@
 		AF42F43A22719863004979AB /* PreviousLuckDatas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousLuckDatas.swift; sourceTree = "<group>"; };
 		AF42F43C22719E96004979AB /* LuckNumbersDb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckNumbersDb.swift; sourceTree = "<group>"; };
 		AF4DFA2325A4256900D3AF6D /* MIMotion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIMotion.swift; sourceTree = "<group>"; };
+		AF4DFAE925A6A5B600D3AF6D /* NSObject+runtime.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+runtime.h"; sourceTree = "<group>"; };
+		AF4DFAEA25A6A5B600D3AF6D /* NSObject+runtime.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+runtime.m"; sourceTree = "<group>"; };
 		AF4EEB8E2302C39E001F298F /* MetalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalView.swift; sourceTree = "<group>"; };
 		AF4EEB902302C4D2001F298F /* MetalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetalViewController.swift; sourceTree = "<group>"; };
 		AF4EEB912302C4D2001F298F /* MetalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetalViewController.xib; sourceTree = "<group>"; };
@@ -842,6 +845,8 @@
 			children = (
 				AF234DE022F8220C00A1A490 /* SourceCode */,
 				AF234DDB22F821A400A1A490 /* MethodSwizzle */,
+				AF4DFAE925A6A5B600D3AF6D /* NSObject+runtime.h */,
+				AF4DFAEA25A6A5B600D3AF6D /* NSObject+runtime.m */,
 			);
 			path = Runtime;
 			sourceTree = "<group>";
@@ -1857,6 +1862,7 @@
 				AF7A6E7025710FAE00543A2B /* YMFadeFromViewController.m in Sources */,
 				AF234DE322F822CA00A1A490 /* SourceCode.m in Sources */,
 				AF2C8BD72193D66F00BA9492 /* CheckAnalysis.m in Sources */,
+				AF4DFAEB25A6A5B600D3AF6D /* NSObject+runtime.m in Sources */,
 				AF71B20722DDC50C008DE695 /* LearnCopyVC.swift in Sources */,
 				AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */,
 				AF188CD522D6DF4300DFE15D /* BatteryInfo.m in Sources */,
