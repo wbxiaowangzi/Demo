@@ -70,7 +70,6 @@ class CoreAnimationVC: UIViewController {
             CATransaction.commit()
         }
     }
-    
 }
 
 extension CoreAnimationVC: UITableViewDataSource {
@@ -81,7 +80,6 @@ extension CoreAnimationVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-
         let name = self.lazyCellNames()[indexPath.row]
         cell.textLabel?.text = name
         cell.textLabel?.adjustsFontSizeToFitWidth = true
@@ -172,9 +170,7 @@ extension CoreAnimationVC {
     
     private func implicitAnimation() {
         let r = CGFloat.random(in: 1...256)/256.0
-
         let g = CGFloat.random(in: 1...256)/256.0
-
         let b = CGFloat.random(in: 1...256)/256.0
         implicitLayer?.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1.0).cgColor
     }

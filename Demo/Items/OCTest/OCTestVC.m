@@ -25,7 +25,7 @@
 }
 
 ///以下代码的效果跟在主队列中调用 dispatch_sync 执行任务一样，会卡死主线程
-- (void)creatABarrierQueue{
+- (void)creatABarrierQueue {
     dispatch_queue_t serialQueue = dispatch_queue_create("serial_queue", DISPATCH_QUEUE_SERIAL);
     dispatch_async(serialQueue, ^{
         NSLog(@"deal task 1,thread = %@",[NSThread currentThread]);
@@ -39,7 +39,7 @@
 }
 
 
--(void)test2{
+-(void)test2 {
     NSLog(@"执行任务0 current thread : %@",[NSThread currentThread]);
 
     dispatch_queue_t queue1 = dispatch_queue_create("serial1", DISPATCH_QUEUE_SERIAL);
@@ -110,7 +110,7 @@
     NSLog(@"tihs another func %c",_cmd);
 }
 
-- (void)function:(NSString*)name age:(int)age{
+- (void)function:(NSString*)name age:(int)age {
     NSLog(@"this is a log");//ca cb cc cd ce cf ... cz 
 }
 

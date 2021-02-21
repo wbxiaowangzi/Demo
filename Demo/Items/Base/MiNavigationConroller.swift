@@ -11,6 +11,7 @@ import UIKit
 
 class ZKViewController: UIViewController {
     
+    
     override var shouldAutorotate: Bool {
         return false
     }
@@ -27,11 +28,30 @@ class ZKViewController: UIViewController {
         super.viewDidLoad()
         let back = UIBarButtonItem(title: nil, style: .done, target: nil, action: nil)
         self.navigationItem.backBarButtonItem = back
-        
+        if self.shouldAutorotate {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.enableRotation = true
+            appDelegate.supportedInterfaceOrientationMask = self.supportedInterfaceOrientations
+        }
     }    
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if self.shouldAutorotate {
+            let value = self.preferredInterfaceOrientationForPresentation.rawValue
+            UIDevice.current.setValue(value, forKey: "orientation")
+        }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if self.shouldAutorotate {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            appDelegate.enableRotation = false
+            appDelegate.supportedInterfaceOrientationMask = nil
+            let value = UIInterfaceOrientation.portrait.rawValue
+            UIDevice.current.setValue(value, forKey: "orientation")
+        }
     }
     
     func addImageGesture(imageView: UIImageView) -> Void {

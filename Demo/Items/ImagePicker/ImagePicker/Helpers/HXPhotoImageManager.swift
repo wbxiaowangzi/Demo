@@ -54,6 +54,8 @@ class HXPhotoImageManager {
                     handler(newStatus == .authorized)
                 }
             }
+        case .limited:
+            break
         }
     }
     

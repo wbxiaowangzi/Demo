@@ -11,7 +11,7 @@
 
 @implementation UILabel (swizzle)
 
-+ (void) initialize{
++ (void) initialize {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         id obj = [[self alloc]init];
@@ -19,7 +19,7 @@
     });
 }
 
-- (void) swizzleMethod{
+- (void) swizzleMethod {
     Method setText = class_getInstanceMethod([UILabel class], @selector(setText:));
     Method customSetText = class_getInstanceMethod([UILabel class], @selector(setTextHooked:));
     method_exchangeImplementations(customSetText, setText);
@@ -29,7 +29,7 @@
     method_exchangeImplementations(customSetAttributedText,setAttributedText);
 }
 
-- (void) setTextHooked:(NSString *)string{
+- (void) setTextHooked:(NSString *) string {
     if (string.length > 2){
         NSMutableString *str = [[NSMutableString alloc] initWithString:string];
         NSString *newStr = [str stringByReplacingOccurrencesOfString:@"太阳穴" withString:@"夫妻宫"];

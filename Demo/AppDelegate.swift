@@ -10,15 +10,22 @@ import UIKit
 //import NVMAspects
 import SDWebImage
 
+let umkey = "5fcdcefabed37e4506c428c7"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var enableRotation: Bool = false
+    
+    var supportedInterfaceOrientationMask: UIInterfaceOrientationMask?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         #if DEBUG
         Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle")?.load()
         #endif
+        UMConfigure.initWithAppkey(umkey, channel: "adhoc")
         hookSDWebImage()
         CatonMonitoring()
         return true
@@ -44,6 +51,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground: .
+    }
+    
+    func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
+        if enableRotation {
+            if let so = supportedInterfaceOrientationMask {
+                return so
+            }
+            return UIInterfaceOrientationMask.all
+        } else {
+            return .portrait
+        }
     }
 
 }

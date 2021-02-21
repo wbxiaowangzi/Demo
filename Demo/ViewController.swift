@@ -21,7 +21,7 @@ enum SDAnimalEnum: CaseIterable {
 }
 
 class ViewController: UIViewController {
-    
+        
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -58,6 +58,15 @@ class ViewController: UIViewController {
         print("login...")
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        UMTool.sdBeginLogPageView(UMPageName.home)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UMTool.sdEndLogPageView(UMPageName.home)
+    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -79,47 +88,8 @@ extension ViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let toValue = self.lazyDatas()[indexPath.row]
-        switch toValue {
-        case .CALayer:
-            self.navigationController?.gotoCALayerVC()
-        case .CoreAnimation:
-            self.navigationController?.gotoCoreAnimationVC()
-        case .MVVM:
-            self.navigationController?.gotoMVVMVC()
-        case .Transition:
-            self.navigationController?.gotoTransitionVC()
-        case .RotatyTable:
-            self.navigationController?.gotoRotaryTableVC()
-        case .GifBG:
-            self.navigationController?.gotoGifBGVC()
-        case .Metal:
-            self.navigationController?.gotoMetalVC()
-        case .SceneKit:
-            self.navigationController?.gotoSceneKitVC()
-        case .Radar:
-            self.navigationController?.gotoRadarVC()
-        case .OpenGL:
-            self.navigationController?.gotoOpenGLVC()
-        case .RXSwift:
-            self.navigationController?.gotoRXSwiftVC()
-        case .SQLite:
-            self.navigationController?.gotoSQLiteVC()
-        case .AvatarX:
-            self.navigationController?.gotoAvatarXVC()
-        case .SizeClass:
-            self.navigationController?.gotoSizeClassVC()
-        case .Luck:
-            self.navigationController?.gotoLuckVC()
-        case .JSPatchTestVC:
-            self.navigationController?.gotoJSPatchTestVC()
-        case .OCTestVC:
-            self.navigationController?.gotoOCTestVC()
-        case .SmoothTableVoew:
-            self.navigationController?.gotoSmoothVC()
-        case .ImagePicker:
-            self.navigationController?.gotoImagePickerVC()
-        case .caton:
-            self.navigationController?.gotoCatonVC()
+        if let vc = toValue.theVC {
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
@@ -127,7 +97,8 @@ extension ViewController: UITableViewDelegate {
 extension ViewController {
     
     func lazyDatas() -> [VCType] {
-        return [.SQLite,
+        return [.Thread,
+                .SQLite,
                 .RXSwift,
                 .OpenGL,
                 .Radar,
@@ -139,13 +110,15 @@ extension ViewController {
                 .SizeClass,
                 .CALayer,
                 .Luck,
-                .JSPatchTestVC,
-                .OCTestVC,
+                .JSPatchTest,
+                .OCTest,
                 .SmoothTableVoew,
                 .ImagePicker,
-                .caton]
+                .Caton,
+                .Buttons,
+                .Trans,
+                .Filter]
     }
-    
 }
 
 enum VCType: String {
@@ -164,9 +137,67 @@ enum VCType: String {
     case AvatarX
     case SizeClass
     case Luck
-    case JSPatchTestVC
-    case OCTestVC
+    case JSPatchTest
+    case OCTest
     case SmoothTableVoew
     case ImagePicker
-    case caton
+    case Caton
+    case Buttons
+    case Trans
+    case Filter
+    case Thread
+    
+    var theVC: UIViewController? {
+        switch self {
+        case .CALayer:
+            return CALayerVC()
+        case .CoreAnimation:
+            return CoreAnimationVC()
+        case .MVVM:
+            return MVVMVC()
+        case .Transition:
+            return TransitionVC()
+        case .RotatyTable:
+            return RotaryTableVC()
+        case .GifBG:
+            return GifBGVC()
+        case .Metal:
+            return MetalVC()
+        case .SceneKit:
+            return SceneKitVC()
+        case .Radar:
+            return RadarVC()
+        case .OpenGL:
+            return OpenGLVC()
+        case .RXSwift:
+            return RXSwiftVC()
+        case .SQLite:
+            return SQLiteVC()
+        case .AvatarX:
+            return BaseVC()
+        case .SizeClass:
+            return SizeClassVC()
+        case .Luck:
+            return LuckVC()
+        case .JSPatchTest:
+            return JSPatchTestVC()
+        case .OCTest:
+            return OCTestVC()
+        case .SmoothTableVoew:
+            return SmoothTableView()
+        case .ImagePicker:
+            return ImagePickerVC()
+        case .Caton:
+            return CatonVC()
+        case .Buttons:
+            return ButtonsVC()
+        case .Trans:
+            return TransVC()
+        case .Filter:
+            return FilterVC()
+        case .Thread:
+            return ThreadVC()
+        }
+    }
 }
+

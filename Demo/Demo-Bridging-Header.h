@@ -13,3 +13,14 @@
 #import "OCTestVC.h"
 #import "MAspects.h"
 #import "SDCatonMonitor.h"
+#import "STSegmentView.h"
+#import "DWSegmentedControl.h"
+#import "YMFadeInAnimate.h"
+#import "YMSwipeFromViewController.h"
+#import "YMPopupFromViewController.h"
+#import "YMCircleFromViewController.h"
+#import "YMFadeFromViewController.h"
+#import "YMCardFromViewController.h"
+#import "YMOpenViewController.h"
+#import <UMCommon/UMCommon.h>
+#import <UMCommon/MobClick.h>
