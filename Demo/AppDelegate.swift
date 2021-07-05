@@ -9,6 +9,7 @@
 import UIKit
 //import NVMAspects
 import SDWebImage
+import Bugly
 
 let umkey = "5fcdcefabed37e4506c428c7"
 
@@ -22,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var supportedInterfaceOrientationMask: UIInterfaceOrientationMask?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        Bugly.start(withAppId: "8c83a06b1a")
+
         #if DEBUG
         Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle")?.load()
         #endif

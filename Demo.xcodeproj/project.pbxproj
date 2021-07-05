@@ -27,6 +27,8 @@
 		97C197692451CA2F00860C26 /* Transitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C197682451CA2F00860C26 /* Transitioning.swift */; };
 		AF09856E23225D6C002B003B /* LintCode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AF09856C23225D6B002B003B /* LintCode.cpp */; };
 		AF09857223226025002B003B /* CppBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = AF09857123226025002B003B /* CppBridge.mm */; };
+		AF10774E25BAF802007C79D2 /* TheCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF10774C25BAF802007C79D2 /* TheCell2.swift */; };
+		AF10774F25BAF802007C79D2 /* TheCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF10774D25BAF802007C79D2 /* TheCell2.xib */; };
 		AF109738219BCCCB003F148D /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AF109737219BCCCB003F148D /* libc++.tbd */; };
 		AF12F09F25345BCC0003CAE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9783B8E420CD12AF00E30FD7 /* Assets.xcassets */; };
 		AF1380D1223CAB1200AB2E0D /* LeetCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1380D0223CAB1200AB2E0D /* LeetCode.swift */; };
@@ -35,6 +37,41 @@
 		AF13A22F2238B341008B91DD /* SDNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF13A22E2238B341008B91DD /* SDNetwork.swift */; };
 		AF14A2CD21883E3C0081487A /* RadarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14A2CC21883E3B0081487A /* RadarVC.swift */; };
 		AF14A2CF21883E5A0081487A /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF14A2CE21883E5A0081487A /* RadarView.swift */; };
+		AF16C09C2692BFDE00141A23 /* String+HYEncryption.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0722692BFDE00141A23 /* String+HYEncryption.swift */; };
+		AF16C09D2692BFDE00141A23 /* HYResponseExpandButtton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0732692BFDE00141A23 /* HYResponseExpandButtton.swift */; };
+		AF16C09E2692BFDE00141A23 /* HYDefaultVideoCacheLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0752692BFDE00141A23 /* HYDefaultVideoCacheLocation.swift */; };
+		AF16C09F2692BFDE00141A23 /* HYMediaCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0762692BFDE00141A23 /* HYMediaCacheManager.swift */; };
+		AF16C0A02692BFDE00141A23 /* HYMediaCryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0772692BFDE00141A23 /* HYMediaCryptor.swift */; };
+		AF16C0A12692BFDE00141A23 /* HYStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0782692BFDE00141A23 /* HYStorage.swift */; };
+		AF16C0A22692BFDE00141A23 /* HYMediaCacher.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0792692BFDE00141A23 /* HYMediaCacher.swift */; };
+		AF16C0A32692BFDE00141A23 /* HYMediaCacheDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C07B2692BFDE00141A23 /* HYMediaCacheDelegate.swift */; };
+		AF16C0A42692BFDE00141A23 /* HYMediaCacherDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C07C2692BFDE00141A23 /* HYMediaCacherDelegate.swift */; };
+		AF16C0A52692BFDE00141A23 /* HYMediaCacheLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C07D2692BFDE00141A23 /* HYMediaCacheLocation.swift */; };
+		AF16C0A62692BFDE00141A23 /* HYVideoCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C07E2692BFDE00141A23 /* HYVideoCacheManager.swift */; };
+		AF16C0A72692BFDE00141A23 /* HYPlayer.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AF16C0802692BFDE00141A23 /* HYPlayer.bundle */; };
+		AF16C0A82692BFDE00141A23 /* HYPlayerCommonConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0822692BFDE00141A23 /* HYPlayerCommonConfig.swift */; };
+		AF16C0A92692BFDE00141A23 /* HYPlayerConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0832692BFDE00141A23 /* HYPlayerConstant.swift */; };
+		AF16C0AA2692BFDE00141A23 /* HYAudiovisualCommonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0842692BFDE00141A23 /* HYAudiovisualCommonModel.swift */; };
+		AF16C0AB2692BFDE00141A23 /* HYCacheStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0862692BFDE00141A23 /* HYCacheStorage.swift */; };
+		AF16C0AC2692BFDE00141A23 /* HYFileDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0872692BFDE00141A23 /* HYFileDirectory.swift */; };
+		AF16C0AD2692BFDE00141A23 /* HYPlayerCommonViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0892692BFDE00141A23 /* HYPlayerCommonViewDelegate.swift */; };
+		AF16C0AE2692BFDE00141A23 /* HYPlayerCommonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C08B2692BFDE00141A23 /* HYPlayerCommonView.swift */; };
+		AF16C0AF2692BFDE00141A23 /* HYAudiovisualCommonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C08C2692BFDE00141A23 /* HYAudiovisualCommonManager.swift */; };
+		AF16C0B02692BFDE00141A23 /* HYMoreFunctionSpeedCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C08F2692BFDE00141A23 /* HYMoreFunctionSpeedCollectionViewCell.swift */; };
+		AF16C0B12692BFDE00141A23 /* HYSpeedyRemindView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0902692BFDE00141A23 /* HYSpeedyRemindView.swift */; };
+		AF16C0B22692BFDE00141A23 /* HYEndPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0912692BFDE00141A23 /* HYEndPlayView.swift */; };
+		AF16C0B32692BFDE00141A23 /* HYWithoutNetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0922692BFDE00141A23 /* HYWithoutNetView.swift */; };
+		AF16C0B42692BFDE00141A23 /* HYFullScreenMaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0932692BFDE00141A23 /* HYFullScreenMaskView.swift */; };
+		AF16C0B52692BFDE00141A23 /* HYControlPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0942692BFDE00141A23 /* HYControlPanelView.swift */; };
+		AF16C0B62692BFDE00141A23 /* HYAccelerationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0952692BFDE00141A23 /* HYAccelerationView.swift */; };
+		AF16C0B72692BFDE00141A23 /* HYAudioPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0962692BFDE00141A23 /* HYAudioPlayView.swift */; };
+		AF16C0B82692BFDE00141A23 /* HYAudiovisualSpeedyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0972692BFDE00141A23 /* HYAudiovisualSpeedyManager.swift */; };
+		AF16C0B92692BFDE00141A23 /* HYPlayerCacheListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0992692BFDE00141A23 /* HYPlayerCacheListCell.swift */; };
+		AF16C0BA2692BFDE00141A23 /* HYPlayerCacheListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C09A2692BFDE00141A23 /* HYPlayerCacheListView.swift */; };
+		AF16C0BB2692BFDE00141A23 /* HYCacheProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C09B2692BFDE00141A23 /* HYCacheProgressView.swift */; };
+		AF16C0BD2692C01400141A23 /* AVPlayerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF16C0BC2692C01400141A23 /* AVPlayerVC.swift */; };
+		AF16C0C12692C04700141A23 /* testMovie.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AF16C0BF2692C04700141A23 /* testMovie.mp4 */; };
+		AF16C0C22692C04700141A23 /* testSong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AF16C0C02692C04700141A23 /* testSong.mp3 */; };
 		AF188CD522D6DF4300DFE15D /* BatteryInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AF188CD422D6DF4300DFE15D /* BatteryInfo.m */; };
 		AF1B05A421BA2F6200A44FE4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B05A321BA2F6100A44FE4 /* UIView+Extension.swift */; };
 		AF1B77C7221D6633008D9AF6 /* OverTimeHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B77C6221D6633008D9AF6 /* OverTimeHandler.swift */; };
@@ -44,6 +81,7 @@
 		AF26EACA2317714F00D61AF6 /* OCTestVC.m in Sources */ = {isa = PBXBuildFile; fileRef = AF26EAC92317714F00D61AF6 /* OCTestVC.m */; };
 		AF26EACC2317724C00D61AF6 /* VCMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF26EACB2317724C00D61AF6 /* VCMap.swift */; };
 		AF26EAD0231774A700D61AF6 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF26EACF231774A700D61AF6 /* Navigator.swift */; };
+		AF27A3B225B1B660000E6FB5 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27A3B125B1B660000E6FB5 /* extension.swift */; };
 		AF27F228218BFF8A001FDFC2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF27F227218BFF8A001FDFC2 /* OpenGLES.framework */; };
 		AF27F22A218BFF93001FDFC2 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF27F229218BFF92001FDFC2 /* GLKit.framework */; };
 		AF27F22E218C0A80001FDFC2 /* OpenGLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27F22C218C0A80001FDFC2 /* OpenGLVC.swift */; };
@@ -113,6 +151,9 @@
 		AF4EEB932302C4D2001F298F /* MetalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF4EEB912302C4D2001F298F /* MetalViewController.xib */; };
 		AF53E4C9238D3CE600E89EB9 /* UIControlVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF53E4C7238D3CE600E89EB9 /* UIControlVC.swift */; };
 		AF53E4CA238D3CE600E89EB9 /* UIControlVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF53E4C8238D3CE600E89EB9 /* UIControlVC.xib */; };
+		AF58D5CB25BAEF6000C06086 /* TableViewTestVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58D5CA25BAEF6000C06086 /* TableViewTestVC.swift */; };
+		AF58D5CE25BAEFD000C06086 /* TheCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF58D5CC25BAEFD000C06086 /* TheCell.swift */; };
+		AF58D5CF25BAEFD000C06086 /* TheCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF58D5CD25BAEFD000C06086 /* TheCell.xib */; };
 		AF60BAB42268240B00AE592D /* Debouncer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BAB32268240B00AE592D /* Debouncer.swift */; };
 		AF60BAB62268269000AE592D /* Throttle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF60BAB52268269000AE592D /* Throttle.swift */; };
 		AF63E97225875DFA006019F1 /* ThreadVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF63E97025875DFA006019F1 /* ThreadVC.xib */; };
@@ -179,7 +220,14 @@
 		AFA758F5224B706C008440F0 /* SomeControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA758F4224B706C008440F0 /* SomeControls.swift */; };
 		AFB4707B2201A89B002B27C7 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4707A2201A89B002B27C7 /* Annotation.swift */; };
 		AFB67CBB235EEB220066D49E /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB67CBA235EEB220066D49E /* SwiftUIView.swift */; };
+		AFBD648525F0A1FF00FD4777 /* Monitor.m in Sources */ = {isa = PBXBuildFile; fileRef = AFBD648425F0A1FF00FD4777 /* Monitor.m */; };
+		AFBD648825F0A7F600FD4777 /* CrashReporter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFBD648725F0A7F600FD4777 /* CrashReporter.framework */; };
+		AFBDD73325C26F49004A57D5 /* Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBDD73225C26F49004A57D5 /* Protocol.swift */; };
+		AFE41D0526298C49001E9C61 /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFE41D0426298C49001E9C61 /* QuickLook.framework */; };
 		AFE80052248A338B00859B39 /* TheViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE80051248A338B00859B39 /* TheViewModel.swift */; };
+		AFEA28B12628236600E69361 /* PPVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA28AF2628236600E69361 /* PPVC.swift */; };
+		AFEA28B22628236600E69361 /* PPVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFEA28B02628236600E69361 /* PPVC.xib */; };
+		AFEA28B4262824F800E69361 /* 皮肤报告.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AFEA28B3262824F800E69361 /* 皮肤报告.pdf */; };
 		AFF0B87B2445767900FCACA8 /* Solution.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF0B87A2445767900FCACA8 /* Solution.swift */; };
 		AFF7A59821956FD6003A4CA5 /* SQLiteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF7A59721956FD6003A4CA5 /* SQLiteVC.swift */; };
 		AFF7A59A21957025003A4CA5 /* SQLDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF7A59921957025003A4CA5 /* SQLDB.swift */; };
@@ -269,6 +317,8 @@
 		AF09856D23225D6B002B003B /* LintCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LintCode.h; sourceTree = "<group>"; };
 		AF09857023226025002B003B /* CppBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CppBridge.h; sourceTree = "<group>"; };
 		AF09857123226025002B003B /* CppBridge.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CppBridge.mm; sourceTree = "<group>"; };
+		AF10774C25BAF802007C79D2 /* TheCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheCell2.swift; sourceTree = "<group>"; };
+		AF10774D25BAF802007C79D2 /* TheCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TheCell2.xib; sourceTree = "<group>"; };
 		AF109737219BCCCB003F148D /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		AF1380D0223CAB1200AB2E0D /* LeetCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeetCode.swift; sourceTree = "<group>"; };
 		AF13A22422379214008B91DD /* LuckVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckVC.swift; sourceTree = "<group>"; };
@@ -276,6 +326,41 @@
 		AF13A22E2238B341008B91DD /* SDNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDNetwork.swift; sourceTree = "<group>"; };
 		AF14A2CC21883E3B0081487A /* RadarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarVC.swift; sourceTree = "<group>"; };
 		AF14A2CE21883E5A0081487A /* RadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarView.swift; sourceTree = "<group>"; };
+		AF16C0722692BFDE00141A23 /* String+HYEncryption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+HYEncryption.swift"; sourceTree = "<group>"; };
+		AF16C0732692BFDE00141A23 /* HYResponseExpandButtton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYResponseExpandButtton.swift; sourceTree = "<group>"; };
+		AF16C0752692BFDE00141A23 /* HYDefaultVideoCacheLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYDefaultVideoCacheLocation.swift; sourceTree = "<group>"; };
+		AF16C0762692BFDE00141A23 /* HYMediaCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYMediaCacheManager.swift; sourceTree = "<group>"; };
+		AF16C0772692BFDE00141A23 /* HYMediaCryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYMediaCryptor.swift; sourceTree = "<group>"; };
+		AF16C0782692BFDE00141A23 /* HYStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYStorage.swift; sourceTree = "<group>"; };
+		AF16C0792692BFDE00141A23 /* HYMediaCacher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYMediaCacher.swift; sourceTree = "<group>"; };
+		AF16C07B2692BFDE00141A23 /* HYMediaCacheDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYMediaCacheDelegate.swift; sourceTree = "<group>"; };
+		AF16C07C2692BFDE00141A23 /* HYMediaCacherDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYMediaCacherDelegate.swift; sourceTree = "<group>"; };
+		AF16C07D2692BFDE00141A23 /* HYMediaCacheLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYMediaCacheLocation.swift; sourceTree = "<group>"; };
+		AF16C07E2692BFDE00141A23 /* HYVideoCacheManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYVideoCacheManager.swift; sourceTree = "<group>"; };
+		AF16C0802692BFDE00141A23 /* HYPlayer.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HYPlayer.bundle; sourceTree = "<group>"; };
+		AF16C0822692BFDE00141A23 /* HYPlayerCommonConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYPlayerCommonConfig.swift; sourceTree = "<group>"; };
+		AF16C0832692BFDE00141A23 /* HYPlayerConstant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYPlayerConstant.swift; sourceTree = "<group>"; };
+		AF16C0842692BFDE00141A23 /* HYAudiovisualCommonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYAudiovisualCommonModel.swift; sourceTree = "<group>"; };
+		AF16C0862692BFDE00141A23 /* HYCacheStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYCacheStorage.swift; sourceTree = "<group>"; };
+		AF16C0872692BFDE00141A23 /* HYFileDirectory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYFileDirectory.swift; sourceTree = "<group>"; };
+		AF16C0892692BFDE00141A23 /* HYPlayerCommonViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYPlayerCommonViewDelegate.swift; sourceTree = "<group>"; };
+		AF16C08B2692BFDE00141A23 /* HYPlayerCommonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYPlayerCommonView.swift; sourceTree = "<group>"; };
+		AF16C08C2692BFDE00141A23 /* HYAudiovisualCommonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYAudiovisualCommonManager.swift; sourceTree = "<group>"; };
+		AF16C08F2692BFDE00141A23 /* HYMoreFunctionSpeedCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYMoreFunctionSpeedCollectionViewCell.swift; sourceTree = "<group>"; };
+		AF16C0902692BFDE00141A23 /* HYSpeedyRemindView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYSpeedyRemindView.swift; sourceTree = "<group>"; };
+		AF16C0912692BFDE00141A23 /* HYEndPlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYEndPlayView.swift; sourceTree = "<group>"; };
+		AF16C0922692BFDE00141A23 /* HYWithoutNetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYWithoutNetView.swift; sourceTree = "<group>"; };
+		AF16C0932692BFDE00141A23 /* HYFullScreenMaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYFullScreenMaskView.swift; sourceTree = "<group>"; };
+		AF16C0942692BFDE00141A23 /* HYControlPanelView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYControlPanelView.swift; sourceTree = "<group>"; };
+		AF16C0952692BFDE00141A23 /* HYAccelerationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYAccelerationView.swift; sourceTree = "<group>"; };
+		AF16C0962692BFDE00141A23 /* HYAudioPlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYAudioPlayView.swift; sourceTree = "<group>"; };
+		AF16C0972692BFDE00141A23 /* HYAudiovisualSpeedyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYAudiovisualSpeedyManager.swift; sourceTree = "<group>"; };
+		AF16C0992692BFDE00141A23 /* HYPlayerCacheListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYPlayerCacheListCell.swift; sourceTree = "<group>"; };
+		AF16C09A2692BFDE00141A23 /* HYPlayerCacheListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYPlayerCacheListView.swift; sourceTree = "<group>"; };
+		AF16C09B2692BFDE00141A23 /* HYCacheProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HYCacheProgressView.swift; sourceTree = "<group>"; };
+		AF16C0BC2692C01400141A23 /* AVPlayerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerVC.swift; sourceTree = "<group>"; };
+		AF16C0BF2692C04700141A23 /* testMovie.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = testMovie.mp4; sourceTree = "<group>"; };
+		AF16C0C02692C04700141A23 /* testSong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = testSong.mp3; sourceTree = "<group>"; };
 		AF188CD322D6DF4300DFE15D /* BatteryInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BatteryInfo.h; sourceTree = "<group>"; };
 		AF188CD422D6DF4300DFE15D /* BatteryInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BatteryInfo.m; sourceTree = "<group>"; };
 		AF1B05A321BA2F6100A44FE4 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -288,6 +373,7 @@
 		AF26EAC92317714F00D61AF6 /* OCTestVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OCTestVC.m; sourceTree = "<group>"; };
 		AF26EACB2317724C00D61AF6 /* VCMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCMap.swift; sourceTree = "<group>"; };
 		AF26EACF231774A700D61AF6 /* Navigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigator.swift; sourceTree = "<group>"; };
+		AF27A3B125B1B660000E6FB5 /* extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extension.swift; sourceTree = "<group>"; };
 		AF27F220218BFE99001FDFC2 /* OpenGL */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = OpenGL; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF27F227218BFF8A001FDFC2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		AF27F229218BFF92001FDFC2 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -375,6 +461,9 @@
 		AF4EEB912302C4D2001F298F /* MetalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MetalViewController.xib; sourceTree = "<group>"; };
 		AF53E4C7238D3CE600E89EB9 /* UIControlVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIControlVC.swift; sourceTree = "<group>"; };
 		AF53E4C8238D3CE600E89EB9 /* UIControlVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UIControlVC.xib; sourceTree = "<group>"; };
+		AF58D5CA25BAEF6000C06086 /* TableViewTestVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTestVC.swift; sourceTree = "<group>"; };
+		AF58D5CC25BAEFD000C06086 /* TheCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheCell.swift; sourceTree = "<group>"; };
+		AF58D5CD25BAEFD000C06086 /* TheCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TheCell.xib; sourceTree = "<group>"; };
 		AF60BAB32268240B00AE592D /* Debouncer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Debouncer.swift; sourceTree = "<group>"; };
 		AF60BAB52268269000AE592D /* Throttle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Throttle.swift; sourceTree = "<group>"; };
 		AF63E97025875DFA006019F1 /* ThreadVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThreadVC.xib; sourceTree = "<group>"; };
@@ -467,8 +556,16 @@
 		AFA758F4224B706C008440F0 /* SomeControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SomeControls.swift; sourceTree = "<group>"; };
 		AFB4707A2201A89B002B27C7 /* Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		AFB67CBA235EEB220066D49E /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		AFBD648325F0A1FF00FD4777 /* Monitor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Monitor.h; sourceTree = "<group>"; };
+		AFBD648425F0A1FF00FD4777 /* Monitor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Monitor.m; sourceTree = "<group>"; };
+		AFBD648725F0A7F600FD4777 /* CrashReporter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = CrashReporter.framework; sourceTree = "<group>"; };
+		AFBDD73225C26F49004A57D5 /* Protocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocol.swift; sourceTree = "<group>"; };
+		AFE41D0426298C49001E9C61 /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 		AFE569242304F75C00C72940 /* MClassMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MClassMap.swift; sourceTree = "<group>"; };
 		AFE80051248A338B00859B39 /* TheViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheViewModel.swift; sourceTree = "<group>"; };
+		AFEA28AF2628236600E69361 /* PPVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PPVC.swift; sourceTree = "<group>"; };
+		AFEA28B02628236600E69361 /* PPVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PPVC.xib; sourceTree = "<group>"; };
+		AFEA28B3262824F800E69361 /* 皮肤报告.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "皮肤报告.pdf"; sourceTree = "<group>"; };
 		AFF0B87A2445767900FCACA8 /* Solution.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution.swift; sourceTree = "<group>"; };
 		AFF7A59721956FD6003A4CA5 /* SQLiteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLiteVC.swift; sourceTree = "<group>"; };
 		AFF7A59921957025003A4CA5 /* SQLDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLDB.swift; sourceTree = "<group>"; };
@@ -489,6 +586,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFE41D0526298C49001E9C61 /* QuickLook.framework in Frameworks */,
 				AF109738219BCCCB003F148D /* libc++.tbd in Frameworks */,
 				AFF7A59D2195955D003A4CA5 /* libsqlite3.0.tbd in Frameworks */,
 				AF27F22A218BFF93001FDFC2 /* GLKit.framework in Frameworks */,
@@ -496,6 +594,7 @@
 				AF30451E218AF70000DA36D2 /* AVFoundation.framework in Frameworks */,
 				AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */,
 				C1E87AD0D3F56B2E82A5B15D /* Pods_Demo.framework in Frameworks */,
+				AFBD648825F0A7F600FD4777 /* CrashReporter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -756,6 +855,10 @@
 		AF13A223223790CA008B91DD /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				AFEA28AE2628233800E69361 /* PrinterPreviewer */,
+				AFBDD73125C26F38004A57D5 /* Protocol */,
+				AF58D5C925BAEF3200C06086 /* UITableView */,
+				AF27A3AF25B1B619000E6FB5 /* KeyWord */,
 				AF63E96B25875C9C006019F1 /* Thread */,
 				AFFB4723257E07CA00D31718 /* Statistics */,
 				AF7CB1A5257793AF00280908 /* Filter */,
@@ -821,6 +924,141 @@
 				AF14A2CE21883E5A0081487A /* RadarView.swift */,
 			);
 			path = RadarView;
+			sourceTree = "<group>";
+		};
+		AF16C0702692BFDE00141A23 /* HYPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				AF16C0712692BFDE00141A23 /* Extension */,
+				AF16C0742692BFDE00141A23 /* Cache */,
+				AF16C07F2692BFDE00141A23 /* Resources */,
+				AF16C0812692BFDE00141A23 /* Models */,
+				AF16C0852692BFDE00141A23 /* FileManager */,
+				AF16C0882692BFDE00141A23 /* Protocols */,
+				AF16C08A2692BFDE00141A23 /* Player */,
+			);
+			path = HYPlayer;
+			sourceTree = "<group>";
+		};
+		AF16C0712692BFDE00141A23 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AF16C0722692BFDE00141A23 /* String+HYEncryption.swift */,
+				AF16C0732692BFDE00141A23 /* HYResponseExpandButtton.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		AF16C0742692BFDE00141A23 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				AF16C0752692BFDE00141A23 /* HYDefaultVideoCacheLocation.swift */,
+				AF16C0762692BFDE00141A23 /* HYMediaCacheManager.swift */,
+				AF16C0772692BFDE00141A23 /* HYMediaCryptor.swift */,
+				AF16C0782692BFDE00141A23 /* HYStorage.swift */,
+				AF16C0792692BFDE00141A23 /* HYMediaCacher.swift */,
+				AF16C07A2692BFDE00141A23 /* Protocols */,
+				AF16C07E2692BFDE00141A23 /* HYVideoCacheManager.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		AF16C07A2692BFDE00141A23 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AF16C07B2692BFDE00141A23 /* HYMediaCacheDelegate.swift */,
+				AF16C07C2692BFDE00141A23 /* HYMediaCacherDelegate.swift */,
+				AF16C07D2692BFDE00141A23 /* HYMediaCacheLocation.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AF16C07F2692BFDE00141A23 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AF16C0802692BFDE00141A23 /* HYPlayer.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AF16C0812692BFDE00141A23 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AF16C0822692BFDE00141A23 /* HYPlayerCommonConfig.swift */,
+				AF16C0832692BFDE00141A23 /* HYPlayerConstant.swift */,
+				AF16C0842692BFDE00141A23 /* HYAudiovisualCommonModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AF16C0852692BFDE00141A23 /* FileManager */ = {
+			isa = PBXGroup;
+			children = (
+				AF16C0862692BFDE00141A23 /* HYCacheStorage.swift */,
+				AF16C0872692BFDE00141A23 /* HYFileDirectory.swift */,
+			);
+			path = FileManager;
+			sourceTree = "<group>";
+		};
+		AF16C0882692BFDE00141A23 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				AF16C0892692BFDE00141A23 /* HYPlayerCommonViewDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		AF16C08A2692BFDE00141A23 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				AF16C08B2692BFDE00141A23 /* HYPlayerCommonView.swift */,
+				AF16C08C2692BFDE00141A23 /* HYAudiovisualCommonManager.swift */,
+				AF16C08D2692BFDE00141A23 /* ChildControlViews */,
+				AF16C0972692BFDE00141A23 /* HYAudiovisualSpeedyManager.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		AF16C08D2692BFDE00141A23 /* ChildControlViews */ = {
+			isa = PBXGroup;
+			children = (
+				AF16C08E2692BFDE00141A23 /* Cells */,
+				AF16C0902692BFDE00141A23 /* HYSpeedyRemindView.swift */,
+				AF16C0912692BFDE00141A23 /* HYEndPlayView.swift */,
+				AF16C0922692BFDE00141A23 /* HYWithoutNetView.swift */,
+				AF16C0932692BFDE00141A23 /* HYFullScreenMaskView.swift */,
+				AF16C0942692BFDE00141A23 /* HYControlPanelView.swift */,
+				AF16C0952692BFDE00141A23 /* HYAccelerationView.swift */,
+				AF16C0962692BFDE00141A23 /* HYAudioPlayView.swift */,
+			);
+			path = ChildControlViews;
+			sourceTree = "<group>";
+		};
+		AF16C08E2692BFDE00141A23 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AF16C08F2692BFDE00141A23 /* HYMoreFunctionSpeedCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		AF16C0982692BFDE00141A23 /* HYProactiveCaching */ = {
+			isa = PBXGroup;
+			children = (
+				AF16C0992692BFDE00141A23 /* HYPlayerCacheListCell.swift */,
+				AF16C09A2692BFDE00141A23 /* HYPlayerCacheListView.swift */,
+				AF16C09B2692BFDE00141A23 /* HYCacheProgressView.swift */,
+			);
+			path = HYProactiveCaching;
+			sourceTree = "<group>";
+		};
+		AF16C0BE2692C04700141A23 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AF16C0BF2692C04700141A23 /* testMovie.mp4 */,
+				AF16C0C02692C04700141A23 /* testSong.mp3 */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		AF1B77C5221D660B008D9AF6 /* OverTimeHandler */ = {
@@ -896,6 +1134,22 @@
 				AF26EACF231774A700D61AF6 /* Navigator.swift */,
 			);
 			path = Navigator;
+			sourceTree = "<group>";
+		};
+		AF27A3AF25B1B619000E6FB5 /* KeyWord */ = {
+			isa = PBXGroup;
+			children = (
+				AF27A3B025B1B622000E6FB5 /* extension */,
+			);
+			path = KeyWord;
+			sourceTree = "<group>";
+		};
+		AF27A3B025B1B622000E6FB5 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				AF27A3B125B1B660000E6FB5 /* extension.swift */,
+			);
+			path = extension;
 			sourceTree = "<group>";
 		};
 		AF27F22B218C0A5E001FDFC2 /* OpenGL */ = {
@@ -1078,6 +1332,7 @@
 		AF3DA1042480DF1700A005CB /* Instrument */ = {
 			isa = PBXGroup;
 			children = (
+				AFBD648225F0A1BC00FD4777 /* RunLoopMonitor */,
 				AF4DFA2225A4255A00D3AF6D /* Util */,
 				AF859F082500B450008CB548 /* StreamReader */,
 				AF3DA12024850A8700A005CB /* CatonMonitor */,
@@ -1150,6 +1405,18 @@
 				AF53E4C8238D3CE600E89EB9 /* UIControlVC.xib */,
 			);
 			path = UIControl;
+			sourceTree = "<group>";
+		};
+		AF58D5C925BAEF3200C06086 /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				AF10774C25BAF802007C79D2 /* TheCell2.swift */,
+				AF10774D25BAF802007C79D2 /* TheCell2.xib */,
+				AF58D5CA25BAEF6000C06086 /* TableViewTestVC.swift */,
+				AF58D5CC25BAEFD000C06086 /* TheCell.swift */,
+				AF58D5CD25BAEFD000C06086 /* TheCell.xib */,
+			);
+			path = UITableView;
 			sourceTree = "<group>";
 		};
 		AF5D3A53219D75ED00E64898 /* C++ */ = {
@@ -1341,6 +1608,7 @@
 		AF7FA3E32181AACA001BB669 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFE41D0426298C49001E9C61 /* QuickLook.framework */,
 				9757718522FFC33400B52C9B /* XCTest.framework */,
 				AF109737219BCCCB003F148D /* libc++.tbd */,
 				AFF7A59B219574A1003A4CA5 /* libsqlite3.0.tbd */,
@@ -1408,8 +1676,30 @@
 		AFBB2C95226ACD08004AB229 /* AVPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				AF16C0BE2692C04700141A23 /* Source */,
+				AF16C0BC2692C01400141A23 /* AVPlayerVC.swift */,
+				AF16C0702692BFDE00141A23 /* HYPlayer */,
+				AF16C0982692BFDE00141A23 /* HYProactiveCaching */,
 			);
 			path = AVPlayer;
+			sourceTree = "<group>";
+		};
+		AFBD648225F0A1BC00FD4777 /* RunLoopMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				AFBD648725F0A7F600FD4777 /* CrashReporter.framework */,
+				AFBD648325F0A1FF00FD4777 /* Monitor.h */,
+				AFBD648425F0A1FF00FD4777 /* Monitor.m */,
+			);
+			path = RunLoopMonitor;
+			sourceTree = "<group>";
+		};
+		AFBDD73125C26F38004A57D5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AFBDD73225C26F49004A57D5 /* Protocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		AFE569232304F74A00C72940 /* ClassMap */ = {
@@ -1418,6 +1708,16 @@
 				AFE569242304F75C00C72940 /* MClassMap.swift */,
 			);
 			path = ClassMap;
+			sourceTree = "<group>";
+		};
+		AFEA28AE2628233800E69361 /* PrinterPreviewer */ = {
+			isa = PBXGroup;
+			children = (
+				AFEA28B3262824F800E69361 /* 皮肤报告.pdf */,
+				AFEA28AF2628236600E69361 /* PPVC.swift */,
+				AFEA28B02628236600E69361 /* PPVC.xib */,
+			);
+			path = PrinterPreviewer;
 			sourceTree = "<group>";
 		};
 		AFFB4723257E07CA00D31718 /* Statistics */ = {
@@ -1644,20 +1944,26 @@
 				AF7A6E752571102100543A2B /* TransVC.xib in Resources */,
 				9783B8E820CD12AF00E30FD7 /* LaunchScreen.storyboard in Resources */,
 				AF3DA12C2485144400A005CB /* CatonVC.xib in Resources */,
+				AF10774F25BAF802007C79D2 /* TheCell2.xib in Resources */,
 				9772816F20D0AC88004E8E4F /* TransitionVC.xib in Resources */,
 				9783B8F820CD1D6800E30FD7 /* CoreAnimationVC.xib in Resources */,
 				AF7CB1A92577942C00280908 /* FilterVC.xib in Resources */,
 				AF7B8E7024516E24001055A3 /* SmoothTableView.xib in Resources */,
 				AF63E97225875DFA006019F1 /* ThreadVC.xib in Resources */,
 				AF7B8E7424516E63001055A3 /* SmoothTableViewCell.xib in Resources */,
+				AF16C0A72692BFDE00141A23 /* HYPlayer.bundle in Resources */,
 				AF71B20822DDC50C008DE695 /* LearnCopyVC.xib in Resources */,
 				AF3DA0EE247FB6B700A005CB /* HXImagePickerController.bundle in Resources */,
 				9783B90420CD341E00E30FD7 /* MVVMVC.xib in Resources */,
+				AF58D5CF25BAEFD000C06086 /* TheCell.xib in Resources */,
 				AFFEC179230E3602001FAC72 /* JSPatch.js in Resources */,
+				AFEA28B22628236600E69361 /* PPVC.xib in Resources */,
 				AF27F22F218C0A80001FDFC2 /* OpenGLVC.xib in Resources */,
 				AF53E4CA238D3CE600E89EB9 /* UIControlVC.xib in Resources */,
+				AF16C0C22692C04700141A23 /* testSong.mp3 in Resources */,
 				AF92CF762553C1FE00DEF7A0 /* ButtonsVC.xib in Resources */,
 				AFFEC184230E3902001FAC72 /* JSPatchTestVC.xib in Resources */,
+				AF16C0C12692C04700141A23 /* testMovie.mp4 in Resources */,
 				AFFEC189230E401C001FAC72 /* jsscript.js in Resources */,
 				AF30451C218AF66600DA36D2 /* lol.mov in Resources */,
 				AF2BED7F21928EC4007FB28E /* RXSwiftVC.xib in Resources */,
@@ -1665,6 +1971,7 @@
 				AF7B8E7924518D0C001055A3 /* SmoothTableDetail.xib in Resources */,
 				9783B8E320CD12AD00E30FD7 /* Main.storyboard in Resources */,
 				AF3DA0F2247FB6E900A005CB /* ImagePickerVC.xib in Resources */,
+				AFEA28B4262824F800E69361 /* 皮肤报告.pdf in Resources */,
 				AF13A22722379214008B91DD /* LuckVC.xib in Resources */,
 				AF12F09F25345BCC0003CAE6 /* Assets.xcassets in Resources */,
 				AF4EEB932302C4D2001F298F /* MetalViewController.xib in Resources */,
@@ -1754,6 +2061,7 @@
 			files = (
 				AF3832D522E00D8D00E1580F /* Observable+ObjectMapper.swift in Sources */,
 				AF4119A12375617F008AF601 /* CAGradientLayerVC.swift in Sources */,
+				AF16C0B12692BFDE00141A23 /* HYSpeedyRemindView.swift in Sources */,
 				AF2C8BD32193D66F00BA9492 /* AppDebugger.m in Sources */,
 				AFA648BA22CF3F5100B02CD0 /* UITableView+Extension.swift in Sources */,
 				AF3DA0E8247FB6B700A005CB /* HXImageNavigationView.swift in Sources */,
@@ -1772,7 +2080,9 @@
 				AF3DA0E3247FB6B700A005CB /* HXImageCell.swift in Sources */,
 				9783B90320CD341E00E30FD7 /* MVVMVC.swift in Sources */,
 				AF7A6E6B25710FAE00543A2B /* YMSwipeFromViewController.m in Sources */,
+				AF16C0A82692BFDE00141A23 /* HYPlayerCommonConfig.swift in Sources */,
 				9783B8E020CD12AD00E30FD7 /* ViewController.swift in Sources */,
+				AF16C0B32692BFDE00141A23 /* HYWithoutNetView.swift in Sources */,
 				9744CE6120FF155A00EBD3DE /* BaseVC.swift in Sources */,
 				AF3DA0DC247FB6B700A005CB /* HXAlbumModel.swift in Sources */,
 				97C197692451CA2F00860C26 /* Transitioning.swift in Sources */,
@@ -1788,30 +2098,47 @@
 				AF7B8E6F24516E24001055A3 /* SmoothTableView.swift in Sources */,
 				AFF7A59A21957025003A4CA5 /* SQLDB.swift in Sources */,
 				AF53E4C9238D3CE600E89EB9 /* UIControlVC.swift in Sources */,
+				AFEA28B12628236600E69361 /* PPVC.swift in Sources */,
 				AF3DA0E4247FB6B700A005CB /* HXPreviewThumbCell.swift in Sources */,
+				AF16C0A22692BFDE00141A23 /* HYMediaCacher.swift in Sources */,
+				AF16C0AF2692BFDE00141A23 /* HYAudiovisualCommonManager.swift in Sources */,
 				AF9041D1256E18A10005A808 /* STSegmentView.m in Sources */,
 				AF2BED7E21928EC4007FB28E /* RXSwiftVC.swift in Sources */,
+				AF16C0A42692BFDE00141A23 /* HYMediaCacherDelegate.swift in Sources */,
 				AF26EAD0231774A700D61AF6 /* Navigator.swift in Sources */,
+				AF16C0BA2692BFDE00141A23 /* HYPlayerCacheListView.swift in Sources */,
 				AF7A6D7825709F8300543A2B /* MISegment.swift in Sources */,
+				AF16C0A92692BFDE00141A23 /* HYPlayerConstant.swift in Sources */,
 				AF3DA0E1247FB6B700A005CB /* HXImageListViewController.swift in Sources */,
+				AF16C0B72692BFDE00141A23 /* HYAudioPlayView.swift in Sources */,
+				AF16C0B42692BFDE00141A23 /* HYFullScreenMaskView.swift in Sources */,
 				AF92CF702553C1BF00DEF7A0 /* CopyGlobalButton.swift in Sources */,
+				AF27A3B225B1B660000E6FB5 /* extension.swift in Sources */,
+				AF16C0AD2692BFDE00141A23 /* HYPlayerCommonViewDelegate.swift in Sources */,
 				AFFEC183230E3902001FAC72 /* JSPatchTestVC.m in Sources */,
 				AFF0B87B2445767900FCACA8 /* Solution.swift in Sources */,
 				AF3DA0E7247FB6B700A005CB /* HXImageClipResizeView.swift in Sources */,
 				AF2C8BD22193D66F00BA9492 /* ShowFlex.m in Sources */,
+				AF16C0BB2692BFDE00141A23 /* HYCacheProgressView.swift in Sources */,
 				AF42F43D22719E96004979AB /* LuckNumbersDb.swift in Sources */,
 				AFA648B922CF3F5100B02CD0 /* String+Extension.swift in Sources */,
 				AF3DA0DB247FB6B700A005CB /* HXImageModel.swift in Sources */,
+				AF10774E25BAF802007C79D2 /* TheCell2.swift in Sources */,
 				AF3832D622E00D8D00E1580F /* AccessTokenPlugin.swift in Sources */,
 				AF7B8E7324516E63001055A3 /* SmoothTableViewCell.swift in Sources */,
 				AF1380D1223CAB1200AB2E0D /* LeetCode.swift in Sources */,
+				AF16C0B22692BFDE00141A23 /* HYEndPlayView.swift in Sources */,
 				AF7A6E6425710FAE00543A2B /* YMCircleFromViewController.m in Sources */,
 				AF3DA0EC247FB6B700A005CB /* HXPhotoImageManager.swift in Sources */,
 				AF3DA0EA247FB6B700A005CB /* HXAlbumCell.swift in Sources */,
 				AF3832D422E00D8D00E1580F /* ApiService.swift in Sources */,
+				AF16C0A32692BFDE00141A23 /* HYMediaCacheDelegate.swift in Sources */,
+				AF16C0BD2692C01400141A23 /* AVPlayerVC.swift in Sources */,
+				AFBDD73325C26F49004A57D5 /* Protocol.swift in Sources */,
 				AF859F0A2500B467008CB548 /* StreamReader.swift in Sources */,
 				AF63E97525885DE5006019F1 /* Dispatch+Extension.swift in Sources */,
 				9783B8F320CD1D4B00E30FD7 /* CALayerVC.swift in Sources */,
+				AF16C0A12692BFDE00141A23 /* HYStorage.swift in Sources */,
 				9744CE6320FF172600EBD3DE /* GifBGVC.swift in Sources */,
 				AF3832E422E00F4700E1580F /* MiNavigationConroller.swift in Sources */,
 				AF42F43B22719863004979AB /* PreviousLuckDatas.swift in Sources */,
@@ -1819,6 +2146,8 @@
 				AF4EEB922302C4D2001F298F /* MetalViewController.swift in Sources */,
 				AF09856E23225D6C002B003B /* LintCode.cpp in Sources */,
 				AF9041D4256E19D60005A808 /* DWSegmentedControl.m in Sources */,
+				AF16C0B82692BFDE00141A23 /* HYAudiovisualSpeedyManager.swift in Sources */,
+				AF58D5CB25BAEF6000C06086 /* TableViewTestVC.swift in Sources */,
 				AF09857223226025002B003B /* CppBridge.mm in Sources */,
 				AF3DA0E2247FB6B700A005CB /* HXPreviewCell.swift in Sources */,
 				AF7CB1A82577942C00280908 /* FilterVC.swift in Sources */,
@@ -1831,6 +2160,7 @@
 				AF7A6E6225710FAE00543A2B /* YMCircleAnimation.m in Sources */,
 				AF92CF722553C1BF00DEF7A0 /* WaveTouchButton.swift in Sources */,
 				AFA758F5224B706C008440F0 /* SomeControls.swift in Sources */,
+				AF16C0AA2692BFDE00141A23 /* HYAudiovisualCommonModel.swift in Sources */,
 				AF3DA0ED247FB6B700A005CB /* HXReuseable.swift in Sources */,
 				9783B8F720CD1D6800E30FD7 /* CoreAnimationVC.swift in Sources */,
 				AF7A6E6525710FAE00543A2B /* YMOpenViewController.m in Sources */,
@@ -1845,43 +2175,59 @@
 				AF63E97325875DFA006019F1 /* ThreadVC.swift in Sources */,
 				AF7A6E6325710FAE00543A2B /* YMCircleToViewController.m in Sources */,
 				AF3DA0E5247FB6B700A005CB /* HXSelectButton.swift in Sources */,
+				AF58D5CE25BAEFD000C06086 /* TheCell.swift in Sources */,
 				AF1B05A421BA2F6200A44FE4 /* UIView+Extension.swift in Sources */,
 				AF7A6E6925710FAE00543A2B /* YMSwipeTransitionManager.m in Sources */,
 				AF60BAB62268269000AE592D /* Throttle.swift in Sources */,
 				AF234DDE22F821CA00A1A490 /* UILabel+swizzle.m in Sources */,
 				AF60BAB42268240B00AE592D /* Debouncer.swift in Sources */,
 				9744CE6520FF173F00EBD3DE /* RotaryTableVC.swift in Sources */,
+				AF16C0AC2692BFDE00141A23 /* HYFileDirectory.swift in Sources */,
+				AF16C09E2692BFDE00141A23 /* HYDefaultVideoCacheLocation.swift in Sources */,
+				AF16C0AB2692BFDE00141A23 /* HYCacheStorage.swift in Sources */,
 				AF7A6E7125710FAE00543A2B /* YMFadeToViewController.m in Sources */,
 				AF7A6E28257103EE00543A2B /* CircleTransitionAnimator.swift in Sources */,
 				AF4DFA2425A4256900D3AF6D /* MIMotion.swift in Sources */,
+				AFBD648525F0A1FF00FD4777 /* Monitor.m in Sources */,
 				AF3DA0DD247FB6B700A005CB /* HXImageClipViewController.swift in Sources */,
 				AF3832E322E00F4700E1580F /* UserDefaultStaticStrings.swift in Sources */,
 				AF3DA0E0247FB6B700A005CB /* HXImagePreviewViewController.swift in Sources */,
 				AFB4707B2201A89B002B27C7 /* Annotation.swift in Sources */,
+				AF16C0B62692BFDE00141A23 /* HYAccelerationView.swift in Sources */,
 				AF27F22E218C0A80001FDFC2 /* OpenGLVC.swift in Sources */,
 				AF7A6E7025710FAE00543A2B /* YMFadeFromViewController.m in Sources */,
 				AF234DE322F822CA00A1A490 /* SourceCode.m in Sources */,
 				AF2C8BD72193D66F00BA9492 /* CheckAnalysis.m in Sources */,
+				AF16C0B92692BFDE00141A23 /* HYPlayerCacheListCell.swift in Sources */,
 				AF4DFAEB25A6A5B600D3AF6D /* NSObject+runtime.m in Sources */,
 				AF71B20722DDC50C008DE695 /* LearnCopyVC.swift in Sources */,
 				AF7FA3E12181A052001BB669 /* SceneKitVC.swift in Sources */,
+				AF16C09C2692BFDE00141A23 /* String+HYEncryption.swift in Sources */,
 				AF188CD522D6DF4300DFE15D /* BatteryInfo.m in Sources */,
 				AF7B8E8F24541A60001055A3 /* MAspects.m in Sources */,
 				AF36862421C3BFE100EC0923 /* SizeClassVC.swift in Sources */,
 				AF3DA12324850ACF00A005CB /* SDCatonMonitor.m in Sources */,
 				AF7A6E6C25710FAE00543A2B /* YMPopupFromViewController.m in Sources */,
+				AF16C0A52692BFDE00141A23 /* HYMediaCacheLocation.swift in Sources */,
 				AF27F231218C1649001FDFC2 /* DrawingBoardView.swift in Sources */,
+				AF16C0B02692BFDE00141A23 /* HYMoreFunctionSpeedCollectionViewCell.swift in Sources */,
 				AF243CE322A907BD00809768 /* RedPointProtocol.swift in Sources */,
 				AF7A6E6025710FAE00543A2B /* YMCardPresentationController.m in Sources */,
 				AF3832DC22E00EA800E1580F /* AppConfig.swift in Sources */,
+				AF16C0A62692BFDE00141A23 /* HYVideoCacheManager.swift in Sources */,
 				AF3DA0E6247FB6B700A005CB /* HXImageClipScrollView.swift in Sources */,
 				AF3DA0DF247FB6B700A005CB /* HXImagePickerController.swift in Sources */,
+				AF16C0AE2692BFDE00141A23 /* HYPlayerCommonView.swift in Sources */,
 				AF9041D7256E1A4B0005A808 /* UIView+Frame.m in Sources */,
 				AF2C8BD42193D66F00BA9492 /* SwitchServer.m in Sources */,
 				AF3DA0DE247FB6B700A005CB /* HXAlbumListViewController.swift in Sources */,
 				AF304520218AFFBC00DA36D2 /* CAShapeLayerVC.swift in Sources */,
+				AF16C09D2692BFDE00141A23 /* HYResponseExpandButtton.swift in Sources */,
 				9783B8DE20CD12AD00E30FD7 /* AppDelegate.swift in Sources */,
+				AF16C0B52692BFDE00141A23 /* HYControlPanelView.swift in Sources */,
 				AF3832D322E00D8D00E1580F /* YunweiMgr.swift in Sources */,
+				AF16C09F2692BFDE00141A23 /* HYMediaCacheManager.swift in Sources */,
+				AF16C0A02692BFDE00141A23 /* HYMediaCryptor.swift in Sources */,
 				AF97A58124513B6100F3D460 /* Shaders.metal in Sources */,
 				AFF7A59821956FD6003A4CA5 /* SQLiteVC.swift in Sources */,
 				975386BA21660A4800B5BE32 /* MetalVC.swift in Sources */,
@@ -2117,10 +2463,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LQQGDZBGK3;
+				DEVELOPMENT_TEAM = SLU2Z8YYU3;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Demo/Instrument/RunLoopMonitor",
+				);
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2133,11 +2482,7 @@
 					"-l\"c++\"",
 					"$(inherited)",
 					"-framework",
-					"\"FBRetainCycleDetector\"",
-					"-framework",
 					"\"FLEX\"",
-					"-framework",
-					"\"MLeaksFinder\"",
 					"-framework",
 					"\"RxCocoa\"",
 					"-framework",
@@ -2165,10 +2510,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = LQQGDZBGK3;
+				DEVELOPMENT_TEAM = SLU2Z8YYU3;
 				ENABLE_BITCODE = NO;
 				ENABLE_TESTABILITY = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Demo/Instrument/RunLoopMonitor",
+				);
 				INFOPLIST_FILE = Demo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -2181,11 +2529,7 @@
 					"-l\"c++\"",
 					"$(inherited)",
 					"-framework",
-					"\"FBRetainCycleDetector\"",
-					"-framework",
 					"\"FLEX\"",
-					"-framework",
-					"\"MLeaksFinder\"",
 					"-framework",
 					"\"RxCocoa\"",
 					"-framework",

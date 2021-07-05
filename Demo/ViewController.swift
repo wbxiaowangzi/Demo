@@ -33,26 +33,26 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 
-    func testThrottle() {
-        let throttle = Throttler.init(seconds: 5)
-        throttle.throttle {
-            var i = 0
-            while i < 100 {
-                sleep(1)
-                NSLog("%d", i)
-                i += 1
-            }
-        }
-    }
-    
-    fileprivate func testOverTime() {
-        let a = OverTimeHandler.init(with: 5) {
-            print("5秒过去了，超时了")
-            }.start()
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
-            a.necessoryToExecuteHandler = false
-        }
-    }
+//    func testThrottle() {
+//        let throttle = Throttler.init(seconds: 5)
+//        throttle.throttle {
+//            var i = 0
+//            while i < 100 {
+//                sleep(1)
+//                NSLog("%d", i)
+//                i += 1
+//            }
+//        }
+//    }
+//
+//    fileprivate func testOverTime() {
+//        let a = OverTimeHandler.init(with: 5) {
+//            print("5秒过去了，超时了")
+//            }.start()
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1) {
+//            a.necessoryToExecuteHandler = false
+//        }
+//    }
     
     func login() {
         print("login...")
@@ -77,7 +77,6 @@ extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-
         let name = self.lazyDatas()[indexPath.row]
         cell.textLabel?.text = name.rawValue
         return cell
@@ -117,7 +116,10 @@ extension ViewController {
                 .Caton,
                 .Buttons,
                 .Trans,
-                .Filter]
+                .Filter,
+                .TableView,
+                .ppvc,
+                .AVPlayer]
     }
 }
 
@@ -146,6 +148,9 @@ enum VCType: String {
     case Trans
     case Filter
     case Thread
+    case TableView
+    case ppvc
+    case AVPlayer
     
     var theVC: UIViewController? {
         switch self {
@@ -197,7 +202,14 @@ enum VCType: String {
             return FilterVC()
         case .Thread:
             return ThreadVC()
+        case .TableView:
+            return TableViewTestVC()
+        case .ppvc:
+            return PPVC()
+        case .AVPlayer:
+            return AVPlayerVC()g
         }
     }
 }
+
 

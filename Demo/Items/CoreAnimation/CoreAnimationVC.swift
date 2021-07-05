@@ -38,7 +38,6 @@ class CoreAnimationVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         showAnimateView()
-        
     }
     
     @IBAction func suspendClick(_ sender: Any) {

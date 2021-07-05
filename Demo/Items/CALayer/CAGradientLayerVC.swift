@@ -162,27 +162,16 @@ class ElelidAdjustImageView: UIView {
     
     private func drawBorderLine() {
         var ps = [CGPoint]()
-
         let space: CGFloat = 6
-
         let w = self.bounds.width
-
         let h = self.bounds.height
-        
         let p1 = CGPoint(x: space, y: space)
-
         let p2 = CGPoint(x: w/2, y: space)
-
         let p3 = CGPoint(x: w - space, y: space)
-
         let p4 = CGPoint(x: w - space, y: h/2)
-
         let p5 = CGPoint(x: w - space, y: h - space)
-
         let p6 = CGPoint(x: w/2, y: h - space)
-
         let p7 = CGPoint(x: space, y: h - space)
-
         let p8 = CGPoint(x: space, y: h/2)
         
         ps = [p1, p2, p3,p4,p5,p6,p7,p8]
@@ -282,13 +271,9 @@ class ElelidAdjustImageView: UIView {
             break
         }
         let x = panViews[indexs[0]].frame.minX
-
         let y = panViews[indexs[1]].frame.minY
-
         let w = panViews[indexs[2]].frame.maxX - panViews[indexs[4]].frame.minX
-
         let h = panViews[indexs[3]].frame.maxY - panViews[indexs[5]].frame.minY
-
         let frame = CGRect(x: x , y: y , width: CGFloat(fabsf(Float(w ))), height: CGFloat(fabsf(Float(h ))))
 
         if let rect = self.superview?.convert(frame, from: self) {
@@ -314,24 +299,17 @@ class ElelidAdjustImageView: UIView {
     ///计算三个点的夹角∠AOB
     private func getAngles(with pA: CGPoint, pO: CGPoint, pB:CGPoint) -> CGFloat {
         let x1 = pA.x - pO.x
-
         let y1 = pA.y - pO.y
-
         let x2 = pB.x - pO.x
-
         let y2 = pB.y - pO.y
-        
         let x = x1*x2 + y1*y2
-
         let y = x1*y2 - x2*y1
-        
         var angle = acos(x/sqrt(x*x+y*y))
         print(angle)
         if angle > CGFloat.pi {
             angle *= -1
         }
         print(angle)
-
         return angle
     }
 }

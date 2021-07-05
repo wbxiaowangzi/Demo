@@ -101,10 +101,10 @@ class CopyGlobalButton: UIView {
             return
         }
         switch pan.state {
-        case UIGestureRecognizerState.began:
+        case UIGestureRecognizer.State.began:
             self.superview?.bringSubviewToFront(self)
             break
-        case UIGestureRecognizerState.changed:
+        case UIGestureRecognizer.State.changed:
             let point = pan.translation(in: self)
             let f = self.frame
             let dx = point.x + f.origin.x
@@ -113,7 +113,7 @@ class CopyGlobalButton: UIView {
             //  注意一旦你完成上述的移动，将translation重置为0十分重要。否则translation每次都会叠加
             pan.setTranslation(CGPoint(x: 0, y: 0), in: self)
             break
-        case UIGestureRecognizerState.ended:
+        case UIGestureRecognizer.State.ended:
             let f = self.frame
             var dx = f.origin.x
             var dy = f.origin.y
