@@ -9,7 +9,7 @@ target 'Demo' do
 
   pod 'RxSwift', '~> 4.0'
   pod 'RxCocoa', '~>4.1.0'
-#  pod 'MLeaksFinder'
+  pod 'MLeaksFinder'
   pod 'FLEX'
   pod 'SQLite.swift', '~> 0.11.5'
   #AvatarX
@@ -25,11 +25,10 @@ target 'Demo' do
   
   pod 'SDWebImage'
   pod 'CTMediator'
-#  pod 'PLCrashReporter'
+  pod 'PLCrashReporter'
+  pod 'MBProgressHUD'
   pod 'SnapKit'
   pod 'UMCCommon'
-  pod 'UITableView+FDTemplateLayoutCell'
-  pod 'Bugly'
 
   #单元测试
   #pod 'Kiwi'
