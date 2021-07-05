@@ -207,7 +207,7 @@ enum VCType: String {
         case .ppvc:
             return PPVC()
         case .AVPlayer:
-            return AVPlayerVC()g
+            return AVPlayerVC()
         }
     }
 }
