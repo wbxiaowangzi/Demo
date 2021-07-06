@@ -28,9 +28,7 @@ struct HYDefaultVideoCacheLocation: HYMediaCacheLocation {
     let mediaType: HYMediaType
     
     init(remoteURL: URL, mediaType: HYMediaType, authenticationFunc: ((URL) -> URL)? = nil) {
-        self.init(remoteURL: remoteURL, mediaType: mediaType)
-        
-        
+        self.init(remoteURL: remoteURL, mediaType: mediaType)        
         if let authenticationFunc = authenticationFunc {
             self.authenticatedURL = authenticationFunc(remoteURL)
         }

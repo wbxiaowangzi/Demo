@@ -23,7 +23,6 @@ extension String {
         for byte in digest {
             hexString += String(format:"%02x", byte)
         }
-        
         return hexString
     }
 }

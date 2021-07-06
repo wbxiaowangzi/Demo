@@ -45,7 +45,7 @@ class AVPlayerVC: UIViewController {
     private var videoView: HYPlayerCommonView?
     
     /// 黑底
-    private lazy var dartView: UIView = {
+    private lazy var darkView: UIView = {
         let view = UIView()
         view.isHidden = true
         view.isUserInteractionEnabled = true
@@ -67,7 +67,6 @@ class AVPlayerVC: UIViewController {
     private var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .plain)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "PlayerListTableViewCell")
-        
         tableView.showsVerticalScrollIndicator = false
         tableView.backgroundColor = .white
         tableView.bounces = true
@@ -77,13 +76,16 @@ class AVPlayerVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
         createUI()
         addDownloadObserver()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
         videoView?.dealToDisappear()
     }
     
@@ -100,7 +102,6 @@ class AVPlayerVC: UIViewController {
             make.leading.trailing.top.equalToSuperview()
             make.height.equalTo(HY_IS_IPHONEX ? 88 : 64)
         }
-        
         
         let returnBtn = UIButton()
         returnBtn.setImage(UIImage(named: "video_ic_back"), for: .normal)
@@ -144,8 +145,8 @@ class AVPlayerVC: UIViewController {
             make.top.equalTo(playView.snp.bottom)
         }
         
-        view.addSubview(dartView)
-        dartView.snp.makeConstraints { (make) in
+        view.addSubview(darkView)
+        darkView.snp.makeConstraints { (make) in
             make.edges.equalToSuperview()
         }
     }
@@ -159,16 +160,12 @@ class AVPlayerVC: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(cacheManagerDidUpdateProgress(_:)), name: .HYVideoCacheManagerDidUpdateProgress, object: nil)
     }
     
-    
-    
     /** 删除缓存*/
     private func deleteCache(url: URL) {
         
         if videoView?.videoCacher.cacheList.contains(url.absoluteString.HYmd5) == true {
-            
             let location = HYDefaultVideoCacheLocation(remoteURL: url, mediaType: .video)
             videoView?.videoCacher.removeCache(located: location)
-            
             if let videoCacher = videoView?.videoCacher {
                 cacheView.reloadCache(videoCacher: videoCacher)
             }
@@ -188,9 +185,6 @@ class AVPlayerVC: UIViewController {
     //        override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
     //            return .landscapeLeft
     //        }
-    
-    
-    
 }
 
 //MARK: UITableViewDelegate, UITableViewDataSource
@@ -228,9 +222,9 @@ extension AVPlayerVC {
             cacheView.configView(cacheList: playerConfigArray, videoCacher: videoCacher)
             UIApplication.shared.windows.first?.addSubview(cacheView)
             
-            dartView.isHidden = false
+            darkView.isHidden = false
             UIView.animate(withDuration: 0.2, animations: {
-                self.dartView.alpha = 0.5
+                self.darkView.alpha = 0.5
                 self.cacheView.frame = CGRect(x: 0, y: HY_SCREEN_HEIGHT - 405, width: HY_SCREEN_WIDTH, height: 405)
             })
         }
@@ -239,10 +233,10 @@ extension AVPlayerVC {
     /** 隐藏缓存列表*/
     @objc private func removeCacheView() {
         UIView.animate(withDuration: 0.2, animations: {
-            self.dartView.alpha = 0
+            self.darkView.alpha = 0
             self.cacheView.frame = CGRect(x: 0, y: HY_SCREEN_HEIGHT, width: HY_SCREEN_WIDTH, height: 405)
         }) { (success) in
-            self.dartView.isHidden = true
+            self.darkView.isHidden = true
             self.cacheView.removeFromSuperview()
         }
     }
@@ -263,7 +257,6 @@ extension AVPlayerVC {
                 }
             }
         }
-        
     }
     
     /** 缓存列表全部选中视频下载完成*/

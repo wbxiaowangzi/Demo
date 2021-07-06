@@ -66,8 +66,7 @@ class HYControlPanelView: UIView {
         
         addSubview(playButton)
         playButton.snp.makeConstraints { (make) in
-            make.left.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.left.bottom.equalToSuperview()
             make.size.equalTo(CGSize.init(width: 40, height: 40))
         }
         
