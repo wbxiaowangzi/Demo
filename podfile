@@ -21,6 +21,8 @@ target 'Demo' do
   pod 'ReachabilitySwift'
   pod 'NVMAspects'
   pod 'MINavigator', :path=>'~/MINavigator/'
+  pod 'Bugly'
+  pod 'UITableView+FDTemplateLayoutCell'
   #pod 'MICommonUI', :path=>'~/MICommonUI/'
   
   pod 'SDWebImage'
