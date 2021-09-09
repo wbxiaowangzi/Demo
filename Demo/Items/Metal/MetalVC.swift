@@ -37,7 +37,7 @@ class MetalVC: UIViewController {
         CreatPipelineState()
         creatCommandQueue()
         creatTimer()
-        render()
+//        render()
     }
     
     func creatMTLLayer() {

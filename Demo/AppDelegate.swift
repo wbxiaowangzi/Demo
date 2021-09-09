@@ -10,6 +10,7 @@ import UIKit
 //import NVMAspects
 import SDWebImage
 import Bugly
+import XXPerformanceMonitor
 
 let umkey = "5fcdcefabed37e4506c428c7"
 
@@ -23,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var supportedInterfaceOrientationMask: UIInterfaceOrientationMask?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        XXPerformanceMonitor.sharedInstance.startMonitorMain()
+        XXPerformanceMonitor.sharedInstance.delegate = self
         Bugly.start(withAppId: "8c83a06b1a")
 
         #if DEBUG
@@ -69,6 +72,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: XXPerformanceMonitorDelegate {
+    func handleThread(reason: String, domain: XXPerformanceMonitorDomain) {
+        print("发生了卡顿："+reason)
+    }
+}
 extension AppDelegate {
     
     fileprivate func hookSDWebImage() {

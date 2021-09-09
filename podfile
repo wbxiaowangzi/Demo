@@ -31,6 +31,7 @@ target 'Demo' do
   pod 'MBProgressHUD'
   pod 'SnapKit'
   pod 'UMCCommon'
+  pod 'XXPerformanceMonitor'
 
   #单元测试
   #pod 'Kiwi'
