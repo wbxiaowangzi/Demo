@@ -12,7 +12,7 @@ import Reachability
 
 ///网络状态
 var HYReach: Reachability = {
-    let reach = Reachability()!
+    let reach = try! Reachability()
     
     // Set the blocks
     reach.whenReachable = {

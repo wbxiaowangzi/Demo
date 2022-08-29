@@ -22,7 +22,7 @@ final class YunweiMgr {
 
     fileprivate var streamProvider: MoyaProvider<ApiService>!
     /** 网络状态监听 **/
-    private let reachability = Reachability()!
+    private let reachability = try! Reachability()
 
     private let remoteHostName = "www.baidu.com"
 

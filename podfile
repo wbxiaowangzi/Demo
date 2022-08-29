@@ -19,7 +19,7 @@ target 'Demo' do
   pod 'Moya/RxSwift', '~> 11.0'
   pod 'ObjectMapper'
   pod 'ReachabilitySwift'
-  pod 'NVMAspects'
+#  pod 'NVMAspects'
   pod 'MINavigator', :path=>'~/MINavigator/'
   pod 'Bugly'
   pod 'UITableView+FDTemplateLayoutCell'
