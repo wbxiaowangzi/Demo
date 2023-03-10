@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UMConfigure.initWithAppkey(umkey, channel: "adhoc")
         hookSDWebImage()
         CatonMonitoring()
+    
+        
         return true
     }
 

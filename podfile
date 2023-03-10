@@ -32,11 +32,17 @@ target 'Demo' do
   pod 'SnapKit'
   pod 'UMCCommon'
   pod 'XXPerformanceMonitor'
+#  pod 'SuperPlayer'
+  
+  target 'SimulatorDemo' do
+    inherit! :search_paths
+  end
 
   #单元测试
   #pod 'Kiwi'
-  
 end
+
+
 
 #关闭某些库的bitcode
 post_install do |installer|

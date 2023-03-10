@@ -106,6 +106,7 @@ extension ViewController {
                 .GifBG,
                 .CoreAnimation,
                 .AvatarX,
+                .WebView,
                 .SizeClass,
                 .CALayer,
                 .Luck,
@@ -151,6 +152,7 @@ enum VCType: String {
     case TableView
     case ppvc
     case AVPlayer
+    case WebView
     
     var theVC: UIViewController? {
         switch self {
@@ -208,6 +210,8 @@ enum VCType: String {
             return PPVC()
         case .AVPlayer:
             return AVPlayerVC()
+        case .WebView:
+            return WebVC()
         }
     }
 }

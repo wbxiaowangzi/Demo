@@ -20,7 +20,7 @@ class ViewController: UIViewController {
 extension ViewController {
     
     func lazyDatas() -> [VCType] {
-        return [.AnomalyButton]
+        return [.AnomalyButton,.Video,.WebView]
     }
 }
 
