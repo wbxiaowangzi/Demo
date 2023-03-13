@@ -35,7 +35,6 @@
 		2D0AEE0A28BDABD300B46AE6 /* AnomalyButtonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0AEE0828BDABD300B46AE6 /* AnomalyButtonVC.xib */; };
 		2D4457B329ADDB65007660AC /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4457B229ADDB65007660AC /* WebVC.swift */; };
 		2D4457B429ADE8E9007660AC /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4457B229ADDB65007660AC /* WebVC.swift */; };
-		2D4A390A28E3E69B003090BB /* VideoPlayer in Frameworks */ = {isa = PBXBuildFile; productRef = 2D4A390928E3E69B003090BB /* VideoPlayer */; };
 		2D4A390E28E3E784003090BB /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4A390C28E3E784003090BB /* VideoVC.swift */; };
 		2D4A390F28E3E784003090BB /* VideoVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D4A390D28E3E784003090BB /* VideoVC.xib */; };
 		2D5603B928BDAE110001BE84 /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 2D5603B828BDAE110001BE84 /* Resource */; };
@@ -702,7 +701,6 @@
 				AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */,
 				C1E87AD0D3F56B2E82A5B15D /* Pods_Demo.framework in Frameworks */,
 				AFBD648825F0A7F600FD4777 /* CrashReporter.framework in Frameworks */,
-				2D4A390A28E3E69B003090BB /* VideoPlayer in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2080,7 +2078,6 @@
 			);
 			name = Demo;
 			packageProductDependencies = (
-				2D4A390928E3E69B003090BB /* VideoPlayer */,
 			);
 			productName = Demo;
 			productReference = 9783B8DA20CD12AD00E30FD7 /* Demo.app */;
@@ -3239,14 +3236,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2D4A390928E3E69B003090BB /* VideoPlayer */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2D4A390828E3E69B003090BB /* XCRemoteSwiftPackageReference "VideoPlayer" */;
-			productName = VideoPlayer;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9783B8D220CD12AD00E30FD7 /* Project object */;
 }
