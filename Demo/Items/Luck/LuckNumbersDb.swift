@@ -21,11 +21,11 @@ class LuckNumbersDB: NSObject {
     
     let Number_Table = Table("luck_number")
 
-    let Face_id = Expression<Int>("face_id")
+    let Face_id = Expression<Int>(value: "face_id")
 
-    let User_ID = Expression<String>("user_id")
+    let User_ID = Expression<String>(value: "user_id")
 
-    let numbs = Expression<[Int]>("ints")
+    let numbs = Expression<[Int]>(value: "ints")
     private override init() {
         super.init()
         creatTable()
@@ -55,7 +55,7 @@ class LuckNumbersDB: NSObject {
     }
     
     func deleteModel(with faceID: Int) {
-        try! DB?.run(Number_Table.filter(self.Face_id == faceID).delete())
+        try! DB?.run(Number_Table.filter(self.Face_id == "\(faceID)").delete())
     }
     
     func deleteModel(with userID: String) {
@@ -63,7 +63,7 @@ class LuckNumbersDB: NSObject {
     }
     
     func select(with faceID: Int) -> [FaceModel]  {
-        let a = try! DB?.prepare(Number_Table.filter(self.Face_id == faceID))
+        let a = try! DB?.prepare(Number_Table.filter(self.Face_id == "\(faceID)"))
         return a!.map {FaceModel(faceid: $0[Face_id], userid: $0[User_ID])}
     }
     

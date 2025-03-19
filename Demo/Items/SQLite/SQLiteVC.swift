@@ -25,9 +25,9 @@ class SQLiteVC: ZKViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        let m1 = FaceModel(faceid: 1, userid: "1231321")
+        let m1 = FaceModel(faceid: "1", userid: "1231321")
 
-        let m2 = FaceModel(faceid: 1, userid: "231231421")
+        let m2 = FaceModel(faceid: "1", userid: "231231421")
         SQLDB.share.insertFace(model: m1)
         SQLDB.share.insertFace(model: m2)
         makealab()

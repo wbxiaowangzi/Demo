@@ -21,9 +21,9 @@ class SQLDB: NSObject {
     
     let Face_Table = Table("face")
 
-    let Face_id = Expression<Int>("face_id")
+    let Face_id = Expression<String>(value: "face_id")
 
-    let User_ID = Expression<String>("user_id")
+    let User_ID = Expression<String>(value: "user_id")
 
     private override init() {
         super.init()
@@ -54,7 +54,7 @@ class SQLDB: NSObject {
     }
     
     func deleteFace(with faceID: Int) {
-        try! DB?.run(Face_Table.filter(self.Face_id == faceID).delete())
+        try! DB?.run(Face_Table.filter(self.Face_id == "\(faceID)").delete())
     }
     
     func deleteFace(with userID: String) {
@@ -62,7 +62,7 @@ class SQLDB: NSObject {
     }
     
     func select(with faceID: Int) -> [FaceModel]  {
-        let a = try! DB?.prepare(Face_Table.filter(self.Face_id == faceID))
+        let a = try! DB?.prepare(Face_Table.filter(self.Face_id == "\(faceID)"))
         return a!.map {FaceModel(faceid: $0[Face_id], userid: $0[User_ID])}
     }
     
@@ -72,10 +72,10 @@ class SQLDB: NSObject {
 }
 
 struct FaceModel {
-    var faceid = 0
+    var faceid = "0"
 
     var userid = "123"
-    init(faceid: Int, userid: String) {
+    init(faceid: String, userid: String) {
         self.faceid = faceid
         self.userid = userid
     }

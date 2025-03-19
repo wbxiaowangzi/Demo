@@ -8,7 +8,7 @@
 
 import UIKit
 import SnapKit
-import UITableView_FDTemplateLayoutCell
+//import UITableView_FDTemplateLayoutCell
 
 class TableViewTestVC: UIViewController {
 
@@ -50,8 +50,9 @@ extension TableViewTestVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         print("-----tableView heightForRowAt")
-        return tableView.fd_heightForCell(withIdentifier: TheCell.identifier, cacheBy: indexPath) { (cell) in
-        }
+//        return tableView.fd_heightForCell(withIdentifier: TheCell.identifier, cacheBy: indexPath) { (cell) in
+//        }
+        return 80
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

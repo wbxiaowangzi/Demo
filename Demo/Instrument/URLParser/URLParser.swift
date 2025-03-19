@@ -30,7 +30,7 @@ public func parse(for url: URL, imageSize: CGSize?, scale: Int?) -> URL {
         if range == nil {
             urlString.append(cdnConvert)
         } else {
-            urlString.insert(contentsOf: cdnConvert.characters, at: range!.lowerBound)
+            urlString.insert(contentsOf: cdnConvert, at: range!.lowerBound)
         }
         return URL(string: urlString) ?? url
     } else if host?.contains(AliMMDNDomain) == true {
@@ -50,7 +50,7 @@ public func parse(for url: URL, imageSize: CGSize?, scale: Int?) -> URL {
         if range == nil {
             urlString.append(cdnConvert)
         } else {
-            urlString.insert(contentsOf: cdnConvert.characters, at: range!.lowerBound)
+            urlString.insert(contentsOf: cdnConvert, at: range!.lowerBound)
         }
         return URL(string: urlString) ?? url
     } else if host?.contains(AliCDNDomain) == true || host?.contains(TBCDNDomain) == true {

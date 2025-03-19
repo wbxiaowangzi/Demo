@@ -63,20 +63,25 @@ class HXPhotoImageManager {
     ///
     /// - Parameter handler: 回调处理闭包，success表示是否已授权
     static func getCameraAuthorization(_ handler: @escaping (_ success: Bool) -> ()) {
-        let status = AVCaptureDevice.authorizationStatus(for: .video)
-        switch status {
-        case .authorized:
-            handler(true)
-        case .denied, .restricted:
-            handler(false)
-        case .notDetermined:
-            AVCaptureDevice.requestAccess(for: .video) { (accessed) in
-                /// 主线程回调
-                DispatchQueue.main.async {
-                    handler(accessed)
+        if #available(macCatalyst 14.0, *) {
+            let status = AVCaptureDevice.authorizationStatus(for: .video)
+            switch status {
+            case .authorized:
+                handler(true)
+            case .denied, .restricted:
+                handler(false)
+            case .notDetermined:
+                AVCaptureDevice.requestAccess(for: .video) { (accessed) in
+                    /// 主线程回调
+                    DispatchQueue.main.async {
+                        handler(accessed)
+                    }
                 }
             }
+        } else {
+            // Fallback on earlier versions
         }
+
     }
     
     /// 获取手机中的相册

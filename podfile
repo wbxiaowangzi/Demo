@@ -3,32 +3,35 @@
 source 'http://gl2.myreal3d.com/Apple/Podspec.git'
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '10.0'
+platform :ios, '13.0'
 target 'Demo' do
   use_frameworks!
 
-  pod 'RxSwift', '~> 4.0'
-  pod 'RxCocoa', '~>4.1.0'
-  pod 'MLeaksFinder'
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  #pod 'MLeaksFinder'
   pod 'FLEX'
-  pod 'SQLite.swift', '~> 0.11.5'
+  pod 'SQLite.swift'
   #AvatarX
   pod 'SSZipArchive'
-  pod 'Yaml', '~> 3.4.3'
+  pod 'Alamofire', '~> 4.9.1'
+  pod 'Result', '~> 3.2.4'
+
+  pod 'Yaml', '~> 3.4.4'
   #network
-  pod 'Moya/RxSwift', '~> 11.0'
+  pod 'Moya/RxSwift'
   pod 'ObjectMapper'
   pod 'ReachabilitySwift'
 #  pod 'NVMAspects'
-  pod 'MINavigator', :path=>'~/MINavigator/'
+  pod 'MINavigator', :path=>'/Users/wangbo/MINavigator'
   pod 'Bugly'
-  pod 'UITableView+FDTemplateLayoutCell'
+  #pod 'UITableView+FDTemplateLayoutCell'
   #pod 'MICommonUI', :path=>'~/MICommonUI/'
   
   pod 'SDWebImage'
-  pod 'CTMediator'
+  #pod 'CTMediator'
   pod 'PLCrashReporter'
-  pod 'MBProgressHUD'
+  #pod 'MBProgressHUD'
   pod 'SnapKit'
   pod 'UMCCommon'
   pod 'XXPerformanceMonitor'
@@ -44,24 +47,13 @@ end
 
 
 
-#关闭某些库的bitcode
 post_install do |installer|
-    installer.pods_project.targets.each do |target|
-        if ['SnapKit'].include?target.name
-            target.build_configurations.each do |config|
-                config.build_settings['SWIFT_VERSION'] = '4.2'
-                config.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '10.10'
-            end
-            else target.build_configurations.each do |config|
-                config.build_settings['SWIFT_VERSION'] = '4.0'
-                config.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '10.10'
-            end
-        end
-        if ['XiaoFuTech-develop','Kiwi'].include?target.name
-            target.build_configurations.each do |config|
-                config.build_settings['ENABLE_BITCODE'] = 'NO'
-            end
-        end
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = '5.0'
+      config.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '10.13'
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '13.0'
     end
+  end
 end
 
