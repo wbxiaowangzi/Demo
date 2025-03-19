@@ -117,8 +117,6 @@
 		AF26EACC2317724C00D61AF6 /* VCMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF26EACB2317724C00D61AF6 /* VCMap.swift */; };
 		AF26EAD0231774A700D61AF6 /* Navigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF26EACF231774A700D61AF6 /* Navigator.swift */; };
 		AF27A3B225B1B660000E6FB5 /* extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27A3B125B1B660000E6FB5 /* extension.swift */; };
-		AF27F228218BFF8A001FDFC2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF27F227218BFF8A001FDFC2 /* OpenGLES.framework */; platformFilter = ios; };
-		AF27F22A218BFF93001FDFC2 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF27F229218BFF92001FDFC2 /* GLKit.framework */; platformFilter = ios; };
 		AF27F22E218C0A80001FDFC2 /* OpenGLVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27F22C218C0A80001FDFC2 /* OpenGLVC.swift */; };
 		AF27F22F218C0A80001FDFC2 /* OpenGLVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF27F22D218C0A80001FDFC2 /* OpenGLVC.xib */; };
 		AF27F231218C1649001FDFC2 /* DrawingBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF27F230218C1649001FDFC2 /* DrawingBoardView.swift */; };
@@ -341,6 +339,7 @@
 		2D5603C128BDB4710001BE84 /* AnalyzeAreaConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyzeAreaConfig.swift; sourceTree = "<group>"; };
 		2D5603C328BDB4790001BE84 /* MIAnalyzeAreaTexture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MIAnalyzeAreaTexture.swift; sourceTree = "<group>"; };
 		2D922B7B2D8AA3ED001503AA /* Demo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Demo.entitlements; sourceTree = "<group>"; };
+		2D922B7C2D8AB5B7001503AA /* libswiftGLKit.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libswiftGLKit.tbd; path = usr/lib/swift/libswiftGLKit.tbd; sourceTree = SDKROOT; };
 		2DC9CE2029BB427600F42B23 /* MemoryHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryHelper.swift; sourceTree = "<group>"; };
 		2DFF82DE28E548CC0002C4B8 /* SimulatorDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimulatorDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		9744CE6020FF155A00EBD3DE /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
@@ -696,8 +695,6 @@
 				AFE41D0526298C49001E9C61 /* QuickLook.framework in Frameworks */,
 				AF109738219BCCCB003F148D /* libc++.tbd in Frameworks */,
 				AFF7A59D2195955D003A4CA5 /* libsqlite3.0.tbd in Frameworks */,
-				AF27F22A218BFF93001FDFC2 /* GLKit.framework in Frameworks */,
-				AF27F228218BFF8A001FDFC2 /* OpenGLES.framework in Frameworks */,
 				AF30451E218AF70000DA36D2 /* AVFoundation.framework in Frameworks */,
 				AF7FA3E52181AACA001BB669 /* SceneKit.framework in Frameworks */,
 				C1E87AD0D3F56B2E82A5B15D /* Pods_Demo.framework in Frameworks */,
@@ -1755,6 +1752,7 @@
 		AF7FA3E32181AACA001BB669 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D922B7C2D8AB5B7001503AA /* libswiftGLKit.tbd */,
 				AFE41D0426298C49001E9C61 /* QuickLook.framework */,
 				9757718522FFC33400B52C9B /* XCTest.framework */,
 				AF109737219BCCCB003F148D /* libc++.tbd */,

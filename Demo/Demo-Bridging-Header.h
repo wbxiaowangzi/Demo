@@ -22,6 +22,6 @@
 #import "YMFadeFromViewController.h"
 #import "YMCardFromViewController.h"
 #import "YMOpenViewController.h"
-#import <UMCommon/UMCommon.h>
-#import <UMCommon/MobClick.h>
+//#import <UMCommon/UMCommon.h>
+//#import <UMCommon/MobClick.h>
 #import <CommonCrypto/CommonCrypto.h>

@@ -48,17 +48,17 @@ extension WebVC {
     }
     
     private func webViwe2() {
-        let userContent = WKUserContentController.init()
-        userContent.add(self, name: "onGoBack")
-        let config = WKWebViewConfiguration.init()
-        config.userContentController = userContent
-
-        let webview = UIWebView(frame: self.view.bounds)
-        view.addSubview(webview)
-//        webview.delegate = self
-
-        let url = URL(string: "http://skin-view-test.myreal3d.com/customer?scope=OPEN:basic&channel_id=25853&store_id=001&token=eyJpdiI6InhCUUFUSnMxQXd4NGFuTGJDb0dVYWc9PSIsInZhbHVlIjoiNmlldGZxbVF1NVNwSG95dTA0YUN0UFhPdnhOYWRySlZUWVhmbVpXV2FtSFNwN3VNaGtycXUxbjkrNWE3elh1UEFObE9UTmJUUENOa3labERZc2tBQkE9PSIsIm1hYyI6ImVhZTJlMGQ0MDRlMjlhYWIzNGNjMDk3N2RhMWM2NTMwNDk4MjRiNWFjYzJlYTlhNTQ2ZWJhNmJjNDE2ODZiZmQiLCJ0YWciOiIifQ==")
-        webview.loadRequest(URLRequest.init(url: url!))
+//        let userContent = WKUserContentController.init()
+//        userContent.add(self, name: "onGoBack")
+//        let config = WKWebViewConfiguration.init()
+//        config.userContentController = userContent
+//
+//        let webview = UIWebView(frame: self.view.bounds)
+//        view.addSubview(webview)
+////        webview.delegate = self
+//
+//        let url = URL(string: "http://skin-view-test.myreal3d.com/customer?scope=OPEN:basic&channel_id=25853&store_id=001&token=eyJpdiI6InhCUUFUSnMxQXd4NGFuTGJDb0dVYWc9PSIsInZhbHVlIjoiNmlldGZxbVF1NVNwSG95dTA0YUN0UFhPdnhOYWRySlZUWVhmbVpXV2FtSFNwN3VNaGtycXUxbjkrNWE3elh1UEFObE9UTmJUUENOa3labERZc2tBQkE9PSIsIm1hYyI6ImVhZTJlMGQ0MDRlMjlhYWIzNGNjMDk3N2RhMWM2NTMwNDk4MjRiNWFjYzJlYTlhNTQ2ZWJhNmJjNDE2ODZiZmQiLCJ0YWciOiIifQ==")
+//        webview.loadRequest(URLRequest.init(url: url!))
     }
 }
 

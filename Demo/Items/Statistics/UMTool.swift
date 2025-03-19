@@ -22,7 +22,7 @@ class UMTool: NSObject {
         guard eventId != nil else {
             return
         }
-        MobClick.event(eventId)
+//        MobClick.event(eventId)
     }
     
     /** 自定义事件, 数量统计.
@@ -32,7 +32,7 @@ class UMTool: NSObject {
         guard eventId != nil, label != nil else {
             return
         }
-        MobClick.event(eventId, label: label)
+//        MobClick.event(eventId, label: label)
     }
     
     /** 自动页面时长统计, 开始记录某个页面展示时长.
@@ -45,7 +45,7 @@ class UMTool: NSObject {
         guard pageName != nil else {
             return
         }
-        MobClick.beginLogPageView(pageName)
+//        MobClick.beginLogPageView(pageName)
     }
     
     /** 自动页面时长统计, 结束记录某个页面展示时长.
@@ -58,7 +58,7 @@ class UMTool: NSObject {
         guard pageName != nil else {
             return
         }
-        MobClick.endLogPageView(pageName)
+//        MobClick.endLogPageView(pageName)
     }
     
     /** 自定义事件, 时长统计.
@@ -68,7 +68,7 @@ class UMTool: NSObject {
         guard eventId != nil else {
             return
         }
-        MobClick.endEvent(eventId)
+//        MobClick.endEvent(eventId)
     }
     
     /** 自定义事件, 时长统计.
@@ -78,7 +78,7 @@ class UMTool: NSObject {
         guard eventId != nil, label != nil else {
             return
         }
-        MobClick.endEvent(eventId, label: label)
+//        MobClick.endEvent(eventId, label: label)
     }
 }
 

@@ -10,7 +10,7 @@ import UIKit
 
 class OpenGLVC: UIViewController {
     
-    var contentView: DrawingBoardView?
+//    var contentView: DrawingBoardView?
 
     @IBOutlet weak var drawView: UIView!
 
@@ -23,43 +23,43 @@ class OpenGLVC: UIViewController {
         addDrawView()
     }
     func addDrawView() {
-        guard contentView == nil else {
-            return
-        }
-        let context = EAGLContext.init(api: EAGLRenderingAPI.openGLES1)
-
-        let v = DrawingBoardView.init(frame: drawView.bounds, context: context!)
-        drawView.addSubview(v)
-        contentView = v
+//        guard contentView == nil else {
+//            return
+//        }
+//        let context = EAGLContext.init(api: EAGLRenderingAPI.openGLES1)
+//
+//        let v = DrawingBoardView.init(frame: drawView.bounds, context: context!)
+//        drawView.addSubview(v)
+//        contentView = v
     }
     
     @IBAction func blackClick(_ sender: Any) {
-        if let c = contentView {
-            c.setPenColor(color: UIColor.black)
-        }
+//        if let c = contentView {
+//            c.setPenColor(color: UIColor.black)
+//        }
     }
     
     @IBAction func redClick(_ sender: Any) {
-        if let c = contentView {
-            c.setPenColor(color: UIColor.red)
-        }
+//        if let c = contentView {
+//            c.setPenColor(color: UIColor.red)
+//        }
     }
     
     @IBAction func yellowClick(_ sender: Any) {
-        if let c = contentView {
-            c.setPenColor(color: UIColor.yellow)
-        }
+//        if let c = contentView {
+//            c.setPenColor(color: UIColor.yellow)
+//        }
     }
     @IBAction func blueClick(_ sender: Any) {
-        if let c = contentView {
-            c.setPenColor(color: UIColor.blue)
-        }
+//        if let c = contentView {
+//            c.setPenColor(color: UIColor.blue)
+//        }
         
     }
     
     @IBAction func stepBackClick(_ sender: Any) {
-        if let c = contentView {
-            c.remove()
-        }
+//        if let c = contentView {
+//            c.remove()
+//        }
     }
 }

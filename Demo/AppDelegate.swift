@@ -9,7 +9,7 @@
 import UIKit
 //import NVMAspects
 import SDWebImage
-import Bugly
+//import Bugly
 import XXPerformanceMonitor
 
 let umkey = "5fcdcefabed37e4506c428c7"
@@ -26,12 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         XXPerformanceMonitor.sharedInstance.startMonitorMain()
         XXPerformanceMonitor.sharedInstance.delegate = self
-        Bugly.start(withAppId: "8c83a06b1a")
+//        Bugly.start(withAppId: "8c83a06b1a")
 
         #if DEBUG
         Bundle(path: "/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle")?.load()
         #endif
-        UMConfigure.initWithAppkey(umkey, channel: "adhoc")
+//        UMConfigure.initWithAppkey(umkey, channel: "adhoc")
         hookSDWebImage()
         CatonMonitoring()
     

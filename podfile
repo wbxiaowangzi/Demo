@@ -24,7 +24,7 @@ target 'Demo' do
   pod 'ReachabilitySwift'
 #  pod 'NVMAspects'
   pod 'MINavigator', :path=>'/Users/wangbo/MINavigator'
-  pod 'Bugly'
+  #pod 'Bugly'
   #pod 'UITableView+FDTemplateLayoutCell'
   #pod 'MICommonUI', :path=>'~/MICommonUI/'
   
@@ -33,7 +33,7 @@ target 'Demo' do
   pod 'PLCrashReporter'
   #pod 'MBProgressHUD'
   pod 'SnapKit'
-  pod 'UMCCommon'
+  #pod 'UMCCommon'
   pod 'XXPerformanceMonitor'
 #  pod 'SuperPlayer'
   
