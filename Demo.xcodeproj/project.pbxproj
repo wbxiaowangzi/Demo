@@ -33,6 +33,10 @@
 		2D0AEE0628BDAB6F00B46AE6 /* ItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0AEE0528BDAB6F00B46AE6 /* ItemType.swift */; };
 		2D0AEE0928BDABD300B46AE6 /* AnomalyButtonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0AEE0728BDABD300B46AE6 /* AnomalyButtonVC.swift */; };
 		2D0AEE0A28BDABD300B46AE6 /* AnomalyButtonVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D0AEE0828BDABD300B46AE6 /* AnomalyButtonVC.xib */; };
+		2D23CD092DAE6F6700AF58E4 /* BigImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D23CD082DAE6F6700AF58E4 /* BigImageVC.swift */; };
+		2D23CD0B2DAE732900AF58E4 /* big.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D23CD0A2DAE732900AF58E4 /* big.jpg */; };
+		2D23CD0F2DAE756100AF58E4 /* SmartBigImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D23CD0E2DAE755800AF58E4 /* SmartBigImageView.swift */; };
+		2D23CD172DAF54B300AF58E4 /* TiledView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D23CD162DAF54AE00AF58E4 /* TiledView.swift */; };
 		2D4457B329ADDB65007660AC /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4457B229ADDB65007660AC /* WebVC.swift */; };
 		2D4457B429ADE8E9007660AC /* WebVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4457B229ADDB65007660AC /* WebVC.swift */; };
 		2D4A390E28E3E784003090BB /* VideoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4A390C28E3E784003090BB /* VideoVC.swift */; };
@@ -332,6 +336,10 @@
 		2D0AEE0528BDAB6F00B46AE6 /* ItemType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemType.swift; sourceTree = "<group>"; };
 		2D0AEE0728BDABD300B46AE6 /* AnomalyButtonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnomalyButtonVC.swift; sourceTree = "<group>"; };
 		2D0AEE0828BDABD300B46AE6 /* AnomalyButtonVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnomalyButtonVC.xib; sourceTree = "<group>"; };
+		2D23CD082DAE6F6700AF58E4 /* BigImageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigImageVC.swift; sourceTree = "<group>"; };
+		2D23CD0A2DAE732900AF58E4 /* big.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = big.jpg; sourceTree = "<group>"; };
+		2D23CD0E2DAE755800AF58E4 /* SmartBigImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartBigImageView.swift; sourceTree = "<group>"; };
+		2D23CD162DAF54AE00AF58E4 /* TiledView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiledView.swift; sourceTree = "<group>"; };
 		2D4457B229ADDB65007660AC /* WebVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebVC.swift; sourceTree = "<group>"; };
 		2D4A390C28E3E784003090BB /* VideoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoVC.swift; sourceTree = "<group>"; };
 		2D4A390D28E3E784003090BB /* VideoVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoVC.xib; sourceTree = "<group>"; };
@@ -804,6 +812,17 @@
 			path = Items;
 			sourceTree = "<group>";
 		};
+		2D23CD052DAE6F1300AF58E4 /* BigImage */ = {
+			isa = PBXGroup;
+			children = (
+				2D23CD162DAF54AE00AF58E4 /* TiledView.swift */,
+				2D23CD0E2DAE755800AF58E4 /* SmartBigImageView.swift */,
+				2D23CD082DAE6F6700AF58E4 /* BigImageVC.swift */,
+				2D23CD0A2DAE732900AF58E4 /* big.jpg */,
+			);
+			path = BigImage;
+			sourceTree = "<group>";
+		};
 		2D4457B129ADD985007660AC /* WebView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1047,6 +1066,7 @@
 		AF13A223223790CA008B91DD /* Items */ = {
 			isa = PBXGroup;
 			children = (
+				2D23CD052DAE6F1300AF58E4 /* BigImage */,
 				2D4457B129ADD985007660AC /* WebView */,
 				AF71B1FF22DDC49A008DE695 /* AboutCopy */,
 				9772817020DD3B32004E8E4F /* AFN */,
@@ -2182,6 +2202,7 @@
 				9783B8F420CD1D4B00E30FD7 /* CALayerVC.xib in Resources */,
 				AF7A6E752571102100543A2B /* TransVC.xib in Resources */,
 				9783B8E820CD12AF00E30FD7 /* LaunchScreen.storyboard in Resources */,
+				2D23CD0B2DAE732900AF58E4 /* big.jpg in Resources */,
 				AF3DA12C2485144400A005CB /* CatonVC.xib in Resources */,
 				AF10774F25BAF802007C79D2 /* TheCell2.xib in Resources */,
 				9772816F20D0AC88004E8E4F /* TransitionVC.xib in Resources */,
@@ -2253,9 +2274,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2270,9 +2295,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Demo/Pods-Demo-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2434,6 +2463,7 @@
 				AFCB8A5A26940354001EF944 /* ZFFloatView.m in Sources */,
 				AF63E97525885DE5006019F1 /* Dispatch+Extension.swift in Sources */,
 				9783B8F320CD1D4B00E30FD7 /* CALayerVC.swift in Sources */,
+				2D23CD0F2DAE756100AF58E4 /* SmartBigImageView.swift in Sources */,
 				AF16C0A12692BFDE00141A23 /* HYStorage.swift in Sources */,
 				9744CE6320FF172600EBD3DE /* GifBGVC.swift in Sources */,
 				AFCB8A6026940354001EF944 /* ZFUtilities.m in Sources */,
@@ -2472,6 +2502,7 @@
 				AFE80052248A338B00859B39 /* TheViewModel.swift in Sources */,
 				AF63E97325875DFA006019F1 /* ThreadVC.swift in Sources */,
 				AFCB8A6A26940354001EF944 /* ZFSpeedLoadingView.m in Sources */,
+				2D23CD092DAE6F6700AF58E4 /* BigImageVC.swift in Sources */,
 				AF7A6E6325710FAE00543A2B /* YMCircleToViewController.m in Sources */,
 				AF3DA0E5247FB6B700A005CB /* HXSelectButton.swift in Sources */,
 				AF58D5CE25BAEFD000C06086 /* TheCell.swift in Sources */,
@@ -2524,6 +2555,7 @@
 				AF16C0AE2692BFDE00141A23 /* HYPlayerCommonView.swift in Sources */,
 				AF9041D7256E1A4B0005A808 /* UIView+Frame.m in Sources */,
 				AF2C8BD42193D66F00BA9492 /* SwitchServer.m in Sources */,
+				2D23CD172DAF54B300AF58E4 /* TiledView.swift in Sources */,
 				AF3DA0DE247FB6B700A005CB /* HXAlbumListViewController.swift in Sources */,
 				AF304520218AFFBC00DA36D2 /* CAShapeLayerVC.swift in Sources */,
 				AF16C09D2692BFDE00141A23 /* HYResponseExpandButtton.swift in Sources */,

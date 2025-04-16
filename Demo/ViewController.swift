@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.clipsToBounds = true
         tableView.tableFooterView = UIView()
     }
 
@@ -96,7 +97,8 @@ extension ViewController: UITableViewDelegate {
 extension ViewController {
     
     func lazyDatas() -> [VCType] {
-        return [.Thread,
+        return [.BigImage,
+                .Thread,
                 .SQLite,
                 .RXSwift,
                 .OpenGL,
@@ -153,6 +155,7 @@ enum VCType: String {
     case ppvc
     case AVPlayer
     case WebView
+    case BigImage
     
     var theVC: UIViewController? {
         switch self {
@@ -212,6 +215,8 @@ enum VCType: String {
             return AVPlayerVC()
         case .WebView:
             return WebVC()
+        case .BigImage:
+            return BigImageVC()
         }
     }
 }

@@ -21,11 +21,12 @@ class LuckNumbersDB: NSObject {
     
     let Number_Table = Table("luck_number")
 
-    let Face_id = Expression<Int>(value: "face_id")
+    let Face_id = Expression<String>(value: "face_id")
 
     let User_ID = Expression<String>(value: "user_id")
 
-    let numbs = Expression<[Int]>(value: "ints")
+    let numbs = Expression<String>(value: "ints")
+    
     private override init() {
         super.init()
         creatTable()
