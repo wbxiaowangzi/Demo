@@ -17,6 +17,5 @@ class BigImageVC: BaseVC {
         let imageURL = URL(fileURLWithPath: imagePath)
         let bigImageView = SmartBigImageView(frame: view.bounds, imageURL: imageURL)
         view.addSubview(bigImageView)
-        print("lalalal")
     }
 }
